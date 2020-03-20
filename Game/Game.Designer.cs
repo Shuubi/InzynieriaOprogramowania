@@ -73,6 +73,7 @@
             this.pictureBox25 = new System.Windows.Forms.PictureBox();
             this.pictureBox26 = new System.Windows.Forms.PictureBox();
             this.pictureBox27 = new System.Windows.Forms.PictureBox();
+            this.pictureBox28 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
             this.PanelHub.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -111,6 +112,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -131,6 +133,7 @@
             // PanelHub
             // 
             this.PanelHub.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(55)))), ((int)(((byte)(98)))));
+            this.PanelHub.Controls.Add(this.pictureBox28);
             this.PanelHub.Controls.Add(this.Player);
             this.PanelHub.Controls.Add(this.label1);
             this.PanelHub.Controls.Add(this.pictureBox3);
@@ -141,7 +144,7 @@
             this.PanelHub.Controls.Add(this.Door3);
             this.PanelHub.Controls.Add(this.Door2);
             this.PanelHub.Controls.Add(this.Door1);
-            this.PanelHub.Location = new System.Drawing.Point(0, 0);
+            this.PanelHub.Location = new System.Drawing.Point(0, 1);
             this.PanelHub.Name = "PanelHub";
             this.PanelHub.Size = new System.Drawing.Size(900, 600);
             this.PanelHub.TabIndex = 1;
@@ -594,6 +597,16 @@
             this.pictureBox27.TabStop = false;
             this.pictureBox27.Tag = "wall";
             // 
+            // pictureBox28
+            // 
+            this.pictureBox28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(41)))), ((int)(((byte)(71)))));
+            this.pictureBox28.Location = new System.Drawing.Point(420, 283);
+            this.pictureBox28.Name = "pictureBox28";
+            this.pictureBox28.Size = new System.Drawing.Size(46, 36);
+            this.pictureBox28.TabIndex = 11;
+            this.pictureBox28.TabStop = false;
+            this.pictureBox28.Tag = "carrot";
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -656,6 +669,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -705,6 +719,7 @@
         private System.Windows.Forms.PictureBox pictureBox25;
         private System.Windows.Forms.PictureBox pictureBox26;
         private System.Windows.Forms.PictureBox pictureBox27;
+        private System.Windows.Forms.PictureBox pictureBox28;
     }
 }
 

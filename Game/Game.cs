@@ -19,9 +19,11 @@ namespace Game
         bool goRight = false;
         bool goUp = false;
         bool goDown = false;
+        bool action = false;
 
         public Game()
         {
+            PlayerCharacter protagonist = new PlayerCharacter();
             InitializeComponent();
         }
 
@@ -44,6 +46,10 @@ namespace Game
             {
                 goRight = true;
             }
+            if (e.KeyCode == Keys.Space)
+            {
+                action = true;
+            }
 
         }
 
@@ -64,6 +70,10 @@ namespace Game
             if (e.KeyCode == Keys.D || e.KeyCode == Keys.Right)
             {
                 goRight = false;
+            }
+            if (e.KeyCode == Keys.Space)
+            {
+                action = false;
             }
         }
 
@@ -96,6 +106,9 @@ namespace Game
                 }
             }
         }
+
+        
+
 
         private void ChangeLocation()
         {   
