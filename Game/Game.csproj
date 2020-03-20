@@ -81,9 +81,5 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="images\carrot.png" />
-    <Content Include="images\wood-stain-hardwood-house-door-brown-door-png.jpg" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
