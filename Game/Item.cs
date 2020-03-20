@@ -9,12 +9,12 @@ namespace Game
    public class Item
     {
         public int amount { set; get; }
-        string name { set; get; }
+        public string name { set; get; }
 
-        public Item(string n)
+        public Item(string name, int amount = 1)
         {
-            name = n;
-            amount = 1;
+            this.name = name;
+            this.amount = amount;
         }
     }
 }

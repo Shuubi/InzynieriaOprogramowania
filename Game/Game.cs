@@ -20,10 +20,11 @@ namespace Game
         bool goUp = false;
         bool goDown = false;
         bool action = false;
+        PlayerCharacter protagonist = new PlayerCharacter();
 
         public Game()
         {
-            PlayerCharacter protagonist = new PlayerCharacter();
+            
             InitializeComponent();
         }
 
@@ -114,29 +115,33 @@ namespace Game
         {   
             //zmienia lokacje po kolizji z danymi drzwiami 
             //kazda lokacja to osobny panel, przy zmianie lokacji ukrywa obecny panel, dodaje gracza do docelowego panelu i go pokazuje
-
-
-            foreach (Control x in Player.Parent.Controls)
+            foreach (Control thisPictureBox in Player.Parent.Controls)
             {
-                if (x is PictureBox && x.Tag == "door")
+                // If this control is not a picture box, keep looping
+                if (!(thisPictureBox is PictureBox)) continue;
+
+                var thisPictureBoxTag = (string)thisPictureBox.Tag;
+                if (thisPictureBoxTag == null) continue;
+
+                if (thisPictureBoxTag == "door")
                 {
-                    if (Player.Bounds.IntersectsWith(x.Bounds))
+                    if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
                     {
                         Player.Parent.Visible = false;
                        
-                        if (x.Name == "Door1")
+                        if (thisPictureBox.Name == "Door1")
                         {
                             PanelLevel1.Controls.Add(Player);
                         }
-                        else if (x.Name == "Door2")
+                        else if (thisPictureBox.Name == "Door2")
                         {
                             PanelLevel2.Controls.Add(Player);
                         }
-                        else if (x.Name == "Door3")
+                        else if (thisPictureBox.Name == "Door3")
                         {
                             PanelLevel3.Controls.Add(Player);
                         }
-                        else if (x.Name == "Door4")
+                        else if (thisPictureBox.Name == "Door4")
                         {
                             PanelLevel4.Controls.Add(Player);
                         }
@@ -148,6 +153,37 @@ namespace Game
                         Player.Parent.Size = new Size(WindowSizeX, WindowSizeY);
                         Player.Parent.Visible = true;
                         Player.Location = new Point(434, 485);
+                    }
+                }
+                if ( thisPictureBoxTag.Equals("carrot") )
+                {
+                    if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
+                    {
+                        if (action)
+                        {
+                            statusLabel.Text = "You got a carrot, yay!";
+                            protagonist.Items.InsertItem("Carrot");
+                            thisPictureBox.Dispose();
+                        }
+                    }
+                }
+                if (thisPictureBoxTag.Equals("NPC"))
+                {
+                    if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
+                    {
+                        if (action)
+                        {
+                            if (protagonist.Items.FindItem("Carrot") == null || protagonist.Items.FindItem("Carrot").amount < 2)
+                            {
+                                statusLabel.Text = "More carrots!";
+                            }
+                            else
+                            {
+                                statusLabel.Text = "You completed the quest!";
+                                protagonist.Items.RemoveItem("Carrot");
+                                thisPictureBox.Dispose();
+                            }
+                        }
                     }
                 }
             }
@@ -177,7 +213,5 @@ namespace Game
             }
 
         }
-
-
     }
 }

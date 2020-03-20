@@ -32,6 +32,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.Player = new System.Windows.Forms.PictureBox();
             this.PanelHub = new System.Windows.Forms.Panel();
+            this.itemPickup = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -73,9 +74,13 @@
             this.pictureBox25 = new System.Windows.Forms.PictureBox();
             this.pictureBox26 = new System.Windows.Forms.PictureBox();
             this.pictureBox27 = new System.Windows.Forms.PictureBox();
-            this.pictureBox28 = new System.Windows.Forms.PictureBox();
+            this.itemPickup2 = new System.Windows.Forms.PictureBox();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.statusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.Bunny = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
             this.PanelHub.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.itemPickup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -112,7 +117,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemPickup2)).BeginInit();
+            this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Bunny)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -133,7 +140,10 @@
             // PanelHub
             // 
             this.PanelHub.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(55)))), ((int)(((byte)(98)))));
-            this.PanelHub.Controls.Add(this.pictureBox28);
+            this.PanelHub.Controls.Add(this.Bunny);
+            this.PanelHub.Controls.Add(this.statusStrip1);
+            this.PanelHub.Controls.Add(this.itemPickup2);
+            this.PanelHub.Controls.Add(this.itemPickup);
             this.PanelHub.Controls.Add(this.Player);
             this.PanelHub.Controls.Add(this.label1);
             this.PanelHub.Controls.Add(this.pictureBox3);
@@ -148,6 +158,16 @@
             this.PanelHub.Name = "PanelHub";
             this.PanelHub.Size = new System.Drawing.Size(900, 600);
             this.PanelHub.TabIndex = 1;
+            // 
+            // itemPickup
+            // 
+            this.itemPickup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(41)))), ((int)(((byte)(71)))));
+            this.itemPickup.Location = new System.Drawing.Point(449, 302);
+            this.itemPickup.Name = "itemPickup";
+            this.itemPickup.Size = new System.Drawing.Size(46, 36);
+            this.itemPickup.TabIndex = 11;
+            this.itemPickup.TabStop = false;
+            this.itemPickup.Tag = "carrot";
             // 
             // label1
             // 
@@ -597,15 +617,43 @@
             this.pictureBox27.TabStop = false;
             this.pictureBox27.Tag = "wall";
             // 
-            // pictureBox28
+            // itemPickup2
             // 
-            this.pictureBox28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(41)))), ((int)(((byte)(71)))));
-            this.pictureBox28.Location = new System.Drawing.Point(420, 283);
-            this.pictureBox28.Name = "pictureBox28";
-            this.pictureBox28.Size = new System.Drawing.Size(46, 36);
-            this.pictureBox28.TabIndex = 11;
-            this.pictureBox28.TabStop = false;
-            this.pictureBox28.Tag = "carrot";
+            this.itemPickup2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(41)))), ((int)(((byte)(71)))));
+            this.itemPickup2.Location = new System.Drawing.Point(352, 300);
+            this.itemPickup2.Name = "itemPickup2";
+            this.itemPickup2.Size = new System.Drawing.Size(46, 36);
+            this.itemPickup2.TabIndex = 12;
+            this.itemPickup2.TabStop = false;
+            this.itemPickup2.Tag = "carrot";
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.statusLabel});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 578);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(900, 22);
+            this.statusStrip1.TabIndex = 13;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // statusLabel
+            // 
+            this.statusLabel.BackColor = System.Drawing.SystemColors.Control;
+            this.statusLabel.Name = "statusLabel";
+            this.statusLabel.Size = new System.Drawing.Size(66, 17);
+            this.statusLabel.Text = "statusLabel";
+            this.statusLabel.VisitedLinkColor = System.Drawing.SystemColors.Control;
+            // 
+            // Bunny
+            // 
+            this.Bunny.BackColor = System.Drawing.Color.White;
+            this.Bunny.Location = new System.Drawing.Point(251, 420);
+            this.Bunny.Name = "Bunny";
+            this.Bunny.Size = new System.Drawing.Size(47, 50);
+            this.Bunny.TabIndex = 14;
+            this.Bunny.TabStop = false;
+            this.Bunny.Tag = "NPC";
             // 
             // Game
             // 
@@ -629,6 +677,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Player)).EndInit();
             this.PanelHub.ResumeLayout(false);
             this.PanelHub.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.itemPickup)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -669,7 +718,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemPickup2)).EndInit();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Bunny)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -719,7 +771,11 @@
         private System.Windows.Forms.PictureBox pictureBox25;
         private System.Windows.Forms.PictureBox pictureBox26;
         private System.Windows.Forms.PictureBox pictureBox27;
-        private System.Windows.Forms.PictureBox pictureBox28;
+        private System.Windows.Forms.PictureBox itemPickup;
+        private System.Windows.Forms.PictureBox itemPickup2;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel statusLabel;
+        private System.Windows.Forms.PictureBox Bunny;
     }
 }
 
