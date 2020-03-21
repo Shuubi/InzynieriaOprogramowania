@@ -13,8 +13,6 @@ namespace Game
 {
     public partial class Game : Form
     {
-        const int WindowSizeX = 900;
-        const int WindowSizeY = 600;
         bool goLeft = false;
         bool goRight = false;
         bool goUp = false;
@@ -24,11 +22,11 @@ namespace Game
 
         public Game()
         {
-            
+
             InitializeComponent();
         }
 
-        //ruch gracza sterowany klawiatura
+        //input
         private void KeyIsDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.W || e.KeyCode == Keys.Up)
@@ -78,12 +76,12 @@ namespace Game
             }
         }
 
-        private void Collision()
+        private void Collision(string tag)
         {
-            //wykrywa kolizje ze scianami i zatrzymuje ruch gracza w danym kierunku
+            //wykrywa kolizje z pictureboxami z tagiem przekazanym jako argument funkcji
             foreach (Control x in Player.Parent.Controls)
             {
-                if (x is PictureBox && x.Tag == "wall")
+                if (x is PictureBox && x.Tag == tag)
                 {
                     if (Player.Bounds.IntersectsWith(x.Bounds))
                     {
@@ -108,13 +106,10 @@ namespace Game
             }
         }
 
-        
 
+        private void ItemInteraction()
+        {
 
-        private void ChangeLocation()
-        {   
-            //zmienia lokacje po kolizji z danymi drzwiami 
-            //kazda lokacja to osobny panel, przy zmianie lokacji ukrywa obecny panel, dodaje gracza do docelowego panelu i go pokazuje
             foreach (Control thisPictureBox in Player.Parent.Controls)
             {
                 // If this control is not a picture box, keep looping
@@ -123,39 +118,7 @@ namespace Game
                 var thisPictureBoxTag = (string)thisPictureBox.Tag;
                 if (thisPictureBoxTag == null) continue;
 
-                if (thisPictureBoxTag == "door")
-                {
-                    if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
-                    {
-                        Player.Parent.Visible = false;
-                       
-                        if (thisPictureBox.Name == "Door1")
-                        {
-                            PanelLevel1.Controls.Add(Player);
-                        }
-                        else if (thisPictureBox.Name == "Door2")
-                        {
-                            PanelLevel2.Controls.Add(Player);
-                        }
-                        else if (thisPictureBox.Name == "Door3")
-                        {
-                            PanelLevel3.Controls.Add(Player);
-                        }
-                        else if (thisPictureBox.Name == "Door4")
-                        {
-                            PanelLevel4.Controls.Add(Player);
-                        }
-                        else
-                        {
-                            PanelHub.Controls.Add(Player);
-                        }
-                        Player.Parent.Location = new Point(0, 0);
-                        Player.Parent.Size = new Size(WindowSizeX, WindowSizeY);
-                        Player.Parent.Visible = true;
-                        Player.Location = new Point(434, 485);
-                    }
-                }
-                if ( thisPictureBoxTag.Equals("carrot") )
+                if (thisPictureBoxTag.Equals("carrot"))
                 {
                     if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
                     {
@@ -175,11 +138,11 @@ namespace Game
                         {
                             if (protagonist.Items.FindItem("Carrot") == null || protagonist.Items.FindItem("Carrot").amount < 2)
                             {
-                                statusLabel.Text = "More carrots!";
+                                    statusLabel.Text = "More carrots!";
                             }
                             else
                             {
-                                statusLabel.Text = "You completed the quest!";
+                                    statusLabel.Text = "You completed the quest!";
                                 protagonist.Items.RemoveItem("Carrot");
                                 thisPictureBox.Dispose();
                             }
@@ -190,28 +153,60 @@ namespace Game
         }
 
 
-        private void timer1_Tick(object sender, EventArgs e)
+       
+        //ruch gracza/kamery (przesuwanie calej mapy, gracz zostaje na srodku)
+        private void MovePlayer()
         {
-            ChangeLocation();
-            Collision();
- 
             if (goRight)
             {
+                Map.Left -= 5;
                 Player.Left += 5;
             }
             if (goLeft)
             {
+                Map.Left += 5;
                 Player.Left -= 5;
             }
             if (goUp)
             {
+                Map.Top += 5;
                 Player.Top -= 5;
             }
             if (goDown)
             {
+                Map.Top -= 5;
                 Player.Top += 5;
             }
 
         }
+
+        private void DoorsInteraction()
+        {
+            foreach (Control x in Player.Parent.Controls)
+            {
+                if (x is PictureBox && x.Tag == "door_closed")
+                {
+                    //jesli gracz dotyka drzwi i nacisnie spacje, to drzwi sie usuwaja 
+                    if(Player.Bounds.IntersectsWith(x.Bounds) && action)
+                    {
+                        x.Dispose();
+                    }
+                }
+            }
+        }
+
+      
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+            DoorsInteraction();
+            ItemInteraction();
+            Collision("wall");
+            Collision("door_closed");
+            MovePlayer();
+
+        }
+
+        
     }
 }
