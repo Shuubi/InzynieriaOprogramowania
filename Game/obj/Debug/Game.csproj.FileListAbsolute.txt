@@ -34,3 +34,12 @@ C:\Users\Weronika\Desktop\Game\Game\obj\Debug\Game.Properties.Resources.resource
 C:\Users\Weronika\Desktop\Game\Game\obj\Debug\Game.csproj.GenerateResource.cache
 C:\Users\Weronika\Desktop\Game\Game\obj\Debug\Game.exe
 C:\Users\Weronika\Desktop\Game\Game\obj\Debug\Game.pdb
+C:\Users\Weronika\Documents\GitHub\InzynieriaOprogramowania\Game\bin\Debug\Game.exe.config
+C:\Users\Weronika\Documents\GitHub\InzynieriaOprogramowania\Game\bin\Debug\Game.exe
+C:\Users\Weronika\Documents\GitHub\InzynieriaOprogramowania\Game\bin\Debug\Game.pdb
+C:\Users\Weronika\Documents\GitHub\InzynieriaOprogramowania\Game\obj\Debug\Game.csprojAssemblyReference.cache
+C:\Users\Weronika\Documents\GitHub\InzynieriaOprogramowania\Game\obj\Debug\Game.Game.resources
+C:\Users\Weronika\Documents\GitHub\InzynieriaOprogramowania\Game\obj\Debug\Game.Properties.Resources.resources
+C:\Users\Weronika\Documents\GitHub\InzynieriaOprogramowania\Game\obj\Debug\Game.csproj.GenerateResource.cache
+C:\Users\Weronika\Documents\GitHub\InzynieriaOprogramowania\Game\obj\Debug\Game.exe
+C:\Users\Weronika\Documents\GitHub\InzynieriaOprogramowania\Game\obj\Debug\Game.pdb

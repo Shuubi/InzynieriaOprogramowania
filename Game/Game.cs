@@ -18,6 +18,7 @@ namespace Game
         bool goUp = false;
         bool goDown = false;
         bool action = false;
+        int playerSpeed = 5;
         PlayerCharacter protagonist = new PlayerCharacter();
 
         public Game()
@@ -76,28 +77,28 @@ namespace Game
             }
         }
 
-        private void Collision(string tag)
+        private void playerCollision(string tag)
         {
-            //wykrywa kolizje z pictureboxami z tagiem przekazanym jako argument funkcji
+            //wykrywa kolizje gracza z pictureboxami z tagiem przekazanym jako argument funkcji
             foreach (Control x in Player.Parent.Controls)
             {
                 if (x is PictureBox && x.Tag == tag)
                 {
                     if (Player.Bounds.IntersectsWith(x.Bounds))
                     {
-                        if (Player.Right > x.Left && Player.Left < x.Left)
+                        if (Player.Right > x.Left && Player.Right < x.Left + 5 && Player.Left < x.Left)
                         {
                             goRight = false;
                         }
-                        if (Player.Left < x.Right && Player.Right > x.Right)
+                        if (Player.Left < x.Right && Player.Left > x.Right - 5 && Player.Right > x.Right)
                         {
                             goLeft = false;
                         }
-                        if (Player.Left + Player.Width > x.Left && Player.Left + Player.Width < x.Left + x.Width + Player.Width && Player.Bottom >= x.Top && Player.Top <= x.Top)
+                        if (Player.Bottom >= x.Top && Player.Bottom < x.Top + 5)
                         {
                             goDown = false;
                         }
-                        if (Player.Bottom > x.Bottom && Player.Top <= x.Bottom && Player.Top > x.Top && Player.Left + Player.Width > x.Left && Player.Left + Player.Width < x.Left + x.Width + Player.Width)
+                        if (Player.Top <= x.Bottom && Player.Top > x.Bottom - 5)
                         {
                             goUp = false;
                         }
@@ -106,6 +107,37 @@ namespace Game
             }
         }
 
+        private void pushMovableObjects()
+        {
+            foreach (Control x in Map.Controls)
+            {
+                if (x is PictureBox && x.Tag == "movable_object")
+                {
+                    if (Player.Bounds.IntersectsWith(x.Bounds))
+                    {
+                        playerSpeed = 2;
+                        if (Player.Right > x.Left && Player.Right < x.Left + 7 && Player.Left < x.Left)
+                        {
+                            x.Left += playerSpeed;
+                        }
+                        if (Player.Left < x.Right && Player.Left > x.Right - 7 && Player.Right > x.Right)
+                        {
+                            x.Left -= playerSpeed;
+                        }
+                        if (Player.Bottom >= x.Top && Player.Bottom < x.Top + 7)
+                        {
+                            x.Top += playerSpeed;
+                        }
+                        if (Player.Top <= x.Bottom && Player.Top > x.Bottom - 7)
+                        {
+                            x.Top -= playerSpeed;
+                        }
+                    }
+                    else
+                        playerSpeed = 5;
+                }
+            }
+        }
 
         private void ItemInteraction()
         {
@@ -138,11 +170,11 @@ namespace Game
                         {
                             if (protagonist.Items.FindItem("Carrot") == null || protagonist.Items.FindItem("Carrot").amount < 2)
                             {
-                                    statusLabel.Text = "More carrots!";
+                                statusLabel.Text = "More carrots!";
                             }
                             else
                             {
-                                    statusLabel.Text = "You completed the quest!";
+                                statusLabel.Text = "You completed the quest!";
                                 protagonist.Items.RemoveItem("Carrot");
                                 thisPictureBox.Dispose();
                             }
@@ -152,30 +184,28 @@ namespace Game
             }
         }
 
-
-       
         //ruch gracza/kamery (przesuwanie calej mapy, gracz zostaje na srodku)
         private void MovePlayer()
         {
             if (goRight)
             {
-                Map.Left -= 5;
-                Player.Left += 5;
+                Map.Left -= playerSpeed;
+                Player.Left += playerSpeed;
             }
             if (goLeft)
             {
-                Map.Left += 5;
-                Player.Left -= 5;
+                Map.Left += playerSpeed;
+                Player.Left -= playerSpeed;
             }
             if (goUp)
             {
-                Map.Top += 5;
-                Player.Top -= 5;
+                Map.Top += playerSpeed;
+                Player.Top -= playerSpeed;
             }
             if (goDown)
             {
-                Map.Top -= 5;
-                Player.Top += 5;
+                Map.Top -= playerSpeed;
+                Player.Top += playerSpeed;
             }
 
         }
@@ -187,7 +217,7 @@ namespace Game
                 if (x is PictureBox && x.Tag == "door_closed")
                 {
                     //jesli gracz dotyka drzwi i nacisnie spacje, to drzwi sie usuwaja 
-                    if(Player.Bounds.IntersectsWith(x.Bounds) && action)
+                    if (Player.Bounds.IntersectsWith(x.Bounds) && action)
                     {
                         x.Dispose();
                     }
@@ -195,18 +225,18 @@ namespace Game
             }
         }
 
-      
         private void timer1_Tick(object sender, EventArgs e)
         {
-
             DoorsInteraction();
             ItemInteraction();
-            Collision("wall");
-            Collision("door_closed");
+            playerCollision("wall");
+            playerCollision("door_closed");
+            pushMovableObjects();
             MovePlayer();
+
 
         }
 
-        
+
     }
 }
