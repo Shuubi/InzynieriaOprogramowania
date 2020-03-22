@@ -86,19 +86,19 @@ namespace Game
                 {
                     if (Player.Bounds.IntersectsWith(x.Bounds))
                     {
-                        if (Player.Right > x.Left && Player.Right < x.Left + 5 && Player.Left < x.Left)
+                        if (Player.Right > x.Left && Player.Right < x.Left + (playerSpeed + 1) && Player.Left < x.Left)
                         {
                             goRight = false;
                         }
-                        if (Player.Left < x.Right && Player.Left > x.Right - 5 && Player.Right > x.Right)
+                        if (Player.Left < x.Right && Player.Left > x.Right - (playerSpeed + 1) && Player.Right > x.Right)
                         {
                             goLeft = false;
                         }
-                        if (Player.Bottom >= x.Top && Player.Bottom < x.Top + 5)
+                        if (Player.Bottom >= x.Top && Player.Bottom < x.Top + (playerSpeed + 1) && Player.Top < x.Top)
                         {
                             goDown = false;
                         }
-                        if (Player.Top <= x.Bottom && Player.Top > x.Bottom - 5)
+                        if (Player.Top <= x.Bottom && Player.Top > x.Bottom - (playerSpeed + 1) && Player.Bottom > x.Bottom) 
                         {
                             goUp = false;
                         }
