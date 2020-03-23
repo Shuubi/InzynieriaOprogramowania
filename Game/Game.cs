@@ -98,7 +98,7 @@ namespace Game
                         {
                             goDown = false;
                         }
-                        if (Player.Top <= x.Bottom && Player.Top > x.Bottom - (playerSpeed + 1) && Player.Bottom > x.Bottom) 
+                        if (Player.Top <= x.Bottom && Player.Top > x.Bottom - (playerSpeed + 1) && Player.Bottom > x.Bottom)
                         {
                             goUp = false;
                         }
@@ -115,26 +115,81 @@ namespace Game
                 {
                     if (Player.Bounds.IntersectsWith(x.Bounds))
                     {
-                        playerSpeed = 2;
-                        if (Player.Right > x.Left && Player.Right < x.Left + 7 && Player.Left < x.Left)
-                        {
+                        if (Player.Right > x.Left && Player.Right < x.Left + (playerSpeed + 5) && Player.Left < x.Left)
+                        { 
                             x.Left += playerSpeed;
                         }
-                        if (Player.Left < x.Right && Player.Left > x.Right - 7 && Player.Right > x.Right)
+                        if (Player.Left < x.Right && Player.Left > x.Right - (playerSpeed + 5) && Player.Right > x.Right)
                         {
                             x.Left -= playerSpeed;
                         }
-                        if (Player.Bottom >= x.Top && Player.Bottom < x.Top + 7)
+                        if (Player.Bottom >= x.Top && Player.Bottom < x.Top + (playerSpeed + 5) && Player.Top < x.Top)
                         {
                             x.Top += playerSpeed;
                         }
-                        if (Player.Top <= x.Bottom && Player.Top > x.Bottom - 7)
+                        if (Player.Top <= x.Bottom && Player.Top > x.Bottom - (playerSpeed + 5) && Player.Bottom > x.Bottom)
                         {
                             x.Top -= playerSpeed;
                         }
                     }
-                    else
-                        playerSpeed = 5;
+                }
+            }
+        }
+
+        //wykrywa kolizje ruchomych obiektow z innymi obiektami
+        private void MovableObjectsCollision()
+        {
+            //poniewaz ruch ruchomych obiektow jest zalezny tylko od ruchu gracza, podczas kolizji blokujemy ruch gracza w danym kierunku 
+            foreach (Control mv in Map.Controls) //mv = movable, objekt ktory sie rusza i ma sie zatrzymac 
+            {
+                if (mv is PictureBox && mv.Tag == "movable_object")
+                {
+                    foreach (Control st in Map.Controls) //st = static, po kolizji mv z tym obiektem zatrzymywany jest ruch
+                    {
+                        if (st is PictureBox)
+                        {
+                            if (st.Tag == "wall" || st.Tag == "door_closed" || st.Tag == "movable_object")
+                            {
+                                if (mv.Bounds.IntersectsWith(st.Bounds))
+                                {
+                                    if (mv.Right > st.Left && mv.Left < st.Left)
+                                    {
+                                        //gdy dojdzie do kolizji i player sie odsunie, to musimy troche odsunac ruchomy 
+                                        //objekt od statycznego, zeby przestal wykrywac kolizje, w innym przypadku ruch bedzie zablokowany nawet po odejsciu playera od obiektu
+                                        goRight = false;
+                                        if (!Player.Bounds.IntersectsWith(mv.Bounds))
+                                        {
+                                            mv.Left -= playerSpeed;
+                                        }
+                                    }
+                                    if (mv.Left < st.Right && mv.Right > st.Right)
+                                    {
+                                        goLeft = false;
+                                        if (!Player.Bounds.IntersectsWith(mv.Bounds))
+                                        {
+                                            mv.Left += playerSpeed;
+                                        }
+                                    }
+                                    if (mv.Bottom >= st.Top && mv.Top < st.Top)
+                                    {
+                                        goDown = false;
+                                        if (!Player.Bounds.IntersectsWith(mv.Bounds))
+                                        {
+                                            mv.Top -= playerSpeed;
+                                        }
+                                    }
+                                    if (mv.Top <= st.Bottom &&  mv.Bottom > st.Bottom)
+                                    {
+                                        goUp = false;
+                                        if (!Player.Bounds.IntersectsWith(mv.Bounds))
+                                        {
+                                            mv.Top += playerSpeed;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -227,12 +282,16 @@ namespace Game
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+           
+            MovableObjectsCollision();
+            pushMovableObjects();
             DoorsInteraction();
             ItemInteraction();
             playerCollision("wall");
             playerCollision("door_closed");
-            pushMovableObjects();
             MovePlayer();
+
+
 
 
         }

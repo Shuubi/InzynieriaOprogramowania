@@ -31,6 +31,9 @@
             this.components = new System.ComponentModel.Container();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.Map = new System.Windows.Forms.Panel();
+            this.pictureBox34 = new System.Windows.Forms.PictureBox();
+            this.Crate = new System.Windows.Forms.PictureBox();
+            this.pictureBox33 = new System.Windows.Forms.PictureBox();
             this.Bunny = new System.Windows.Forms.PictureBox();
             this.itemPIckup = new System.Windows.Forms.PictureBox();
             this.itemPickup2 = new System.Windows.Forms.PictureBox();
@@ -78,9 +81,10 @@
             this.Level2 = new System.Windows.Forms.PictureBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.statusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.pictureBox33 = new System.Windows.Forms.PictureBox();
-            this.Crate = new System.Windows.Forms.PictureBox();
             this.Map.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Crate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Bunny)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemPIckup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemPickup2)).BeginInit();
@@ -127,8 +131,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.Level1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Level2)).BeginInit();
             this.statusStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Crate)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -140,6 +142,15 @@
             // Map
             // 
             this.Map.BackColor = System.Drawing.Color.Black;
+            this.Map.Controls.Add(this.pictureBox21);
+            this.Map.Controls.Add(this.pictureBox20);
+            this.Map.Controls.Add(this.pictureBox8);
+            this.Map.Controls.Add(this.pictureBox7);
+            this.Map.Controls.Add(this.pictureBox17);
+            this.Map.Controls.Add(this.pictureBox6);
+            this.Map.Controls.Add(this.pictureBox5);
+            this.Map.Controls.Add(this.pictureBox23);
+            this.Map.Controls.Add(this.pictureBox34);
             this.Map.Controls.Add(this.Crate);
             this.Map.Controls.Add(this.pictureBox33);
             this.Map.Controls.Add(this.Bunny);
@@ -155,12 +166,8 @@
             this.Map.Controls.Add(this.pictureBox25);
             this.Map.Controls.Add(this.pictureBox24);
             this.Map.Controls.Add(this.pictureBox22);
-            this.Map.Controls.Add(this.pictureBox21);
-            this.Map.Controls.Add(this.pictureBox20);
             this.Map.Controls.Add(this.pictureBox19);
             this.Map.Controls.Add(this.pictureBox18);
-            this.Map.Controls.Add(this.pictureBox17);
-            this.Map.Controls.Add(this.pictureBox23);
             this.Map.Controls.Add(this.pictureBox16);
             this.Map.Controls.Add(this.pictureBox15);
             this.Map.Controls.Add(this.pictureBox14);
@@ -169,10 +176,6 @@
             this.Map.Controls.Add(this.pictureBox11);
             this.Map.Controls.Add(this.pictureBox10);
             this.Map.Controls.Add(this.pictureBox9);
-            this.Map.Controls.Add(this.pictureBox8);
-            this.Map.Controls.Add(this.pictureBox7);
-            this.Map.Controls.Add(this.pictureBox6);
-            this.Map.Controls.Add(this.pictureBox5);
             this.Map.Controls.Add(this.Player);
             this.Map.Controls.Add(this.doorLevel4Closed);
             this.Map.Controls.Add(this.doorLevel2Closed);
@@ -191,6 +194,36 @@
             this.Map.Name = "Map";
             this.Map.Size = new System.Drawing.Size(3000, 3000);
             this.Map.TabIndex = 0;
+            // 
+            // pictureBox34
+            // 
+            this.pictureBox34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(122)))), ((int)(((byte)(111)))));
+            this.pictureBox34.Location = new System.Drawing.Point(1271, 1293);
+            this.pictureBox34.Name = "pictureBox34";
+            this.pictureBox34.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox34.TabIndex = 54;
+            this.pictureBox34.TabStop = false;
+            this.pictureBox34.Tag = "movable_object";
+            // 
+            // Crate
+            // 
+            this.Crate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(122)))), ((int)(((byte)(111)))));
+            this.Crate.Location = new System.Drawing.Point(1342, 1232);
+            this.Crate.Name = "Crate";
+            this.Crate.Size = new System.Drawing.Size(50, 50);
+            this.Crate.TabIndex = 53;
+            this.Crate.TabStop = false;
+            this.Crate.Tag = "movable_object";
+            // 
+            // pictureBox33
+            // 
+            this.pictureBox33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(52)))), ((int)(((byte)(112)))));
+            this.pictureBox33.Location = new System.Drawing.Point(1478, 1118);
+            this.pictureBox33.Name = "pictureBox33";
+            this.pictureBox33.Size = new System.Drawing.Size(26, 130);
+            this.pictureBox33.TabIndex = 52;
+            this.pictureBox33.TabStop = false;
+            this.pictureBox33.Tag = "wall";
             // 
             // Bunny
             // 
@@ -649,26 +682,6 @@
             this.statusLabel.Size = new System.Drawing.Size(66, 17);
             this.statusLabel.Text = "statusLabel";
             // 
-            // pictureBox33
-            // 
-            this.pictureBox33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(52)))), ((int)(((byte)(112)))));
-            this.pictureBox33.Location = new System.Drawing.Point(1478, 1118);
-            this.pictureBox33.Name = "pictureBox33";
-            this.pictureBox33.Size = new System.Drawing.Size(26, 130);
-            this.pictureBox33.TabIndex = 52;
-            this.pictureBox33.TabStop = false;
-            this.pictureBox33.Tag = "wall";
-            // 
-            // Crate
-            // 
-            this.Crate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(122)))), ((int)(((byte)(111)))));
-            this.Crate.Location = new System.Drawing.Point(1342, 1232);
-            this.Crate.Name = "Crate";
-            this.Crate.Size = new System.Drawing.Size(50, 50);
-            this.Crate.TabIndex = 53;
-            this.Crate.TabStop = false;
-            this.Crate.Tag = "movable_object";
-            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -686,6 +699,9 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyIsDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.KeyIsUp);
             this.Map.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Crate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Bunny)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemPIckup)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemPickup2)).EndInit();
@@ -733,8 +749,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.Level2)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Crate)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -792,6 +806,7 @@
         private System.Windows.Forms.ToolStripStatusLabel statusLabel;
         private System.Windows.Forms.PictureBox pictureBox33;
         private System.Windows.Forms.PictureBox Crate;
+        private System.Windows.Forms.PictureBox pictureBox34;
     }
 }
 
