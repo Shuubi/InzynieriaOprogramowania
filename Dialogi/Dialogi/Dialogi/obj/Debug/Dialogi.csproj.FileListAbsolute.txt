@@ -1,0 +1,9 @@
+C:\Users\Julia\Desktop\Dialogi\Dialogi\Dialogi\bin\Debug\Dialogi.exe.config
+C:\Users\Julia\Desktop\Dialogi\Dialogi\Dialogi\bin\Debug\Dialogi.exe
+C:\Users\Julia\Desktop\Dialogi\Dialogi\Dialogi\bin\Debug\Dialogi.pdb
+C:\Users\Julia\Desktop\Dialogi\Dialogi\Dialogi\obj\Debug\Dialogi.csprojAssemblyReference.cache
+C:\Users\Julia\Desktop\Dialogi\Dialogi\Dialogi\obj\Debug\Dialogi.Form1.resources
+C:\Users\Julia\Desktop\Dialogi\Dialogi\Dialogi\obj\Debug\Dialogi.Properties.Resources.resources
+C:\Users\Julia\Desktop\Dialogi\Dialogi\Dialogi\obj\Debug\Dialogi.csproj.GenerateResource.cache
+C:\Users\Julia\Desktop\Dialogi\Dialogi\Dialogi\obj\Debug\Dialogi.exe
+C:\Users\Julia\Desktop\Dialogi\Dialogi\Dialogi\obj\Debug\Dialogi.pdb
