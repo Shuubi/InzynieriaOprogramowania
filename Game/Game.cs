@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Game
 {
@@ -21,6 +22,10 @@ namespace Game
         int playerSpeed = 5;
         PlayerCharacter protagonist = new PlayerCharacter();
 
+        bool cont = false;
+        bool reading = false;
+        public string path = String.Empty;
+
         public Game()
         {
 
@@ -30,25 +35,30 @@ namespace Game
         //input
         private void KeyIsDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.W || e.KeyCode == Keys.Up)
+            if(pnlText.Visible!=true)
             {
-                goUp = true;
-            }
-            if (e.KeyCode == Keys.S || e.KeyCode == Keys.Down)
-            {
-                goDown = true;
-            }
-            if (e.KeyCode == Keys.A || e.KeyCode == Keys.Left)
-            {
-                goLeft = true;
-            }
-            if (e.KeyCode == Keys.D || e.KeyCode == Keys.Right)
-            {
-                goRight = true;
+                if (e.KeyCode == Keys.W || e.KeyCode == Keys.Up)
+                {
+                    goUp = true;
+                }
+                if (e.KeyCode == Keys.S || e.KeyCode == Keys.Down)
+                {
+                    goDown = true;
+                }
+                if (e.KeyCode == Keys.A || e.KeyCode == Keys.Left)
+                {
+                    goLeft = true;
+                }
+                if (e.KeyCode == Keys.D || e.KeyCode == Keys.Right)
+                {
+                    goRight = true;
+                }
             }
             if (e.KeyCode == Keys.Space)
             {
                 action = true;
+                if (reading)
+                    cont = true;
             }
 
         }
@@ -221,22 +231,78 @@ namespace Game
                 {
                     if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
                     {
-                        if (action)
+                        if (reading != true)
                         {
-                            if (protagonist.Items.FindItem("Carrot") == null || protagonist.Items.FindItem("Carrot").amount < 2)
+                            if (action)
                             {
-                                statusLabel.Text = "More carrots!";
-                            }
-                            else
-                            {
-                                statusLabel.Text = "You completed the quest!";
-                                protagonist.Items.RemoveItem("Carrot");
-                                thisPictureBox.Dispose();
+                                if (protagonist.Items.FindItem("Carrot") == null || protagonist.Items.FindItem("Carrot").amount < 2)
+                                {
+                                    statusLabel.Text = "More carrots!";
+                                    path = "../Resources/Dialogs/NPCIncompleteQuest.txt";
+                                }
+                                else
+                                {
+                                    statusLabel.Text = "You completed the quest!";
+                                    path = "../Resources/Dialogs/NPCFinishedQuest.txt";
+                                    protagonist.Items.RemoveItem("Carrot");
+                                    thisPictureBox.Dispose();
+                                }
+                                StreamReader sr = new StreamReader(path);
+                                LoadDialog(sr);
+                                sr.Close();
                             }
                         }
                     }
                 }
             }
+        }
+
+        private void ReadLine(string ln)
+        {
+            bool readAll = false;
+            //Animacja Tekstu
+            string ln2 = String.Empty;
+            for (int i = 0; i < ln.Length; i++)
+            {
+                ln2 = ln2.Insert(ln2.Length, ln[i].ToString());
+                lblDialog.Text = ln2;
+                Application.DoEvents();
+                System.Threading.Thread.Sleep(50);
+                if (cont)
+                    break;
+                if(i==(ln.Length)-1)
+                    readAll = true;
+            }
+            
+            if (readAll!=true)
+            {
+                lblDialog.Text = ln;
+                cont = false;
+            }
+        }
+        //pokazywanie panelu z dialogami i odczytywanie tekstu z pliku linijka po linijce
+
+        private void LoadDialog(StreamReader sr)
+        {
+            pnlText.Visible = true;
+            string ln = String.Empty;
+
+            reading = true;
+            while ((ln = sr.ReadLine()) != null)
+            {
+                
+                ReadLine(ln);
+                while(cont!=true)
+                {
+                    Application.DoEvents();
+                    System.Threading.Thread.Sleep(50);
+                }
+                cont = false;
+            }
+            reading = false;
+
+            pnlText.Visible = false;
+            lblDialog.Text = "";
         }
 
         //ruch gracza/kamery (przesuwanie calej mapy, gracz zostaje na srodku)
@@ -295,7 +361,5 @@ namespace Game
 
 
         }
-
-
     }
 }
