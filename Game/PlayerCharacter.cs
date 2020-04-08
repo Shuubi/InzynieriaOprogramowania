@@ -96,24 +96,33 @@ namespace Game
             {
                 if (x is PictureBox && x.Tag == "movable_object")
                 {
-                    if (Player.Bounds.IntersectsWith(x.Bounds))
+                    if (action) //gdy gracz ma wcisnieta spacje i podejdzie do movable_object, to moze go przesuwac na wszystkie strony, rowniez ciagnac do siebie (potem mozna dodac warunek znajomosci jakiegos zaklecia)
                     {
-                        if (Player.Right > x.Left && Player.Right < x.Left + (playerSpeed + 5) && Player.Left < x.Left && goRight)
+                        if (Player.Bounds.IntersectsWith(x.Bounds))
                         {
-                            x.Left += playerSpeed;
+                            playerSpeed = 3;
+                            if (goRight)
+                            {
+                                x.Left += playerSpeed;
+                            }
+                            if (goLeft)
+                            {
+                                x.Left -= playerSpeed;
+                            }
+                            if (goDown)
+                            {
+                                x.Top += playerSpeed;
+                            }
+                            if (goUp)
+                            {
+                                x.Top -= playerSpeed;
+                            }
                         }
-                        if (Player.Left < x.Right && Player.Left > x.Right - (playerSpeed + 5) && Player.Right > x.Right && goLeft)
-                        {
-                            x.Left -= playerSpeed;
-                        }
-                        if (Player.Bottom >= x.Top && Player.Bottom < x.Top + (playerSpeed + 5) && Player.Top < x.Top && goDown)
-                        {
-                            x.Top += playerSpeed;
-                        }
-                        if (Player.Top <= x.Bottom && Player.Top > x.Bottom - (playerSpeed + 5) && Player.Bottom > x.Bottom)
-                        {
-                            x.Top -= playerSpeed;
-                        }
+                    }
+                    else
+                    {
+                        playerSpeed = 5;
+                        playerCollision("movable_object");
                     }
                 }
             }
@@ -131,43 +140,25 @@ namespace Game
                     {
                         if (st is PictureBox)
                         {
-                            if (st.Tag == "wall" || st.Tag == "door_closed" || st.Tag == "movable_object")
+                            if (st.Tag == "wall" || st.Tag == "door_closed" || st.Tag == "movable_object") 
                             {
-                                if (mv.Bounds.IntersectsWith(st.Bounds))
+                                if (mv.Bounds.IntersectsWith(st.Bounds)&& Player.Bounds.IntersectsWith(mv.Bounds))
                                 {
                                     if (mv.Right > st.Left && mv.Left < st.Left)
                                     {
-                                        //gdy dojdzie do kolizji i player sie odsunie, to musimy troche odsunac ruchomy 
-                                        //objekt od statycznego, zeby przestal wykrywac kolizje, w innym przypadku ruch bedzie zablokowany nawet po odejsciu playera od obiektu
                                         goRight = false;
-                                        if (!Player.Bounds.IntersectsWith(mv.Bounds))
-                                        {
-                                            mv.Left -= playerSpeed;
-                                        }
                                     }
                                     if (mv.Left < st.Right && mv.Right > st.Right)
                                     {
                                         goLeft = false;
-                                        if (!Player.Bounds.IntersectsWith(mv.Bounds))
-                                        {
-                                            mv.Left += playerSpeed;
-                                        }
                                     }
                                     if (mv.Bottom >= st.Top && mv.Top < st.Top)
                                     {
                                         goDown = false;
-                                        if (!Player.Bounds.IntersectsWith(mv.Bounds))
-                                        {
-                                            mv.Top -= playerSpeed;
-                                        }
                                     }
                                     if (mv.Top <= st.Bottom && mv.Bottom > st.Bottom)
                                     {
                                         goUp = false;
-                                        if (!Player.Bounds.IntersectsWith(mv.Bounds))
-                                        {
-                                            mv.Top += playerSpeed;
-                                        }
                                     }
                                 }
                             }

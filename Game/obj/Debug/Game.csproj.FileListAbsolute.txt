@@ -43,3 +43,4 @@ C:\Users\Weronika\Documents\GitHub\InzynieriaOprogramowania\Game\obj\Debug\Game.
 C:\Users\Weronika\Documents\GitHub\InzynieriaOprogramowania\Game\obj\Debug\Game.csproj.GenerateResource.cache
 C:\Users\Weronika\Documents\GitHub\InzynieriaOprogramowania\Game\obj\Debug\Game.exe
 C:\Users\Weronika\Documents\GitHub\InzynieriaOprogramowania\Game\obj\Debug\Game.pdb
+C:\Users\Weronika\Documents\GitHub\InzynieriaOprogramowania\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
