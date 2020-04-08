@@ -122,13 +122,12 @@ namespace Game
         {
             protagonist.playerCollision("wall");
             protagonist.playerCollision("door_closed");
-            protagonist.MovableObjectsCollision();
+           protagonist.MovableObjectsCollision();
             protagonist.pushMovableObjects();
             protagonist.DoorsInteraction();
             ItemInteraction();
             
             protagonist.MovePlayer();
-
         }
 
 
