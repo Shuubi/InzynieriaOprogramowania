@@ -21,8 +21,10 @@ namespace Game
         public bool goUp { get; set; }
         public bool goDown { get; set; }
         public bool action { get; set; }
+        public bool fire { get; set; }
+        public Directions playerRotation { get; set; }
 
-        static public int playerSpeed = 5;
+        static public int playerSpeed = 6;
 
         public PlayerItemInventory Items = new PlayerItemInventory();
 
@@ -40,25 +42,30 @@ namespace Game
             {
                 Player.Parent.Left -= playerSpeed;
                 Player.Left += playerSpeed;
+                playerRotation = Directions.Right;
 
             }
             if (goLeft)
             {
                 Player.Parent.Left += playerSpeed;
                 Player.Left -= playerSpeed;
+                playerRotation = Directions.Left;
             }
             if (goUp)
             {
                 Player.Parent.Top += playerSpeed;
                 Player.Top -= playerSpeed;
+                playerRotation = Directions.Up;
             }
             if (goDown)
             {
                 Player.Parent.Top -= playerSpeed;
                 Player.Top += playerSpeed;
+                playerRotation = Directions.Down;
             }
 
         }
+
 
         public void playerCollision(string tag)
         {
@@ -140,9 +147,9 @@ namespace Game
                     {
                         if (st is PictureBox)
                         {
-                            if (st.Tag == "wall" || st.Tag == "door_closed" || st.Tag == "movable_object") 
+                            if (st.Tag == "wall" || st.Tag == "door_closed" || st.Tag == "movable_object")
                             {
-                                if (mv.Bounds.IntersectsWith(st.Bounds)&& Player.Bounds.IntersectsWith(mv.Bounds))
+                                if (mv.Bounds.IntersectsWith(st.Bounds) && Player.Bounds.IntersectsWith(mv.Bounds))
                                 {
                                     if (mv.Right > st.Left && mv.Left < st.Left)
                                     {
@@ -184,6 +191,67 @@ namespace Game
             }
         }
 
+        public void Fire()
+        {
+            var fireball = new PictureBox
+            {
+                Tag = "fireball",
+                Size = new Size(7, 7),
+                Location = new Point(this.Player.Location.X + 25, this.Player.Location.Y + 25),
+                BackColor = Color.Red,
+            };
+            if (fire)
+            {
+                this.Player.Parent.Controls.Add(fireball);
+                fireball.BringToFront();
+            }
+            foreach (Control f in Player.Parent.Controls)
+            {
+                if (f is PictureBox && f.Tag == "fireball")
+                {
+                    switch (playerRotation)
+                    {
+                        case Directions.Right:
+                            f.Left += 20;
+                            break;
+                        case Directions.Left:
+                            f.Left -= 20;
+                            break;
+                        case Directions.Up:
+                            f.Top -= 20;
+                            break;
+                        case Directions.Down:
+                            f.Top += 20;
+                            break;
+                        default: break;
+                    }
+                    foreach (Control x in Player.Parent.Controls)
+                    {
+                        if (f.Bounds.IntersectsWith(x.Bounds) && (x.Tag == "wall"||x.Tag == "door_closed"))
+                        {
+                            f.Dispose();
+                        }
+                        if(f.Bounds.IntersectsWith(x.Bounds) && x.Tag == "flammable_object")
+                        {
+                            x.BackColor = Color.Red;
+                            x.Tag = "burning_object";
+                        }
+                    }
+
+                }
+            }
+        }
+
+        public void HandlePlayerCharacter()
+        {
+            playerCollision("wall");
+            playerCollision("door_closed");
+            playerCollision("flammable_object");
+            MovableObjectsCollision();
+            pushMovableObjects();
+            DoorsInteraction();
+            Fire();
+        }
 
 
     }
