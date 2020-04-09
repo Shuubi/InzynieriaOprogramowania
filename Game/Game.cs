@@ -8,12 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Game
 {
     public partial class Game : Form
     {
         int mouseX, mouseY;
+
+        //na potrzeby dialogow
+        bool cont = false;
+        bool reading = false;
+        public string path = String.Empty;
+
 
         PlayerCharacter protagonist;
 
@@ -27,30 +34,37 @@ namespace Game
         //input
         private void KeyIsDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.W || e.KeyCode == Keys.Up)
+            if (pnlText.Visible != true) //wylaczenie ruchu przy czytaniu dialogow
             {
-                protagonist.goUp = true;
+                if (e.KeyCode == Keys.W || e.KeyCode == Keys.Up)
+                {
+                    protagonist.goUp = true;
+                }
+                if (e.KeyCode == Keys.S || e.KeyCode == Keys.Down)
+                {
+                    protagonist.goDown = true;
+                }
+                if (e.KeyCode == Keys.A || e.KeyCode == Keys.Left)
+                {
+                    protagonist.goLeft = true;
+                }
+                if (e.KeyCode == Keys.D || e.KeyCode == Keys.Right)
+                {
+                    protagonist.goRight = true;
+                }
+                if (e.KeyCode == Keys.E)
+                {
+                    protagonist.fire = true;
+                }
             }
-            if (e.KeyCode == Keys.S || e.KeyCode == Keys.Down)
-            {
-                protagonist.goDown = true;
-            }
-            if (e.KeyCode == Keys.A || e.KeyCode == Keys.Left)
-            {
-                protagonist.goLeft = true;
-            }
-            if (e.KeyCode == Keys.D || e.KeyCode == Keys.Right)
-            {
-                protagonist.goRight = true;
-            }
+                
             if (e.KeyCode == Keys.Space)
             {
                 protagonist.action = true;
+                if (reading)
+                    cont = true;
             }
-            if (e.KeyCode == Keys.E)
-            {
-                protagonist.fire = true;
-            }
+            
         }
 
         private void KeyIsUp(object sender, KeyEventArgs e)
@@ -134,22 +148,79 @@ namespace Game
                 {
                     if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
                     {
-                        if (protagonist.action)
+                        if (reading != true)
                         {
-                            if (protagonist.Items.FindItem("Carrot") == null || protagonist.Items.FindItem("Carrot").amount < 2)
+                            if (protagonist.action)
                             {
-                                statusLabel.Text = "More carrots!";
-                            }
-                            else
-                            {
-                                statusLabel.Text = "You completed the quest!";
-                                protagonist.Items.RemoveItem("Carrot");
-                                thisPictureBox.Dispose();
+                                if (protagonist.Items.FindItem("Carrot") == null || protagonist.Items.FindItem("Carrot").amount < 2)
+                                {
+                                    statusLabel.Text = "More carrots!";
+                                    path = "../Resources/Dialogs/NPCIncompleteQuest.txt";
+                                }
+                                else
+                                {
+                                    statusLabel.Text = "You completed the quest!";
+                                    path = "../Resources/Dialogs/NPCFinishedQuest.txt";
+                                    protagonist.Items.RemoveItem("Carrot");
+                                    thisPictureBox.Dispose();
+                                }
+                                StreamReader sr = new StreamReader(path);
+                                LoadDialog(sr);
+                                sr.Close();
                             }
                         }
                     }
                 }
             }
+        }
+
+        //czytanie pojedynczej linii z pliku z mozliwoscia przewijania
+        private void ReadLine(string ln)
+        {
+            bool readAll = false;
+            //Animacja Tekstu
+            string ln2 = String.Empty;
+            for (int i = 0; i < ln.Length; i++)
+            {
+                ln2 = ln2.Insert(ln2.Length, ln[i].ToString());
+                lblDialog.Text = ln2;
+                Application.DoEvents();
+                System.Threading.Thread.Sleep(50);
+                if (cont) //przewinięcie
+                    break;
+                if (i == (ln.Length) - 1) //jesli wczytany cały dialog, nie wczytuj w następnym if
+                    readAll = true;
+            }
+
+            if (readAll != true) //jeśli przewinięto, wczytaj cały dialog na raz
+            {
+                lblDialog.Text = ln;
+                cont = false;
+            }
+        }
+
+        //pokazywanie panelu z dialogami, przejscie do funkcji czytajacej linie z pliku i zamkniecie okna
+        private void LoadDialog(StreamReader sr)
+        {
+            pnlText.Visible = true;
+            string ln = String.Empty;
+
+            reading = true;
+            while ((ln = sr.ReadLine()) != null)
+            {
+
+                ReadLine(ln);
+                while (cont != true)
+                {
+                    Application.DoEvents();
+                    System.Threading.Thread.Sleep(50);
+                }
+                cont = false;
+            }
+
+            lblDialog.Text = "";
+            pnlText.Visible = false;
+            reading = false;
         }
 
         private void timer1_Tick(object sender, EventArgs e)

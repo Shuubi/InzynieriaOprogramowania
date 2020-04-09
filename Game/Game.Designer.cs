@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.Map = new System.Windows.Forms.Panel();
+            this.pictureBox35 = new System.Windows.Forms.PictureBox();
             this.pictureBox21 = new System.Windows.Forms.PictureBox();
             this.pictureBox20 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
@@ -82,8 +83,11 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.statusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox35 = new System.Windows.Forms.PictureBox();
+            this.pnlText = new System.Windows.Forms.Panel();
+            this.pnlDialog = new System.Windows.Forms.Panel();
+            this.lblDialog = new System.Windows.Forms.Label();
             this.Map.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -133,7 +137,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Level1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Level2)).BeginInit();
             this.statusStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).BeginInit();
+            this.pnlText.SuspendLayout();
+            this.pnlDialog.SuspendLayout();
             this.SuspendLayout();
             // 
             // timer1
@@ -198,6 +203,16 @@
             this.Map.Name = "Map";
             this.Map.Size = new System.Drawing.Size(3000, 3000);
             this.Map.TabIndex = 0;
+            // 
+            // pictureBox35
+            // 
+            this.pictureBox35.BackColor = System.Drawing.Color.OliveDrab;
+            this.pictureBox35.Location = new System.Drawing.Point(1204, 979);
+            this.pictureBox35.Name = "pictureBox35";
+            this.pictureBox35.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox35.TabIndex = 55;
+            this.pictureBox35.TabStop = false;
+            this.pictureBox35.Tag = "flammable_object";
             // 
             // pictureBox21
             // 
@@ -692,15 +707,36 @@
             this.timer2.Interval = 200;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
-            // pictureBox35
+            // pnlText
             // 
-            this.pictureBox35.BackColor = System.Drawing.Color.OliveDrab;
-            this.pictureBox35.Location = new System.Drawing.Point(1204, 979);
-            this.pictureBox35.Name = "pictureBox35";
-            this.pictureBox35.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox35.TabIndex = 55;
-            this.pictureBox35.TabStop = false;
-            this.pictureBox35.Tag = "flammable_object";
+            this.pnlText.BackColor = System.Drawing.Color.Black;
+            this.pnlText.Controls.Add(this.pnlDialog);
+            this.pnlText.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlText.Location = new System.Drawing.Point(0, 603);
+            this.pnlText.Name = "pnlText";
+            this.pnlText.Size = new System.Drawing.Size(755, 122);
+            this.pnlText.TabIndex = 3;
+            this.pnlText.Visible = false;
+            // 
+            // pnlDialog
+            // 
+            this.pnlDialog.BackColor = System.Drawing.Color.Transparent;
+            this.pnlDialog.Controls.Add(this.lblDialog);
+            this.pnlDialog.Location = new System.Drawing.Point(22, 19);
+            this.pnlDialog.Name = "pnlDialog";
+            this.pnlDialog.Size = new System.Drawing.Size(691, 86);
+            this.pnlDialog.TabIndex = 0;
+            // 
+            // lblDialog
+            // 
+            this.lblDialog.AutoSize = true;
+            this.lblDialog.BackColor = System.Drawing.Color.Transparent;
+            this.lblDialog.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblDialog.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblDialog.Location = new System.Drawing.Point(4, 4);
+            this.lblDialog.Name = "lblDialog";
+            this.lblDialog.Size = new System.Drawing.Size(0, 23);
+            this.lblDialog.TabIndex = 0;
             // 
             // Game
             // 
@@ -709,6 +745,7 @@
             this.BackColor = System.Drawing.Color.DimGray;
             this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(755, 747);
+            this.Controls.Add(this.pnlText);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.Map);
             this.DoubleBuffered = true;
@@ -719,6 +756,7 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyIsDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.KeyIsUp);
             this.Map.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
@@ -769,7 +807,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.Level2)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).EndInit();
+            this.pnlText.ResumeLayout(false);
+            this.pnlDialog.ResumeLayout(false);
+            this.pnlDialog.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -830,6 +870,9 @@
         private System.Windows.Forms.PictureBox pictureBox34;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.PictureBox pictureBox35;
+        private System.Windows.Forms.Panel pnlText;
+        private System.Windows.Forms.Panel pnlDialog;
+        private System.Windows.Forms.Label lblDialog;
     }
 }
 
