@@ -81,6 +81,8 @@
             this.Level2 = new System.Windows.Forms.PictureBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.statusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox35 = new System.Windows.Forms.PictureBox();
             this.Map.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
@@ -131,6 +133,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Level1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Level2)).BeginInit();
             this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -142,6 +145,7 @@
             // Map
             // 
             this.Map.BackColor = System.Drawing.Color.Black;
+            this.Map.Controls.Add(this.pictureBox35);
             this.Map.Controls.Add(this.pictureBox21);
             this.Map.Controls.Add(this.pictureBox20);
             this.Map.Controls.Add(this.pictureBox8);
@@ -288,7 +292,7 @@
             // Crate
             // 
             this.Crate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(122)))), ((int)(((byte)(111)))));
-            this.Crate.Location = new System.Drawing.Point(1342, 1232);
+            this.Crate.Location = new System.Drawing.Point(1375, 1262);
             this.Crate.Name = "Crate";
             this.Crate.Size = new System.Drawing.Size(50, 50);
             this.Crate.TabIndex = 53;
@@ -682,6 +686,22 @@
             this.statusLabel.Size = new System.Drawing.Size(66, 17);
             this.statusLabel.Text = "statusLabel";
             // 
+            // timer2
+            // 
+            this.timer2.Enabled = true;
+            this.timer2.Interval = 200;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // pictureBox35
+            // 
+            this.pictureBox35.BackColor = System.Drawing.Color.OliveDrab;
+            this.pictureBox35.Location = new System.Drawing.Point(1204, 979);
+            this.pictureBox35.Name = "pictureBox35";
+            this.pictureBox35.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox35.TabIndex = 55;
+            this.pictureBox35.TabStop = false;
+            this.pictureBox35.Tag = "flammable_object";
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -749,6 +769,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Level2)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -807,6 +828,8 @@
         private System.Windows.Forms.PictureBox pictureBox33;
         private System.Windows.Forms.PictureBox Crate;
         private System.Windows.Forms.PictureBox pictureBox34;
+        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.PictureBox pictureBox35;
     }
 }
 

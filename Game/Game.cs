@@ -13,12 +13,14 @@ namespace Game
 {
     public partial class Game : Form
     {
-       
+        int mouseX, mouseY;
+
         PlayerCharacter protagonist;
 
         public Game()
         {
             InitializeComponent();
+
             protagonist = new PlayerCharacter(Player);
         }
 
@@ -45,7 +47,10 @@ namespace Game
             {
                 protagonist.action = true;
             }
-
+            if (e.KeyCode == Keys.E)
+            {
+                protagonist.fire = true;
+            }
         }
 
         private void KeyIsUp(object sender, KeyEventArgs e)
@@ -69,6 +74,36 @@ namespace Game
             if (e.KeyCode == Keys.Space)
             {
                 protagonist.action = false;
+            }
+            if (e.KeyCode == Keys.E)
+            {
+                protagonist.fire = false;
+            }
+        }
+
+
+        public void Rotation()
+        {
+            Player.Image = Image.FromFile(@"Images\player.jpg");
+            Image img = Player.Image;
+            switch (protagonist.playerRotation)
+            {
+                case PlayerCharacter.Directions.Right:
+                    img.RotateFlip(RotateFlipType.Rotate90FlipNone);
+                    Player.Image = img;
+                    break;
+                case PlayerCharacter.Directions.Left:
+                    img.RotateFlip(RotateFlipType.Rotate270FlipNone);
+                    Player.Image = img;
+                    break;
+                case PlayerCharacter.Directions.Up:
+                    Player.Image = img;
+                    break;
+                case PlayerCharacter.Directions.Down:
+                    img.RotateFlip(RotateFlipType.Rotate180FlipNone);
+                    Player.Image = img;
+                    break;
+                default: break;
             }
         }
 
@@ -117,19 +152,25 @@ namespace Game
             }
         }
 
-        
         private void timer1_Tick(object sender, EventArgs e)
         {
-            protagonist.playerCollision("wall");
-            protagonist.playerCollision("door_closed");
-           protagonist.MovableObjectsCollision();
-            protagonist.pushMovableObjects();
-            protagonist.DoorsInteraction();
+            protagonist.HandlePlayerCharacter();
             ItemInteraction();
-            
+            Rotation();
+
             protagonist.MovePlayer();
         }
 
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            foreach (Control f in Player.Parent.Controls)
+            {
+                if (f is PictureBox && (f.Tag == "fireball" || f.Tag == "burning_object"))
+                {
+                    f.Dispose();
+                }
+            }
+        }
 
     }
 }
