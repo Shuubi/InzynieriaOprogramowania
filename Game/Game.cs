@@ -144,7 +144,25 @@ namespace Game
                         }
                     }
                 }
-                if (thisPictureBoxTag.Equals("NPC"))
+                if (thisPictureBoxTag.Equals("George"))
+                {
+                    if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
+                    {
+                        if (reading != true)
+                        {
+                            if (protagonist.action)
+                            {
+
+                                path = "../Resources/Dialogs/George.txt";
+                                StreamReader sr = new StreamReader(path);
+                                LoadDialog(sr);
+                                sr.Close();
+
+                            }
+                        }
+                    }
+                }
+                if (thisPictureBoxTag.Equals("Bunny"))
                 {
                     if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
                     {
