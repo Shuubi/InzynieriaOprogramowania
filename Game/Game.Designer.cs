@@ -626,7 +626,7 @@
             this.water1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.water1.Location = new System.Drawing.Point(810, 558);
             this.water1.Name = "water1";
-            this.water1.Size = new System.Drawing.Size(300, 60);
+            this.water1.Size = new System.Drawing.Size(298, 60);
             this.water1.TabIndex = 40;
             this.water1.TabStop = false;
             this.water1.Tag = "water";
@@ -659,6 +659,7 @@
             this.rock3.Size = new System.Drawing.Size(60, 60);
             this.rock3.TabIndex = 43;
             this.rock3.TabStop = false;
+            this.rock3.Tag = "movable_object";
             // 
             // rock4
             // 
@@ -668,6 +669,7 @@
             this.rock4.Size = new System.Drawing.Size(60, 60);
             this.rock4.TabIndex = 44;
             this.rock4.TabStop = false;
+            this.rock4.Tag = "movable_object";
             // 
             // Game
             // 
