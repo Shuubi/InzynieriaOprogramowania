@@ -193,45 +193,47 @@ namespace Game
 
         public void Fire()
         {
-            var fireball = new PictureBox
-            {
-                Tag = "fireball",
-                Size = new Size(7, 7),
-                Location = new Point(this.Player.Location.X + 25, this.Player.Location.Y + 25),
-                BackColor = Color.Red,
-            };
             if (fire)
             {
+                var directionString = playerRotation.ToString();
+                var fireball = new PictureBox
+                {
+                    Tag = $"fireball|{directionString}",
+                    Size = new Size(7, 7),
+                    Location = new Point(this.Player.Location.X + 25, this.Player.Location.Y + 25),
+                    BackColor = Color.Red,
+                };
                 this.Player.Parent.Controls.Add(fireball);
                 fireball.BringToFront();
             }
             foreach (Control f in Player.Parent.Controls)
             {
-                if (f is PictureBox && f.Tag == "fireball")
+                if (f is PictureBox && f.Tag != null && f.Tag.ToString().StartsWith("fireball"))
                 {
-                    switch (playerRotation)
+                    var rotation = f.Tag.ToString().Substring("fireball".Length + 1);
+                    switch (rotation)
                     {
-                        case Directions.Right:
+                        case "Right":
                             f.Left += 20;
                             break;
-                        case Directions.Left:
+                        case "Left":
                             f.Left -= 20;
                             break;
-                        case Directions.Up:
+                        case "Up":
                             f.Top -= 20;
                             break;
-                        case Directions.Down:
+                        case "Down":
                             f.Top += 20;
                             break;
                         default: break;
                     }
                     foreach (Control x in Player.Parent.Controls)
                     {
-                        if (f.Bounds.IntersectsWith(x.Bounds) && (x.Tag == "wall"||x.Tag == "door_closed"))
+                        if (f.Bounds.IntersectsWith(x.Bounds) && (x.Tag == "wall" || x.Tag == "door_closed"))
                         {
                             f.Dispose();
                         }
-                        if(f.Bounds.IntersectsWith(x.Bounds) && x.Tag == "flammable_object")
+                        if (f.Bounds.IntersectsWith(x.Bounds) && x.Tag == "flammable_object")
                         {
                             x.BackColor = Color.Red;
                             x.Tag = "burning_object";
