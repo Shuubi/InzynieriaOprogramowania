@@ -21,7 +21,6 @@ namespace Game
         bool reading = false;
         public string path = String.Empty;
 
-
         PlayerCharacter protagonist;
 
         public Game()
@@ -29,6 +28,27 @@ namespace Game
             InitializeComponent();
 
             protagonist = new PlayerCharacter(Player);
+        }
+
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+
+            var top = Player.Top - ((this.Height / 2) - (Player.Height / 2));
+            var left = Player.Left - ((this.Width / 2) - (Player.Width / 2));
+
+            Player.Parent.Top = -top;
+            Player.Parent.Left = -left;
+        }
+        protected override void OnResize(EventArgs e)
+        {
+            base.OnResize(e);
+
+            var top = Player.Top - ((this.Height / 2) - (Player.Height / 2));
+            var left = Player.Left - ((this.Width / 2) - (Player.Width / 2));
+
+            Player.Parent.Top = -top;
+            Player.Parent.Left = -left;
         }
 
         //input
@@ -144,7 +164,25 @@ namespace Game
                         }
                     }
                 }
-                if (thisPictureBoxTag.Equals("NPC"))
+                if (thisPictureBoxTag.Equals("George"))
+                {
+                    if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
+                    {
+                        if (reading != true)
+                        {
+                            if (protagonist.action)
+                            {
+
+                                path = "../Resources/Dialogs/George.txt";
+                                StreamReader sr = new StreamReader(path);
+                                LoadDialog(sr);
+                                sr.Close();
+
+                            }
+                        }
+                    }
+                }
+                if (thisPictureBoxTag.Equals("Bunny"))
                 {
                     if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
                     {
