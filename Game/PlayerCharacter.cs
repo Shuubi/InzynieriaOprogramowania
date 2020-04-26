@@ -199,8 +199,8 @@ namespace Game
                 var fireball = new PictureBox
                 {
                     Tag = $"fireball|{directionString}",
-                    Size = new Size(7, 7),
-                    Location = new Point(this.Player.Location.X + 25, this.Player.Location.Y + 25),
+                    Size = new Size(6, 6),
+                    Location = new Point(this.Player.Location.X + 15, this.Player.Location.Y + 15),
                     BackColor = Color.Red,
                 };
                 this.Player.Parent.Controls.Add(fireball);
@@ -214,16 +214,16 @@ namespace Game
                     switch (rotation)
                     {
                         case "Right":
-                            f.Left += 20;
+                            f.Left += 15;
                             break;
                         case "Left":
-                            f.Left -= 20;
+                            f.Left -= 15;
                             break;
                         case "Up":
-                            f.Top -= 20;
+                            f.Top -= 15;
                             break;
                         case "Down":
-                            f.Top += 20;
+                            f.Top += 15;
                             break;
                         default: break;
                     }

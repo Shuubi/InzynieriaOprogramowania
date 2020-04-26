@@ -272,7 +272,7 @@ namespace Game
         {
             foreach (Control f in Player.Parent.Controls)
             {
-                if (f is PictureBox && (f.Tag == "fireball" || f.Tag == "burning_object"))
+                if (f is PictureBox && f.Tag != null && (f.Tag.ToString().StartsWith("fireball")) || f.Tag == "burning_object")
                 {
                     f.Dispose();
                 }

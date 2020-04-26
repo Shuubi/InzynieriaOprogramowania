@@ -275,7 +275,7 @@
             // timer2
             // 
             this.timer2.Enabled = true;
-            this.timer2.Interval = 200;
+            this.timer2.Interval = 80;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // pnlText
@@ -293,7 +293,7 @@
             // wall16
             // 
             this.wall16.Location = new System.Drawing.Point(0, 0);
-            this.wall16.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.wall16.Margin = new System.Windows.Forms.Padding(2);
             this.wall16.Name = "wall16";
             this.wall16.Size = new System.Drawing.Size(30, 504);
             this.wall16.TabIndex = 1;
@@ -1406,11 +1406,11 @@
             // Map
             // 
             this.Map.BackColor = System.Drawing.Color.Black;
+            this.Map.Controls.Add(this.Player);
             this.Map.Controls.Add(this.rocklvl2);
             this.Map.Controls.Add(this.coin);
             this.Map.Controls.Add(this.stick2);
             this.Map.Controls.Add(this.stick1);
-            this.Map.Controls.Add(this.Player);
             this.Map.Controls.Add(this.chest);
             this.Map.Controls.Add(this.pot);
             this.Map.Controls.Add(this.freezablelvl2_8);
