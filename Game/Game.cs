@@ -171,6 +171,7 @@ namespace Game
             }
         }
 
+
         private void ItemInteraction()
         {
 
@@ -193,6 +194,7 @@ namespace Game
                         }
                     }
                 }
+
                 if (thisPictureBoxTag.Equals("stick"))
                 {
                     if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
@@ -269,10 +271,13 @@ namespace Game
                 {
                     if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
                     {
-                        if (protagonist.action)
+                        if (reading != true)
                         {
-                            protagonist.Items.InsertItem("Coin");
-                            thisPictureBox.Dispose();
+                            if (protagonist.action)
+                            {
+                                protagonist.Items.InsertItem("Coin");
+                                thisPictureBox.Dispose();
+                            }
                         }
                     }
                 }
@@ -399,7 +404,6 @@ namespace Game
             lblDialog.Text = "";
             pnlText.Visible = false;
             reading = false;
-
             System.Threading.Thread.Sleep(100); //zbyt powolne wciśnięcie spacji sprawiało że dialog jednocześnie kończył się i zaczynał od nowa, sleep ma temu przeciwdziałać
         }
 
@@ -408,6 +412,7 @@ namespace Game
             Item cur;
             string path;
             int amount;
+
             for (int i = 0; i < protagonist.Items.ListSize(); i++)
             {
                 cur = protagonist.Items.ReturnItem(i);
@@ -441,6 +446,21 @@ namespace Game
             Rotation();
 
             protagonist.MovePlayer();
+        }
+
+        private void freezablelvl2_2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void riverlvl2_4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void freezablelvl2_6_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void timer2_Tick(object sender, EventArgs e)
