@@ -56,7 +56,7 @@ namespace Game
         //input
         private void KeyIsDown(object sender, KeyEventArgs e)
         {
-            if (pnlText.Visible != true) //wylaczenie ruchu przy czytaniu dialogow
+            if (pnlText.Visible != true && pnlInv.Visible != true) //wylaczenie ruchu przy czytaniu dialogow
             {
                 if (e.KeyCode == Keys.W || e.KeyCode == Keys.Up)
                 {
@@ -78,15 +78,26 @@ namespace Game
                 {
                     protagonist.fire = true;
                 }
-            }
-                
+            }  
+
             if (e.KeyCode == Keys.Space)
             {
                 protagonist.action = true;
                 if (reading)
                     cont = true;
             }
-            
+
+            if (e.KeyCode == Keys.I)
+            {
+                if (pnlInv.Visible)
+                    pnlInv.Visible = false;
+                else
+                {
+                    updateInv();
+                    pnlInv.BringToFront();
+                    pnlInv.Visible = true;
+                }
+            }
         }
 
         private void KeyIsUp(object sender, KeyEventArgs e)
@@ -256,7 +267,38 @@ namespace Game
             lblDialog.Text = "";
             pnlText.Visible = false;
             reading = false;
-            System.Threading.Thread.Sleep(50); //zbyt powolne wciśnięcie spacji sprawiało że dialog jednocześnie kończył się i zaczynał od nowa, sleep ma temu przeciwdziałać
+            System.Threading.Thread.Sleep(100); //zbyt powolne wciśnięcie spacji sprawiało że dialog jednocześnie kończył się i zaczynał od nowa, sleep ma temu przeciwdziałać
+        }
+
+        private void updateInv()
+        {
+            Item cur;
+            string path;
+            int amount;
+            for (int i=0;i< protagonist.Items.ListSize(); i++)
+            {
+                cur = protagonist.Items.ReturnItem(i);
+                path = "../Resources/Items/" + cur.name + ".jpg"; //nazwa itemu jest takze nazwa pliku
+                switch (i) //dodac jesli zwiekszy sie liczba dostepnych itemow w grze
+                {
+                    case 0: 
+                        item1.LoadAsync(@path);
+                        item1Lbl.Text = (cur.amount).ToString();
+                        break;
+                    case 1:
+                        item2.LoadAsync(@path);
+                        item2Lbl.Text = (cur.amount).ToString();
+                        break;
+                    case 2:
+                        item2.LoadAsync(@path);
+                        item2Lbl.Text = (cur.amount).ToString();
+                        break;
+                    case 3:
+                        item4.LoadAsync(@path);
+                        item4Lbl.Text = (cur.amount).ToString();
+                        break;
+                }
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -272,7 +314,7 @@ namespace Game
         {
             foreach (Control f in Player.Parent.Controls)
             {
-                if (f is PictureBox && f.Tag != null && (f.Tag.ToString().StartsWith("fireball")) || f.Tag == "burning_object")
+                if (f is PictureBox && (f.Tag == "fireball" || f.Tag == "burning_object"))
                 {
                     f.Dispose();
                 }

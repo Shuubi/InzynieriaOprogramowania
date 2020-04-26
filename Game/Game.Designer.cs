@@ -140,6 +140,15 @@
             this.coin = new System.Windows.Forms.PictureBox();
             this.rocklvl2 = new System.Windows.Forms.PictureBox();
             this.Map = new System.Windows.Forms.Panel();
+            this.pnlInv = new System.Windows.Forms.Panel();
+            this.item4Lbl = new System.Windows.Forms.Label();
+            this.item3Lbl = new System.Windows.Forms.Label();
+            this.item2Lbl = new System.Windows.Forms.Label();
+            this.item1Lbl = new System.Windows.Forms.Label();
+            this.item4 = new System.Windows.Forms.PictureBox();
+            this.item3 = new System.Windows.Forms.PictureBox();
+            this.item2 = new System.Windows.Forms.PictureBox();
+            this.item1 = new System.Windows.Forms.PictureBox();
             this.statusStrip1.SuspendLayout();
             this.pnlText.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.wall16)).BeginInit();
@@ -247,6 +256,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.coin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rocklvl2)).BeginInit();
             this.Map.SuspendLayout();
+            this.pnlInv.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.item4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item1)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -275,7 +289,7 @@
             // timer2
             // 
             this.timer2.Enabled = true;
-            this.timer2.Interval = 80;
+            this.timer2.Interval = 200;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // pnlText
@@ -1406,11 +1420,11 @@
             // Map
             // 
             this.Map.BackColor = System.Drawing.Color.Black;
-            this.Map.Controls.Add(this.Player);
             this.Map.Controls.Add(this.rocklvl2);
             this.Map.Controls.Add(this.coin);
             this.Map.Controls.Add(this.stick2);
             this.Map.Controls.Add(this.stick1);
+            this.Map.Controls.Add(this.Player);
             this.Map.Controls.Add(this.chest);
             this.Map.Controls.Add(this.pot);
             this.Map.Controls.Add(this.freezablelvl2_8);
@@ -1514,6 +1528,100 @@
             this.Map.Size = new System.Drawing.Size(1778, 1926);
             this.Map.TabIndex = 4;
             // 
+            // pnlInv
+            // 
+            this.pnlInv.BackColor = System.Drawing.Color.Black;
+            this.pnlInv.Controls.Add(this.item4Lbl);
+            this.pnlInv.Controls.Add(this.item3Lbl);
+            this.pnlInv.Controls.Add(this.item2Lbl);
+            this.pnlInv.Controls.Add(this.item1Lbl);
+            this.pnlInv.Controls.Add(this.item4);
+            this.pnlInv.Controls.Add(this.item3);
+            this.pnlInv.Controls.Add(this.item2);
+            this.pnlInv.Controls.Add(this.item1);
+            this.pnlInv.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlInv.Location = new System.Drawing.Point(0, 0);
+            this.pnlInv.Name = "pnlInv";
+            this.pnlInv.Size = new System.Drawing.Size(1319, 114);
+            this.pnlInv.TabIndex = 5;
+            this.pnlInv.Visible = false;
+            // 
+            // item4Lbl
+            // 
+            this.item4Lbl.AutoSize = true;
+            this.item4Lbl.BackColor = System.Drawing.Color.Transparent;
+            this.item4Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.item4Lbl.ForeColor = System.Drawing.Color.White;
+            this.item4Lbl.Location = new System.Drawing.Point(360, 57);
+            this.item4Lbl.Name = "item4Lbl";
+            this.item4Lbl.Size = new System.Drawing.Size(0, 24);
+            this.item4Lbl.TabIndex = 7;
+            // 
+            // item3Lbl
+            // 
+            this.item3Lbl.AutoSize = true;
+            this.item3Lbl.BackColor = System.Drawing.Color.Transparent;
+            this.item3Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.item3Lbl.ForeColor = System.Drawing.Color.White;
+            this.item3Lbl.Location = new System.Drawing.Point(265, 57);
+            this.item3Lbl.Name = "item3Lbl";
+            this.item3Lbl.Size = new System.Drawing.Size(0, 24);
+            this.item3Lbl.TabIndex = 6;
+            // 
+            // item2Lbl
+            // 
+            this.item2Lbl.AutoSize = true;
+            this.item2Lbl.BackColor = System.Drawing.Color.Transparent;
+            this.item2Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.item2Lbl.ForeColor = System.Drawing.Color.White;
+            this.item2Lbl.Location = new System.Drawing.Point(170, 57);
+            this.item2Lbl.Name = "item2Lbl";
+            this.item2Lbl.Size = new System.Drawing.Size(0, 24);
+            this.item2Lbl.TabIndex = 5;
+            // 
+            // item1Lbl
+            // 
+            this.item1Lbl.AutoSize = true;
+            this.item1Lbl.BackColor = System.Drawing.Color.Transparent;
+            this.item1Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.item1Lbl.ForeColor = System.Drawing.Color.White;
+            this.item1Lbl.Location = new System.Drawing.Point(75, 57);
+            this.item1Lbl.Name = "item1Lbl";
+            this.item1Lbl.Size = new System.Drawing.Size(0, 24);
+            this.item1Lbl.TabIndex = 4;
+            // 
+            // item4
+            // 
+            this.item4.Location = new System.Drawing.Point(315, 16);
+            this.item4.Name = "item4";
+            this.item4.Size = new System.Drawing.Size(65, 65);
+            this.item4.TabIndex = 3;
+            this.item4.TabStop = false;
+            // 
+            // item3
+            // 
+            this.item3.Location = new System.Drawing.Point(220, 16);
+            this.item3.Name = "item3";
+            this.item3.Size = new System.Drawing.Size(65, 65);
+            this.item3.TabIndex = 2;
+            this.item3.TabStop = false;
+            // 
+            // item2
+            // 
+            this.item2.Location = new System.Drawing.Point(125, 16);
+            this.item2.Name = "item2";
+            this.item2.Size = new System.Drawing.Size(65, 65);
+            this.item2.TabIndex = 1;
+            this.item2.TabStop = false;
+            // 
+            // item1
+            // 
+            this.item1.Location = new System.Drawing.Point(30, 16);
+            this.item1.Name = "item1";
+            this.item1.Size = new System.Drawing.Size(65, 65);
+            this.item1.TabIndex = 0;
+            this.item1.TabStop = false;
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1524,6 +1632,7 @@
             this.Controls.Add(this.Map);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.pnlText);
+            this.Controls.Add(this.pnlInv);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MinimizeBox = false;
@@ -1640,6 +1749,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.coin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rocklvl2)).EndInit();
             this.Map.ResumeLayout(false);
+            this.pnlInv.ResumeLayout(false);
+            this.pnlInv.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.item4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1757,6 +1872,15 @@
         private System.Windows.Forms.PictureBox coin;
         private System.Windows.Forms.PictureBox rocklvl2;
         private System.Windows.Forms.Panel Map;
+        private System.Windows.Forms.Panel pnlInv;
+        private System.Windows.Forms.PictureBox item4;
+        private System.Windows.Forms.PictureBox item3;
+        private System.Windows.Forms.PictureBox item2;
+        private System.Windows.Forms.PictureBox item1;
+        private System.Windows.Forms.Label item4Lbl;
+        private System.Windows.Forms.Label item3Lbl;
+        private System.Windows.Forms.Label item2Lbl;
+        private System.Windows.Forms.Label item1Lbl;
     }
 }
 
