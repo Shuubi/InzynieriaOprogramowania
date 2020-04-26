@@ -171,7 +171,6 @@ namespace Game
             }
         }
 
-
         private void ItemInteraction()
         {
 
@@ -194,7 +193,6 @@ namespace Game
                         }
                     }
                 }
-
                 if (thisPictureBoxTag.Equals("stick"))
                 {
                     if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
@@ -254,14 +252,18 @@ namespace Game
                 //wczytywanie dialogow dla wszystkich npc
                 if (thisPictureBoxTag.Equals("NPC"))
                 {
+
                     if (reading != true)
-                    {
-                        if (protagonist.action)
-                        {
-                            protagonist.Items.InsertItem("Stick");
-                            thisPictureBox.Dispose();
-                        }
-                    }
+					{
+						if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
+						{
+							if (protagonist.action)
+							{
+								protagonist.Items.InsertItem("Stick");
+								thisPictureBox.Dispose();
+							}
+						}
+					}
                 }
                 if (thisPictureBoxTag.Equals("coin"))
                 {
@@ -397,6 +399,7 @@ namespace Game
             lblDialog.Text = "";
             pnlText.Visible = false;
             reading = false;
+
             System.Threading.Thread.Sleep(100); //zbyt powolne wciśnięcie spacji sprawiało że dialog jednocześnie kończył się i zaczynał od nowa, sleep ma temu przeciwdziałać
         }
 
@@ -438,21 +441,6 @@ namespace Game
             Rotation();
 
             protagonist.MovePlayer();
-        }
-
-        private void freezablelvl2_2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void riverlvl2_4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void freezablelvl2_6_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void timer2_Tick(object sender, EventArgs e)
