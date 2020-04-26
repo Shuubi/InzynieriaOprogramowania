@@ -149,6 +149,7 @@
             this.item3 = new System.Windows.Forms.PictureBox();
             this.item2 = new System.Windows.Forms.PictureBox();
             this.item1 = new System.Windows.Forms.PictureBox();
+            this.PlayerSpells = new System.Windows.Forms.PictureBox();
             this.statusStrip1.SuspendLayout();
             this.pnlText.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.wall16)).BeginInit();
@@ -261,6 +262,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.item3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.item2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.item1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PlayerSpells)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -289,7 +291,7 @@
             // timer2
             // 
             this.timer2.Enabled = true;
-            this.timer2.Interval = 200;
+            this.timer2.Interval = 80;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // pnlText
@@ -1367,7 +1369,7 @@
             this.Player.Location = new System.Drawing.Point(748, 736);
             this.Player.Margin = new System.Windows.Forms.Padding(2);
             this.Player.Name = "Player";
-            this.Player.Size = new System.Drawing.Size(30, 32);
+            this.Player.Size = new System.Drawing.Size(30, 30);
             this.Player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Player.TabIndex = 1;
             this.Player.TabStop = false;
@@ -1420,11 +1422,12 @@
             // Map
             // 
             this.Map.BackColor = System.Drawing.Color.Black;
+            this.Map.Controls.Add(this.Player);
+            this.Map.Controls.Add(this.PlayerSpells);
             this.Map.Controls.Add(this.rocklvl2);
             this.Map.Controls.Add(this.coin);
             this.Map.Controls.Add(this.stick2);
             this.Map.Controls.Add(this.stick1);
-            this.Map.Controls.Add(this.Player);
             this.Map.Controls.Add(this.chest);
             this.Map.Controls.Add(this.pot);
             this.Map.Controls.Add(this.freezablelvl2_8);
@@ -1622,6 +1625,14 @@
             this.item1.TabIndex = 0;
             this.item1.TabStop = false;
             // 
+            // PlayerSpells
+            // 
+            this.PlayerSpells.Location = new System.Drawing.Point(745, 733);
+            this.PlayerSpells.Name = "PlayerSpells";
+            this.PlayerSpells.Size = new System.Drawing.Size(36, 36);
+            this.PlayerSpells.TabIndex = 102;
+            this.PlayerSpells.TabStop = false;
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1755,6 +1766,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.item3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.item2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.item1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PlayerSpells)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1881,6 +1893,7 @@
         private System.Windows.Forms.Label item3Lbl;
         private System.Windows.Forms.Label item2Lbl;
         private System.Windows.Forms.Label item1Lbl;
+        private System.Windows.Forms.PictureBox PlayerSpells;
     }
 }
 

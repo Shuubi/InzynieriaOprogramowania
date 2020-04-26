@@ -16,23 +16,26 @@ namespace Game
     public class PlayerCharacter
     {
         public Control Player;
+        public Control PlayerSpells;
         public bool goRight { get; set; }
         public bool goLeft { get; set; }
         public bool goUp { get; set; }
         public bool goDown { get; set; }
         public bool action { get; set; }
-        public bool fire { get; set; }
+        public bool castSpell { get; set; }
         public Directions playerRotation { get; set; }
+        public Spells currentSpell { get; set; }
 
         static public int playerSpeed = 6;
 
         public PlayerItemInventory Items = new PlayerItemInventory();
-
         public enum Directions { Left, Right, Up, Down }
+        public enum Spells { None, Earth, Fire, Ice }
 
-        public PlayerCharacter(Control player)
+        public PlayerCharacter(Control player, Control playerspells)
         {
             Player = player;
+            PlayerSpells = playerspells;
         }
 
         public void MovePlayer()
@@ -42,6 +45,7 @@ namespace Game
             {
                 Player.Parent.Left -= playerSpeed;
                 Player.Left += playerSpeed;
+                PlayerSpells.Left += playerSpeed;
                 playerRotation = Directions.Right;
 
             }
@@ -49,18 +53,21 @@ namespace Game
             {
                 Player.Parent.Left += playerSpeed;
                 Player.Left -= playerSpeed;
+                PlayerSpells.Left -= playerSpeed;
                 playerRotation = Directions.Left;
             }
             if (goUp)
             {
                 Player.Parent.Top += playerSpeed;
                 Player.Top -= playerSpeed;
+                PlayerSpells.Top -= playerSpeed;
                 playerRotation = Directions.Up;
             }
             if (goDown)
             {
                 Player.Parent.Top -= playerSpeed;
                 Player.Top += playerSpeed;
+                PlayerSpells.Top += playerSpeed;
                 playerRotation = Directions.Down;
             }
 
@@ -99,6 +106,8 @@ namespace Game
 
         public void pushMovableObjects()
         {
+            MovableObjectsCollision();
+
             foreach (Control x in Player.Parent.Controls)
             {
                 if (x is PictureBox && x.Tag == "movable_object")
@@ -193,14 +202,14 @@ namespace Game
 
         public void Fire()
         {
-            if (fire)
+            if (castSpell)
             {
                 var directionString = playerRotation.ToString();
                 var fireball = new PictureBox
                 {
                     Tag = $"fireball|{directionString}",
-                    Size = new Size(7, 7),
-                    Location = new Point(this.Player.Location.X + 25, this.Player.Location.Y + 25),
+                    Size = new Size(6, 6),
+                    Location = new Point(this.Player.Location.X + 15, this.Player.Location.Y + 15),
                     BackColor = Color.Red,
                 };
                 this.Player.Parent.Controls.Add(fireball);
@@ -214,16 +223,16 @@ namespace Game
                     switch (rotation)
                     {
                         case "Right":
-                            f.Left += 20;
+                            f.Left += 15;
                             break;
                         case "Left":
-                            f.Left -= 20;
+                            f.Left -= 15;
                             break;
                         case "Up":
-                            f.Top -= 20;
+                            f.Top -= 15;
                             break;
                         case "Down":
-                            f.Top += 20;
+                            f.Top += 15;
                             break;
                         default: break;
                     }
@@ -239,9 +248,90 @@ namespace Game
                             x.Tag = "burning_object";
                         }
                     }
+                }
+            }
+        }
+
+        public void Ice()
+        {
+            if (castSpell)
+            {
+                var directionString = playerRotation.ToString();
+                var iceball = new PictureBox
+                {
+                    Tag = $"iceball|{directionString}",
+                    Size = new Size(6, 6),
+                    Location = new Point(this.Player.Location.X + 15, this.Player.Location.Y + 15),
+                    BackColor = Color.White,
+                };
+                this.Player.Parent.Controls.Add(iceball);
+                iceball.BringToFront();
+            }
+            foreach (Control f in Player.Parent.Controls)
+            {
+                if (f is PictureBox && f.Tag != null && f.Tag.ToString().StartsWith("iceball"))
+                {
+                    var rotation = f.Tag.ToString().Substring("iceball".Length + 1);
+                    switch (rotation)
+                    {
+                        case "Right":
+                            f.Left += 15;
+                            break;
+                        case "Left":
+                            f.Left -= 15;
+                            break;
+                        case "Up":
+                            f.Top -= 15;
+                            break;
+                        case "Down":
+                            f.Top += 15;
+                            break;
+                        default: break;
+                    }
+                    foreach (Control x in Player.Parent.Controls)
+                    {
+                        if (f.Bounds.IntersectsWith(x.Bounds) && (x.Tag == "wall" || x.Tag == "door_closed"))
+                        {
+                            f.Dispose();
+                        }
+                        if (f.Bounds.IntersectsWith(x.Bounds) && (x.Tag == "water"||x.Tag=="river"))
+                        {
+                            x.BackColor = Color.White;
+                            x.Tag = "ice";
+                        }
+                    }
 
                 }
             }
+        }
+
+
+        public void SpellCasting()
+        {
+            if (currentSpell == Spells.Earth)
+            {
+                PlayerSpells.BackColor = Color.GreenYellow;
+                PlayerSpells.Visible = true;
+                pushMovableObjects();
+            }
+            if (currentSpell == Spells.Fire)
+            {
+                PlayerSpells.BackColor = Color.Red;
+                PlayerSpells.Visible = true;
+                Fire();
+            }
+            if (currentSpell == Spells.Ice)
+            {
+                PlayerSpells.BackColor = Color.White;
+                PlayerSpells.Visible = true;
+                Ice();
+            }
+            if(currentSpell == Spells.None)
+            {
+                PlayerSpells.Visible = false;
+            }
+
+
         }
 
         public void HandlePlayerCharacter()
@@ -249,10 +339,11 @@ namespace Game
             playerCollision("wall");
             playerCollision("door_closed");
             playerCollision("flammable_object");
-            MovableObjectsCollision();
-            pushMovableObjects();
+            playerCollision("water");
+            playerCollision("river");
+            playerCollision("movable_object");
+            SpellCasting();
             DoorsInteraction();
-            Fire();
         }
 
 
