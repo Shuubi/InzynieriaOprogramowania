@@ -30,6 +30,7 @@ namespace Game
             InitializeComponent();
             pfc.AddFontFile("VCR.ttf");
             protagonist = new PlayerCharacter(Player,PlayerSpells);
+
             PlayerSpells.Visible = false;
         }
 
@@ -195,10 +196,127 @@ namespace Game
                     }
                 }
 
+                if (thisPictureBoxTag.Equals("stick"))
+                {
+                    if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
+                    {
+                        if (protagonist.action)
+                        {
+                            protagonist.Items.InsertItem("Stick");
+                            thisPictureBox.Dispose();
+                        }
+                    }
+                }
+                if (thisPictureBoxTag.Equals("coin"))
+                {
+                    if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
+                    {
+                        if (protagonist.action)
+                        {
+                            protagonist.Items.InsertItem("Coin");
+                            thisPictureBox.Dispose();
+                        }
+                    }
+                }
+                if (thisPictureBoxTag.Equals("pot"))
+                {
+                    if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
+                    {
+                        if (protagonist.action)
+                        {
+                            protagonist.Items.InsertItem("Pot");
+                            thisPictureBox.Dispose();
+                        }
+                    }
+                }
+                if (thisPictureBoxTag.Equals("sugar"))
+                {
+                    if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
+                    {
+                        if (protagonist.action)
+                        {
+                            protagonist.Items.InsertItem("Sugar");
+                            thisPictureBox.Dispose();
+                        }
+                    }
+                }
+                if (thisPictureBoxTag.Equals("crystal"))
+                {
+                    if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
+                    {
+                        if (protagonist.action)
+                        {
+                            protagonist.Items.InsertItem("crystal");
+                            thisPictureBox.Dispose();
+                        }
+                    }
+                }
+
+
                 //wczytywanie dialogow dla wszystkich npc
                 if (thisPictureBoxTag.Equals("NPC"))
                 {
-                    if (reading != true) 
+                    if (reading != true)
+                    {
+                        if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
+                        {
+                            if (protagonist.action)
+                            {
+                                protagonist.Items.InsertItem("Stick");
+                                thisPictureBox.Dispose();
+                            }
+                        }
+                    }
+                }
+                if (thisPictureBoxTag.Equals("coin"))
+                {
+                    if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
+                    {
+                        if (protagonist.action)
+                        {
+                            protagonist.Items.InsertItem("Coin");
+                            thisPictureBox.Dispose();
+                        }
+                    }
+                }
+                if (thisPictureBoxTag.Equals("pot"))
+                {
+                    if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
+                    {
+                        if (protagonist.action)
+                        {
+                            protagonist.Items.InsertItem("Pot");
+                            thisPictureBox.Dispose();
+                        }
+                    }
+                }
+                if (thisPictureBoxTag.Equals("sugar"))
+                {
+                    if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
+                    {
+                        if (protagonist.action)
+                        {
+                            protagonist.Items.InsertItem("Sugar");
+                            thisPictureBox.Dispose();
+                        }
+                    }
+                }
+                if (thisPictureBoxTag.Equals("crystal"))
+                {
+                    if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
+                    {
+                        if (protagonist.action)
+                        {
+                            protagonist.Items.InsertItem("crystal");
+                            thisPictureBox.Dispose();
+                        }
+                    }
+                }
+
+                //wczytywanie dialogow dla wszystkich npc
+                if (thisPictureBoxTag.Equals("NPC"))
+                {
+                    if (reading != true)
                     {
                         if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
                         {
