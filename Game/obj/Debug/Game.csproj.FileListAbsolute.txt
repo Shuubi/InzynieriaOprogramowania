@@ -53,24 +53,3 @@ C:\Users\Julia\Desktop\InzynieriaOprogramowania-master\Game\obj\Debug\Game.Prope
 C:\Users\Julia\Desktop\InzynieriaOprogramowania-master\Game\obj\Debug\Game.csproj.GenerateResource.cache
 C:\Users\Julia\Desktop\InzynieriaOprogramowania-master\Game\obj\Debug\Game.exe
 C:\Users\Julia\Desktop\InzynieriaOprogramowania-master\Game\obj\Debug\Game.pdb
-<<<<<<< Updated upstream
-=======
-C:\Users\Julia\Desktop\C#\InzynieriaOprogramowania-master\Game\bin\Debug\Game.exe.config
-C:\Users\Julia\Desktop\C#\InzynieriaOprogramowania-master\Game\bin\Debug\Game.exe
-C:\Users\Julia\Desktop\C#\InzynieriaOprogramowania-master\Game\bin\Debug\Game.pdb
-C:\Users\Julia\Desktop\C#\InzynieriaOprogramowania-master\Game\obj\Debug\Game.csprojAssemblyReference.cache
-C:\Users\Julia\Desktop\C#\InzynieriaOprogramowania-master\Game\obj\Debug\Game.Game.resources
-C:\Users\Julia\Desktop\C#\InzynieriaOprogramowania-master\Game\obj\Debug\Game.Properties.Resources.resources
-C:\Users\Julia\Desktop\C#\InzynieriaOprogramowania-master\Game\obj\Debug\Game.csproj.GenerateResource.cache
-C:\Users\Julia\Desktop\C#\InzynieriaOprogramowania-master\Game\obj\Debug\Game.exe
-C:\Users\Julia\Desktop\C#\InzynieriaOprogramowania-master\Game\obj\Debug\Game.pdb
-C:\Users\Shuubi\Downloads\InzynieriaOprogramowania-053cd518c28d7636c4ca87cdda942d8984a375bc\Game\obj\Debug\Game.csprojAssemblyReference.cache
-C:\Users\Shuubi\Downloads\InzynieriaOprogramowania-053cd518c28d7636c4ca87cdda942d8984a375bc\Game\obj\Debug\Game.Properties.Resources.resources
-C:\Users\Shuubi\Downloads\InzynieriaOprogramowania-053cd518c28d7636c4ca87cdda942d8984a375bc\Game\obj\Debug\Game.csproj.GenerateResource.cache
-C:\Users\Shuubi\Downloads\InzynieriaOprogramowania-053cd518c28d7636c4ca87cdda942d8984a375bc\Game\obj\Debug\Game.exe
-C:\Users\Shuubi\Downloads\InzynieriaOprogramowania-053cd518c28d7636c4ca87cdda942d8984a375bc\Game\obj\Debug\Game.pdb
-C:\Users\Shuubi\Downloads\InzynieriaOprogramowania-053cd518c28d7636c4ca87cdda942d8984a375bc\Game\obj\Debug\Game.Game.resources
-C:\Users\Shuubi\Downloads\InzynieriaOprogramowania-053cd518c28d7636c4ca87cdda942d8984a375bc\Game\bin\Debug\Game.exe.config
-C:\Users\Shuubi\Downloads\InzynieriaOprogramowania-053cd518c28d7636c4ca87cdda942d8984a375bc\Game\bin\Debug\Game.exe
-C:\Users\Shuubi\Downloads\InzynieriaOprogramowania-053cd518c28d7636c4ca87cdda942d8984a375bc\Game\bin\Debug\Game.pdb
->>>>>>> Stashed changes

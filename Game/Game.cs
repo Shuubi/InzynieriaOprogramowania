@@ -141,7 +141,6 @@ namespace Game
             }
         }
 
-
         private void ItemInteraction()
         {
 
@@ -165,11 +164,8 @@ namespace Game
                     }
                 }
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
                 if (thisPictureBoxTag.Equals("George"))
 =======
-=======
->>>>>>> Stashed changes
                 if (thisPictureBoxTag.Equals("stick"))
                 {
                     if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
@@ -230,11 +226,7 @@ namespace Game
                 if (thisPictureBoxTag.Equals("NPC"))
 >>>>>>> Stashed changes
                 {
-<<<<<<< Updated upstream
                     if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
-=======
-                    if (reading != true)
->>>>>>> Stashed changes
                     {
                         if (reading != true)
                         {
@@ -327,42 +319,6 @@ namespace Game
             lblDialog.Text = "";
             pnlText.Visible = false;
             reading = false;
-<<<<<<< Updated upstream
-=======
-            System.Threading.Thread.Sleep(100); //zbyt powolne wciśnięcie spacji sprawiało że dialog jednocześnie kończył się i zaczynał od nowa, sleep ma temu przeciwdziałać
-        }
-
-        private void updateInv()
-        {
-            Item cur;
-            string path;
-            int amount;
-
-            for (int i=0;i< protagonist.Items.ListSize(); i++)
-            {
-                cur = protagonist.Items.ReturnItem(i);
-                path = "../Resources/Items/" + cur.name + ".jpg"; //nazwa itemu jest takze nazwa pliku
-                switch (i) //dodac jesli zwiekszy sie liczba dostepnych itemow w grze
-                {
-                    case 0: 
-                        item1.LoadAsync(@path);
-                        item1Lbl.Text = (cur.amount).ToString();
-                        break;
-                    case 1:
-                        item2.LoadAsync(@path);
-                        item2Lbl.Text = (cur.amount).ToString();
-                        break;
-                    case 2:
-                        item2.LoadAsync(@path);
-                        item2Lbl.Text = (cur.amount).ToString();
-                        break;
-                    case 3:
-                        item4.LoadAsync(@path);
-                        item4Lbl.Text = (cur.amount).ToString();
-                        break;
-                }
-            }
->>>>>>> Stashed changes
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -372,21 +328,6 @@ namespace Game
             Rotation();
 
             protagonist.MovePlayer();
-        }
-
-        private void freezablelvl2_2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void riverlvl2_4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void freezablelvl2_6_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void timer2_Tick(object sender, EventArgs e)

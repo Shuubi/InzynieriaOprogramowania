@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.PlayerSpells = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.statusLabel = new System.Windows.Forms.ToolStripStatusLabel();
@@ -151,17 +150,22 @@
             this.riverlvl2_2 = new System.Windows.Forms.PictureBox();
             this.freezablelvl2_1 = new System.Windows.Forms.PictureBox();
             this.riverlvl2_3 = new System.Windows.Forms.PictureBox();
+            this.riverlvl2_4 = new System.Windows.Forms.PictureBox();
             this.freezablelvl2_2 = new System.Windows.Forms.PictureBox();
             this.riverlvl2_5 = new System.Windows.Forms.PictureBox();
+            this.riverlvl2_6 = new System.Windows.Forms.PictureBox();
             this.riverlvl2_7 = new System.Windows.Forms.PictureBox();
+            this.riverlvl2_8 = new System.Windows.Forms.PictureBox();
             this.freezablelvl2_3 = new System.Windows.Forms.PictureBox();
             this.riverlvl2_9 = new System.Windows.Forms.PictureBox();
             this.riverlvl2_10 = new System.Windows.Forms.PictureBox();
             this.riverlvl2_11 = new System.Windows.Forms.PictureBox();
+            this.riverlvl2_12 = new System.Windows.Forms.PictureBox();
             this.riverlvl2_13 = new System.Windows.Forms.PictureBox();
             this.riverlvl2_14 = new System.Windows.Forms.PictureBox();
             this.riverlvl2_15 = new System.Windows.Forms.PictureBox();
             this.riverlvl2_16 = new System.Windows.Forms.PictureBox();
+            this.riverlvl2_17 = new System.Windows.Forms.PictureBox();
             this.freezablelvl2_4 = new System.Windows.Forms.PictureBox();
             this.freezablelvl2_5 = new System.Windows.Forms.PictureBox();
             this.freezablelvl2_6 = new System.Windows.Forms.PictureBox();
@@ -181,13 +185,8 @@
             this.coin = new System.Windows.Forms.PictureBox();
             this.rocklvl2 = new System.Windows.Forms.PictureBox();
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
 =======
             this.Map = new System.Windows.Forms.Panel();
-=======
-            this.Map = new System.Windows.Forms.Panel();
-            this.Cthulhu = new System.Windows.Forms.PictureBox();
->>>>>>> Stashed changes
             this.buttonlvl1 = new System.Windows.Forms.PictureBox();
             this.IceCrystal = new System.Windows.Forms.PictureBox();
             this.buttonlvl2 = new System.Windows.Forms.PictureBox();
@@ -235,23 +234,8 @@
             this.freezablelvl3_2 = new System.Windows.Forms.PictureBox();
             this.riverlvl3_2 = new System.Windows.Forms.PictureBox();
             this.freezablelvl3_1 = new System.Windows.Forms.PictureBox();
-<<<<<<< Updated upstream
             this.riverlvl3_1 = new System.Windows.Forms.PictureBox();
             this.Cthulhu = new System.Windows.Forms.PictureBox();
->>>>>>> Stashed changes
-=======
-            this.riverlvl3_1 = new System.Windows.Forms.PictureBox();
-            this.pnlInv = new System.Windows.Forms.Panel();
-            this.item4Lbl = new System.Windows.Forms.Label();
-            this.item3Lbl = new System.Windows.Forms.Label();
-            this.item2Lbl = new System.Windows.Forms.Label();
-            this.item1Lbl = new System.Windows.Forms.Label();
-            this.item4 = new System.Windows.Forms.PictureBox();
-            this.item3 = new System.Windows.Forms.PictureBox();
-            this.item2 = new System.Windows.Forms.PictureBox();
-            this.item1 = new System.Windows.Forms.PictureBox();
-            this.PlayerSpells = new System.Windows.Forms.PictureBox();
-
 >>>>>>> Stashed changes
             this.statusStrip1.SuspendLayout();
             this.pnlText.SuspendLayout();
@@ -370,17 +354,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.freezablelvl2_1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.freezablelvl2_2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.freezablelvl2_3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.freezablelvl2_4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.freezablelvl2_5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.freezablelvl2_6)).BeginInit();
@@ -400,13 +389,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.coin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rocklvl2)).BeginInit();
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
 =======
             this.Map.SuspendLayout();
-=======
-            this.Map.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Cthulhu)).BeginInit();
->>>>>>> Stashed changes
             ((System.ComponentModel.ISupportInitialize)(this.buttonlvl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IceCrystal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonlvl2)).BeginInit();
@@ -454,29 +438,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.freezablelvl3_2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl3_2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.freezablelvl3_1)).BeginInit();
-<<<<<<< Updated upstream
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl3_1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cthulhu)).BeginInit();
 >>>>>>> Stashed changes
-=======
-            ((System.ComponentModel.ISupportInitialize)(this.riverlvl3_1)).BeginInit();
-            this.pnlInv.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.item4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.item3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.item2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.item1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PlayerSpells)).BeginInit();
-
->>>>>>> Stashed changes
             this.SuspendLayout();
-            // 
-            // PlayerSpells
-            // 
-            this.PlayerSpells.Location = new System.Drawing.Point(745, 733);
-            this.PlayerSpells.Name = "PlayerSpells";
-            this.PlayerSpells.Size = new System.Drawing.Size(36, 36);
-            this.PlayerSpells.TabIndex = 102;
-            this.PlayerSpells.TabStop = false;
             // 
             // timer1
             // 
@@ -489,7 +454,6 @@
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.statusLabel});
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
             this.statusStrip1.Location = new System.Drawing.Point(0, 817);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
@@ -498,11 +462,6 @@
             this.statusStrip1.Location = new System.Drawing.Point(0, 845);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(1591, 22);
->>>>>>> Stashed changes
-=======
-            this.statusStrip1.Location = new System.Drawing.Point(0, 537);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1264, 22);
 >>>>>>> Stashed changes
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
@@ -527,7 +486,6 @@
             this.pnlText.Controls.Add(this.pnlDialog);
             this.pnlText.Dock = System.Windows.Forms.DockStyle.Bottom;
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
             this.pnlText.Location = new System.Drawing.Point(0, 839);
             this.pnlText.Margin = new System.Windows.Forms.Padding(4);
             this.pnlText.Name = "pnlText";
@@ -539,11 +497,6 @@
             this.pnlText.Location = new System.Drawing.Point(0, 867);
             this.pnlText.Name = "pnlText";
             this.pnlText.Size = new System.Drawing.Size(1591, 122);
-=======
-            this.pnlText.Location = new System.Drawing.Point(0, 559);
-            this.pnlText.Name = "pnlText";
-            this.pnlText.Size = new System.Drawing.Size(1264, 122);
->>>>>>> Stashed changes
             this.pnlText.TabIndex = 3;
             this.pnlText.Visible = false;
             // 
@@ -1504,11 +1457,7 @@
 =======
             this.rock3.BackColor = System.Drawing.Color.Gray;
             this.rock3.Location = new System.Drawing.Point(1020, 496);
-<<<<<<< Updated upstream
             this.rock3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-=======
-            this.rock3.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> Stashed changes
             this.rock3.Name = "rock3";
             this.rock3.Size = new System.Drawing.Size(45, 49);
             this.rock3.TabIndex = 43;
@@ -1537,11 +1486,7 @@
 =======
             this.rock4.BackColor = System.Drawing.Color.Gray;
             this.rock4.Location = new System.Drawing.Point(968, 496);
-<<<<<<< Updated upstream
             this.rock4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-=======
-            this.rock4.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> Stashed changes
             this.rock4.Name = "rock4";
             this.rock4.Size = new System.Drawing.Size(45, 49);
             this.rock4.TabIndex = 44;
@@ -1661,15 +1606,10 @@
             // walllvl2_4
             // 
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
             this.walllvl2_4.Location = new System.Drawing.Point(1960, 1080);
 =======
             this.walllvl2_4.Location = new System.Drawing.Point(1470, 878);
             this.walllvl2_4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
->>>>>>> Stashed changes
-=======
-            this.walllvl2_4.Location = new System.Drawing.Point(1470, 856);
-            this.walllvl2_4.Margin = new System.Windows.Forms.Padding(2);
 >>>>>>> Stashed changes
             this.walllvl2_4.Name = "walllvl2_4";
             this.walllvl2_4.Size = new System.Drawing.Size(160, 40);
@@ -1681,15 +1621,10 @@
             // 
             this.doorlvl2_2.BackColor = System.Drawing.Color.Maroon;
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
             this.doorlvl2_2.Location = new System.Drawing.Point(2120, 1080);
 =======
             this.doorlvl2_2.Location = new System.Drawing.Point(1590, 878);
             this.doorlvl2_2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
->>>>>>> Stashed changes
-=======
-            this.doorlvl2_2.Location = new System.Drawing.Point(1590, 856);
-            this.doorlvl2_2.Margin = new System.Windows.Forms.Padding(2);
 >>>>>>> Stashed changes
             this.doorlvl2_2.Name = "doorlvl2_2";
             this.doorlvl2_2.Size = new System.Drawing.Size(80, 40);
@@ -1700,15 +1635,10 @@
             // walllvl2_5
             // 
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
             this.walllvl2_5.Location = new System.Drawing.Point(2200, 1080);
 =======
             this.walllvl2_5.Location = new System.Drawing.Point(1650, 878);
             this.walllvl2_5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
->>>>>>> Stashed changes
-=======
-            this.walllvl2_5.Location = new System.Drawing.Point(1650, 856);
-            this.walllvl2_5.Margin = new System.Windows.Forms.Padding(2);
 >>>>>>> Stashed changes
             this.walllvl2_5.Name = "walllvl2_5";
             this.walllvl2_5.Size = new System.Drawing.Size(200, 40);
@@ -1902,16 +1832,11 @@
             this.riverlvl2_3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 >>>>>>> Stashed changes
             this.riverlvl2_3.Name = "riverlvl2_3";
-<<<<<<< Updated upstream
             this.riverlvl2_3.Size = new System.Drawing.Size(80, 120);
-=======
-            this.riverlvl2_3.Size = new System.Drawing.Size(142, 77);
->>>>>>> Stashed changes
             this.riverlvl2_3.TabIndex = 67;
             this.riverlvl2_3.TabStop = false;
             this.riverlvl2_3.Tag = "river";
             // 
-<<<<<<< Updated upstream
             // riverlvl2_4
             // 
             this.riverlvl2_4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -1936,33 +1861,20 @@
             this.freezablelvl2_2.Location = new System.Drawing.Point(1590, 796);
             this.freezablelvl2_2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 >>>>>>> Stashed changes
-=======
-            // freezablelvl2_2
-            // 
-            this.freezablelvl2_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.freezablelvl2_2.Location = new System.Drawing.Point(1590, 776);
-            this.freezablelvl2_2.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> Stashed changes
             this.freezablelvl2_2.Name = "freezablelvl2_2";
             this.freezablelvl2_2.Size = new System.Drawing.Size(40, 60);
             this.freezablelvl2_2.TabIndex = 69;
             this.freezablelvl2_2.TabStop = false;
             this.freezablelvl2_2.Tag = "freezable_object";
-            this.freezablelvl2_2.Click += new System.EventHandler(this.freezablelvl2_2_Click);
             // 
             // riverlvl2_5
             // 
             this.riverlvl2_5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
             this.riverlvl2_5.Location = new System.Drawing.Point(1960, 980);
 =======
             this.riverlvl2_5.Location = new System.Drawing.Point(1470, 796);
             this.riverlvl2_5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
->>>>>>> Stashed changes
-=======
-            this.riverlvl2_5.Location = new System.Drawing.Point(1470, 776);
-            this.riverlvl2_5.Margin = new System.Windows.Forms.Padding(2);
 >>>>>>> Stashed changes
             this.riverlvl2_5.Name = "riverlvl2_5";
             this.riverlvl2_5.Size = new System.Drawing.Size(160, 60);
@@ -1970,7 +1882,6 @@
             this.riverlvl2_5.TabStop = false;
             this.riverlvl2_5.Tag = "river";
             // 
-<<<<<<< Updated upstream
             // riverlvl2_6
             // 
             this.riverlvl2_6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -1997,20 +1908,10 @@
 >>>>>>> Stashed changes
             this.riverlvl2_7.Name = "riverlvl2_7";
             this.riverlvl2_7.Size = new System.Drawing.Size(40, 100);
-=======
-            // riverlvl2_7
-            // 
-            this.riverlvl2_7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.riverlvl2_7.Location = new System.Drawing.Point(1470, 886);
-            this.riverlvl2_7.Margin = new System.Windows.Forms.Padding(2);
-            this.riverlvl2_7.Name = "riverlvl2_7";
-            this.riverlvl2_7.Size = new System.Drawing.Size(30, 105);
->>>>>>> Stashed changes
             this.riverlvl2_7.TabIndex = 72;
             this.riverlvl2_7.TabStop = false;
             this.riverlvl2_7.Tag = "river";
             // 
-<<<<<<< Updated upstream
             // riverlvl2_8
             // 
             this.riverlvl2_8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -2037,15 +1938,6 @@
 >>>>>>> Stashed changes
             this.freezablelvl2_3.Name = "freezablelvl2_3";
             this.freezablelvl2_3.Size = new System.Drawing.Size(40, 20);
-=======
-            // freezablelvl2_3
-            // 
-            this.freezablelvl2_3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.freezablelvl2_3.Location = new System.Drawing.Point(1650, 951);
-            this.freezablelvl2_3.Margin = new System.Windows.Forms.Padding(2);
-            this.freezablelvl2_3.Name = "freezablelvl2_3";
-            this.freezablelvl2_3.Size = new System.Drawing.Size(56, 16);
->>>>>>> Stashed changes
             this.freezablelvl2_3.TabIndex = 74;
             this.freezablelvl2_3.TabStop = false;
             this.freezablelvl2_3.Tag = "freezable_object";
@@ -2054,15 +1946,10 @@
             // 
             this.riverlvl2_9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
             this.riverlvl2_9.Location = new System.Drawing.Point(2000, 1160);
 =======
             this.riverlvl2_9.Location = new System.Drawing.Point(1500, 942);
             this.riverlvl2_9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
->>>>>>> Stashed changes
-=======
-            this.riverlvl2_9.Location = new System.Drawing.Point(1500, 951);
-            this.riverlvl2_9.Margin = new System.Windows.Forms.Padding(2);
 >>>>>>> Stashed changes
             this.riverlvl2_9.Name = "riverlvl2_9";
             this.riverlvl2_9.Size = new System.Drawing.Size(200, 20);
@@ -2074,7 +1961,6 @@
             // 
             this.riverlvl2_10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
             this.riverlvl2_10.Location = new System.Drawing.Point(2000, 1180);
 =======
             this.riverlvl2_10.Location = new System.Drawing.Point(1500, 959);
@@ -2082,12 +1968,6 @@
 >>>>>>> Stashed changes
             this.riverlvl2_10.Name = "riverlvl2_10";
             this.riverlvl2_10.Size = new System.Drawing.Size(160, 40);
-=======
-            this.riverlvl2_10.Location = new System.Drawing.Point(1500, 951);
-            this.riverlvl2_10.Margin = new System.Windows.Forms.Padding(2);
-            this.riverlvl2_10.Name = "riverlvl2_10";
-            this.riverlvl2_10.Size = new System.Drawing.Size(120, 40);
->>>>>>> Stashed changes
             this.riverlvl2_10.TabIndex = 76;
             this.riverlvl2_10.TabStop = false;
             this.riverlvl2_10.Tag = "river";
@@ -2096,7 +1976,6 @@
             // 
             this.riverlvl2_11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
             this.riverlvl2_11.Location = new System.Drawing.Point(2020, 1260);
 =======
             this.riverlvl2_11.Location = new System.Drawing.Point(1515, 1024);
@@ -2104,17 +1983,10 @@
 >>>>>>> Stashed changes
             this.riverlvl2_11.Name = "riverlvl2_11";
             this.riverlvl2_11.Size = new System.Drawing.Size(200, 40);
-=======
-            this.riverlvl2_11.Location = new System.Drawing.Point(1530, 1024);
-            this.riverlvl2_11.Margin = new System.Windows.Forms.Padding(2);
-            this.riverlvl2_11.Name = "riverlvl2_11";
-            this.riverlvl2_11.Size = new System.Drawing.Size(140, 46);
->>>>>>> Stashed changes
             this.riverlvl2_11.TabIndex = 77;
             this.riverlvl2_11.TabStop = false;
             this.riverlvl2_11.Tag = "river";
             // 
-<<<<<<< Updated upstream
             // riverlvl2_12
             // 
             this.riverlvl2_12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -2141,15 +2013,6 @@
 >>>>>>> Stashed changes
             this.riverlvl2_13.Name = "riverlvl2_13";
             this.riverlvl2_13.Size = new System.Drawing.Size(40, 40);
-=======
-            // riverlvl2_13
-            // 
-            this.riverlvl2_13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.riverlvl2_13.Location = new System.Drawing.Point(1530, 1055);
-            this.riverlvl2_13.Margin = new System.Windows.Forms.Padding(2);
-            this.riverlvl2_13.Name = "riverlvl2_13";
-            this.riverlvl2_13.Size = new System.Drawing.Size(30, 49);
->>>>>>> Stashed changes
             this.riverlvl2_13.TabIndex = 79;
             this.riverlvl2_13.TabStop = false;
             this.riverlvl2_13.Tag = "river";
@@ -2158,7 +2021,6 @@
             // 
             this.riverlvl2_14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
             this.riverlvl2_14.Location = new System.Drawing.Point(2240, 1160);
 =======
             this.riverlvl2_14.Location = new System.Drawing.Point(1680, 942);
@@ -2166,12 +2028,6 @@
 >>>>>>> Stashed changes
             this.riverlvl2_14.Name = "riverlvl2_14";
             this.riverlvl2_14.Size = new System.Drawing.Size(80, 20);
-=======
-            this.riverlvl2_14.Location = new System.Drawing.Point(1699, 951);
-            this.riverlvl2_14.Margin = new System.Windows.Forms.Padding(2);
-            this.riverlvl2_14.Name = "riverlvl2_14";
-            this.riverlvl2_14.Size = new System.Drawing.Size(39, 16);
->>>>>>> Stashed changes
             this.riverlvl2_14.TabIndex = 80;
             this.riverlvl2_14.TabStop = false;
             this.riverlvl2_14.Tag = "river";
@@ -2180,7 +2036,6 @@
             // 
             this.riverlvl2_15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
             this.riverlvl2_15.Location = new System.Drawing.Point(2320, 1120);
 =======
             this.riverlvl2_15.Location = new System.Drawing.Point(1740, 910);
@@ -2188,12 +2043,6 @@
 >>>>>>> Stashed changes
             this.riverlvl2_15.Name = "riverlvl2_15";
             this.riverlvl2_15.Size = new System.Drawing.Size(100, 240);
-=======
-            this.riverlvl2_15.Location = new System.Drawing.Point(1736, 886);
-            this.riverlvl2_15.Margin = new System.Windows.Forms.Padding(2);
-            this.riverlvl2_15.Name = "riverlvl2_15";
-            this.riverlvl2_15.Size = new System.Drawing.Size(26, 184);
->>>>>>> Stashed changes
             this.riverlvl2_15.TabIndex = 81;
             this.riverlvl2_15.TabStop = false;
             this.riverlvl2_15.Tag = "river";
@@ -2202,7 +2051,6 @@
             // 
             this.riverlvl2_16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
             this.riverlvl2_16.Location = new System.Drawing.Point(2280, 1180);
 =======
             this.riverlvl2_16.Location = new System.Drawing.Point(1710, 959);
@@ -2210,17 +2058,10 @@
 >>>>>>> Stashed changes
             this.riverlvl2_16.Name = "riverlvl2_16";
             this.riverlvl2_16.Size = new System.Drawing.Size(40, 180);
-=======
-            this.riverlvl2_16.Location = new System.Drawing.Point(1710, 951);
-            this.riverlvl2_16.Margin = new System.Windows.Forms.Padding(2);
-            this.riverlvl2_16.Name = "riverlvl2_16";
-            this.riverlvl2_16.Size = new System.Drawing.Size(30, 119);
->>>>>>> Stashed changes
             this.riverlvl2_16.TabIndex = 82;
             this.riverlvl2_16.TabStop = false;
             this.riverlvl2_16.Tag = "river";
             // 
-<<<<<<< Updated upstream
             // riverlvl2_17
             // 
             this.riverlvl2_17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -2236,8 +2077,6 @@
             this.riverlvl2_17.TabStop = false;
             this.riverlvl2_17.Tag = "river";
             // 
-=======
->>>>>>> Stashed changes
             // freezablelvl2_4
             // 
             this.freezablelvl2_4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -2248,11 +2087,7 @@
             this.freezablelvl2_4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 >>>>>>> Stashed changes
             this.freezablelvl2_4.Name = "freezablelvl2_4";
-<<<<<<< Updated upstream
             this.freezablelvl2_4.Size = new System.Drawing.Size(40, 40);
-=======
-            this.freezablelvl2_4.Size = new System.Drawing.Size(0, 0);
->>>>>>> Stashed changes
             this.freezablelvl2_4.TabIndex = 84;
             this.freezablelvl2_4.TabStop = false;
             this.freezablelvl2_4.Tag = "freezable_object";
@@ -2276,7 +2111,6 @@
             // 
             this.freezablelvl2_6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
             this.freezablelvl2_6.Location = new System.Drawing.Point(2220, 1260);
 =======
             this.freezablelvl2_6.Location = new System.Drawing.Point(1665, 1024);
@@ -2284,16 +2118,9 @@
 >>>>>>> Stashed changes
             this.freezablelvl2_6.Name = "freezablelvl2_6";
             this.freezablelvl2_6.Size = new System.Drawing.Size(40, 60);
-=======
-            this.freezablelvl2_6.Location = new System.Drawing.Point(1670, 1022);
-            this.freezablelvl2_6.Margin = new System.Windows.Forms.Padding(2);
-            this.freezablelvl2_6.Name = "freezablelvl2_6";
-            this.freezablelvl2_6.Size = new System.Drawing.Size(41, 48);
->>>>>>> Stashed changes
             this.freezablelvl2_6.TabIndex = 86;
             this.freezablelvl2_6.TabStop = false;
             this.freezablelvl2_6.Tag = "freezable_object";
-            this.freezablelvl2_6.Click += new System.EventHandler(this.freezablelvl2_6_Click);
             // 
             // riverlvl2_18
             // 
@@ -2506,17 +2333,12 @@
             // 
             this.stick2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
             this.stick2.Location = new System.Drawing.Point(1980, 940);
             this.stick2.Name = "stick2";
             this.stick2.Size = new System.Drawing.Size(40, 20);
 =======
             this.stick2.Location = new System.Drawing.Point(1485, 764);
             this.stick2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-=======
-            this.stick2.Location = new System.Drawing.Point(1560, 686);
-            this.stick2.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> Stashed changes
             this.stick2.Name = "stick2";
             this.stick2.Size = new System.Drawing.Size(30, 16);
 >>>>>>> Stashed changes
@@ -2545,17 +2367,12 @@
             // 
             this.rocklvl2.BackColor = System.Drawing.Color.Gray;
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
             this.rocklvl2.Location = new System.Drawing.Point(2280, 1130);
             this.rocklvl2.Name = "rocklvl2";
             this.rocklvl2.Size = new System.Drawing.Size(30, 30);
 =======
             this.rocklvl2.Location = new System.Drawing.Point(1710, 918);
             this.rocklvl2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-=======
-            this.rocklvl2.Location = new System.Drawing.Point(1699, 894);
-            this.rocklvl2.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> Stashed changes
             this.rocklvl2.Name = "rocklvl2";
             this.rocklvl2.Size = new System.Drawing.Size(22, 24);
 >>>>>>> Stashed changes
@@ -2568,13 +2385,7 @@
             // Map
             // 
             this.Map.BackColor = System.Drawing.Color.Black;
-            this.Map.Controls.Add(this.walllvl2_5);
-            this.Map.Controls.Add(this.walllvl2_4);
             this.Map.Controls.Add(this.Player);
-<<<<<<< Updated upstream
-=======
-            this.Map.Controls.Add(this.PlayerSpells);
->>>>>>> Stashed changes
             this.Map.Controls.Add(this.Cthulhu);
             this.Map.Controls.Add(this.rock2);
             this.Map.Controls.Add(this.buttonlvl1);
@@ -2624,11 +2435,7 @@
             this.Map.Controls.Add(this.freezablelvl3_2);
             this.Map.Controls.Add(this.riverlvl3_2);
             this.Map.Controls.Add(this.freezablelvl3_1);
-<<<<<<< Updated upstream
             this.Map.Controls.Add(this.riverlvl3_1);
-=======
-            this.Map.Controls.Add(this.riverlvl3_1);
->>>>>>> Stashed changes
             this.Map.Controls.Add(this.rocklvl2);
             this.Map.Controls.Add(this.coin);
             this.Map.Controls.Add(this.stick2);
@@ -2647,17 +2454,22 @@
             this.Map.Controls.Add(this.freezablelvl2_6);
             this.Map.Controls.Add(this.freezablelvl2_5);
             this.Map.Controls.Add(this.freezablelvl2_4);
+            this.Map.Controls.Add(this.riverlvl2_17);
             this.Map.Controls.Add(this.riverlvl2_16);
             this.Map.Controls.Add(this.riverlvl2_15);
             this.Map.Controls.Add(this.riverlvl2_14);
             this.Map.Controls.Add(this.riverlvl2_13);
+            this.Map.Controls.Add(this.riverlvl2_12);
             this.Map.Controls.Add(this.riverlvl2_11);
             this.Map.Controls.Add(this.riverlvl2_10);
             this.Map.Controls.Add(this.riverlvl2_9);
             this.Map.Controls.Add(this.freezablelvl2_3);
+            this.Map.Controls.Add(this.riverlvl2_8);
             this.Map.Controls.Add(this.riverlvl2_7);
+            this.Map.Controls.Add(this.riverlvl2_6);
             this.Map.Controls.Add(this.riverlvl2_5);
             this.Map.Controls.Add(this.freezablelvl2_2);
+            this.Map.Controls.Add(this.riverlvl2_4);
             this.Map.Controls.Add(this.riverlvl2_3);
             this.Map.Controls.Add(this.freezablelvl2_1);
             this.Map.Controls.Add(this.riverlvl2_2);
@@ -2671,7 +2483,9 @@
             this.Map.Controls.Add(this.walllvl2_7);
             this.Map.Controls.Add(this.doorlvl2_3);
             this.Map.Controls.Add(this.walllvl2_6);
+            this.Map.Controls.Add(this.walllvl2_5);
             this.Map.Controls.Add(this.doorlvl2_2);
+            this.Map.Controls.Add(this.walllvl2_4);
             this.Map.Controls.Add(this.walllvl2_3);
             this.Map.Controls.Add(this.doorlvl2_1);
             this.Map.Controls.Add(this.walllvl2_2);
@@ -2725,29 +2539,12 @@
             this.Map.Name = "Map";
             this.Map.Size = new System.Drawing.Size(1778, 1926);
             this.Map.TabIndex = 4;
-<<<<<<< Updated upstream
-=======
-            // 
-            // Cthulhu
-            // 
-            this.Cthulhu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.Cthulhu.Location = new System.Drawing.Point(1221, 856);
-            this.Cthulhu.Name = "Cthulhu";
-            this.Cthulhu.Size = new System.Drawing.Size(200, 200);
-            this.Cthulhu.TabIndex = 150;
-            this.Cthulhu.TabStop = false;
-            this.Cthulhu.Tag = "NPC";
->>>>>>> Stashed changes
             // 
             // buttonlvl1
             // 
             this.buttonlvl1.BackColor = System.Drawing.Color.Magenta;
             this.buttonlvl1.Location = new System.Drawing.Point(630, 455);
-<<<<<<< Updated upstream
             this.buttonlvl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-=======
-            this.buttonlvl1.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> Stashed changes
             this.buttonlvl1.Name = "buttonlvl1";
             this.buttonlvl1.Size = new System.Drawing.Size(30, 16);
             this.buttonlvl1.TabIndex = 145;
@@ -2757,11 +2554,7 @@
             // 
             this.IceCrystal.BackColor = System.Drawing.Color.Cyan;
             this.IceCrystal.Location = new System.Drawing.Point(1290, 1202);
-<<<<<<< Updated upstream
             this.IceCrystal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-=======
-            this.IceCrystal.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> Stashed changes
             this.IceCrystal.Name = "IceCrystal";
             this.IceCrystal.Size = new System.Drawing.Size(15, 16);
             this.IceCrystal.TabIndex = 149;
@@ -2772,11 +2565,7 @@
             // 
             this.buttonlvl2.BackColor = System.Drawing.Color.Magenta;
             this.buttonlvl2.Location = new System.Drawing.Point(1485, 1072);
-<<<<<<< Updated upstream
             this.buttonlvl2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-=======
-            this.buttonlvl2.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> Stashed changes
             this.buttonlvl2.Name = "buttonlvl2";
             this.buttonlvl2.Size = new System.Drawing.Size(30, 16);
             this.buttonlvl2.TabIndex = 148;
@@ -2786,11 +2575,7 @@
             // walllvl1_11
             // 
             this.walllvl1_11.Location = new System.Drawing.Point(968, 548);
-<<<<<<< Updated upstream
             this.walllvl1_11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-=======
-            this.walllvl1_11.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> Stashed changes
             this.walllvl1_11.Name = "walllvl1_11";
             this.walllvl1_11.Size = new System.Drawing.Size(98, 93);
             this.walllvl1_11.TabIndex = 147;
@@ -2800,11 +2585,7 @@
             // walllvl1_10
             // 
             this.walllvl1_10.Location = new System.Drawing.Point(968, 415);
-<<<<<<< Updated upstream
             this.walllvl1_10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-=======
-            this.walllvl1_10.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> Stashed changes
             this.walllvl1_10.Name = "walllvl1_10";
             this.walllvl1_10.Size = new System.Drawing.Size(98, 76);
             this.walllvl1_10.TabIndex = 146;
@@ -2815,11 +2596,7 @@
             // 
             this.EarthCrystal.BackColor = System.Drawing.Color.LawnGreen;
             this.EarthCrystal.Location = new System.Drawing.Point(690, 49);
-<<<<<<< Updated upstream
             this.EarthCrystal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-=======
-            this.EarthCrystal.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> Stashed changes
             this.EarthCrystal.Name = "EarthCrystal";
             this.EarthCrystal.Size = new System.Drawing.Size(15, 16);
             this.EarthCrystal.TabIndex = 144;
@@ -2830,11 +2607,7 @@
             // 
             this.FireCrystal.BackColor = System.Drawing.Color.Red;
             this.FireCrystal.Location = new System.Drawing.Point(480, 1186);
-<<<<<<< Updated upstream
             this.FireCrystal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-=======
-            this.FireCrystal.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> Stashed changes
             this.FireCrystal.Name = "FireCrystal";
             this.FireCrystal.Size = new System.Drawing.Size(15, 16);
             this.FireCrystal.TabIndex = 143;
@@ -2845,11 +2618,7 @@
             // 
             this.buttonlvl3.BackColor = System.Drawing.Color.Magenta;
             this.buttonlvl3.Location = new System.Drawing.Point(135, 878);
-<<<<<<< Updated upstream
             this.buttonlvl3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-=======
-            this.buttonlvl3.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> Stashed changes
             this.buttonlvl3.Name = "buttonlvl3";
             this.buttonlvl3.Size = new System.Drawing.Size(30, 16);
             this.buttonlvl3.TabIndex = 142;
@@ -2860,11 +2629,7 @@
             // 
             this.craft_area.BackColor = System.Drawing.Color.Gainsboro;
             this.craft_area.Location = new System.Drawing.Point(165, 1154);
-<<<<<<< Updated upstream
             this.craft_area.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-=======
-            this.craft_area.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> Stashed changes
             this.craft_area.Name = "craft_area";
             this.craft_area.Size = new System.Drawing.Size(60, 65);
             this.craft_area.TabIndex = 141;
@@ -2875,11 +2640,7 @@
             // 
             this.rocklvl3_4.BackColor = System.Drawing.Color.DimGray;
             this.rocklvl3_4.Location = new System.Drawing.Point(135, 1056);
-<<<<<<< Updated upstream
             this.rocklvl3_4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-=======
-            this.rocklvl3_4.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> Stashed changes
             this.rocklvl3_4.Name = "rocklvl3_4";
             this.rocklvl3_4.Size = new System.Drawing.Size(30, 32);
             this.rocklvl3_4.TabIndex = 140;
@@ -2890,11 +2651,7 @@
             // 
             this.loglvl3_2.BackColor = System.Drawing.Color.Peru;
             this.loglvl3_2.Location = new System.Drawing.Point(120, 1024);
-<<<<<<< Updated upstream
             this.loglvl3_2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-=======
-            this.loglvl3_2.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> Stashed changes
             this.loglvl3_2.Name = "loglvl3_2";
             this.loglvl3_2.Size = new System.Drawing.Size(150, 32);
             this.loglvl3_2.TabIndex = 139;
@@ -2905,11 +2662,7 @@
             // 
             this.riverlvl3_7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.riverlvl3_7.Location = new System.Drawing.Point(285, 1008);
-<<<<<<< Updated upstream
             this.riverlvl3_7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-=======
-            this.riverlvl3_7.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> Stashed changes
             this.riverlvl3_7.Name = "riverlvl3_7";
             this.riverlvl3_7.Size = new System.Drawing.Size(60, 81);
             this.riverlvl3_7.TabIndex = 138;
@@ -2920,11 +2673,7 @@
             // 
             this.freezablelvl3_5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.freezablelvl3_5.Location = new System.Drawing.Point(285, 942);
-<<<<<<< Updated upstream
             this.freezablelvl3_5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-=======
-            this.freezablelvl3_5.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> Stashed changes
             this.freezablelvl3_5.Name = "freezablelvl3_5";
             this.freezablelvl3_5.Size = new System.Drawing.Size(60, 65);
             this.freezablelvl3_5.TabIndex = 137;
@@ -2935,11 +2684,7 @@
             // 
             this.riverlvl3_6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.riverlvl3_6.Location = new System.Drawing.Point(285, 861);
-<<<<<<< Updated upstream
             this.riverlvl3_6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-=======
-            this.riverlvl3_6.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> Stashed changes
             this.riverlvl3_6.Name = "riverlvl3_6";
             this.riverlvl3_6.Size = new System.Drawing.Size(60, 81);
             this.riverlvl3_6.TabIndex = 136;
@@ -2949,11 +2694,7 @@
             // walllvl3_11
             // 
             this.walllvl3_11.Location = new System.Drawing.Point(375, 1219);
-<<<<<<< Updated upstream
             this.walllvl3_11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-=======
-            this.walllvl3_11.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> Stashed changes
             this.walllvl3_11.Name = "walllvl3_11";
             this.walllvl3_11.Size = new System.Drawing.Size(30, 49);
             this.walllvl3_11.TabIndex = 135;
@@ -2964,11 +2705,7 @@
             // 
             this.doorlvl3_7.BackColor = System.Drawing.Color.Maroon;
             this.doorlvl3_7.Location = new System.Drawing.Point(375, 1154);
-<<<<<<< Updated upstream
             this.doorlvl3_7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-=======
-            this.doorlvl3_7.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> Stashed changes
             this.doorlvl3_7.Name = "doorlvl3_7";
             this.doorlvl3_7.Size = new System.Drawing.Size(30, 65);
             this.doorlvl3_7.TabIndex = 134;
@@ -2979,11 +2716,7 @@
             // 
             this.doorlvl3_6.BackColor = System.Drawing.Color.Maroon;
             this.doorlvl3_6.Location = new System.Drawing.Point(15, 1089);
-<<<<<<< Updated upstream
             this.doorlvl3_6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-=======
-            this.doorlvl3_6.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> Stashed changes
             this.doorlvl3_6.Name = "doorlvl3_6";
             this.doorlvl3_6.Size = new System.Drawing.Size(60, 32);
             this.doorlvl3_6.TabIndex = 133;
@@ -2994,11 +2727,7 @@
             // 
             this.doorlvl3_5.BackColor = System.Drawing.Color.Maroon;
             this.doorlvl3_5.Location = new System.Drawing.Point(375, 942);
-<<<<<<< Updated upstream
             this.doorlvl3_5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-=======
-            this.doorlvl3_5.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> Stashed changes
             this.doorlvl3_5.Name = "doorlvl3_5";
             this.doorlvl3_5.Size = new System.Drawing.Size(30, 67);
             this.doorlvl3_5.TabIndex = 132;
@@ -3008,11 +2737,7 @@
             // walllvl3_10
             // 
             this.walllvl3_10.Location = new System.Drawing.Point(75, 1089);
-<<<<<<< Updated upstream
             this.walllvl3_10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-=======
-            this.walllvl3_10.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> Stashed changes
             this.walllvl3_10.Name = "walllvl3_10";
             this.walllvl3_10.Size = new System.Drawing.Size(525, 32);
             this.walllvl3_10.TabIndex = 131;
@@ -3022,11 +2747,7 @@
             // walllvl3_9
             // 
             this.walllvl3_9.Location = new System.Drawing.Point(375, 1008);
-<<<<<<< Updated upstream
             this.walllvl3_9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-=======
-            this.walllvl3_9.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> Stashed changes
             this.walllvl3_9.Name = "walllvl3_9";
             this.walllvl3_9.Size = new System.Drawing.Size(30, 146);
             this.walllvl3_9.TabIndex = 130;
@@ -3037,11 +2758,7 @@
             // 
             this.loglvl3_1.BackColor = System.Drawing.Color.Peru;
             this.loglvl3_1.Location = new System.Drawing.Point(405, 894);
-<<<<<<< Updated upstream
             this.loglvl3_1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-=======
-            this.loglvl3_1.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> Stashed changes
             this.loglvl3_1.Name = "loglvl3_1";
             this.loglvl3_1.Size = new System.Drawing.Size(30, 162);
             this.loglvl3_1.TabIndex = 129;
@@ -3051,11 +2768,7 @@
             // walllvl3_8
             // 
             this.walllvl3_8.Location = new System.Drawing.Point(75, 829);
-<<<<<<< Updated upstream
             this.walllvl3_8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-=======
-            this.walllvl3_8.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> Stashed changes
             this.walllvl3_8.Name = "walllvl3_8";
             this.walllvl3_8.Size = new System.Drawing.Size(30, 292);
             this.walllvl3_8.TabIndex = 128;
@@ -3066,11 +2779,7 @@
             // 
             this.rocklvl3_3.BackColor = System.Drawing.Color.DimGray;
             this.rocklvl3_3.Location = new System.Drawing.Point(465, 861);
-<<<<<<< Updated upstream
             this.rocklvl3_3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-=======
-            this.rocklvl3_3.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> Stashed changes
             this.rocklvl3_3.Name = "rocklvl3_3";
             this.rocklvl3_3.Size = new System.Drawing.Size(60, 32);
             this.rocklvl3_3.TabIndex = 127;
@@ -3080,11 +2789,7 @@
             // walllvl3_7
             // 
             this.walllvl3_7.Location = new System.Drawing.Point(525, 829);
-<<<<<<< Updated upstream
             this.walllvl3_7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-=======
-            this.walllvl3_7.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> Stashed changes
             this.walllvl3_7.Name = "walllvl3_7";
             this.walllvl3_7.Size = new System.Drawing.Size(60, 32);
             this.walllvl3_7.TabIndex = 126;
@@ -3095,11 +2800,7 @@
             // 
             this.door3.BackColor = System.Drawing.Color.Maroon;
             this.door3.Location = new System.Drawing.Point(578, 942);
-<<<<<<< Updated upstream
             this.door3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-=======
-            this.door3.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> Stashed changes
             this.door3.Name = "door3";
             this.door3.Size = new System.Drawing.Size(30, 65);
             this.door3.TabIndex = 125;
@@ -3109,11 +2810,7 @@
             // wall18
             // 
             this.wall18.Location = new System.Drawing.Point(578, 650);
-<<<<<<< Updated upstream
             this.wall18.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-=======
-            this.wall18.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> Stashed changes
             this.wall18.Name = "wall18";
             this.wall18.Size = new System.Drawing.Size(30, 292);
             this.wall18.TabIndex = 124;
@@ -3123,11 +2820,7 @@
             // wall19
             // 
             this.wall19.Location = new System.Drawing.Point(578, 1008);
-<<<<<<< Updated upstream
             this.wall19.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-=======
-            this.wall19.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> Stashed changes
             this.wall19.Name = "wall19";
             this.wall19.Size = new System.Drawing.Size(30, 276);
             this.wall19.TabIndex = 123;
@@ -3138,11 +2831,7 @@
             // 
             this.doorlvl3_4.BackColor = System.Drawing.Color.Maroon;
             this.doorlvl3_4.Location = new System.Drawing.Point(465, 829);
-<<<<<<< Updated upstream
             this.doorlvl3_4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-=======
-            this.doorlvl3_4.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> Stashed changes
             this.doorlvl3_4.Name = "doorlvl3_4";
             this.doorlvl3_4.Size = new System.Drawing.Size(60, 32);
             this.doorlvl3_4.TabIndex = 122;
@@ -3152,11 +2841,7 @@
             // walllvl3_6
             // 
             this.walllvl3_6.Location = new System.Drawing.Point(255, 829);
-<<<<<<< Updated upstream
             this.walllvl3_6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-=======
-            this.walllvl3_6.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> Stashed changes
             this.walllvl3_6.Name = "walllvl3_6";
             this.walllvl3_6.Size = new System.Drawing.Size(210, 32);
             this.walllvl3_6.TabIndex = 121;
@@ -3167,11 +2852,7 @@
             // 
             this.doorlvl3_2.BackColor = System.Drawing.Color.Maroon;
             this.doorlvl3_2.Location = new System.Drawing.Point(195, 829);
-<<<<<<< Updated upstream
             this.doorlvl3_2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-=======
-            this.doorlvl3_2.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> Stashed changes
             this.doorlvl3_2.Name = "doorlvl3_2";
             this.doorlvl3_2.Size = new System.Drawing.Size(60, 32);
             this.doorlvl3_2.TabIndex = 120;
@@ -3181,11 +2862,7 @@
             // walllvl3_4
             // 
             this.walllvl3_4.Location = new System.Drawing.Point(75, 829);
-<<<<<<< Updated upstream
             this.walllvl3_4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-=======
-            this.walllvl3_4.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> Stashed changes
             this.walllvl3_4.Name = "walllvl3_4";
             this.walllvl3_4.Size = new System.Drawing.Size(120, 32);
             this.walllvl3_4.TabIndex = 119;
@@ -3195,17 +2872,10 @@
             // rocklvl3_2
             // 
             this.rocklvl3_2.BackColor = System.Drawing.Color.DimGray;
-<<<<<<< Updated upstream
             this.rocklvl3_2.Location = new System.Drawing.Point(255, 796);
             this.rocklvl3_2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rocklvl3_2.Name = "rocklvl3_2";
             this.rocklvl3_2.Size = new System.Drawing.Size(30, 32);
-=======
-            this.rocklvl3_2.Location = new System.Drawing.Point(255, 805);
-            this.rocklvl3_2.Margin = new System.Windows.Forms.Padding(2);
-            this.rocklvl3_2.Name = "rocklvl3_2";
-            this.rocklvl3_2.Size = new System.Drawing.Size(20, 20);
->>>>>>> Stashed changes
             this.rocklvl3_2.TabIndex = 118;
             this.rocklvl3_2.TabStop = false;
             this.rocklvl3_2.Tag = "movable_object";
@@ -3214,11 +2884,7 @@
             // 
             this.riverlvl3_5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.riverlvl3_5.Location = new System.Drawing.Point(345, 764);
-<<<<<<< Updated upstream
             this.riverlvl3_5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-=======
-            this.riverlvl3_5.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> Stashed changes
             this.riverlvl3_5.Name = "riverlvl3_5";
             this.riverlvl3_5.Size = new System.Drawing.Size(30, 32);
             this.riverlvl3_5.TabIndex = 117;
@@ -3229,11 +2895,7 @@
             // 
             this.freezablelvl3_3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.freezablelvl3_3.Location = new System.Drawing.Point(300, 764);
-<<<<<<< Updated upstream
             this.freezablelvl3_3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-=======
-            this.freezablelvl3_3.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> Stashed changes
             this.freezablelvl3_3.Name = "freezablelvl3_3";
             this.freezablelvl3_3.Size = new System.Drawing.Size(45, 32);
             this.freezablelvl3_3.TabIndex = 116;
@@ -3244,34 +2906,19 @@
             // 
             this.riverlvl3_4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.riverlvl3_4.Location = new System.Drawing.Point(195, 764);
-<<<<<<< Updated upstream
             this.riverlvl3_4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-=======
-            this.riverlvl3_4.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> Stashed changes
             this.riverlvl3_4.Name = "riverlvl3_4";
             this.riverlvl3_4.Size = new System.Drawing.Size(105, 32);
             this.riverlvl3_4.TabIndex = 115;
             this.riverlvl3_4.TabStop = false;
-<<<<<<< Updated upstream
-=======
-            this.riverlvl3_4.Tag = "river";
->>>>>>> Stashed changes
             // 
             // rocklvl3_1
             // 
             this.rocklvl3_1.BackColor = System.Drawing.Color.DimGray;
-<<<<<<< Updated upstream
             this.rocklvl3_1.Location = new System.Drawing.Point(270, 731);
             this.rocklvl3_1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rocklvl3_1.Name = "rocklvl3_1";
             this.rocklvl3_1.Size = new System.Drawing.Size(30, 32);
-=======
-            this.rocklvl3_1.Location = new System.Drawing.Point(270, 736);
-            this.rocklvl3_1.Margin = new System.Windows.Forms.Padding(2);
-            this.rocklvl3_1.Name = "rocklvl3_1";
-            this.rocklvl3_1.Size = new System.Drawing.Size(20, 20);
->>>>>>> Stashed changes
             this.rocklvl3_1.TabIndex = 114;
             this.rocklvl3_1.TabStop = false;
             this.rocklvl3_1.Tag = "movable_object";
@@ -3280,11 +2927,7 @@
             // 
             this.doorlvl3_1.BackColor = System.Drawing.Color.Maroon;
             this.doorlvl3_1.Location = new System.Drawing.Point(15, 829);
-<<<<<<< Updated upstream
             this.doorlvl3_1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-=======
-            this.doorlvl3_1.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> Stashed changes
             this.doorlvl3_1.Name = "doorlvl3_1";
             this.doorlvl3_1.Size = new System.Drawing.Size(60, 32);
             this.doorlvl3_1.TabIndex = 113;
@@ -3294,11 +2937,7 @@
             // walllvl3_3
             // 
             this.walllvl3_3.Location = new System.Drawing.Point(75, 829);
-<<<<<<< Updated upstream
             this.walllvl3_3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-=======
-            this.walllvl3_3.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> Stashed changes
             this.walllvl3_3.Name = "walllvl3_3";
             this.walllvl3_3.Size = new System.Drawing.Size(120, 32);
             this.walllvl3_3.TabIndex = 112;
@@ -3309,11 +2948,7 @@
             // 
             this.chest2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.chest2.Location = new System.Drawing.Point(120, 780);
-<<<<<<< Updated upstream
             this.chest2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-=======
-            this.chest2.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> Stashed changes
             this.chest2.Name = "chest2";
             this.chest2.Size = new System.Drawing.Size(30, 32);
             this.chest2.TabIndex = 111;
@@ -3324,11 +2959,7 @@
             // 
             this.Sugar.BackColor = System.Drawing.Color.White;
             this.Sugar.Location = new System.Drawing.Point(128, 788);
-<<<<<<< Updated upstream
             this.Sugar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-=======
-            this.Sugar.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> Stashed changes
             this.Sugar.Name = "Sugar";
             this.Sugar.Size = new System.Drawing.Size(15, 16);
             this.Sugar.TabIndex = 110;
@@ -3338,11 +2969,7 @@
             // walllvl3_2
             // 
             this.walllvl3_2.Location = new System.Drawing.Point(165, 731);
-<<<<<<< Updated upstream
             this.walllvl3_2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-=======
-            this.walllvl3_2.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> Stashed changes
             this.walllvl3_2.Name = "walllvl3_2";
             this.walllvl3_2.Size = new System.Drawing.Size(30, 130);
             this.walllvl3_2.TabIndex = 109;
@@ -3353,11 +2980,7 @@
             // 
             this.Dragon.BackColor = System.Drawing.Color.Green;
             this.Dragon.Location = new System.Drawing.Point(431, 699);
-<<<<<<< Updated upstream
             this.Dragon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-=======
-            this.Dragon.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> Stashed changes
             this.Dragon.Name = "Dragon";
             this.Dragon.Size = new System.Drawing.Size(120, 98);
             this.Dragon.TabIndex = 108;
@@ -3367,11 +2990,7 @@
             // walllvl3_1
             // 
             this.walllvl3_1.Location = new System.Drawing.Point(375, 658);
-<<<<<<< Updated upstream
             this.walllvl3_1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-=======
-            this.walllvl3_1.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> Stashed changes
             this.walllvl3_1.Name = "walllvl3_1";
             this.walllvl3_1.Size = new System.Drawing.Size(30, 292);
             this.walllvl3_1.TabIndex = 107;
@@ -3382,11 +3001,7 @@
             // 
             this.riverlvl3_3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.riverlvl3_3.Location = new System.Drawing.Point(270, 699);
-<<<<<<< Updated upstream
             this.riverlvl3_3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-=======
-            this.riverlvl3_3.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> Stashed changes
             this.riverlvl3_3.Name = "riverlvl3_3";
             this.riverlvl3_3.Size = new System.Drawing.Size(105, 32);
             this.riverlvl3_3.TabIndex = 106;
@@ -3397,11 +3012,7 @@
             // 
             this.freezablelvl3_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.freezablelvl3_2.Location = new System.Drawing.Point(225, 699);
-<<<<<<< Updated upstream
             this.freezablelvl3_2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-=======
-            this.freezablelvl3_2.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> Stashed changes
             this.freezablelvl3_2.Name = "freezablelvl3_2";
             this.freezablelvl3_2.Size = new System.Drawing.Size(45, 32);
             this.freezablelvl3_2.TabIndex = 105;
@@ -3412,11 +3023,7 @@
             // 
             this.riverlvl3_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.riverlvl3_2.Location = new System.Drawing.Point(120, 699);
-<<<<<<< Updated upstream
             this.riverlvl3_2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-=======
-            this.riverlvl3_2.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> Stashed changes
             this.riverlvl3_2.Name = "riverlvl3_2";
             this.riverlvl3_2.Size = new System.Drawing.Size(105, 32);
             this.riverlvl3_2.TabIndex = 104;
@@ -3427,11 +3034,7 @@
             // 
             this.freezablelvl3_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.freezablelvl3_1.Location = new System.Drawing.Point(60, 699);
-<<<<<<< Updated upstream
             this.freezablelvl3_1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-=======
-            this.freezablelvl3_1.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> Stashed changes
             this.freezablelvl3_1.Name = "freezablelvl3_1";
             this.freezablelvl3_1.Size = new System.Drawing.Size(60, 32);
             this.freezablelvl3_1.TabIndex = 103;
@@ -3442,17 +3045,12 @@
             // 
             this.riverlvl3_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.riverlvl3_1.Location = new System.Drawing.Point(15, 699);
-<<<<<<< Updated upstream
             this.riverlvl3_1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-=======
-            this.riverlvl3_1.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> Stashed changes
             this.riverlvl3_1.Name = "riverlvl3_1";
             this.riverlvl3_1.Size = new System.Drawing.Size(45, 32);
             this.riverlvl3_1.TabIndex = 102;
             this.riverlvl3_1.TabStop = false;
             this.riverlvl3_1.Tag = "river";
-<<<<<<< Updated upstream
             // 
             // Cthulhu
             // 
@@ -3465,111 +3063,6 @@
             this.Cthulhu.Tag = "NPC";
             // 
 >>>>>>> Stashed changes
-=======
-            // 
-            // pnlInv
-            // 
-            this.pnlInv.BackColor = System.Drawing.Color.Black;
-            this.pnlInv.Controls.Add(this.item4Lbl);
-            this.pnlInv.Controls.Add(this.item3Lbl);
-            this.pnlInv.Controls.Add(this.item2Lbl);
-            this.pnlInv.Controls.Add(this.item1Lbl);
-            this.pnlInv.Controls.Add(this.item4);
-            this.pnlInv.Controls.Add(this.item3);
-            this.pnlInv.Controls.Add(this.item2);
-            this.pnlInv.Controls.Add(this.item1);
-            this.pnlInv.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlInv.Location = new System.Drawing.Point(0, 0);
-            this.pnlInv.Name = "pnlInv";
-            this.pnlInv.Size = new System.Drawing.Size(1319, 114);
-            this.pnlInv.TabIndex = 5;
-            this.pnlInv.Visible = false;
-            // 
-            // item4Lbl
-            // 
-            this.item4Lbl.AutoSize = true;
-            this.item4Lbl.BackColor = System.Drawing.Color.Transparent;
-            this.item4Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.item4Lbl.ForeColor = System.Drawing.Color.White;
-            this.item4Lbl.Location = new System.Drawing.Point(360, 57);
-            this.item4Lbl.Name = "item4Lbl";
-            this.item4Lbl.Size = new System.Drawing.Size(0, 24);
-            this.item4Lbl.TabIndex = 7;
-            // 
-            // item3Lbl
-            // 
-            this.item3Lbl.AutoSize = true;
-            this.item3Lbl.BackColor = System.Drawing.Color.Transparent;
-            this.item3Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.item3Lbl.ForeColor = System.Drawing.Color.White;
-            this.item3Lbl.Location = new System.Drawing.Point(265, 57);
-            this.item3Lbl.Name = "item3Lbl";
-            this.item3Lbl.Size = new System.Drawing.Size(0, 24);
-            this.item3Lbl.TabIndex = 6;
-            // 
-            // item2Lbl
-            // 
-            this.item2Lbl.AutoSize = true;
-            this.item2Lbl.BackColor = System.Drawing.Color.Transparent;
-            this.item2Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.item2Lbl.ForeColor = System.Drawing.Color.White;
-            this.item2Lbl.Location = new System.Drawing.Point(170, 57);
-            this.item2Lbl.Name = "item2Lbl";
-            this.item2Lbl.Size = new System.Drawing.Size(0, 24);
-            this.item2Lbl.TabIndex = 5;
-            // 
-            // item1Lbl
-            // 
-            this.item1Lbl.AutoSize = true;
-            this.item1Lbl.BackColor = System.Drawing.Color.Transparent;
-            this.item1Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.item1Lbl.ForeColor = System.Drawing.Color.White;
-            this.item1Lbl.Location = new System.Drawing.Point(75, 57);
-            this.item1Lbl.Name = "item1Lbl";
-            this.item1Lbl.Size = new System.Drawing.Size(0, 24);
-            this.item1Lbl.TabIndex = 4;
-            // 
-            // item4
-            // 
-            this.item4.Location = new System.Drawing.Point(315, 16);
-            this.item4.Name = "item4";
-            this.item4.Size = new System.Drawing.Size(65, 65);
-            this.item4.TabIndex = 3;
-            this.item4.TabStop = false;
-            // 
-            // item3
-            // 
-            this.item3.Location = new System.Drawing.Point(220, 16);
-            this.item3.Name = "item3";
-            this.item3.Size = new System.Drawing.Size(65, 65);
-            this.item3.TabIndex = 2;
-            this.item3.TabStop = false;
-            // 
-            // item2
-            // 
-            this.item2.Location = new System.Drawing.Point(125, 16);
-            this.item2.Name = "item2";
-            this.item2.Size = new System.Drawing.Size(65, 65);
-            this.item2.TabIndex = 1;
-            this.item2.TabStop = false;
-            // 
-            // item1
-            // 
-            this.item1.Location = new System.Drawing.Point(30, 16);
-            this.item1.Name = "item1";
-            this.item1.Size = new System.Drawing.Size(65, 65);
-            this.item1.TabIndex = 0;
-            this.item1.TabStop = false;
-            // 
-            // PlayerSpells
-            // 
-            this.PlayerSpells.Location = new System.Drawing.Point(745, 733);
-            this.PlayerSpells.Name = "PlayerSpells";
-            this.PlayerSpells.Size = new System.Drawing.Size(36, 36);
-            this.PlayerSpells.TabIndex = 102;
-            this.PlayerSpells.TabStop = false;
-            // 
->>>>>>> Stashed changes
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -3577,13 +3070,9 @@
             this.BackColor = System.Drawing.Color.DimGray;
             this.CausesValidation = false;
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
             this.ClientSize = new System.Drawing.Size(1759, 989);
 =======
             this.ClientSize = new System.Drawing.Size(1591, 989);
->>>>>>> Stashed changes
-=======
-            this.ClientSize = new System.Drawing.Size(1264, 681);
 >>>>>>> Stashed changes
             this.Controls.Add(this.Map);
             this.Controls.Add(this.statusStrip1);
@@ -3596,7 +3085,6 @@
             this.Text = "Game";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyIsDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.KeyIsUp);
-            ((System.ComponentModel.ISupportInitialize)(this.PlayerSpells)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.pnlText.ResumeLayout(false);
@@ -3716,17 +3204,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.freezablelvl2_1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.freezablelvl2_2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.freezablelvl2_3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.freezablelvl2_4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.freezablelvl2_5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.freezablelvl2_6)).EndInit();
@@ -3746,13 +3239,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.coin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rocklvl2)).EndInit();
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
 =======
             this.Map.ResumeLayout(false);
-=======
-            this.Map.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Cthulhu)).EndInit();
->>>>>>> Stashed changes
             ((System.ComponentModel.ISupportInitialize)(this.buttonlvl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IceCrystal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonlvl2)).EndInit();
@@ -3801,18 +3289,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl3_2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.freezablelvl3_1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl3_1)).EndInit();
-<<<<<<< Updated upstream
             ((System.ComponentModel.ISupportInitialize)(this.Cthulhu)).EndInit();
->>>>>>> Stashed changes
-=======
-
-            this.pnlInv.ResumeLayout(false);
-            this.pnlInv.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.item4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.item3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.item2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.item1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PlayerSpells)).EndInit();
 >>>>>>> Stashed changes
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -3820,7 +3297,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox PlayerSpells;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel statusLabel;
@@ -3870,10 +3346,7 @@
         private System.Windows.Forms.PictureBox Carrot1;
         private System.Windows.Forms.PictureBox George;
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
 =======
-=======
->>>>>>> Stashed changes
         private System.Windows.Forms.PictureBox rock2;
         private System.Windows.Forms.PictureBox rock3;
 >>>>>>> Stashed changes
@@ -3904,24 +3377,16 @@
         private System.Windows.Forms.PictureBox Altie;
         private System.Windows.Forms.PictureBox riverlvl2_1;
         private System.Windows.Forms.PictureBox freezablelvl2_1;
-<<<<<<< Updated upstream
         private System.Windows.Forms.PictureBox riverlvl2_2;
         private System.Windows.Forms.PictureBox riverlvl2_4;
         private System.Windows.Forms.PictureBox riverlvl2_3;
         private System.Windows.Forms.PictureBox riverlvl2_6;
         private System.Windows.Forms.PictureBox riverlvl2_5;
         private System.Windows.Forms.PictureBox freezablelvl2_2;
-=======
-        private System.Windows.Forms.PictureBox riverlvl2_3;
-        private System.Windows.Forms.PictureBox freezablelvl2_2;
-        private System.Windows.Forms.PictureBox riverlvl2_5;
-        private System.Windows.Forms.PictureBox riverlvl2_7;
->>>>>>> Stashed changes
         private System.Windows.Forms.PictureBox freezablelvl2_3;
         private System.Windows.Forms.PictureBox riverlvl2_8;
         private System.Windows.Forms.PictureBox riverlvl2_7;
         private System.Windows.Forms.PictureBox riverlvl2_10;
-<<<<<<< Updated upstream
         private System.Windows.Forms.PictureBox riverlvl2_9;
         private System.Windows.Forms.PictureBox riverlvl2_17;
         private System.Windows.Forms.PictureBox riverlvl2_16;
@@ -3930,15 +3395,6 @@
         private System.Windows.Forms.PictureBox riverlvl2_13;
         private System.Windows.Forms.PictureBox riverlvl2_12;
         private System.Windows.Forms.PictureBox riverlvl2_11;
-=======
-        private System.Windows.Forms.PictureBox riverlvl2_11;
-        private System.Windows.Forms.PictureBox riverlvl2_13;
-        private System.Windows.Forms.PictureBox riverlvl2_14;
-        private System.Windows.Forms.PictureBox riverlvl2_15;
-        private System.Windows.Forms.PictureBox riverlvl2_16;
-        private System.Windows.Forms.PictureBox freezablelvl2_4;
-        private System.Windows.Forms.PictureBox freezablelvl2_5;
->>>>>>> Stashed changes
         private System.Windows.Forms.PictureBox freezablelvl2_6;
         private System.Windows.Forms.PictureBox freezablelvl2_5;
         private System.Windows.Forms.PictureBox freezablelvl2_4;
@@ -3955,15 +3411,11 @@
         private System.Windows.Forms.PictureBox pot;
         private System.Windows.Forms.PictureBox rocklvl2;
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
         private System.Windows.Forms.PictureBox coin;
         private System.Windows.Forms.PictureBox stick2;
         private System.Windows.Forms.PictureBox stick1;
 =======
         private System.Windows.Forms.Panel Map;
-=======
-        private System.Windows.Forms.Panel Map;
->>>>>>> Stashed changes
         private System.Windows.Forms.PictureBox riverlvl3_1;
         private System.Windows.Forms.PictureBox riverlvl3_2;
         private System.Windows.Forms.PictureBox freezablelvl3_1;
@@ -4012,20 +3464,7 @@
         private System.Windows.Forms.PictureBox walllvl1_11;
         private System.Windows.Forms.PictureBox walllvl1_10;
         private System.Windows.Forms.PictureBox buttonlvl1;
-<<<<<<< Updated upstream
         private System.Windows.Forms.PictureBox Cthulhu;
->>>>>>> Stashed changes
-=======
-        private System.Windows.Forms.PictureBox Cthulhu;
-        private System.Windows.Forms.Panel pnlInv;
-        private System.Windows.Forms.PictureBox item4;
-        private System.Windows.Forms.PictureBox item3;
-        private System.Windows.Forms.PictureBox item2;
-        private System.Windows.Forms.PictureBox item1;
-        private System.Windows.Forms.Label item4Lbl;
-        private System.Windows.Forms.Label item3Lbl;
-        private System.Windows.Forms.Label item2Lbl;
-        private System.Windows.Forms.Label item1Lbl;
 >>>>>>> Stashed changes
     }
 }
