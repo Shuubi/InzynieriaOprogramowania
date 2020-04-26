@@ -8,7 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 using System.Windows.Forms;
-using System.IO;
+using System.IO; //czytnie plikow
+using System.Drawing.Text; //zmiana na wybrany font
 
 namespace Game
 {
@@ -20,13 +21,14 @@ namespace Game
         bool cont = false;
         bool reading = false;
         public string path = String.Empty;
+        PrivateFontCollection pfc = new PrivateFontCollection();
 
         PlayerCharacter protagonist;
 
         public Game()
         {
             InitializeComponent();
-
+            pfc.AddFontFile("VCR.ttf");
             protagonist = new PlayerCharacter(Player);
         }
 
@@ -168,9 +170,9 @@ namespace Game
                 //wczytywanie dialogow dla wszystkich npc
                 if (thisPictureBoxTag.Equals("NPC"))
                 {
-                    if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
+                    if (reading != true) 
                     {
-                        if (reading != true)
+                        if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
                         {
                             if (protagonist.action)
                             {
@@ -233,7 +235,9 @@ namespace Game
         //pokazywanie panelu z dialogami, przejscie do funkcji czytajacej linie z pliku i zamkniecie okna
         private void LoadDialog(StreamReader sr)
         {
+            pnlText.BringToFront();
             pnlText.Visible = true;
+            lblDialog.Font = new Font(pfc.Families[0], 16);
             string ln = String.Empty;
 
             reading = true;
@@ -252,6 +256,7 @@ namespace Game
             lblDialog.Text = "";
             pnlText.Visible = false;
             reading = false;
+            System.Threading.Thread.Sleep(50); //zbyt powolne wciśnięcie spacji sprawiało że dialog jednocześnie kończył się i zaczynał od nowa, sleep ma temu przeciwdziałać
         }
 
         private void timer1_Tick(object sender, EventArgs e)
