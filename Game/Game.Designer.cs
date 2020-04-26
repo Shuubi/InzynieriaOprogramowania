@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            this.PlayerSpells = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.statusLabel = new System.Windows.Forms.ToolStripStatusLabel();
@@ -76,8 +77,6 @@
             this.Carrot3 = new System.Windows.Forms.PictureBox();
             this.Bunny = new System.Windows.Forms.PictureBox();
             this.George = new System.Windows.Forms.PictureBox();
-            this.water1 = new System.Windows.Forms.PictureBox();
-            this.water2 = new System.Windows.Forms.PictureBox();
             this.rock2 = new System.Windows.Forms.PictureBox();
             this.rock3 = new System.Windows.Forms.PictureBox();
             this.rock4 = new System.Windows.Forms.PictureBox();
@@ -104,22 +103,17 @@
             this.riverlvl2_2 = new System.Windows.Forms.PictureBox();
             this.freezablelvl2_1 = new System.Windows.Forms.PictureBox();
             this.riverlvl2_3 = new System.Windows.Forms.PictureBox();
-            this.riverlvl2_4 = new System.Windows.Forms.PictureBox();
             this.freezablelvl2_2 = new System.Windows.Forms.PictureBox();
             this.riverlvl2_5 = new System.Windows.Forms.PictureBox();
-            this.riverlvl2_6 = new System.Windows.Forms.PictureBox();
             this.riverlvl2_7 = new System.Windows.Forms.PictureBox();
-            this.riverlvl2_8 = new System.Windows.Forms.PictureBox();
             this.freezablelvl2_3 = new System.Windows.Forms.PictureBox();
             this.riverlvl2_9 = new System.Windows.Forms.PictureBox();
             this.riverlvl2_10 = new System.Windows.Forms.PictureBox();
             this.riverlvl2_11 = new System.Windows.Forms.PictureBox();
-            this.riverlvl2_12 = new System.Windows.Forms.PictureBox();
             this.riverlvl2_13 = new System.Windows.Forms.PictureBox();
             this.riverlvl2_14 = new System.Windows.Forms.PictureBox();
             this.riverlvl2_15 = new System.Windows.Forms.PictureBox();
             this.riverlvl2_16 = new System.Windows.Forms.PictureBox();
-            this.riverlvl2_17 = new System.Windows.Forms.PictureBox();
             this.freezablelvl2_4 = new System.Windows.Forms.PictureBox();
             this.freezablelvl2_5 = new System.Windows.Forms.PictureBox();
             this.freezablelvl2_6 = new System.Windows.Forms.PictureBox();
@@ -140,6 +134,58 @@
             this.coin = new System.Windows.Forms.PictureBox();
             this.rocklvl2 = new System.Windows.Forms.PictureBox();
             this.Map = new System.Windows.Forms.Panel();
+<<<<<<< HEAD
+            this.Cthulhu = new System.Windows.Forms.PictureBox();
+            this.buttonlvl1 = new System.Windows.Forms.PictureBox();
+            this.IceCrystal = new System.Windows.Forms.PictureBox();
+            this.buttonlvl2 = new System.Windows.Forms.PictureBox();
+            this.walllvl1_11 = new System.Windows.Forms.PictureBox();
+            this.walllvl1_10 = new System.Windows.Forms.PictureBox();
+            this.EarthCrystal = new System.Windows.Forms.PictureBox();
+            this.FireCrystal = new System.Windows.Forms.PictureBox();
+            this.buttonlvl3 = new System.Windows.Forms.PictureBox();
+            this.craft_area = new System.Windows.Forms.PictureBox();
+            this.rocklvl3_4 = new System.Windows.Forms.PictureBox();
+            this.loglvl3_2 = new System.Windows.Forms.PictureBox();
+            this.riverlvl3_7 = new System.Windows.Forms.PictureBox();
+            this.freezablelvl3_5 = new System.Windows.Forms.PictureBox();
+            this.riverlvl3_6 = new System.Windows.Forms.PictureBox();
+            this.walllvl3_11 = new System.Windows.Forms.PictureBox();
+            this.doorlvl3_7 = new System.Windows.Forms.PictureBox();
+            this.doorlvl3_6 = new System.Windows.Forms.PictureBox();
+            this.doorlvl3_5 = new System.Windows.Forms.PictureBox();
+            this.walllvl3_10 = new System.Windows.Forms.PictureBox();
+            this.walllvl3_9 = new System.Windows.Forms.PictureBox();
+            this.loglvl3_1 = new System.Windows.Forms.PictureBox();
+            this.walllvl3_8 = new System.Windows.Forms.PictureBox();
+            this.rocklvl3_3 = new System.Windows.Forms.PictureBox();
+            this.walllvl3_7 = new System.Windows.Forms.PictureBox();
+            this.door3 = new System.Windows.Forms.PictureBox();
+            this.wall18 = new System.Windows.Forms.PictureBox();
+            this.wall19 = new System.Windows.Forms.PictureBox();
+            this.doorlvl3_4 = new System.Windows.Forms.PictureBox();
+            this.walllvl3_6 = new System.Windows.Forms.PictureBox();
+            this.doorlvl3_2 = new System.Windows.Forms.PictureBox();
+            this.walllvl3_4 = new System.Windows.Forms.PictureBox();
+            this.rocklvl3_2 = new System.Windows.Forms.PictureBox();
+            this.riverlvl3_5 = new System.Windows.Forms.PictureBox();
+            this.freezablelvl3_3 = new System.Windows.Forms.PictureBox();
+            this.riverlvl3_4 = new System.Windows.Forms.PictureBox();
+            this.rocklvl3_1 = new System.Windows.Forms.PictureBox();
+            this.doorlvl3_1 = new System.Windows.Forms.PictureBox();
+            this.walllvl3_3 = new System.Windows.Forms.PictureBox();
+            this.chest2 = new System.Windows.Forms.PictureBox();
+            this.Sugar = new System.Windows.Forms.PictureBox();
+            this.walllvl3_2 = new System.Windows.Forms.PictureBox();
+            this.Dragon = new System.Windows.Forms.PictureBox();
+            this.walllvl3_1 = new System.Windows.Forms.PictureBox();
+            this.riverlvl3_3 = new System.Windows.Forms.PictureBox();
+            this.freezablelvl3_2 = new System.Windows.Forms.PictureBox();
+            this.riverlvl3_2 = new System.Windows.Forms.PictureBox();
+            this.freezablelvl3_1 = new System.Windows.Forms.PictureBox();
+            this.riverlvl3_1 = new System.Windows.Forms.PictureBox();
+=======
+>>>>>>> f3684b9933ba2c182d953a2d8e0d5b8fa77d57fc
             this.pnlInv = new System.Windows.Forms.Panel();
             this.item4Lbl = new System.Windows.Forms.Label();
             this.item3Lbl = new System.Windows.Forms.Label();
@@ -149,7 +195,11 @@
             this.item3 = new System.Windows.Forms.PictureBox();
             this.item2 = new System.Windows.Forms.PictureBox();
             this.item1 = new System.Windows.Forms.PictureBox();
+<<<<<<< HEAD
+            ((System.ComponentModel.ISupportInitialize)(this.PlayerSpells)).BeginInit();
+=======
             this.PlayerSpells = new System.Windows.Forms.PictureBox();
+>>>>>>> f3684b9933ba2c182d953a2d8e0d5b8fa77d57fc
             this.statusStrip1.SuspendLayout();
             this.pnlText.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.wall16)).BeginInit();
@@ -193,8 +243,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.Carrot3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Bunny)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.George)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.water1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.water2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rock2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rock3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rock4)).BeginInit();
@@ -221,22 +269,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.freezablelvl2_1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.freezablelvl2_2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.freezablelvl2_3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.freezablelvl2_4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.freezablelvl2_5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.freezablelvl2_6)).BeginInit();
@@ -257,13 +300,76 @@
             ((System.ComponentModel.ISupportInitialize)(this.coin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rocklvl2)).BeginInit();
             this.Map.SuspendLayout();
+<<<<<<< HEAD
+            ((System.ComponentModel.ISupportInitialize)(this.Cthulhu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonlvl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IceCrystal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonlvl2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.walllvl1_11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.walllvl1_10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EarthCrystal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FireCrystal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonlvl3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.craft_area)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rocklvl3_4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loglvl3_2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.riverlvl3_7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.freezablelvl3_5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.riverlvl3_6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.walllvl3_11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doorlvl3_7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doorlvl3_6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doorlvl3_5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.walllvl3_10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.walllvl3_9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loglvl3_1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.walllvl3_8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rocklvl3_3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.walllvl3_7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.door3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wall18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wall19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doorlvl3_4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.walllvl3_6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doorlvl3_2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.walllvl3_4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rocklvl3_2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.riverlvl3_5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.freezablelvl3_3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.riverlvl3_4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rocklvl3_1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doorlvl3_1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.walllvl3_3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chest2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Sugar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.walllvl3_2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Dragon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.walllvl3_1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.riverlvl3_3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.freezablelvl3_2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.riverlvl3_2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.freezablelvl3_1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.riverlvl3_1)).BeginInit();
+=======
+>>>>>>> f3684b9933ba2c182d953a2d8e0d5b8fa77d57fc
             this.pnlInv.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.item4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.item3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.item2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.item1)).BeginInit();
+<<<<<<< HEAD
+=======
             ((System.ComponentModel.ISupportInitialize)(this.PlayerSpells)).BeginInit();
+>>>>>>> f3684b9933ba2c182d953a2d8e0d5b8fa77d57fc
             this.SuspendLayout();
+            // 
+            // PlayerSpells
+            // 
+            this.PlayerSpells.Location = new System.Drawing.Point(745, 733);
+            this.PlayerSpells.Name = "PlayerSpells";
+            this.PlayerSpells.Size = new System.Drawing.Size(36, 36);
+            this.PlayerSpells.TabIndex = 102;
+            this.PlayerSpells.TabStop = false;
             // 
             // timer1
             // 
@@ -275,9 +381,9 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.statusLabel});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 660);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 537);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1319, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1264, 22);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -300,9 +406,9 @@
             this.pnlText.Controls.Add(this.wall16);
             this.pnlText.Controls.Add(this.pnlDialog);
             this.pnlText.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlText.Location = new System.Drawing.Point(0, 682);
+            this.pnlText.Location = new System.Drawing.Point(0, 559);
             this.pnlText.Name = "pnlText";
-            this.pnlText.Size = new System.Drawing.Size(1319, 122);
+            this.pnlText.Size = new System.Drawing.Size(1264, 122);
             this.pnlText.TabIndex = 3;
             this.pnlText.Visible = false;
             // 
@@ -736,28 +842,6 @@
             this.George.TabStop = false;
             this.George.Tag = "NPC";
             // 
-            // water1
-            // 
-            this.water1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.water1.Location = new System.Drawing.Point(608, 453);
-            this.water1.Margin = new System.Windows.Forms.Padding(2);
-            this.water1.Name = "water1";
-            this.water1.Size = new System.Drawing.Size(224, 49);
-            this.water1.TabIndex = 40;
-            this.water1.TabStop = false;
-            this.water1.Tag = "water";
-            // 
-            // water2
-            // 
-            this.water2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.water2.Location = new System.Drawing.Point(977, 422);
-            this.water2.Margin = new System.Windows.Forms.Padding(2);
-            this.water2.Name = "water2";
-            this.water2.Size = new System.Drawing.Size(90, 203);
-            this.water2.TabIndex = 41;
-            this.water2.TabStop = false;
-            this.water2.Tag = "water";
-            // 
             // rock2
             // 
             this.rock2.BackColor = System.Drawing.Color.Gray;
@@ -772,7 +856,7 @@
             // rock3
             // 
             this.rock3.BackColor = System.Drawing.Color.Gray;
-            this.rock3.Location = new System.Drawing.Point(908, 466);
+            this.rock3.Location = new System.Drawing.Point(1020, 496);
             this.rock3.Margin = new System.Windows.Forms.Padding(2);
             this.rock3.Name = "rock3";
             this.rock3.Size = new System.Drawing.Size(45, 49);
@@ -783,7 +867,7 @@
             // rock4
             // 
             this.rock4.BackColor = System.Drawing.Color.Gray;
-            this.rock4.Location = new System.Drawing.Point(892, 555);
+            this.rock4.Location = new System.Drawing.Point(968, 496);
             this.rock4.Margin = new System.Windows.Forms.Padding(2);
             this.rock4.Name = "rock4";
             this.rock4.Size = new System.Drawing.Size(45, 49);
@@ -865,7 +949,7 @@
             // 
             // walllvl2_4
             // 
-            this.walllvl2_4.Location = new System.Drawing.Point(1470, 878);
+            this.walllvl2_4.Location = new System.Drawing.Point(1470, 856);
             this.walllvl2_4.Margin = new System.Windows.Forms.Padding(2);
             this.walllvl2_4.Name = "walllvl2_4";
             this.walllvl2_4.Size = new System.Drawing.Size(120, 32);
@@ -876,7 +960,7 @@
             // doorlvl2_2
             // 
             this.doorlvl2_2.BackColor = System.Drawing.Color.Maroon;
-            this.doorlvl2_2.Location = new System.Drawing.Point(1590, 878);
+            this.doorlvl2_2.Location = new System.Drawing.Point(1590, 856);
             this.doorlvl2_2.Margin = new System.Windows.Forms.Padding(2);
             this.doorlvl2_2.Name = "doorlvl2_2";
             this.doorlvl2_2.Size = new System.Drawing.Size(60, 32);
@@ -886,7 +970,7 @@
             // 
             // walllvl2_5
             // 
-            this.walllvl2_5.Location = new System.Drawing.Point(1650, 878);
+            this.walllvl2_5.Location = new System.Drawing.Point(1650, 856);
             this.walllvl2_5.Margin = new System.Windows.Forms.Padding(2);
             this.walllvl2_5.Name = "walllvl2_5";
             this.walllvl2_5.Size = new System.Drawing.Size(150, 32);
@@ -1028,37 +1112,27 @@
             this.riverlvl2_3.Location = new System.Drawing.Point(1620, 748);
             this.riverlvl2_3.Margin = new System.Windows.Forms.Padding(2);
             this.riverlvl2_3.Name = "riverlvl2_3";
-            this.riverlvl2_3.Size = new System.Drawing.Size(60, 98);
+            this.riverlvl2_3.Size = new System.Drawing.Size(142, 77);
             this.riverlvl2_3.TabIndex = 67;
             this.riverlvl2_3.TabStop = false;
             this.riverlvl2_3.Tag = "river";
             // 
-            // riverlvl2_4
-            // 
-            this.riverlvl2_4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.riverlvl2_4.Location = new System.Drawing.Point(1680, 780);
-            this.riverlvl2_4.Margin = new System.Windows.Forms.Padding(2);
-            this.riverlvl2_4.Name = "riverlvl2_4";
-            this.riverlvl2_4.Size = new System.Drawing.Size(82, 98);
-            this.riverlvl2_4.TabIndex = 68;
-            this.riverlvl2_4.TabStop = false;
-            this.riverlvl2_4.Tag = "river";
-            // 
             // freezablelvl2_2
             // 
             this.freezablelvl2_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.freezablelvl2_2.Location = new System.Drawing.Point(1590, 796);
+            this.freezablelvl2_2.Location = new System.Drawing.Point(1590, 776);
             this.freezablelvl2_2.Margin = new System.Windows.Forms.Padding(2);
             this.freezablelvl2_2.Name = "freezablelvl2_2";
             this.freezablelvl2_2.Size = new System.Drawing.Size(30, 49);
             this.freezablelvl2_2.TabIndex = 69;
             this.freezablelvl2_2.TabStop = false;
             this.freezablelvl2_2.Tag = "freezable_object";
+            this.freezablelvl2_2.Click += new System.EventHandler(this.freezablelvl2_2_Click);
             // 
             // riverlvl2_5
             // 
             this.riverlvl2_5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.riverlvl2_5.Location = new System.Drawing.Point(1470, 796);
+            this.riverlvl2_5.Location = new System.Drawing.Point(1470, 776);
             this.riverlvl2_5.Margin = new System.Windows.Forms.Padding(2);
             this.riverlvl2_5.Name = "riverlvl2_5";
             this.riverlvl2_5.Size = new System.Drawing.Size(120, 49);
@@ -1066,46 +1140,24 @@
             this.riverlvl2_5.TabStop = false;
             this.riverlvl2_5.Tag = "river";
             // 
-            // riverlvl2_6
-            // 
-            this.riverlvl2_6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.riverlvl2_6.Location = new System.Drawing.Point(1470, 845);
-            this.riverlvl2_6.Margin = new System.Windows.Forms.Padding(2);
-            this.riverlvl2_6.Name = "riverlvl2_6";
-            this.riverlvl2_6.Size = new System.Drawing.Size(90, 32);
-            this.riverlvl2_6.TabIndex = 71;
-            this.riverlvl2_6.TabStop = false;
-            this.riverlvl2_6.Tag = "river";
-            // 
             // riverlvl2_7
             // 
             this.riverlvl2_7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.riverlvl2_7.Location = new System.Drawing.Point(1470, 910);
+            this.riverlvl2_7.Location = new System.Drawing.Point(1470, 886);
             this.riverlvl2_7.Margin = new System.Windows.Forms.Padding(2);
             this.riverlvl2_7.Name = "riverlvl2_7";
-            this.riverlvl2_7.Size = new System.Drawing.Size(30, 81);
+            this.riverlvl2_7.Size = new System.Drawing.Size(30, 105);
             this.riverlvl2_7.TabIndex = 72;
             this.riverlvl2_7.TabStop = false;
             this.riverlvl2_7.Tag = "river";
             // 
-            // riverlvl2_8
-            // 
-            this.riverlvl2_8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.riverlvl2_8.Location = new System.Drawing.Point(1470, 991);
-            this.riverlvl2_8.Margin = new System.Windows.Forms.Padding(2);
-            this.riverlvl2_8.Name = "riverlvl2_8";
-            this.riverlvl2_8.Size = new System.Drawing.Size(15, 65);
-            this.riverlvl2_8.TabIndex = 73;
-            this.riverlvl2_8.TabStop = false;
-            this.riverlvl2_8.Tag = "river";
-            // 
             // freezablelvl2_3
             // 
             this.freezablelvl2_3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.freezablelvl2_3.Location = new System.Drawing.Point(1650, 942);
+            this.freezablelvl2_3.Location = new System.Drawing.Point(1650, 951);
             this.freezablelvl2_3.Margin = new System.Windows.Forms.Padding(2);
             this.freezablelvl2_3.Name = "freezablelvl2_3";
-            this.freezablelvl2_3.Size = new System.Drawing.Size(30, 16);
+            this.freezablelvl2_3.Size = new System.Drawing.Size(56, 16);
             this.freezablelvl2_3.TabIndex = 74;
             this.freezablelvl2_3.TabStop = false;
             this.freezablelvl2_3.Tag = "freezable_object";
@@ -1113,7 +1165,7 @@
             // riverlvl2_9
             // 
             this.riverlvl2_9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.riverlvl2_9.Location = new System.Drawing.Point(1500, 942);
+            this.riverlvl2_9.Location = new System.Drawing.Point(1500, 951);
             this.riverlvl2_9.Margin = new System.Windows.Forms.Padding(2);
             this.riverlvl2_9.Name = "riverlvl2_9";
             this.riverlvl2_9.Size = new System.Drawing.Size(150, 16);
@@ -1124,10 +1176,10 @@
             // riverlvl2_10
             // 
             this.riverlvl2_10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.riverlvl2_10.Location = new System.Drawing.Point(1500, 959);
+            this.riverlvl2_10.Location = new System.Drawing.Point(1500, 951);
             this.riverlvl2_10.Margin = new System.Windows.Forms.Padding(2);
             this.riverlvl2_10.Name = "riverlvl2_10";
-            this.riverlvl2_10.Size = new System.Drawing.Size(120, 32);
+            this.riverlvl2_10.Size = new System.Drawing.Size(120, 40);
             this.riverlvl2_10.TabIndex = 76;
             this.riverlvl2_10.TabStop = false;
             this.riverlvl2_10.Tag = "river";
@@ -1135,32 +1187,21 @@
             // riverlvl2_11
             // 
             this.riverlvl2_11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.riverlvl2_11.Location = new System.Drawing.Point(1515, 1024);
+            this.riverlvl2_11.Location = new System.Drawing.Point(1530, 1024);
             this.riverlvl2_11.Margin = new System.Windows.Forms.Padding(2);
             this.riverlvl2_11.Name = "riverlvl2_11";
-            this.riverlvl2_11.Size = new System.Drawing.Size(150, 32);
+            this.riverlvl2_11.Size = new System.Drawing.Size(140, 46);
             this.riverlvl2_11.TabIndex = 77;
             this.riverlvl2_11.TabStop = false;
             this.riverlvl2_11.Tag = "river";
             // 
-            // riverlvl2_12
-            // 
-            this.riverlvl2_12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.riverlvl2_12.Location = new System.Drawing.Point(1530, 1056);
-            this.riverlvl2_12.Margin = new System.Windows.Forms.Padding(2);
-            this.riverlvl2_12.Name = "riverlvl2_12";
-            this.riverlvl2_12.Size = new System.Drawing.Size(135, 16);
-            this.riverlvl2_12.TabIndex = 78;
-            this.riverlvl2_12.TabStop = false;
-            this.riverlvl2_12.Tag = "river";
-            // 
             // riverlvl2_13
             // 
             this.riverlvl2_13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.riverlvl2_13.Location = new System.Drawing.Point(1530, 1072);
+            this.riverlvl2_13.Location = new System.Drawing.Point(1530, 1055);
             this.riverlvl2_13.Margin = new System.Windows.Forms.Padding(2);
             this.riverlvl2_13.Name = "riverlvl2_13";
-            this.riverlvl2_13.Size = new System.Drawing.Size(30, 32);
+            this.riverlvl2_13.Size = new System.Drawing.Size(30, 49);
             this.riverlvl2_13.TabIndex = 79;
             this.riverlvl2_13.TabStop = false;
             this.riverlvl2_13.Tag = "river";
@@ -1168,10 +1209,10 @@
             // riverlvl2_14
             // 
             this.riverlvl2_14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.riverlvl2_14.Location = new System.Drawing.Point(1680, 942);
+            this.riverlvl2_14.Location = new System.Drawing.Point(1699, 951);
             this.riverlvl2_14.Margin = new System.Windows.Forms.Padding(2);
             this.riverlvl2_14.Name = "riverlvl2_14";
-            this.riverlvl2_14.Size = new System.Drawing.Size(60, 16);
+            this.riverlvl2_14.Size = new System.Drawing.Size(39, 16);
             this.riverlvl2_14.TabIndex = 80;
             this.riverlvl2_14.TabStop = false;
             this.riverlvl2_14.Tag = "river";
@@ -1179,10 +1220,10 @@
             // riverlvl2_15
             // 
             this.riverlvl2_15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.riverlvl2_15.Location = new System.Drawing.Point(1740, 910);
+            this.riverlvl2_15.Location = new System.Drawing.Point(1736, 886);
             this.riverlvl2_15.Margin = new System.Windows.Forms.Padding(2);
             this.riverlvl2_15.Name = "riverlvl2_15";
-            this.riverlvl2_15.Size = new System.Drawing.Size(75, 195);
+            this.riverlvl2_15.Size = new System.Drawing.Size(26, 184);
             this.riverlvl2_15.TabIndex = 81;
             this.riverlvl2_15.TabStop = false;
             this.riverlvl2_15.Tag = "river";
@@ -1190,24 +1231,13 @@
             // riverlvl2_16
             // 
             this.riverlvl2_16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.riverlvl2_16.Location = new System.Drawing.Point(1710, 959);
+            this.riverlvl2_16.Location = new System.Drawing.Point(1710, 951);
             this.riverlvl2_16.Margin = new System.Windows.Forms.Padding(2);
             this.riverlvl2_16.Name = "riverlvl2_16";
-            this.riverlvl2_16.Size = new System.Drawing.Size(30, 146);
+            this.riverlvl2_16.Size = new System.Drawing.Size(30, 119);
             this.riverlvl2_16.TabIndex = 82;
             this.riverlvl2_16.TabStop = false;
             this.riverlvl2_16.Tag = "river";
-            // 
-            // riverlvl2_17
-            // 
-            this.riverlvl2_17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.riverlvl2_17.Location = new System.Drawing.Point(1680, 1024);
-            this.riverlvl2_17.Margin = new System.Windows.Forms.Padding(2);
-            this.riverlvl2_17.Name = "riverlvl2_17";
-            this.riverlvl2_17.Size = new System.Drawing.Size(30, 49);
-            this.riverlvl2_17.TabIndex = 83;
-            this.riverlvl2_17.TabStop = false;
-            this.riverlvl2_17.Tag = "river";
             // 
             // freezablelvl2_4
             // 
@@ -1215,7 +1245,7 @@
             this.freezablelvl2_4.Location = new System.Drawing.Point(1485, 1024);
             this.freezablelvl2_4.Margin = new System.Windows.Forms.Padding(2);
             this.freezablelvl2_4.Name = "freezablelvl2_4";
-            this.freezablelvl2_4.Size = new System.Drawing.Size(30, 32);
+            this.freezablelvl2_4.Size = new System.Drawing.Size(0, 0);
             this.freezablelvl2_4.TabIndex = 84;
             this.freezablelvl2_4.TabStop = false;
             this.freezablelvl2_4.Tag = "freezable_object";
@@ -1234,13 +1264,14 @@
             // freezablelvl2_6
             // 
             this.freezablelvl2_6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.freezablelvl2_6.Location = new System.Drawing.Point(1665, 1024);
+            this.freezablelvl2_6.Location = new System.Drawing.Point(1670, 1022);
             this.freezablelvl2_6.Margin = new System.Windows.Forms.Padding(2);
             this.freezablelvl2_6.Name = "freezablelvl2_6";
-            this.freezablelvl2_6.Size = new System.Drawing.Size(30, 49);
+            this.freezablelvl2_6.Size = new System.Drawing.Size(41, 48);
             this.freezablelvl2_6.TabIndex = 86;
             this.freezablelvl2_6.TabStop = false;
             this.freezablelvl2_6.Tag = "freezable_object";
+            this.freezablelvl2_6.Click += new System.EventHandler(this.freezablelvl2_6_Click);
             // 
             // riverlvl2_18
             // 
@@ -1389,7 +1420,7 @@
             // stick2
             // 
             this.stick2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.stick2.Location = new System.Drawing.Point(1485, 764);
+            this.stick2.Location = new System.Drawing.Point(1560, 686);
             this.stick2.Margin = new System.Windows.Forms.Padding(2);
             this.stick2.Name = "stick2";
             this.stick2.Size = new System.Drawing.Size(30, 16);
@@ -1411,7 +1442,7 @@
             // rocklvl2
             // 
             this.rocklvl2.BackColor = System.Drawing.Color.Gray;
-            this.rocklvl2.Location = new System.Drawing.Point(1710, 918);
+            this.rocklvl2.Location = new System.Drawing.Point(1699, 894);
             this.rocklvl2.Margin = new System.Windows.Forms.Padding(2);
             this.rocklvl2.Name = "rocklvl2";
             this.rocklvl2.Size = new System.Drawing.Size(22, 24);
@@ -1422,8 +1453,63 @@
             // Map
             // 
             this.Map.BackColor = System.Drawing.Color.Black;
+            this.Map.Controls.Add(this.walllvl2_5);
+            this.Map.Controls.Add(this.walllvl2_4);
             this.Map.Controls.Add(this.Player);
             this.Map.Controls.Add(this.PlayerSpells);
+<<<<<<< HEAD
+            this.Map.Controls.Add(this.Cthulhu);
+            this.Map.Controls.Add(this.rock2);
+            this.Map.Controls.Add(this.buttonlvl1);
+            this.Map.Controls.Add(this.IceCrystal);
+            this.Map.Controls.Add(this.buttonlvl2);
+            this.Map.Controls.Add(this.walllvl1_11);
+            this.Map.Controls.Add(this.walllvl1_10);
+            this.Map.Controls.Add(this.EarthCrystal);
+            this.Map.Controls.Add(this.FireCrystal);
+            this.Map.Controls.Add(this.buttonlvl3);
+            this.Map.Controls.Add(this.craft_area);
+            this.Map.Controls.Add(this.rocklvl3_4);
+            this.Map.Controls.Add(this.loglvl3_2);
+            this.Map.Controls.Add(this.riverlvl3_7);
+            this.Map.Controls.Add(this.freezablelvl3_5);
+            this.Map.Controls.Add(this.riverlvl3_6);
+            this.Map.Controls.Add(this.walllvl3_11);
+            this.Map.Controls.Add(this.doorlvl3_7);
+            this.Map.Controls.Add(this.doorlvl3_6);
+            this.Map.Controls.Add(this.doorlvl3_5);
+            this.Map.Controls.Add(this.walllvl3_10);
+            this.Map.Controls.Add(this.walllvl3_9);
+            this.Map.Controls.Add(this.loglvl3_1);
+            this.Map.Controls.Add(this.walllvl3_8);
+            this.Map.Controls.Add(this.rocklvl3_3);
+            this.Map.Controls.Add(this.walllvl3_7);
+            this.Map.Controls.Add(this.door3);
+            this.Map.Controls.Add(this.wall18);
+            this.Map.Controls.Add(this.wall19);
+            this.Map.Controls.Add(this.doorlvl3_4);
+            this.Map.Controls.Add(this.walllvl3_6);
+            this.Map.Controls.Add(this.doorlvl3_2);
+            this.Map.Controls.Add(this.walllvl3_4);
+            this.Map.Controls.Add(this.rocklvl3_2);
+            this.Map.Controls.Add(this.riverlvl3_5);
+            this.Map.Controls.Add(this.freezablelvl3_3);
+            this.Map.Controls.Add(this.riverlvl3_4);
+            this.Map.Controls.Add(this.rocklvl3_1);
+            this.Map.Controls.Add(this.doorlvl3_1);
+            this.Map.Controls.Add(this.walllvl3_3);
+            this.Map.Controls.Add(this.chest2);
+            this.Map.Controls.Add(this.Sugar);
+            this.Map.Controls.Add(this.walllvl3_2);
+            this.Map.Controls.Add(this.Dragon);
+            this.Map.Controls.Add(this.walllvl3_1);
+            this.Map.Controls.Add(this.riverlvl3_3);
+            this.Map.Controls.Add(this.freezablelvl3_2);
+            this.Map.Controls.Add(this.riverlvl3_2);
+            this.Map.Controls.Add(this.freezablelvl3_1);
+            this.Map.Controls.Add(this.riverlvl3_1);
+=======
+>>>>>>> f3684b9933ba2c182d953a2d8e0d5b8fa77d57fc
             this.Map.Controls.Add(this.rocklvl2);
             this.Map.Controls.Add(this.coin);
             this.Map.Controls.Add(this.stick2);
@@ -1442,22 +1528,17 @@
             this.Map.Controls.Add(this.freezablelvl2_6);
             this.Map.Controls.Add(this.freezablelvl2_5);
             this.Map.Controls.Add(this.freezablelvl2_4);
-            this.Map.Controls.Add(this.riverlvl2_17);
             this.Map.Controls.Add(this.riverlvl2_16);
             this.Map.Controls.Add(this.riverlvl2_15);
             this.Map.Controls.Add(this.riverlvl2_14);
             this.Map.Controls.Add(this.riverlvl2_13);
-            this.Map.Controls.Add(this.riverlvl2_12);
             this.Map.Controls.Add(this.riverlvl2_11);
             this.Map.Controls.Add(this.riverlvl2_10);
             this.Map.Controls.Add(this.riverlvl2_9);
             this.Map.Controls.Add(this.freezablelvl2_3);
-            this.Map.Controls.Add(this.riverlvl2_8);
             this.Map.Controls.Add(this.riverlvl2_7);
-            this.Map.Controls.Add(this.riverlvl2_6);
             this.Map.Controls.Add(this.riverlvl2_5);
             this.Map.Controls.Add(this.freezablelvl2_2);
-            this.Map.Controls.Add(this.riverlvl2_4);
             this.Map.Controls.Add(this.riverlvl2_3);
             this.Map.Controls.Add(this.freezablelvl2_1);
             this.Map.Controls.Add(this.riverlvl2_2);
@@ -1471,9 +1552,7 @@
             this.Map.Controls.Add(this.walllvl2_7);
             this.Map.Controls.Add(this.doorlvl2_3);
             this.Map.Controls.Add(this.walllvl2_6);
-            this.Map.Controls.Add(this.walllvl2_5);
             this.Map.Controls.Add(this.doorlvl2_2);
-            this.Map.Controls.Add(this.walllvl2_4);
             this.Map.Controls.Add(this.walllvl2_3);
             this.Map.Controls.Add(this.doorlvl2_1);
             this.Map.Controls.Add(this.walllvl2_2);
@@ -1483,9 +1562,6 @@
             this.Map.Controls.Add(this.doorlvl2);
             this.Map.Controls.Add(this.rock4);
             this.Map.Controls.Add(this.rock3);
-            this.Map.Controls.Add(this.rock2);
-            this.Map.Controls.Add(this.water2);
-            this.Map.Controls.Add(this.water1);
             this.Map.Controls.Add(this.George);
             this.Map.Controls.Add(this.Bunny);
             this.Map.Controls.Add(this.Carrot3);
@@ -1531,6 +1607,532 @@
             this.Map.Size = new System.Drawing.Size(1778, 1926);
             this.Map.TabIndex = 4;
             // 
+<<<<<<< HEAD
+            // Cthulhu
+            // 
+            this.Cthulhu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.Cthulhu.Location = new System.Drawing.Point(1221, 856);
+            this.Cthulhu.Name = "Cthulhu";
+            this.Cthulhu.Size = new System.Drawing.Size(200, 200);
+            this.Cthulhu.TabIndex = 150;
+            this.Cthulhu.TabStop = false;
+            this.Cthulhu.Tag = "NPC";
+            // 
+            // buttonlvl1
+            // 
+            this.buttonlvl1.BackColor = System.Drawing.Color.Magenta;
+            this.buttonlvl1.Location = new System.Drawing.Point(630, 455);
+            this.buttonlvl1.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonlvl1.Name = "buttonlvl1";
+            this.buttonlvl1.Size = new System.Drawing.Size(30, 16);
+            this.buttonlvl1.TabIndex = 145;
+            this.buttonlvl1.TabStop = false;
+            // 
+            // IceCrystal
+            // 
+            this.IceCrystal.BackColor = System.Drawing.Color.Cyan;
+            this.IceCrystal.Location = new System.Drawing.Point(1290, 1202);
+            this.IceCrystal.Margin = new System.Windows.Forms.Padding(2);
+            this.IceCrystal.Name = "IceCrystal";
+            this.IceCrystal.Size = new System.Drawing.Size(15, 16);
+            this.IceCrystal.TabIndex = 149;
+            this.IceCrystal.TabStop = false;
+            this.IceCrystal.Tag = "crystal";
+            // 
+            // buttonlvl2
+            // 
+            this.buttonlvl2.BackColor = System.Drawing.Color.Magenta;
+            this.buttonlvl2.Location = new System.Drawing.Point(1485, 1072);
+            this.buttonlvl2.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonlvl2.Name = "buttonlvl2";
+            this.buttonlvl2.Size = new System.Drawing.Size(30, 16);
+            this.buttonlvl2.TabIndex = 148;
+            this.buttonlvl2.TabStop = false;
+            this.buttonlvl2.Tag = "button";
+            // 
+            // walllvl1_11
+            // 
+            this.walllvl1_11.Location = new System.Drawing.Point(968, 548);
+            this.walllvl1_11.Margin = new System.Windows.Forms.Padding(2);
+            this.walllvl1_11.Name = "walllvl1_11";
+            this.walllvl1_11.Size = new System.Drawing.Size(98, 93);
+            this.walllvl1_11.TabIndex = 147;
+            this.walllvl1_11.TabStop = false;
+            this.walllvl1_11.Tag = "wall";
+            // 
+            // walllvl1_10
+            // 
+            this.walllvl1_10.Location = new System.Drawing.Point(968, 415);
+            this.walllvl1_10.Margin = new System.Windows.Forms.Padding(2);
+            this.walllvl1_10.Name = "walllvl1_10";
+            this.walllvl1_10.Size = new System.Drawing.Size(98, 76);
+            this.walllvl1_10.TabIndex = 146;
+            this.walllvl1_10.TabStop = false;
+            this.walllvl1_10.Tag = "wall";
+            // 
+            // EarthCrystal
+            // 
+            this.EarthCrystal.BackColor = System.Drawing.Color.LawnGreen;
+            this.EarthCrystal.Location = new System.Drawing.Point(690, 49);
+            this.EarthCrystal.Margin = new System.Windows.Forms.Padding(2);
+            this.EarthCrystal.Name = "EarthCrystal";
+            this.EarthCrystal.Size = new System.Drawing.Size(15, 16);
+            this.EarthCrystal.TabIndex = 144;
+            this.EarthCrystal.TabStop = false;
+            this.EarthCrystal.Tag = "crystal";
+            // 
+            // FireCrystal
+            // 
+            this.FireCrystal.BackColor = System.Drawing.Color.Red;
+            this.FireCrystal.Location = new System.Drawing.Point(480, 1186);
+            this.FireCrystal.Margin = new System.Windows.Forms.Padding(2);
+            this.FireCrystal.Name = "FireCrystal";
+            this.FireCrystal.Size = new System.Drawing.Size(15, 16);
+            this.FireCrystal.TabIndex = 143;
+            this.FireCrystal.TabStop = false;
+            this.FireCrystal.Tag = "crystal";
+            // 
+            // buttonlvl3
+            // 
+            this.buttonlvl3.BackColor = System.Drawing.Color.Magenta;
+            this.buttonlvl3.Location = new System.Drawing.Point(135, 878);
+            this.buttonlvl3.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonlvl3.Name = "buttonlvl3";
+            this.buttonlvl3.Size = new System.Drawing.Size(30, 16);
+            this.buttonlvl3.TabIndex = 142;
+            this.buttonlvl3.TabStop = false;
+            this.buttonlvl3.Tag = "button";
+            // 
+            // craft_area
+            // 
+            this.craft_area.BackColor = System.Drawing.Color.Gainsboro;
+            this.craft_area.Location = new System.Drawing.Point(165, 1154);
+            this.craft_area.Margin = new System.Windows.Forms.Padding(2);
+            this.craft_area.Name = "craft_area";
+            this.craft_area.Size = new System.Drawing.Size(60, 65);
+            this.craft_area.TabIndex = 141;
+            this.craft_area.TabStop = false;
+            this.craft_area.Tag = "craftarea";
+            // 
+            // rocklvl3_4
+            // 
+            this.rocklvl3_4.BackColor = System.Drawing.Color.DimGray;
+            this.rocklvl3_4.Location = new System.Drawing.Point(135, 1056);
+            this.rocklvl3_4.Margin = new System.Windows.Forms.Padding(2);
+            this.rocklvl3_4.Name = "rocklvl3_4";
+            this.rocklvl3_4.Size = new System.Drawing.Size(30, 32);
+            this.rocklvl3_4.TabIndex = 140;
+            this.rocklvl3_4.TabStop = false;
+            this.rocklvl3_4.Tag = "movable_object";
+            // 
+            // loglvl3_2
+            // 
+            this.loglvl3_2.BackColor = System.Drawing.Color.Peru;
+            this.loglvl3_2.Location = new System.Drawing.Point(120, 1024);
+            this.loglvl3_2.Margin = new System.Windows.Forms.Padding(2);
+            this.loglvl3_2.Name = "loglvl3_2";
+            this.loglvl3_2.Size = new System.Drawing.Size(150, 32);
+            this.loglvl3_2.TabIndex = 139;
+            this.loglvl3_2.TabStop = false;
+            this.loglvl3_2.Tag = "flammable_object";
+            // 
+            // riverlvl3_7
+            // 
+            this.riverlvl3_7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.riverlvl3_7.Location = new System.Drawing.Point(285, 1008);
+            this.riverlvl3_7.Margin = new System.Windows.Forms.Padding(2);
+            this.riverlvl3_7.Name = "riverlvl3_7";
+            this.riverlvl3_7.Size = new System.Drawing.Size(60, 81);
+            this.riverlvl3_7.TabIndex = 138;
+            this.riverlvl3_7.TabStop = false;
+            this.riverlvl3_7.Tag = "river";
+            // 
+            // freezablelvl3_5
+            // 
+            this.freezablelvl3_5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.freezablelvl3_5.Location = new System.Drawing.Point(285, 942);
+            this.freezablelvl3_5.Margin = new System.Windows.Forms.Padding(2);
+            this.freezablelvl3_5.Name = "freezablelvl3_5";
+            this.freezablelvl3_5.Size = new System.Drawing.Size(60, 65);
+            this.freezablelvl3_5.TabIndex = 137;
+            this.freezablelvl3_5.TabStop = false;
+            this.freezablelvl3_5.Tag = "freezable_object";
+            // 
+            // riverlvl3_6
+            // 
+            this.riverlvl3_6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.riverlvl3_6.Location = new System.Drawing.Point(285, 861);
+            this.riverlvl3_6.Margin = new System.Windows.Forms.Padding(2);
+            this.riverlvl3_6.Name = "riverlvl3_6";
+            this.riverlvl3_6.Size = new System.Drawing.Size(60, 81);
+            this.riverlvl3_6.TabIndex = 136;
+            this.riverlvl3_6.TabStop = false;
+            this.riverlvl3_6.Tag = "river";
+            // 
+            // walllvl3_11
+            // 
+            this.walllvl3_11.Location = new System.Drawing.Point(375, 1219);
+            this.walllvl3_11.Margin = new System.Windows.Forms.Padding(2);
+            this.walllvl3_11.Name = "walllvl3_11";
+            this.walllvl3_11.Size = new System.Drawing.Size(30, 49);
+            this.walllvl3_11.TabIndex = 135;
+            this.walllvl3_11.TabStop = false;
+            this.walllvl3_11.Tag = "wall";
+            // 
+            // doorlvl3_7
+            // 
+            this.doorlvl3_7.BackColor = System.Drawing.Color.Maroon;
+            this.doorlvl3_7.Location = new System.Drawing.Point(375, 1154);
+            this.doorlvl3_7.Margin = new System.Windows.Forms.Padding(2);
+            this.doorlvl3_7.Name = "doorlvl3_7";
+            this.doorlvl3_7.Size = new System.Drawing.Size(30, 65);
+            this.doorlvl3_7.TabIndex = 134;
+            this.doorlvl3_7.TabStop = false;
+            this.doorlvl3_7.Tag = "door_closed";
+            // 
+            // doorlvl3_6
+            // 
+            this.doorlvl3_6.BackColor = System.Drawing.Color.Maroon;
+            this.doorlvl3_6.Location = new System.Drawing.Point(15, 1089);
+            this.doorlvl3_6.Margin = new System.Windows.Forms.Padding(2);
+            this.doorlvl3_6.Name = "doorlvl3_6";
+            this.doorlvl3_6.Size = new System.Drawing.Size(60, 32);
+            this.doorlvl3_6.TabIndex = 133;
+            this.doorlvl3_6.TabStop = false;
+            this.doorlvl3_6.Tag = "door_closed";
+            // 
+            // doorlvl3_5
+            // 
+            this.doorlvl3_5.BackColor = System.Drawing.Color.Maroon;
+            this.doorlvl3_5.Location = new System.Drawing.Point(375, 942);
+            this.doorlvl3_5.Margin = new System.Windows.Forms.Padding(2);
+            this.doorlvl3_5.Name = "doorlvl3_5";
+            this.doorlvl3_5.Size = new System.Drawing.Size(30, 67);
+            this.doorlvl3_5.TabIndex = 132;
+            this.doorlvl3_5.TabStop = false;
+            this.doorlvl3_5.Tag = "door_closed";
+            // 
+            // walllvl3_10
+            // 
+            this.walllvl3_10.Location = new System.Drawing.Point(75, 1089);
+            this.walllvl3_10.Margin = new System.Windows.Forms.Padding(2);
+            this.walllvl3_10.Name = "walllvl3_10";
+            this.walllvl3_10.Size = new System.Drawing.Size(525, 32);
+            this.walllvl3_10.TabIndex = 131;
+            this.walllvl3_10.TabStop = false;
+            this.walllvl3_10.Tag = "wall";
+            // 
+            // walllvl3_9
+            // 
+            this.walllvl3_9.Location = new System.Drawing.Point(375, 1008);
+            this.walllvl3_9.Margin = new System.Windows.Forms.Padding(2);
+            this.walllvl3_9.Name = "walllvl3_9";
+            this.walllvl3_9.Size = new System.Drawing.Size(30, 146);
+            this.walllvl3_9.TabIndex = 130;
+            this.walllvl3_9.TabStop = false;
+            this.walllvl3_9.Tag = "wall";
+            // 
+            // loglvl3_1
+            // 
+            this.loglvl3_1.BackColor = System.Drawing.Color.Peru;
+            this.loglvl3_1.Location = new System.Drawing.Point(405, 894);
+            this.loglvl3_1.Margin = new System.Windows.Forms.Padding(2);
+            this.loglvl3_1.Name = "loglvl3_1";
+            this.loglvl3_1.Size = new System.Drawing.Size(30, 162);
+            this.loglvl3_1.TabIndex = 129;
+            this.loglvl3_1.TabStop = false;
+            this.loglvl3_1.Tag = "flammable_object";
+            // 
+            // walllvl3_8
+            // 
+            this.walllvl3_8.Location = new System.Drawing.Point(75, 829);
+            this.walllvl3_8.Margin = new System.Windows.Forms.Padding(2);
+            this.walllvl3_8.Name = "walllvl3_8";
+            this.walllvl3_8.Size = new System.Drawing.Size(30, 292);
+            this.walllvl3_8.TabIndex = 128;
+            this.walllvl3_8.TabStop = false;
+            this.walllvl3_8.Tag = "wall";
+            // 
+            // rocklvl3_3
+            // 
+            this.rocklvl3_3.BackColor = System.Drawing.Color.DimGray;
+            this.rocklvl3_3.Location = new System.Drawing.Point(465, 861);
+            this.rocklvl3_3.Margin = new System.Windows.Forms.Padding(2);
+            this.rocklvl3_3.Name = "rocklvl3_3";
+            this.rocklvl3_3.Size = new System.Drawing.Size(60, 32);
+            this.rocklvl3_3.TabIndex = 127;
+            this.rocklvl3_3.TabStop = false;
+            this.rocklvl3_3.Tag = "movable_object";
+            // 
+            // walllvl3_7
+            // 
+            this.walllvl3_7.Location = new System.Drawing.Point(525, 829);
+            this.walllvl3_7.Margin = new System.Windows.Forms.Padding(2);
+            this.walllvl3_7.Name = "walllvl3_7";
+            this.walllvl3_7.Size = new System.Drawing.Size(60, 32);
+            this.walllvl3_7.TabIndex = 126;
+            this.walllvl3_7.TabStop = false;
+            this.walllvl3_7.Tag = "wall";
+            // 
+            // door3
+            // 
+            this.door3.BackColor = System.Drawing.Color.Maroon;
+            this.door3.Location = new System.Drawing.Point(578, 942);
+            this.door3.Margin = new System.Windows.Forms.Padding(2);
+            this.door3.Name = "door3";
+            this.door3.Size = new System.Drawing.Size(30, 65);
+            this.door3.TabIndex = 125;
+            this.door3.TabStop = false;
+            this.door3.Tag = "door_closed";
+            // 
+            // wall18
+            // 
+            this.wall18.Location = new System.Drawing.Point(578, 650);
+            this.wall18.Margin = new System.Windows.Forms.Padding(2);
+            this.wall18.Name = "wall18";
+            this.wall18.Size = new System.Drawing.Size(30, 292);
+            this.wall18.TabIndex = 124;
+            this.wall18.TabStop = false;
+            this.wall18.Tag = "wall";
+            // 
+            // wall19
+            // 
+            this.wall19.Location = new System.Drawing.Point(578, 1008);
+            this.wall19.Margin = new System.Windows.Forms.Padding(2);
+            this.wall19.Name = "wall19";
+            this.wall19.Size = new System.Drawing.Size(30, 276);
+            this.wall19.TabIndex = 123;
+            this.wall19.TabStop = false;
+            this.wall19.Tag = "wall";
+            // 
+            // doorlvl3_4
+            // 
+            this.doorlvl3_4.BackColor = System.Drawing.Color.Maroon;
+            this.doorlvl3_4.Location = new System.Drawing.Point(465, 829);
+            this.doorlvl3_4.Margin = new System.Windows.Forms.Padding(2);
+            this.doorlvl3_4.Name = "doorlvl3_4";
+            this.doorlvl3_4.Size = new System.Drawing.Size(60, 32);
+            this.doorlvl3_4.TabIndex = 122;
+            this.doorlvl3_4.TabStop = false;
+            this.doorlvl3_4.Tag = "door_closed";
+            // 
+            // walllvl3_6
+            // 
+            this.walllvl3_6.Location = new System.Drawing.Point(255, 829);
+            this.walllvl3_6.Margin = new System.Windows.Forms.Padding(2);
+            this.walllvl3_6.Name = "walllvl3_6";
+            this.walllvl3_6.Size = new System.Drawing.Size(210, 32);
+            this.walllvl3_6.TabIndex = 121;
+            this.walllvl3_6.TabStop = false;
+            this.walllvl3_6.Tag = "wall";
+            // 
+            // doorlvl3_2
+            // 
+            this.doorlvl3_2.BackColor = System.Drawing.Color.Maroon;
+            this.doorlvl3_2.Location = new System.Drawing.Point(195, 829);
+            this.doorlvl3_2.Margin = new System.Windows.Forms.Padding(2);
+            this.doorlvl3_2.Name = "doorlvl3_2";
+            this.doorlvl3_2.Size = new System.Drawing.Size(60, 32);
+            this.doorlvl3_2.TabIndex = 120;
+            this.doorlvl3_2.TabStop = false;
+            this.doorlvl3_2.Tag = "door_closed";
+            // 
+            // walllvl3_4
+            // 
+            this.walllvl3_4.Location = new System.Drawing.Point(75, 829);
+            this.walllvl3_4.Margin = new System.Windows.Forms.Padding(2);
+            this.walllvl3_4.Name = "walllvl3_4";
+            this.walllvl3_4.Size = new System.Drawing.Size(120, 32);
+            this.walllvl3_4.TabIndex = 119;
+            this.walllvl3_4.TabStop = false;
+            this.walllvl3_4.Tag = "wall";
+            // 
+            // rocklvl3_2
+            // 
+            this.rocklvl3_2.BackColor = System.Drawing.Color.DimGray;
+            this.rocklvl3_2.Location = new System.Drawing.Point(255, 805);
+            this.rocklvl3_2.Margin = new System.Windows.Forms.Padding(2);
+            this.rocklvl3_2.Name = "rocklvl3_2";
+            this.rocklvl3_2.Size = new System.Drawing.Size(20, 20);
+            this.rocklvl3_2.TabIndex = 118;
+            this.rocklvl3_2.TabStop = false;
+            this.rocklvl3_2.Tag = "movable_object";
+            // 
+            // riverlvl3_5
+            // 
+            this.riverlvl3_5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.riverlvl3_5.Location = new System.Drawing.Point(345, 764);
+            this.riverlvl3_5.Margin = new System.Windows.Forms.Padding(2);
+            this.riverlvl3_5.Name = "riverlvl3_5";
+            this.riverlvl3_5.Size = new System.Drawing.Size(30, 32);
+            this.riverlvl3_5.TabIndex = 117;
+            this.riverlvl3_5.TabStop = false;
+            this.riverlvl3_5.Tag = "river";
+            // 
+            // freezablelvl3_3
+            // 
+            this.freezablelvl3_3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.freezablelvl3_3.Location = new System.Drawing.Point(300, 764);
+            this.freezablelvl3_3.Margin = new System.Windows.Forms.Padding(2);
+            this.freezablelvl3_3.Name = "freezablelvl3_3";
+            this.freezablelvl3_3.Size = new System.Drawing.Size(45, 32);
+            this.freezablelvl3_3.TabIndex = 116;
+            this.freezablelvl3_3.TabStop = false;
+            this.freezablelvl3_3.Tag = "freezable_object";
+            // 
+            // riverlvl3_4
+            // 
+            this.riverlvl3_4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.riverlvl3_4.Location = new System.Drawing.Point(195, 764);
+            this.riverlvl3_4.Margin = new System.Windows.Forms.Padding(2);
+            this.riverlvl3_4.Name = "riverlvl3_4";
+            this.riverlvl3_4.Size = new System.Drawing.Size(105, 32);
+            this.riverlvl3_4.TabIndex = 115;
+            this.riverlvl3_4.TabStop = false;
+            this.riverlvl3_4.Tag = "river";
+            // 
+            // rocklvl3_1
+            // 
+            this.rocklvl3_1.BackColor = System.Drawing.Color.DimGray;
+            this.rocklvl3_1.Location = new System.Drawing.Point(270, 736);
+            this.rocklvl3_1.Margin = new System.Windows.Forms.Padding(2);
+            this.rocklvl3_1.Name = "rocklvl3_1";
+            this.rocklvl3_1.Size = new System.Drawing.Size(20, 20);
+            this.rocklvl3_1.TabIndex = 114;
+            this.rocklvl3_1.TabStop = false;
+            this.rocklvl3_1.Tag = "movable_object";
+            // 
+            // doorlvl3_1
+            // 
+            this.doorlvl3_1.BackColor = System.Drawing.Color.Maroon;
+            this.doorlvl3_1.Location = new System.Drawing.Point(15, 829);
+            this.doorlvl3_1.Margin = new System.Windows.Forms.Padding(2);
+            this.doorlvl3_1.Name = "doorlvl3_1";
+            this.doorlvl3_1.Size = new System.Drawing.Size(60, 32);
+            this.doorlvl3_1.TabIndex = 113;
+            this.doorlvl3_1.TabStop = false;
+            this.doorlvl3_1.Tag = "door_closed";
+            // 
+            // walllvl3_3
+            // 
+            this.walllvl3_3.Location = new System.Drawing.Point(75, 829);
+            this.walllvl3_3.Margin = new System.Windows.Forms.Padding(2);
+            this.walllvl3_3.Name = "walllvl3_3";
+            this.walllvl3_3.Size = new System.Drawing.Size(120, 32);
+            this.walllvl3_3.TabIndex = 112;
+            this.walllvl3_3.TabStop = false;
+            this.walllvl3_3.Tag = "wall";
+            // 
+            // chest2
+            // 
+            this.chest2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.chest2.Location = new System.Drawing.Point(120, 780);
+            this.chest2.Margin = new System.Windows.Forms.Padding(2);
+            this.chest2.Name = "chest2";
+            this.chest2.Size = new System.Drawing.Size(30, 32);
+            this.chest2.TabIndex = 111;
+            this.chest2.TabStop = false;
+            this.chest2.Tag = "flammable_object";
+            // 
+            // Sugar
+            // 
+            this.Sugar.BackColor = System.Drawing.Color.White;
+            this.Sugar.Location = new System.Drawing.Point(128, 788);
+            this.Sugar.Margin = new System.Windows.Forms.Padding(2);
+            this.Sugar.Name = "Sugar";
+            this.Sugar.Size = new System.Drawing.Size(15, 16);
+            this.Sugar.TabIndex = 110;
+            this.Sugar.TabStop = false;
+            this.Sugar.Tag = "sugar";
+            // 
+            // walllvl3_2
+            // 
+            this.walllvl3_2.Location = new System.Drawing.Point(165, 731);
+            this.walllvl3_2.Margin = new System.Windows.Forms.Padding(2);
+            this.walllvl3_2.Name = "walllvl3_2";
+            this.walllvl3_2.Size = new System.Drawing.Size(30, 130);
+            this.walllvl3_2.TabIndex = 109;
+            this.walllvl3_2.TabStop = false;
+            this.walllvl3_2.Tag = "wall";
+            // 
+            // Dragon
+            // 
+            this.Dragon.BackColor = System.Drawing.Color.Green;
+            this.Dragon.Location = new System.Drawing.Point(431, 699);
+            this.Dragon.Margin = new System.Windows.Forms.Padding(2);
+            this.Dragon.Name = "Dragon";
+            this.Dragon.Size = new System.Drawing.Size(120, 98);
+            this.Dragon.TabIndex = 108;
+            this.Dragon.TabStop = false;
+            this.Dragon.Tag = "NPC";
+            // 
+            // walllvl3_1
+            // 
+            this.walllvl3_1.Location = new System.Drawing.Point(375, 658);
+            this.walllvl3_1.Margin = new System.Windows.Forms.Padding(2);
+            this.walllvl3_1.Name = "walllvl3_1";
+            this.walllvl3_1.Size = new System.Drawing.Size(30, 292);
+            this.walllvl3_1.TabIndex = 107;
+            this.walllvl3_1.TabStop = false;
+            this.walllvl3_1.Tag = "wall";
+            // 
+            // riverlvl3_3
+            // 
+            this.riverlvl3_3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.riverlvl3_3.Location = new System.Drawing.Point(270, 699);
+            this.riverlvl3_3.Margin = new System.Windows.Forms.Padding(2);
+            this.riverlvl3_3.Name = "riverlvl3_3";
+            this.riverlvl3_3.Size = new System.Drawing.Size(105, 32);
+            this.riverlvl3_3.TabIndex = 106;
+            this.riverlvl3_3.TabStop = false;
+            this.riverlvl3_3.Tag = "river";
+            // 
+            // freezablelvl3_2
+            // 
+            this.freezablelvl3_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.freezablelvl3_2.Location = new System.Drawing.Point(225, 699);
+            this.freezablelvl3_2.Margin = new System.Windows.Forms.Padding(2);
+            this.freezablelvl3_2.Name = "freezablelvl3_2";
+            this.freezablelvl3_2.Size = new System.Drawing.Size(45, 32);
+            this.freezablelvl3_2.TabIndex = 105;
+            this.freezablelvl3_2.TabStop = false;
+            this.freezablelvl3_2.Tag = "freezable_object";
+            // 
+            // riverlvl3_2
+            // 
+            this.riverlvl3_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.riverlvl3_2.Location = new System.Drawing.Point(120, 699);
+            this.riverlvl3_2.Margin = new System.Windows.Forms.Padding(2);
+            this.riverlvl3_2.Name = "riverlvl3_2";
+            this.riverlvl3_2.Size = new System.Drawing.Size(105, 32);
+            this.riverlvl3_2.TabIndex = 104;
+            this.riverlvl3_2.TabStop = false;
+            this.riverlvl3_2.Tag = "river";
+            // 
+            // freezablelvl3_1
+            // 
+            this.freezablelvl3_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.freezablelvl3_1.Location = new System.Drawing.Point(60, 699);
+            this.freezablelvl3_1.Margin = new System.Windows.Forms.Padding(2);
+            this.freezablelvl3_1.Name = "freezablelvl3_1";
+            this.freezablelvl3_1.Size = new System.Drawing.Size(60, 32);
+            this.freezablelvl3_1.TabIndex = 103;
+            this.freezablelvl3_1.TabStop = false;
+            this.freezablelvl3_1.Tag = "freezable_object";
+            // 
+            // riverlvl3_1
+            // 
+            this.riverlvl3_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.riverlvl3_1.Location = new System.Drawing.Point(15, 699);
+            this.riverlvl3_1.Margin = new System.Windows.Forms.Padding(2);
+            this.riverlvl3_1.Name = "riverlvl3_1";
+            this.riverlvl3_1.Size = new System.Drawing.Size(45, 32);
+            this.riverlvl3_1.TabIndex = 102;
+            this.riverlvl3_1.TabStop = false;
+            this.riverlvl3_1.Tag = "river";
+            // 
+=======
+>>>>>>> f3684b9933ba2c182d953a2d8e0d5b8fa77d57fc
             // pnlInv
             // 
             this.pnlInv.BackColor = System.Drawing.Color.Black;
@@ -1544,8 +2146,14 @@
             this.pnlInv.Controls.Add(this.item1);
             this.pnlInv.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlInv.Location = new System.Drawing.Point(0, 0);
+<<<<<<< HEAD
+            this.pnlInv.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlInv.Name = "pnlInv";
+            this.pnlInv.Size = new System.Drawing.Size(1264, 93);
+=======
             this.pnlInv.Name = "pnlInv";
             this.pnlInv.Size = new System.Drawing.Size(1319, 114);
+>>>>>>> f3684b9933ba2c182d953a2d8e0d5b8fa77d57fc
             this.pnlInv.TabIndex = 5;
             this.pnlInv.Visible = false;
             // 
@@ -1555,7 +2163,12 @@
             this.item4Lbl.BackColor = System.Drawing.Color.Transparent;
             this.item4Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.item4Lbl.ForeColor = System.Drawing.Color.White;
+<<<<<<< HEAD
+            this.item4Lbl.Location = new System.Drawing.Point(270, 46);
+            this.item4Lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+=======
             this.item4Lbl.Location = new System.Drawing.Point(360, 57);
+>>>>>>> f3684b9933ba2c182d953a2d8e0d5b8fa77d57fc
             this.item4Lbl.Name = "item4Lbl";
             this.item4Lbl.Size = new System.Drawing.Size(0, 24);
             this.item4Lbl.TabIndex = 7;
@@ -1566,7 +2179,12 @@
             this.item3Lbl.BackColor = System.Drawing.Color.Transparent;
             this.item3Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.item3Lbl.ForeColor = System.Drawing.Color.White;
+<<<<<<< HEAD
+            this.item3Lbl.Location = new System.Drawing.Point(199, 46);
+            this.item3Lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+=======
             this.item3Lbl.Location = new System.Drawing.Point(265, 57);
+>>>>>>> f3684b9933ba2c182d953a2d8e0d5b8fa77d57fc
             this.item3Lbl.Name = "item3Lbl";
             this.item3Lbl.Size = new System.Drawing.Size(0, 24);
             this.item3Lbl.TabIndex = 6;
@@ -1577,7 +2195,12 @@
             this.item2Lbl.BackColor = System.Drawing.Color.Transparent;
             this.item2Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.item2Lbl.ForeColor = System.Drawing.Color.White;
+<<<<<<< HEAD
+            this.item2Lbl.Location = new System.Drawing.Point(128, 46);
+            this.item2Lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+=======
             this.item2Lbl.Location = new System.Drawing.Point(170, 57);
+>>>>>>> f3684b9933ba2c182d953a2d8e0d5b8fa77d57fc
             this.item2Lbl.Name = "item2Lbl";
             this.item2Lbl.Size = new System.Drawing.Size(0, 24);
             this.item2Lbl.TabIndex = 5;
@@ -1588,37 +2211,72 @@
             this.item1Lbl.BackColor = System.Drawing.Color.Transparent;
             this.item1Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.item1Lbl.ForeColor = System.Drawing.Color.White;
+<<<<<<< HEAD
+            this.item1Lbl.Location = new System.Drawing.Point(56, 46);
+            this.item1Lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+=======
             this.item1Lbl.Location = new System.Drawing.Point(75, 57);
+>>>>>>> f3684b9933ba2c182d953a2d8e0d5b8fa77d57fc
             this.item1Lbl.Name = "item1Lbl";
             this.item1Lbl.Size = new System.Drawing.Size(0, 24);
             this.item1Lbl.TabIndex = 4;
             // 
             // item4
             // 
+<<<<<<< HEAD
+            this.item4.Location = new System.Drawing.Point(236, 13);
+            this.item4.Margin = new System.Windows.Forms.Padding(2);
+            this.item4.Name = "item4";
+            this.item4.Size = new System.Drawing.Size(49, 53);
+=======
             this.item4.Location = new System.Drawing.Point(315, 16);
             this.item4.Name = "item4";
             this.item4.Size = new System.Drawing.Size(65, 65);
+>>>>>>> f3684b9933ba2c182d953a2d8e0d5b8fa77d57fc
             this.item4.TabIndex = 3;
             this.item4.TabStop = false;
             // 
             // item3
             // 
+<<<<<<< HEAD
+            this.item3.Location = new System.Drawing.Point(165, 13);
+            this.item3.Margin = new System.Windows.Forms.Padding(2);
+            this.item3.Name = "item3";
+            this.item3.Size = new System.Drawing.Size(49, 53);
+=======
             this.item3.Location = new System.Drawing.Point(220, 16);
             this.item3.Name = "item3";
             this.item3.Size = new System.Drawing.Size(65, 65);
+>>>>>>> f3684b9933ba2c182d953a2d8e0d5b8fa77d57fc
             this.item3.TabIndex = 2;
             this.item3.TabStop = false;
             // 
             // item2
             // 
+<<<<<<< HEAD
+            this.item2.Location = new System.Drawing.Point(94, 13);
+            this.item2.Margin = new System.Windows.Forms.Padding(2);
+            this.item2.Name = "item2";
+            this.item2.Size = new System.Drawing.Size(49, 53);
+=======
             this.item2.Location = new System.Drawing.Point(125, 16);
             this.item2.Name = "item2";
             this.item2.Size = new System.Drawing.Size(65, 65);
+>>>>>>> f3684b9933ba2c182d953a2d8e0d5b8fa77d57fc
             this.item2.TabIndex = 1;
             this.item2.TabStop = false;
             // 
             // item1
             // 
+<<<<<<< HEAD
+            this.item1.Location = new System.Drawing.Point(22, 13);
+            this.item1.Margin = new System.Windows.Forms.Padding(2);
+            this.item1.Name = "item1";
+            this.item1.Size = new System.Drawing.Size(49, 53);
+            this.item1.TabIndex = 0;
+            this.item1.TabStop = false;
+            // 
+=======
             this.item1.Location = new System.Drawing.Point(30, 16);
             this.item1.Name = "item1";
             this.item1.Size = new System.Drawing.Size(65, 65);
@@ -1633,13 +2291,14 @@
             this.PlayerSpells.TabIndex = 102;
             this.PlayerSpells.TabStop = false;
             // 
+>>>>>>> f3684b9933ba2c182d953a2d8e0d5b8fa77d57fc
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.CausesValidation = false;
-            this.ClientSize = new System.Drawing.Size(1319, 804);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.Map);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.pnlText);
@@ -1651,6 +2310,7 @@
             this.Text = "Game";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyIsDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.KeyIsUp);
+            ((System.ComponentModel.ISupportInitialize)(this.PlayerSpells)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.pnlText.ResumeLayout(false);
@@ -1696,8 +2356,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.Carrot3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Bunny)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.George)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.water1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.water2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rock2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rock3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rock4)).EndInit();
@@ -1724,22 +2382,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.freezablelvl2_1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.freezablelvl2_2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.freezablelvl2_3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.riverlvl2_17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.freezablelvl2_4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.freezablelvl2_5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.freezablelvl2_6)).EndInit();
@@ -1760,19 +2413,75 @@
             ((System.ComponentModel.ISupportInitialize)(this.coin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rocklvl2)).EndInit();
             this.Map.ResumeLayout(false);
+<<<<<<< HEAD
+            ((System.ComponentModel.ISupportInitialize)(this.Cthulhu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonlvl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IceCrystal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonlvl2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.walllvl1_11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.walllvl1_10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EarthCrystal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FireCrystal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonlvl3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.craft_area)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rocklvl3_4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loglvl3_2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.riverlvl3_7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.freezablelvl3_5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.riverlvl3_6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.walllvl3_11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doorlvl3_7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doorlvl3_6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doorlvl3_5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.walllvl3_10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.walllvl3_9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loglvl3_1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.walllvl3_8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rocklvl3_3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.walllvl3_7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.door3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wall18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wall19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doorlvl3_4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.walllvl3_6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doorlvl3_2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.walllvl3_4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rocklvl3_2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.riverlvl3_5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.freezablelvl3_3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.riverlvl3_4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rocklvl3_1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doorlvl3_1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.walllvl3_3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chest2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Sugar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.walllvl3_2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Dragon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.walllvl3_1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.riverlvl3_3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.freezablelvl3_2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.riverlvl3_2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.freezablelvl3_1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.riverlvl3_1)).EndInit();
+=======
+>>>>>>> f3684b9933ba2c182d953a2d8e0d5b8fa77d57fc
             this.pnlInv.ResumeLayout(false);
             this.pnlInv.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.item4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.item3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.item2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.item1)).EndInit();
+<<<<<<< HEAD
+=======
             ((System.ComponentModel.ISupportInitialize)(this.PlayerSpells)).EndInit();
+>>>>>>> f3684b9933ba2c182d953a2d8e0d5b8fa77d57fc
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
+        private System.Windows.Forms.PictureBox PlayerSpells;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel statusLabel;
@@ -1820,8 +2529,6 @@
         private System.Windows.Forms.PictureBox Carrot3;
         private System.Windows.Forms.PictureBox Bunny;
         private System.Windows.Forms.PictureBox George;
-        private System.Windows.Forms.PictureBox water1;
-        private System.Windows.Forms.PictureBox water2;
         private System.Windows.Forms.PictureBox rock2;
         private System.Windows.Forms.PictureBox rock3;
         private System.Windows.Forms.PictureBox rock4;
@@ -1848,22 +2555,17 @@
         private System.Windows.Forms.PictureBox riverlvl2_2;
         private System.Windows.Forms.PictureBox freezablelvl2_1;
         private System.Windows.Forms.PictureBox riverlvl2_3;
-        private System.Windows.Forms.PictureBox riverlvl2_4;
         private System.Windows.Forms.PictureBox freezablelvl2_2;
         private System.Windows.Forms.PictureBox riverlvl2_5;
-        private System.Windows.Forms.PictureBox riverlvl2_6;
         private System.Windows.Forms.PictureBox riverlvl2_7;
-        private System.Windows.Forms.PictureBox riverlvl2_8;
         private System.Windows.Forms.PictureBox freezablelvl2_3;
         private System.Windows.Forms.PictureBox riverlvl2_9;
         private System.Windows.Forms.PictureBox riverlvl2_10;
         private System.Windows.Forms.PictureBox riverlvl2_11;
-        private System.Windows.Forms.PictureBox riverlvl2_12;
         private System.Windows.Forms.PictureBox riverlvl2_13;
         private System.Windows.Forms.PictureBox riverlvl2_14;
         private System.Windows.Forms.PictureBox riverlvl2_15;
         private System.Windows.Forms.PictureBox riverlvl2_16;
-        private System.Windows.Forms.PictureBox riverlvl2_17;
         private System.Windows.Forms.PictureBox freezablelvl2_4;
         private System.Windows.Forms.PictureBox freezablelvl2_5;
         private System.Windows.Forms.PictureBox freezablelvl2_6;
@@ -1884,6 +2586,58 @@
         private System.Windows.Forms.PictureBox coin;
         private System.Windows.Forms.PictureBox rocklvl2;
         private System.Windows.Forms.Panel Map;
+<<<<<<< HEAD
+        private System.Windows.Forms.PictureBox riverlvl3_1;
+        private System.Windows.Forms.PictureBox riverlvl3_2;
+        private System.Windows.Forms.PictureBox freezablelvl3_1;
+        private System.Windows.Forms.PictureBox Dragon;
+        private System.Windows.Forms.PictureBox walllvl3_1;
+        private System.Windows.Forms.PictureBox riverlvl3_3;
+        private System.Windows.Forms.PictureBox freezablelvl3_2;
+        private System.Windows.Forms.PictureBox chest2;
+        private System.Windows.Forms.PictureBox Sugar;
+        private System.Windows.Forms.PictureBox walllvl3_2;
+        private System.Windows.Forms.PictureBox walllvl3_3;
+        private System.Windows.Forms.PictureBox rocklvl3_2;
+        private System.Windows.Forms.PictureBox riverlvl3_5;
+        private System.Windows.Forms.PictureBox freezablelvl3_3;
+        private System.Windows.Forms.PictureBox riverlvl3_4;
+        private System.Windows.Forms.PictureBox rocklvl3_1;
+        private System.Windows.Forms.PictureBox doorlvl3_1;
+        private System.Windows.Forms.PictureBox doorlvl3_4;
+        private System.Windows.Forms.PictureBox walllvl3_6;
+        private System.Windows.Forms.PictureBox doorlvl3_2;
+        private System.Windows.Forms.PictureBox walllvl3_4;
+        private System.Windows.Forms.PictureBox wall19;
+        private System.Windows.Forms.PictureBox door3;
+        private System.Windows.Forms.PictureBox wall18;
+        private System.Windows.Forms.PictureBox walllvl3_7;
+        private System.Windows.Forms.PictureBox walllvl3_8;
+        private System.Windows.Forms.PictureBox rocklvl3_3;
+        private System.Windows.Forms.PictureBox walllvl3_9;
+        private System.Windows.Forms.PictureBox loglvl3_1;
+        private System.Windows.Forms.PictureBox walllvl3_10;
+        private System.Windows.Forms.PictureBox walllvl3_11;
+        private System.Windows.Forms.PictureBox doorlvl3_7;
+        private System.Windows.Forms.PictureBox doorlvl3_6;
+        private System.Windows.Forms.PictureBox doorlvl3_5;
+        private System.Windows.Forms.PictureBox riverlvl3_6;
+        private System.Windows.Forms.PictureBox FireCrystal;
+        private System.Windows.Forms.PictureBox buttonlvl3;
+        private System.Windows.Forms.PictureBox craft_area;
+        private System.Windows.Forms.PictureBox rocklvl3_4;
+        private System.Windows.Forms.PictureBox loglvl3_2;
+        private System.Windows.Forms.PictureBox riverlvl3_7;
+        private System.Windows.Forms.PictureBox freezablelvl3_5;
+        private System.Windows.Forms.PictureBox EarthCrystal;
+        private System.Windows.Forms.PictureBox IceCrystal;
+        private System.Windows.Forms.PictureBox buttonlvl2;
+        private System.Windows.Forms.PictureBox walllvl1_11;
+        private System.Windows.Forms.PictureBox walllvl1_10;
+        private System.Windows.Forms.PictureBox buttonlvl1;
+        private System.Windows.Forms.PictureBox Cthulhu;
+=======
+>>>>>>> f3684b9933ba2c182d953a2d8e0d5b8fa77d57fc
         private System.Windows.Forms.Panel pnlInv;
         private System.Windows.Forms.PictureBox item4;
         private System.Windows.Forms.PictureBox item3;
@@ -1893,7 +2647,10 @@
         private System.Windows.Forms.Label item3Lbl;
         private System.Windows.Forms.Label item2Lbl;
         private System.Windows.Forms.Label item1Lbl;
+<<<<<<< HEAD
+=======
         private System.Windows.Forms.PictureBox PlayerSpells;
+>>>>>>> f3684b9933ba2c182d953a2d8e0d5b8fa77d57fc
     }
 }
 
