@@ -29,7 +29,8 @@ namespace Game
         {
             InitializeComponent();
             pfc.AddFontFile("VCR.ttf");
-            protagonist = new PlayerCharacter(Player);
+            protagonist = new PlayerCharacter(Player,PlayerSpells);
+            PlayerSpells.Visible = false;
         }
 
         protected override void OnLoad(EventArgs e)
@@ -76,7 +77,23 @@ namespace Game
                 }
                 if (e.KeyCode == Keys.E)
                 {
-                    protagonist.fire = true;
+                    protagonist.castSpell = true;
+                }
+                if (e.KeyCode == Keys.D1)
+                {
+                    protagonist.currentSpell = PlayerCharacter.Spells.Earth;
+                }
+                if (e.KeyCode == Keys.D2)
+                {
+                    protagonist.currentSpell = PlayerCharacter.Spells.Fire;
+                }
+                if (e.KeyCode == Keys.D3)
+                {
+                    protagonist.currentSpell = PlayerCharacter.Spells.Ice;
+                }
+                if (e.KeyCode == Keys.Q)
+                {
+                    protagonist.currentSpell = PlayerCharacter.Spells.None;
                 }
             }  
 
@@ -124,7 +141,7 @@ namespace Game
             }
             if (e.KeyCode == Keys.E)
             {
-                protagonist.fire = false;
+                protagonist.castSpell = false;
             }
         }
 
@@ -314,7 +331,7 @@ namespace Game
         {
             foreach (Control f in Player.Parent.Controls)
             {
-                if (f is PictureBox && (f.Tag == "fireball" || f.Tag == "burning_object"))
+                if (f is PictureBox && f.Tag != null && (f.Tag.ToString().StartsWith("fireball") || f.Tag.ToString().StartsWith("iceball") || f.Tag == "burning_object"))
                 {
                     f.Dispose();
                 }
