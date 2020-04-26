@@ -164,7 +164,9 @@ namespace Game
                         }
                     }
                 }
-                if (thisPictureBoxTag.Equals("George"))
+
+                //wczytywanie dialogow dla wszystkich npc
+                if (thisPictureBoxTag.Equals("NPC"))
                 {
                     if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
                     {
@@ -172,36 +174,27 @@ namespace Game
                         {
                             if (protagonist.action)
                             {
+                                //dobranie path zaleznej od nazwy npc
+                                //ewentualnie przerzucic na switch jesli bedzie duzo npc
+                                if (thisPictureBox.Name == "George")
+                                    path = "../Resources/Dialogs/George.txt";
 
-                                path = "../Resources/Dialogs/George.txt";
-                                StreamReader sr = new StreamReader(path);
-                                LoadDialog(sr);
-                                sr.Close();
-
-                            }
-                        }
-                    }
-                }
-                if (thisPictureBoxTag.Equals("Bunny"))
-                {
-                    if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
-                    {
-                        if (reading != true)
-                        {
-                            if (protagonist.action)
-                            {
-                                if (protagonist.Items.FindItem("Carrot") == null || protagonist.Items.FindItem("Carrot").amount < 2)
+                                else if (thisPictureBox.Name == "Bunny")
                                 {
-                                    statusLabel.Text = "More carrots!";
-                                    path = "../Resources/Dialogs/NPCIncompleteQuest.txt";
+                                    if (protagonist.Items.FindItem("Carrot") == null || protagonist.Items.FindItem("Carrot").amount < 2)
+                                    {
+                                        statusLabel.Text = "More carrots!";
+                                        path = "../Resources/Dialogs/NPCIncompleteQuest.txt";
+                                    }
+                                    else
+                                    {
+                                        statusLabel.Text = "You completed the quest!";
+                                        path = "../Resources/Dialogs/NPCFinishedQuest.txt";
+                                        protagonist.Items.RemoveItem("Carrot");
+                                        thisPictureBox.Dispose();
+                                    }
                                 }
-                                else
-                                {
-                                    statusLabel.Text = "You completed the quest!";
-                                    path = "../Resources/Dialogs/NPCFinishedQuest.txt";
-                                    protagonist.Items.RemoveItem("Carrot");
-                                    thisPictureBox.Dispose();
-                                }
+                                //przekazanie path do funckji wczytujacej dialogi
                                 StreamReader sr = new StreamReader(path);
                                 LoadDialog(sr);
                                 sr.Close();
