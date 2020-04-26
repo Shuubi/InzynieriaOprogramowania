@@ -16,35 +16,19 @@ namespace Game
     public class PlayerCharacter
     {
         public Control Player;
-<<<<<<< Updated upstream
-=======
         public Control PlayerSpells;
->>>>>>> Stashed changes
         public bool goRight { get; set; }
         public bool goLeft { get; set; }
         public bool goUp { get; set; }
         public bool goDown { get; set; }
         public bool action { get; set; }
-<<<<<<< Updated upstream
-        public bool fire { get; set; }
-        public Directions playerRotation { get; set; }
-=======
         public bool castSpell { get; set; }
         public Directions playerRotation { get; set; }
         public Spells currentSpell { get; set; }
->>>>>>> Stashed changes
 
         static public int playerSpeed = 6;
 
         public PlayerItemInventory Items = new PlayerItemInventory();
-<<<<<<< Updated upstream
-
-        public enum Directions { Left, Right, Up, Down }
-
-        public PlayerCharacter(Control player)
-        {
-            Player = player;
-=======
         public enum Directions { Left, Right, Up, Down }
         public enum Spells { None, Earth, Fire, Ice }
 
@@ -52,7 +36,6 @@ namespace Game
         {
             Player = player;
             PlayerSpells = playerspells;
->>>>>>> Stashed changes
         }
 
         public void MovePlayer()
@@ -62,10 +45,7 @@ namespace Game
             {
                 Player.Parent.Left -= playerSpeed;
                 Player.Left += playerSpeed;
-<<<<<<< Updated upstream
-=======
                 PlayerSpells.Left += playerSpeed;
->>>>>>> Stashed changes
                 playerRotation = Directions.Right;
 
             }
@@ -73,30 +53,21 @@ namespace Game
             {
                 Player.Parent.Left += playerSpeed;
                 Player.Left -= playerSpeed;
-<<<<<<< Updated upstream
-=======
                 PlayerSpells.Left -= playerSpeed;
->>>>>>> Stashed changes
                 playerRotation = Directions.Left;
             }
             if (goUp)
             {
                 Player.Parent.Top += playerSpeed;
                 Player.Top -= playerSpeed;
-<<<<<<< Updated upstream
-=======
                 PlayerSpells.Top -= playerSpeed;
->>>>>>> Stashed changes
                 playerRotation = Directions.Up;
             }
             if (goDown)
             {
                 Player.Parent.Top -= playerSpeed;
                 Player.Top += playerSpeed;
-<<<<<<< Updated upstream
-=======
                 PlayerSpells.Top += playerSpeed;
->>>>>>> Stashed changes
                 playerRotation = Directions.Down;
             }
 
@@ -135,11 +106,8 @@ namespace Game
 
         public void pushMovableObjects()
         {
-<<<<<<< Updated upstream
-=======
             MovableObjectsCollision();
 
->>>>>>> Stashed changes
             foreach (Control x in Player.Parent.Controls)
             {
                 if (x is PictureBox && x.Tag == "movable_object")
@@ -234,23 +202,14 @@ namespace Game
 
         public void Fire()
         {
-<<<<<<< Updated upstream
-            if (fire)
-=======
             if (castSpell)
->>>>>>> Stashed changes
             {
                 var directionString = playerRotation.ToString();
                 var fireball = new PictureBox
                 {
                     Tag = $"fireball|{directionString}",
-<<<<<<< Updated upstream
-                    Size = new Size(7, 7),
-                    Location = new Point(this.Player.Location.X + 25, this.Player.Location.Y + 25),
-=======
                     Size = new Size(6, 6),
                     Location = new Point(this.Player.Location.X + 15, this.Player.Location.Y + 15),
->>>>>>> Stashed changes
                     BackColor = Color.Red,
                 };
                 this.Player.Parent.Controls.Add(fireball);
@@ -264,18 +223,6 @@ namespace Game
                     switch (rotation)
                     {
                         case "Right":
-<<<<<<< Updated upstream
-                            f.Left += 20;
-                            break;
-                        case "Left":
-                            f.Left -= 20;
-                            break;
-                        case "Up":
-                            f.Top -= 20;
-                            break;
-                        case "Down":
-                            f.Top += 20;
-=======
                             f.Left += 15;
                             break;
                         case "Left":
@@ -286,7 +233,6 @@ namespace Game
                             break;
                         case "Down":
                             f.Top += 15;
->>>>>>> Stashed changes
                             break;
                         default: break;
                     }
@@ -302,8 +248,6 @@ namespace Game
                             x.Tag = "burning_object";
                         }
                     }
-<<<<<<< Updated upstream
-=======
                 }
             }
         }
@@ -356,14 +300,11 @@ namespace Game
                             x.Tag = "ice";
                         }
                     }
->>>>>>> Stashed changes
 
                 }
             }
         }
 
-<<<<<<< Updated upstream
-=======
 
         public void SpellCasting()
         {
@@ -393,25 +334,17 @@ namespace Game
 
         }
 
->>>>>>> Stashed changes
         public void HandlePlayerCharacter()
         {
             playerCollision("wall");
             playerCollision("door_closed");
             playerCollision("flammable_object");
-<<<<<<< Updated upstream
-            MovableObjectsCollision();
-            pushMovableObjects();
-            DoorsInteraction();
-            Fire();
-=======
             playerCollision("water");
             playerCollision("river");
             playerCollision("movable_object");
             playerCollision("freezable_object");
             SpellCasting();
             DoorsInteraction();
->>>>>>> Stashed changes
         }
 
 
@@ -470,19 +403,12 @@ namespace Game
                     return item;
                 }
             }
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
             return null;
             */
 
             return _items.DefaultIfEmpty(null).FirstOrDefault(x => x != null && x.name.Equals(itemName));
         }
 
-<<<<<<< Updated upstream
-    }
-=======
         public int ListSize()
         {
             return _items.Count;
@@ -496,5 +422,5 @@ namespace Game
     }
 
 
->>>>>>> Stashed changes
+
 }

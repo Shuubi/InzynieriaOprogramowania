@@ -8,7 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 using System.Windows.Forms;
-using System.IO;
+using System.IO; //czytnie plikow
+using System.Drawing.Text; //zmiana na wybrany font
 
 namespace Game
 {
@@ -20,14 +21,16 @@ namespace Game
         bool cont = false;
         bool reading = false;
         public string path = String.Empty;
+        PrivateFontCollection pfc = new PrivateFontCollection();
 
         PlayerCharacter protagonist;
 
         public Game()
         {
             InitializeComponent();
-
-            protagonist = new PlayerCharacter(Player);
+            pfc.AddFontFile("VCR.ttf");
+            protagonist = new PlayerCharacter(Player,PlayerSpells);
+            PlayerSpells.Visible = false;
         }
 
         protected override void OnLoad(EventArgs e)
@@ -54,7 +57,7 @@ namespace Game
         //input
         private void KeyIsDown(object sender, KeyEventArgs e)
         {
-            if (pnlText.Visible != true) //wylaczenie ruchu przy czytaniu dialogow
+            if (pnlText.Visible != true && pnlInv.Visible != true) //wylaczenie ruchu przy czytaniu dialogow
             {
                 if (e.KeyCode == Keys.W || e.KeyCode == Keys.Up)
                 {
@@ -74,17 +77,44 @@ namespace Game
                 }
                 if (e.KeyCode == Keys.E)
                 {
-                    protagonist.fire = true;
+                    protagonist.castSpell = true;
                 }
-            }
-                
+                if (e.KeyCode == Keys.D1)
+                {
+                    protagonist.currentSpell = PlayerCharacter.Spells.Earth;
+                }
+                if (e.KeyCode == Keys.D2)
+                {
+                    protagonist.currentSpell = PlayerCharacter.Spells.Fire;
+                }
+                if (e.KeyCode == Keys.D3)
+                {
+                    protagonist.currentSpell = PlayerCharacter.Spells.Ice;
+                }
+                if (e.KeyCode == Keys.Q)
+                {
+                    protagonist.currentSpell = PlayerCharacter.Spells.None;
+                }
+            }  
+
             if (e.KeyCode == Keys.Space)
             {
                 protagonist.action = true;
                 if (reading)
                     cont = true;
             }
-            
+
+            if (e.KeyCode == Keys.I)
+            {
+                if (pnlInv.Visible)
+                    pnlInv.Visible = false;
+                else
+                {
+                    updateInv();
+                    pnlInv.BringToFront();
+                    pnlInv.Visible = true;
+                }
+            }
         }
 
         private void KeyIsUp(object sender, KeyEventArgs e)
@@ -111,7 +141,7 @@ namespace Game
             }
             if (e.KeyCode == Keys.E)
             {
-                protagonist.fire = false;
+                protagonist.castSpell = false;
             }
         }
 
@@ -164,12 +194,6 @@ namespace Game
                         }
                     }
                 }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-                if (thisPictureBoxTag.Equals("George"))
-=======
-=======
->>>>>>> Stashed changes
                 if (thisPictureBoxTag.Equals("stick"))
                 {
                     if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
@@ -228,48 +252,34 @@ namespace Game
 
                 //wczytywanie dialogow dla wszystkich npc
                 if (thisPictureBoxTag.Equals("NPC"))
->>>>>>> Stashed changes
                 {
-<<<<<<< Updated upstream
-                    if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
-=======
                     if (reading != true)
->>>>>>> Stashed changes
                     {
-                        if (reading != true)
+                        if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
                         {
                             if (protagonist.action)
                             {
+                                //dobranie path zaleznej od nazwy npc
+                                //ewentualnie przerzucic na switch jesli bedzie duzo npc
+                                if (thisPictureBox.Name == "George")
+                                    path = "../Resources/Dialogs/George.txt";
 
-                                path = "../Resources/Dialogs/George.txt";
-                                StreamReader sr = new StreamReader(path);
-                                LoadDialog(sr);
-                                sr.Close();
-
-                            }
-                        }
-                    }
-                }
-                if (thisPictureBoxTag.Equals("Bunny"))
-                {
-                    if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
-                    {
-                        if (reading != true)
-                        {
-                            if (protagonist.action)
-                            {
-                                if (protagonist.Items.FindItem("Carrot") == null || protagonist.Items.FindItem("Carrot").amount < 2)
+                                else if (thisPictureBox.Name == "Bunny")
                                 {
-                                    statusLabel.Text = "More carrots!";
-                                    path = "../Resources/Dialogs/NPCIncompleteQuest.txt";
+                                    if (protagonist.Items.FindItem("Carrot") == null || protagonist.Items.FindItem("Carrot").amount < 2)
+                                    {
+                                        statusLabel.Text = "More carrots!";
+                                        path = "../Resources/Dialogs/NPCIncompleteQuest.txt";
+                                    }
+                                    else
+                                    {
+                                        statusLabel.Text = "You completed the quest!";
+                                        path = "../Resources/Dialogs/NPCFinishedQuest.txt";
+                                        protagonist.Items.RemoveItem("Carrot");
+                                        thisPictureBox.Dispose();
+                                    }
                                 }
-                                else
-                                {
-                                    statusLabel.Text = "You completed the quest!";
-                                    path = "../Resources/Dialogs/NPCFinishedQuest.txt";
-                                    protagonist.Items.RemoveItem("Carrot");
-                                    thisPictureBox.Dispose();
-                                }
+                                //przekazanie path do funckji wczytujacej dialogi
                                 StreamReader sr = new StreamReader(path);
                                 LoadDialog(sr);
                                 sr.Close();
@@ -308,7 +318,9 @@ namespace Game
         //pokazywanie panelu z dialogami, przejscie do funkcji czytajacej linie z pliku i zamkniecie okna
         private void LoadDialog(StreamReader sr)
         {
+            pnlText.BringToFront();
             pnlText.Visible = true;
+            lblDialog.Font = new Font(pfc.Families[0], 16);
             string ln = String.Empty;
 
             reading = true;
@@ -327,8 +339,6 @@ namespace Game
             lblDialog.Text = "";
             pnlText.Visible = false;
             reading = false;
-<<<<<<< Updated upstream
-=======
             System.Threading.Thread.Sleep(100); //zbyt powolne wciśnięcie spacji sprawiało że dialog jednocześnie kończył się i zaczynał od nowa, sleep ma temu przeciwdziałać
         }
 
@@ -337,7 +347,6 @@ namespace Game
             Item cur;
             string path;
             int amount;
-
             for (int i=0;i< protagonist.Items.ListSize(); i++)
             {
                 cur = protagonist.Items.ReturnItem(i);
@@ -362,7 +371,6 @@ namespace Game
                         break;
                 }
             }
->>>>>>> Stashed changes
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -393,7 +401,7 @@ namespace Game
         {
             foreach (Control f in Player.Parent.Controls)
             {
-                if (f is PictureBox && (f.Tag == "fireball" || f.Tag == "burning_object"))
+                if (f is PictureBox && f.Tag != null && (f.Tag.ToString().StartsWith("fireball") || f.Tag.ToString().StartsWith("iceball") || f.Tag == "burning_object"))
                 {
                     f.Dispose();
                 }
