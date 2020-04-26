@@ -254,7 +254,7 @@ namespace Game
                 //wczytywanie dialogow dla wszystkich npc
                 if (thisPictureBoxTag.Equals("NPC"))
                 {
-                    if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
+                    if (reading != true)
                     {
                         if (protagonist.action)
                         {
