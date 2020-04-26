@@ -195,7 +195,6 @@ namespace Game
                         }
                     }
                 }
-
                 if (thisPictureBoxTag.Equals("stick"))
                 {
                     if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
@@ -402,6 +401,7 @@ namespace Game
             lblDialog.Text = "";
             pnlText.Visible = false;
             reading = false;
+
             System.Threading.Thread.Sleep(100); //zbyt powolne wciśnięcie spacji sprawiało że dialog jednocześnie kończył się i zaczynał od nowa, sleep ma temu przeciwdziałać
         }
 
