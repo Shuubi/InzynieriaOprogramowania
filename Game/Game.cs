@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Threading;
 using System.Windows.Forms;
 using System.IO; //czytnie plikow
 using System.Drawing.Text; //zmiana na wybrany font
@@ -171,6 +164,7 @@ namespace Game
             }
         }
 
+
         private void ItemInteraction()
         {
 
@@ -194,11 +188,131 @@ namespace Game
                         }
                     }
                 }
+                if (thisPictureBoxTag.Equals("stick"))
+                {
+                    if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
+                    {
+                        if (protagonist.action)
+                        {
+                            protagonist.Items.InsertItem("Stick");
+                            thisPictureBox.Dispose();
+                        }
+                    }
+                }
+                if (thisPictureBoxTag.Equals("coin"))
+                {
+                    if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
+                    {
+                        if (protagonist.action)
+                        {
+                            protagonist.Items.InsertItem("Coin");
+                            thisPictureBox.Dispose();
+                        }
+                    }
+                }
+                if (thisPictureBoxTag.Equals("pot"))
+                {
+                    if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
+                    {
+                        if (protagonist.action)
+                        {
+                            protagonist.Items.InsertItem("Pot");
+                            thisPictureBox.Dispose();
+                        }
+                    }
+                }
+                if (thisPictureBoxTag.Equals("sugar"))
+                {
+                    if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
+                    {
+                        if (protagonist.action)
+                        {
+                            protagonist.Items.InsertItem("Sugar");
+                            thisPictureBox.Dispose();
+                        }
+                    }
+                }
+                if (thisPictureBoxTag.Equals("crystal"))
+                {
+                    if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
+                    {
+                        if (protagonist.action)
+                        {
+                            protagonist.Items.InsertItem("crystal");
+                            thisPictureBox.Dispose();
+                        }
+                    }
+                }
+
+                if (thisPictureBoxTag.Equals("NPC"))
+                {
+                    if (reading != true)
+                    {
+                        if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
+                        {
+                            if (protagonist.action)
+                            {
+                                protagonist.Items.InsertItem("Stick");
+                                thisPictureBox.Dispose();
+                            }
+                        }
+                    }
+                }
+                if (thisPictureBoxTag.Equals("coin"))
+                {
+                    if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
+                    {
+                        if (reading != true)
+                        {
+                            if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
+                            {
+                                if (protagonist.action)
+                                {
+                                    protagonist.Items.InsertItem("Coin");
+                                    thisPictureBox.Dispose();
+                                }
+                            }
+                        }
+                    }
+                }
+                if (thisPictureBoxTag.Equals("pot"))
+                {
+                    if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
+                    {
+                        if (protagonist.action)
+                        {
+                            protagonist.Items.InsertItem("Pot");
+                            thisPictureBox.Dispose();
+                        }
+                    }
+                }
+                if (thisPictureBoxTag.Equals("sugar"))
+                {
+                    if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
+                    {
+                        if (protagonist.action)
+                        {
+                            protagonist.Items.InsertItem("Sugar");
+                            thisPictureBox.Dispose();
+                        }
+                    }
+                }
+                if (thisPictureBoxTag.Equals("crystal"))
+                {
+                    if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
+                    {
+                        if (protagonist.action)
+                        {
+                            protagonist.Items.InsertItem("crystal");
+                            thisPictureBox.Dispose();
+                        }
+                    }
+                }
 
                 //wczytywanie dialogow dla wszystkich npc
                 if (thisPictureBoxTag.Equals("NPC"))
                 {
-                    if (reading != true) 
+                    if (reading != true)
                     {
                         if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
                         {
@@ -327,11 +441,26 @@ namespace Game
             protagonist.MovePlayer();
         }
 
+        private void freezablelvl2_2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void riverlvl2_4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void freezablelvl2_6_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void timer2_Tick(object sender, EventArgs e)
         {
             foreach (Control f in Player.Parent.Controls)
             {
-                if (f is PictureBox && f.Tag != null && (f.Tag.ToString().StartsWith("fireball") || f.Tag.ToString().StartsWith("iceball") || f.Tag == "burning_object"))
+                if (f is PictureBox && f.Tag != null && (f.Tag.ToString().StartsWith("fireball") || f.Tag.ToString().StartsWith("iceball") || f.Tag.ToString() == "burning_object"))
                 {
                     f.Dispose();
                 }
