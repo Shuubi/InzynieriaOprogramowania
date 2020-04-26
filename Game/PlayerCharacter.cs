@@ -294,7 +294,7 @@ namespace Game
                         {
                             f.Dispose();
                         }
-                        if (f.Bounds.IntersectsWith(x.Bounds) && (x.Tag == "water"||x.Tag=="river"))
+                        if (f.Bounds.IntersectsWith(x.Bounds) && (x.Tag == "freezable_object"))
                         {
                             x.BackColor = Color.White;
                             x.Tag = "ice";
@@ -326,7 +326,7 @@ namespace Game
                 PlayerSpells.Visible = true;
                 Ice();
             }
-            if(currentSpell == Spells.None)
+            if (currentSpell == Spells.None)
             {
                 PlayerSpells.Visible = false;
             }
@@ -342,6 +342,7 @@ namespace Game
             playerCollision("water");
             playerCollision("river");
             playerCollision("movable_object");
+            playerCollision("freezable_object");
             SpellCasting();
             DoorsInteraction();
         }
@@ -402,7 +403,6 @@ namespace Game
                     return item;
                 }
             }
-
             return null;
             */
 
@@ -418,6 +418,5 @@ namespace Game
         {
             return _items[i];
         }
-
     }
 }
