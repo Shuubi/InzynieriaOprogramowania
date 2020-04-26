@@ -1115,6 +1115,7 @@
             this.freezablelvl2_2.TabIndex = 69;
             this.freezablelvl2_2.TabStop = false;
             this.freezablelvl2_2.Tag = "freezable_object";
+            this.freezablelvl2_2.Click += new System.EventHandler(this.freezablelvl2_2_Click);
             // 
             // riverlvl2_5
             // 
@@ -1258,6 +1259,7 @@
             this.freezablelvl2_6.TabIndex = 86;
             this.freezablelvl2_6.TabStop = false;
             this.freezablelvl2_6.Tag = "freezable_object";
+            this.freezablelvl2_6.Click += new System.EventHandler(this.freezablelvl2_6_Click);
             // 
             // riverlvl2_18
             // 
