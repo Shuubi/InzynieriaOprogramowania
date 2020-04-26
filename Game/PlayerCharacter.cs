@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -79,7 +79,7 @@ namespace Game
             //wykrywa kolizje gracza z pictureboxami z tagiem przekazanym jako argument funkcji
             foreach (Control x in Player.Parent.Controls)
             {
-                if (x is PictureBox && x.Tag == tag)
+                if (x is PictureBox && x.Tag.ToString() == tag)
                 {
                     if (Player.Bounds.IntersectsWith(x.Bounds))
                     {
@@ -110,7 +110,7 @@ namespace Game
 
             foreach (Control x in Player.Parent.Controls)
             {
-                if (x is PictureBox && x.Tag == "movable_object")
+                if (x is PictureBox && x.Tag.ToString() == "movable_object")
                 {
                     if (action) //gdy gracz ma wcisnieta spacje i podejdzie do movable_object, to moze go przesuwac na wszystkie strony, rowniez ciagnac do siebie (potem mozna dodac warunek znajomosci jakiegos zaklecia)
                     {
@@ -150,13 +150,13 @@ namespace Game
             //poniewaz ruch ruchomych obiektow jest zalezny tylko od ruchu gracza, podczas kolizji blokujemy ruch gracza w danym kierunku 
             foreach (Control mv in Player.Parent.Controls) //mv = movable, objekt ktory sie rusza i ma sie zatrzymac 
             {
-                if (mv is PictureBox && mv.Tag == "movable_object")
+                if (mv is PictureBox && mv.Tag.ToString() == "movable_object")
                 {
                     foreach (Control st in Player.Parent.Controls) //st = static, po kolizji mv z tym obiektem zatrzymywany jest ruch
                     {
                         if (st is PictureBox)
                         {
-                            if (st.Tag == "wall" || st.Tag == "door_closed" || st.Tag == "movable_object")
+                            if (st.Tag.ToString() == "wall" || st.Tag.ToString() == "door_closed" || st.Tag.ToString() == "movable_object")
                             {
                                 if (mv.Bounds.IntersectsWith(st.Bounds) && Player.Bounds.IntersectsWith(mv.Bounds))
                                 {
@@ -188,7 +188,7 @@ namespace Game
         {
             foreach (PictureBox x in Player.Parent.Controls)
             {
-                if (x is PictureBox && x.Tag == "door_closed")
+                if (x is PictureBox && x.Tag.ToString() == "door_closed")
                 {
                     //jesli gracz dotyka drzwi i nacisnie spacje, to drzwi zmieniaja tag i kolor
                     if (Player.Bounds.IntersectsWith(x.Bounds) && action)
@@ -238,11 +238,11 @@ namespace Game
                     }
                     foreach (Control x in Player.Parent.Controls)
                     {
-                        if (f.Bounds.IntersectsWith(x.Bounds) && (x.Tag == "wall" || x.Tag == "door_closed"))
+                        if (f.Bounds.IntersectsWith(x.Bounds) && (x.Tag.ToString() == "wall" || x.Tag.ToString() == "door_closed"))
                         {
                             f.Dispose();
                         }
-                        if (f.Bounds.IntersectsWith(x.Bounds) && x.Tag == "flammable_object")
+                        if (f.Bounds.IntersectsWith(x.Bounds) && x.Tag.ToString() == "flammable_object")
                         {
                             x.BackColor = Color.Red;
                             x.Tag = "burning_object";
@@ -290,11 +290,11 @@ namespace Game
                     }
                     foreach (Control x in Player.Parent.Controls)
                     {
-                        if (f.Bounds.IntersectsWith(x.Bounds) && (x.Tag == "wall" || x.Tag == "door_closed"))
+                        if (f.Bounds.IntersectsWith(x.Bounds) && (x.Tag.ToString() == "wall" || x.Tag.ToString() == "door_closed"))
                         {
                             f.Dispose();
                         }
-                        if (f.Bounds.IntersectsWith(x.Bounds) && (x.Tag == "freezable_object"))
+                        if (f.Bounds.IntersectsWith(x.Bounds) && (x.Tag.ToString() == "freezable_object"))
                         {
                             x.BackColor = Color.White;
                             x.Tag = "ice";
@@ -420,7 +420,4 @@ namespace Game
         }
 
     }
-
-
-
 }

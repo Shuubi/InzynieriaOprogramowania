@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Threading;
 using System.Windows.Forms;
 using System.IO; //czytnie plikow
 using System.Drawing.Text; //zmiana na wybrany font
@@ -30,6 +23,7 @@ namespace Game
             InitializeComponent();
             pfc.AddFontFile("VCR.ttf");
             protagonist = new PlayerCharacter(Player, PlayerSpells);
+            protagonist = new PlayerCharacter(Player,PlayerSpells);
             PlayerSpells.Visible = false;
         }
 
@@ -194,7 +188,6 @@ namespace Game
                         }
                     }
                 }
-
                 if (thisPictureBoxTag.Equals("stick"))
                 {
                     if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
@@ -251,10 +244,8 @@ namespace Game
                     }
                 }
 
-                //wczytywanie dialogow dla wszystkich npc
                 if (thisPictureBoxTag.Equals("NPC"))
                 {
-
                     if (reading != true)
 					{
 						if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
@@ -273,10 +264,13 @@ namespace Game
                     {
                         if (reading != true)
                         {
-                            if (protagonist.action)
+                            if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
                             {
-                                protagonist.Items.InsertItem("Coin");
-                                thisPictureBox.Dispose();
+                                if (protagonist.action)
+                                {
+                                    protagonist.Items.InsertItem("Coin");
+                                    thisPictureBox.Dispose();
+                                }
                             }
                         }
                     }
@@ -412,7 +406,6 @@ namespace Game
             Item cur;
             string path;
             int amount;
-
             for (int i = 0; i < protagonist.Items.ListSize(); i++)
             {
                 cur = protagonist.Items.ReturnItem(i);
@@ -467,7 +460,7 @@ namespace Game
         {
             foreach (Control f in Player.Parent.Controls)
             {
-                if (f is PictureBox && f.Tag != null && (f.Tag.ToString().StartsWith("fireball") || f.Tag.ToString().StartsWith("iceball") || f.Tag == "burning_object"))
+                if (f is PictureBox && f.Tag != null && (f.Tag.ToString().StartsWith("fireball") || f.Tag.ToString().StartsWith("iceball") || f.Tag.ToString() == "burning_object"))
                 {
                     f.Dispose();
                 }
