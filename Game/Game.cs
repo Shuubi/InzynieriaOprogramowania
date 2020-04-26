@@ -29,11 +29,7 @@ namespace Game
         {
             InitializeComponent();
             pfc.AddFontFile("VCR.ttf");
-<<<<<<< HEAD
             protagonist = new PlayerCharacter(Player, PlayerSpells);
-=======
-            protagonist = new PlayerCharacter(Player,PlayerSpells);
->>>>>>> f3684b9933ba2c182d953a2d8e0d5b8fa77d57fc
             PlayerSpells.Visible = false;
         }
 
@@ -82,7 +78,6 @@ namespace Game
                 if (e.KeyCode == Keys.E)
                 {
                     protagonist.castSpell = true;
-<<<<<<< HEAD
                 }
                 if (e.KeyCode == Keys.D1)
                 {
@@ -101,26 +96,6 @@ namespace Game
                     protagonist.currentSpell = PlayerCharacter.Spells.None;
                 }
             }
-=======
-                }
-                if (e.KeyCode == Keys.D1)
-                {
-                    protagonist.currentSpell = PlayerCharacter.Spells.Earth;
-                }
-                if (e.KeyCode == Keys.D2)
-                {
-                    protagonist.currentSpell = PlayerCharacter.Spells.Fire;
-                }
-                if (e.KeyCode == Keys.D3)
-                {
-                    protagonist.currentSpell = PlayerCharacter.Spells.Ice;
-                }
-                if (e.KeyCode == Keys.Q)
-                {
-                    protagonist.currentSpell = PlayerCharacter.Spells.None;
-                }
-            }  
->>>>>>> f3684b9933ba2c182d953a2d8e0d5b8fa77d57fc
 
             if (e.KeyCode == Keys.Space)
             {
@@ -219,7 +194,65 @@ namespace Game
                         }
                     }
                 }
+
                 if (thisPictureBoxTag.Equals("stick"))
+                {
+                    if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
+                    {
+                        if (protagonist.action)
+                        {
+                            protagonist.Items.InsertItem("Stick");
+                            thisPictureBox.Dispose();
+                        }
+                    }
+                }
+                if (thisPictureBoxTag.Equals("coin"))
+                {
+                    if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
+                    {
+                        if (protagonist.action)
+                        {
+                            protagonist.Items.InsertItem("Coin");
+                            thisPictureBox.Dispose();
+                        }
+                    }
+                }
+                if (thisPictureBoxTag.Equals("pot"))
+                {
+                    if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
+                    {
+                        if (protagonist.action)
+                        {
+                            protagonist.Items.InsertItem("Pot");
+                            thisPictureBox.Dispose();
+                        }
+                    }
+                }
+                if (thisPictureBoxTag.Equals("sugar"))
+                {
+                    if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
+                    {
+                        if (protagonist.action)
+                        {
+                            protagonist.Items.InsertItem("Sugar");
+                            thisPictureBox.Dispose();
+                        }
+                    }
+                }
+                if (thisPictureBoxTag.Equals("crystal"))
+                {
+                    if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
+                    {
+                        if (protagonist.action)
+                        {
+                            protagonist.Items.InsertItem("crystal");
+                            thisPictureBox.Dispose();
+                        }
+                    }
+                }
+
+                //wczytywanie dialogow dla wszystkich npc
+                if (thisPictureBoxTag.Equals("NPC"))
                 {
                     if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
                     {
@@ -372,21 +405,13 @@ namespace Game
             Item cur;
             string path;
             int amount;
-<<<<<<< HEAD
             for (int i = 0; i < protagonist.Items.ListSize(); i++)
-=======
-            for (int i=0;i< protagonist.Items.ListSize(); i++)
->>>>>>> f3684b9933ba2c182d953a2d8e0d5b8fa77d57fc
             {
                 cur = protagonist.Items.ReturnItem(i);
                 path = "../Resources/Items/" + cur.name + ".jpg"; //nazwa itemu jest takze nazwa pliku
                 switch (i) //dodac jesli zwiekszy sie liczba dostepnych itemow w grze
                 {
-<<<<<<< HEAD
                     case 0:
-=======
-                    case 0: 
->>>>>>> f3684b9933ba2c182d953a2d8e0d5b8fa77d57fc
                         item1.LoadAsync(@path);
                         item1Lbl.Text = (cur.amount).ToString();
                         break;

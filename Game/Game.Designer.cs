@@ -134,7 +134,6 @@
             this.coin = new System.Windows.Forms.PictureBox();
             this.rocklvl2 = new System.Windows.Forms.PictureBox();
             this.Map = new System.Windows.Forms.Panel();
-<<<<<<< HEAD
             this.Cthulhu = new System.Windows.Forms.PictureBox();
             this.buttonlvl1 = new System.Windows.Forms.PictureBox();
             this.IceCrystal = new System.Windows.Forms.PictureBox();
@@ -184,8 +183,6 @@
             this.riverlvl3_2 = new System.Windows.Forms.PictureBox();
             this.freezablelvl3_1 = new System.Windows.Forms.PictureBox();
             this.riverlvl3_1 = new System.Windows.Forms.PictureBox();
-=======
->>>>>>> f3684b9933ba2c182d953a2d8e0d5b8fa77d57fc
             this.pnlInv = new System.Windows.Forms.Panel();
             this.item4Lbl = new System.Windows.Forms.Label();
             this.item3Lbl = new System.Windows.Forms.Label();
@@ -195,11 +192,7 @@
             this.item3 = new System.Windows.Forms.PictureBox();
             this.item2 = new System.Windows.Forms.PictureBox();
             this.item1 = new System.Windows.Forms.PictureBox();
-<<<<<<< HEAD
-            ((System.ComponentModel.ISupportInitialize)(this.PlayerSpells)).BeginInit();
-=======
-            this.PlayerSpells = new System.Windows.Forms.PictureBox();
->>>>>>> f3684b9933ba2c182d953a2d8e0d5b8fa77d57fc
+
             this.statusStrip1.SuspendLayout();
             this.pnlText.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.wall16)).BeginInit();
@@ -300,7 +293,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.coin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rocklvl2)).BeginInit();
             this.Map.SuspendLayout();
-<<<<<<< HEAD
             ((System.ComponentModel.ISupportInitialize)(this.Cthulhu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonlvl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IceCrystal)).BeginInit();
@@ -350,17 +342,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl3_2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.freezablelvl3_1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl3_1)).BeginInit();
-=======
->>>>>>> f3684b9933ba2c182d953a2d8e0d5b8fa77d57fc
             this.pnlInv.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.item4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.item3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.item2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.item1)).BeginInit();
-<<<<<<< HEAD
-=======
             ((System.ComponentModel.ISupportInitialize)(this.PlayerSpells)).BeginInit();
->>>>>>> f3684b9933ba2c182d953a2d8e0d5b8fa77d57fc
+
             this.SuspendLayout();
             // 
             // PlayerSpells
@@ -1457,7 +1445,6 @@
             this.Map.Controls.Add(this.walllvl2_4);
             this.Map.Controls.Add(this.Player);
             this.Map.Controls.Add(this.PlayerSpells);
-<<<<<<< HEAD
             this.Map.Controls.Add(this.Cthulhu);
             this.Map.Controls.Add(this.rock2);
             this.Map.Controls.Add(this.buttonlvl1);
@@ -1508,8 +1495,6 @@
             this.Map.Controls.Add(this.riverlvl3_2);
             this.Map.Controls.Add(this.freezablelvl3_1);
             this.Map.Controls.Add(this.riverlvl3_1);
-=======
->>>>>>> f3684b9933ba2c182d953a2d8e0d5b8fa77d57fc
             this.Map.Controls.Add(this.rocklvl2);
             this.Map.Controls.Add(this.coin);
             this.Map.Controls.Add(this.stick2);
@@ -1607,7 +1592,6 @@
             this.Map.Size = new System.Drawing.Size(1778, 1926);
             this.Map.TabIndex = 4;
             // 
-<<<<<<< HEAD
             // Cthulhu
             // 
             this.Cthulhu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
@@ -2131,8 +2115,6 @@
             this.riverlvl3_1.TabStop = false;
             this.riverlvl3_1.Tag = "river";
             // 
-=======
->>>>>>> f3684b9933ba2c182d953a2d8e0d5b8fa77d57fc
             // pnlInv
             // 
             this.pnlInv.BackColor = System.Drawing.Color.Black;
@@ -2146,14 +2128,8 @@
             this.pnlInv.Controls.Add(this.item1);
             this.pnlInv.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlInv.Location = new System.Drawing.Point(0, 0);
-<<<<<<< HEAD
-            this.pnlInv.Margin = new System.Windows.Forms.Padding(2);
-            this.pnlInv.Name = "pnlInv";
-            this.pnlInv.Size = new System.Drawing.Size(1264, 93);
-=======
             this.pnlInv.Name = "pnlInv";
             this.pnlInv.Size = new System.Drawing.Size(1319, 114);
->>>>>>> f3684b9933ba2c182d953a2d8e0d5b8fa77d57fc
             this.pnlInv.TabIndex = 5;
             this.pnlInv.Visible = false;
             // 
@@ -2163,12 +2139,7 @@
             this.item4Lbl.BackColor = System.Drawing.Color.Transparent;
             this.item4Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.item4Lbl.ForeColor = System.Drawing.Color.White;
-<<<<<<< HEAD
-            this.item4Lbl.Location = new System.Drawing.Point(270, 46);
-            this.item4Lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-=======
             this.item4Lbl.Location = new System.Drawing.Point(360, 57);
->>>>>>> f3684b9933ba2c182d953a2d8e0d5b8fa77d57fc
             this.item4Lbl.Name = "item4Lbl";
             this.item4Lbl.Size = new System.Drawing.Size(0, 24);
             this.item4Lbl.TabIndex = 7;
@@ -2179,12 +2150,7 @@
             this.item3Lbl.BackColor = System.Drawing.Color.Transparent;
             this.item3Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.item3Lbl.ForeColor = System.Drawing.Color.White;
-<<<<<<< HEAD
-            this.item3Lbl.Location = new System.Drawing.Point(199, 46);
-            this.item3Lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-=======
             this.item3Lbl.Location = new System.Drawing.Point(265, 57);
->>>>>>> f3684b9933ba2c182d953a2d8e0d5b8fa77d57fc
             this.item3Lbl.Name = "item3Lbl";
             this.item3Lbl.Size = new System.Drawing.Size(0, 24);
             this.item3Lbl.TabIndex = 6;
@@ -2195,12 +2161,7 @@
             this.item2Lbl.BackColor = System.Drawing.Color.Transparent;
             this.item2Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.item2Lbl.ForeColor = System.Drawing.Color.White;
-<<<<<<< HEAD
-            this.item2Lbl.Location = new System.Drawing.Point(128, 46);
-            this.item2Lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-=======
             this.item2Lbl.Location = new System.Drawing.Point(170, 57);
->>>>>>> f3684b9933ba2c182d953a2d8e0d5b8fa77d57fc
             this.item2Lbl.Name = "item2Lbl";
             this.item2Lbl.Size = new System.Drawing.Size(0, 24);
             this.item2Lbl.TabIndex = 5;
@@ -2211,72 +2172,38 @@
             this.item1Lbl.BackColor = System.Drawing.Color.Transparent;
             this.item1Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.item1Lbl.ForeColor = System.Drawing.Color.White;
-<<<<<<< HEAD
-            this.item1Lbl.Location = new System.Drawing.Point(56, 46);
-            this.item1Lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-=======
             this.item1Lbl.Location = new System.Drawing.Point(75, 57);
->>>>>>> f3684b9933ba2c182d953a2d8e0d5b8fa77d57fc
             this.item1Lbl.Name = "item1Lbl";
             this.item1Lbl.Size = new System.Drawing.Size(0, 24);
             this.item1Lbl.TabIndex = 4;
             // 
             // item4
             // 
-<<<<<<< HEAD
-            this.item4.Location = new System.Drawing.Point(236, 13);
-            this.item4.Margin = new System.Windows.Forms.Padding(2);
-            this.item4.Name = "item4";
-            this.item4.Size = new System.Drawing.Size(49, 53);
-=======
+
             this.item4.Location = new System.Drawing.Point(315, 16);
             this.item4.Name = "item4";
             this.item4.Size = new System.Drawing.Size(65, 65);
->>>>>>> f3684b9933ba2c182d953a2d8e0d5b8fa77d57fc
             this.item4.TabIndex = 3;
             this.item4.TabStop = false;
             // 
             // item3
             // 
-<<<<<<< HEAD
-            this.item3.Location = new System.Drawing.Point(165, 13);
-            this.item3.Margin = new System.Windows.Forms.Padding(2);
-            this.item3.Name = "item3";
-            this.item3.Size = new System.Drawing.Size(49, 53);
-=======
             this.item3.Location = new System.Drawing.Point(220, 16);
             this.item3.Name = "item3";
             this.item3.Size = new System.Drawing.Size(65, 65);
->>>>>>> f3684b9933ba2c182d953a2d8e0d5b8fa77d57fc
             this.item3.TabIndex = 2;
             this.item3.TabStop = false;
             // 
             // item2
             // 
-<<<<<<< HEAD
-            this.item2.Location = new System.Drawing.Point(94, 13);
-            this.item2.Margin = new System.Windows.Forms.Padding(2);
-            this.item2.Name = "item2";
-            this.item2.Size = new System.Drawing.Size(49, 53);
-=======
             this.item2.Location = new System.Drawing.Point(125, 16);
             this.item2.Name = "item2";
             this.item2.Size = new System.Drawing.Size(65, 65);
->>>>>>> f3684b9933ba2c182d953a2d8e0d5b8fa77d57fc
             this.item2.TabIndex = 1;
             this.item2.TabStop = false;
             // 
             // item1
             // 
-<<<<<<< HEAD
-            this.item1.Location = new System.Drawing.Point(22, 13);
-            this.item1.Margin = new System.Windows.Forms.Padding(2);
-            this.item1.Name = "item1";
-            this.item1.Size = new System.Drawing.Size(49, 53);
-            this.item1.TabIndex = 0;
-            this.item1.TabStop = false;
-            // 
-=======
             this.item1.Location = new System.Drawing.Point(30, 16);
             this.item1.Name = "item1";
             this.item1.Size = new System.Drawing.Size(65, 65);
@@ -2291,7 +2218,6 @@
             this.PlayerSpells.TabIndex = 102;
             this.PlayerSpells.TabStop = false;
             // 
->>>>>>> f3684b9933ba2c182d953a2d8e0d5b8fa77d57fc
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2413,7 +2339,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.coin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rocklvl2)).EndInit();
             this.Map.ResumeLayout(false);
-<<<<<<< HEAD
             ((System.ComponentModel.ISupportInitialize)(this.Cthulhu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonlvl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IceCrystal)).EndInit();
@@ -2463,18 +2388,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl3_2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.freezablelvl3_1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl3_1)).EndInit();
-=======
->>>>>>> f3684b9933ba2c182d953a2d8e0d5b8fa77d57fc
+
             this.pnlInv.ResumeLayout(false);
             this.pnlInv.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.item4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.item3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.item2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.item1)).EndInit();
-<<<<<<< HEAD
-=======
             ((System.ComponentModel.ISupportInitialize)(this.PlayerSpells)).EndInit();
->>>>>>> f3684b9933ba2c182d953a2d8e0d5b8fa77d57fc
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2586,7 +2507,6 @@
         private System.Windows.Forms.PictureBox coin;
         private System.Windows.Forms.PictureBox rocklvl2;
         private System.Windows.Forms.Panel Map;
-<<<<<<< HEAD
         private System.Windows.Forms.PictureBox riverlvl3_1;
         private System.Windows.Forms.PictureBox riverlvl3_2;
         private System.Windows.Forms.PictureBox freezablelvl3_1;
@@ -2636,8 +2556,6 @@
         private System.Windows.Forms.PictureBox walllvl1_10;
         private System.Windows.Forms.PictureBox buttonlvl1;
         private System.Windows.Forms.PictureBox Cthulhu;
-=======
->>>>>>> f3684b9933ba2c182d953a2d8e0d5b8fa77d57fc
         private System.Windows.Forms.Panel pnlInv;
         private System.Windows.Forms.PictureBox item4;
         private System.Windows.Forms.PictureBox item3;
@@ -2647,10 +2565,5 @@
         private System.Windows.Forms.Label item3Lbl;
         private System.Windows.Forms.Label item2Lbl;
         private System.Windows.Forms.Label item1Lbl;
-<<<<<<< HEAD
-=======
-        private System.Windows.Forms.PictureBox PlayerSpells;
->>>>>>> f3684b9933ba2c182d953a2d8e0d5b8fa77d57fc
     }
 }
-
