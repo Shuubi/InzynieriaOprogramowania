@@ -72,9 +72,9 @@
             this.wall12 = new System.Windows.Forms.PictureBox();
             this.wall13 = new System.Windows.Forms.PictureBox();
             this.wall14 = new System.Windows.Forms.PictureBox();
-            this.Carrot1 = new System.Windows.Forms.PictureBox();
-            this.Carrot2 = new System.Windows.Forms.PictureBox();
-            this.Carrot3 = new System.Windows.Forms.PictureBox();
+            this.carrot1 = new System.Windows.Forms.PictureBox();
+            this.carrot2 = new System.Windows.Forms.PictureBox();
+            this.carrot3 = new System.Windows.Forms.PictureBox();
             this.Bunny = new System.Windows.Forms.PictureBox();
             this.George = new System.Windows.Forms.PictureBox();
             this.rock2 = new System.Windows.Forms.PictureBox();
@@ -136,12 +136,12 @@
             this.Map = new System.Windows.Forms.Panel();
             this.Cthulhu = new System.Windows.Forms.PictureBox();
             this.buttonlvl1 = new System.Windows.Forms.PictureBox();
-            this.IceCrystal = new System.Windows.Forms.PictureBox();
+            this.crystalI = new System.Windows.Forms.PictureBox();
             this.buttonlvl2 = new System.Windows.Forms.PictureBox();
             this.walllvl1_11 = new System.Windows.Forms.PictureBox();
             this.walllvl1_10 = new System.Windows.Forms.PictureBox();
-            this.EarthCrystal = new System.Windows.Forms.PictureBox();
-            this.FireCrystal = new System.Windows.Forms.PictureBox();
+            this.crystalE = new System.Windows.Forms.PictureBox();
+            this.crystalF = new System.Windows.Forms.PictureBox();
             this.buttonlvl3 = new System.Windows.Forms.PictureBox();
             this.craft_area = new System.Windows.Forms.PictureBox();
             this.rocklvl3_4 = new System.Windows.Forms.PictureBox();
@@ -174,7 +174,7 @@
             this.doorlvl3_1 = new System.Windows.Forms.PictureBox();
             this.walllvl3_3 = new System.Windows.Forms.PictureBox();
             this.chest2 = new System.Windows.Forms.PictureBox();
-            this.Sugar = new System.Windows.Forms.PictureBox();
+            this.sugar = new System.Windows.Forms.PictureBox();
             this.walllvl3_2 = new System.Windows.Forms.PictureBox();
             this.Dragon = new System.Windows.Forms.PictureBox();
             this.walllvl3_1 = new System.Windows.Forms.PictureBox();
@@ -192,7 +192,12 @@
             this.item3 = new System.Windows.Forms.PictureBox();
             this.item2 = new System.Windows.Forms.PictureBox();
             this.item1 = new System.Windows.Forms.PictureBox();
-
+            this.item5Lbl = new System.Windows.Forms.Label();
+            this.item5 = new System.Windows.Forms.PictureBox();
+            this.item6Lbl = new System.Windows.Forms.Label();
+            this.item6 = new System.Windows.Forms.PictureBox();
+            this.invCursor = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.PlayerSpells)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.pnlText.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.wall16)).BeginInit();
@@ -231,9 +236,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.wall12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Carrot1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Carrot2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Carrot3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carrot1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carrot2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carrot3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Bunny)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.George)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rock2)).BeginInit();
@@ -295,12 +300,12 @@
             this.Map.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Cthulhu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonlvl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.IceCrystal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.crystalI)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonlvl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.walllvl1_11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.walllvl1_10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EarthCrystal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FireCrystal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.crystalE)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.crystalF)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonlvl3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.craft_area)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rocklvl3_4)).BeginInit();
@@ -333,7 +338,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.doorlvl3_1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.walllvl3_3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chest2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Sugar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sugar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.walllvl3_2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Dragon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.walllvl3_1)).BeginInit();
@@ -347,8 +352,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.item3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.item2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.item1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PlayerSpells)).BeginInit();
-
+            ((System.ComponentModel.ISupportInitialize)(this.item5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.invCursor)).BeginInit();
             this.SuspendLayout();
             // 
             // PlayerSpells
@@ -775,38 +781,38 @@
             this.wall14.TabStop = false;
             this.wall14.Tag = "wall";
             // 
-            // Carrot1
+            // carrot1
             // 
-            this.Carrot1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Carrot1.Location = new System.Drawing.Point(1125, 587);
-            this.Carrot1.Margin = new System.Windows.Forms.Padding(2);
-            this.Carrot1.Name = "Carrot1";
-            this.Carrot1.Size = new System.Drawing.Size(30, 16);
-            this.Carrot1.TabIndex = 35;
-            this.Carrot1.TabStop = false;
-            this.Carrot1.Tag = "carrot";
+            this.carrot1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.carrot1.Location = new System.Drawing.Point(1125, 587);
+            this.carrot1.Margin = new System.Windows.Forms.Padding(2);
+            this.carrot1.Name = "carrot1";
+            this.carrot1.Size = new System.Drawing.Size(30, 16);
+            this.carrot1.TabIndex = 35;
+            this.carrot1.TabStop = false;
+            this.carrot1.Tag = "pickable_item";
             // 
-            // Carrot2
+            // carrot2
             // 
-            this.Carrot2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Carrot2.Location = new System.Drawing.Point(780, 312);
-            this.Carrot2.Margin = new System.Windows.Forms.Padding(2);
-            this.Carrot2.Name = "Carrot2";
-            this.Carrot2.Size = new System.Drawing.Size(30, 16);
-            this.Carrot2.TabIndex = 36;
-            this.Carrot2.TabStop = false;
-            this.Carrot2.Tag = "carrot";
+            this.carrot2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.carrot2.Location = new System.Drawing.Point(780, 312);
+            this.carrot2.Margin = new System.Windows.Forms.Padding(2);
+            this.carrot2.Name = "carrot2";
+            this.carrot2.Size = new System.Drawing.Size(30, 16);
+            this.carrot2.TabIndex = 36;
+            this.carrot2.TabStop = false;
+            this.carrot2.Tag = "pickable_item";
             // 
-            // Carrot3
+            // carrot3
             // 
-            this.Carrot3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Carrot3.Location = new System.Drawing.Point(908, 48);
-            this.Carrot3.Margin = new System.Windows.Forms.Padding(2);
-            this.Carrot3.Name = "Carrot3";
-            this.Carrot3.Size = new System.Drawing.Size(30, 16);
-            this.Carrot3.TabIndex = 37;
-            this.Carrot3.TabStop = false;
-            this.Carrot3.Tag = "carrot";
+            this.carrot3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.carrot3.Location = new System.Drawing.Point(908, 48);
+            this.carrot3.Margin = new System.Windows.Forms.Padding(2);
+            this.carrot3.Name = "carrot3";
+            this.carrot3.Size = new System.Drawing.Size(30, 16);
+            this.carrot3.TabIndex = 37;
+            this.carrot3.TabStop = false;
+            this.carrot3.Tag = "pickable_item";
             // 
             // Bunny
             // 
@@ -1369,7 +1375,7 @@
             this.pot.Size = new System.Drawing.Size(15, 16);
             this.pot.TabIndex = 97;
             this.pot.TabStop = false;
-            this.pot.Tag = "pot";
+            this.pot.Tag = "pickable_item";
             // 
             // chest
             // 
@@ -1403,7 +1409,7 @@
             this.stick1.Size = new System.Drawing.Size(30, 16);
             this.stick1.TabIndex = 98;
             this.stick1.TabStop = false;
-            this.stick1.Tag = "stick";
+            this.stick1.Tag = "pickable_item";
             // 
             // stick2
             // 
@@ -1414,7 +1420,7 @@
             this.stick2.Size = new System.Drawing.Size(30, 16);
             this.stick2.TabIndex = 99;
             this.stick2.TabStop = false;
-            this.stick2.Tag = "stick";
+            this.stick2.Tag = "pickable_item";
             // 
             // coin
             // 
@@ -1425,7 +1431,7 @@
             this.coin.Size = new System.Drawing.Size(15, 16);
             this.coin.TabIndex = 100;
             this.coin.TabStop = false;
-            this.coin.Tag = "coin";
+            this.coin.Tag = "pickable_item";
             // 
             // rocklvl2
             // 
@@ -1448,12 +1454,12 @@
             this.Map.Controls.Add(this.Cthulhu);
             this.Map.Controls.Add(this.rock2);
             this.Map.Controls.Add(this.buttonlvl1);
-            this.Map.Controls.Add(this.IceCrystal);
+            this.Map.Controls.Add(this.crystalI);
             this.Map.Controls.Add(this.buttonlvl2);
             this.Map.Controls.Add(this.walllvl1_11);
             this.Map.Controls.Add(this.walllvl1_10);
-            this.Map.Controls.Add(this.EarthCrystal);
-            this.Map.Controls.Add(this.FireCrystal);
+            this.Map.Controls.Add(this.crystalE);
+            this.Map.Controls.Add(this.crystalF);
             this.Map.Controls.Add(this.buttonlvl3);
             this.Map.Controls.Add(this.craft_area);
             this.Map.Controls.Add(this.rocklvl3_4);
@@ -1486,7 +1492,7 @@
             this.Map.Controls.Add(this.doorlvl3_1);
             this.Map.Controls.Add(this.walllvl3_3);
             this.Map.Controls.Add(this.chest2);
-            this.Map.Controls.Add(this.Sugar);
+            this.Map.Controls.Add(this.sugar);
             this.Map.Controls.Add(this.walllvl3_2);
             this.Map.Controls.Add(this.Dragon);
             this.Map.Controls.Add(this.walllvl3_1);
@@ -1549,9 +1555,9 @@
             this.Map.Controls.Add(this.rock3);
             this.Map.Controls.Add(this.George);
             this.Map.Controls.Add(this.Bunny);
-            this.Map.Controls.Add(this.Carrot3);
-            this.Map.Controls.Add(this.Carrot2);
-            this.Map.Controls.Add(this.Carrot1);
+            this.Map.Controls.Add(this.carrot3);
+            this.Map.Controls.Add(this.carrot2);
+            this.Map.Controls.Add(this.carrot1);
             this.Map.Controls.Add(this.wall14);
             this.Map.Controls.Add(this.wall13);
             this.Map.Controls.Add(this.wall12);
@@ -1612,16 +1618,16 @@
             this.buttonlvl1.TabIndex = 145;
             this.buttonlvl1.TabStop = false;
             // 
-            // IceCrystal
+            // crystalI
             // 
-            this.IceCrystal.BackColor = System.Drawing.Color.Cyan;
-            this.IceCrystal.Location = new System.Drawing.Point(1290, 1202);
-            this.IceCrystal.Margin = new System.Windows.Forms.Padding(2);
-            this.IceCrystal.Name = "IceCrystal";
-            this.IceCrystal.Size = new System.Drawing.Size(15, 16);
-            this.IceCrystal.TabIndex = 149;
-            this.IceCrystal.TabStop = false;
-            this.IceCrystal.Tag = "crystal";
+            this.crystalI.BackColor = System.Drawing.Color.Cyan;
+            this.crystalI.Location = new System.Drawing.Point(1290, 1202);
+            this.crystalI.Margin = new System.Windows.Forms.Padding(2);
+            this.crystalI.Name = "crystalI";
+            this.crystalI.Size = new System.Drawing.Size(15, 16);
+            this.crystalI.TabIndex = 149;
+            this.crystalI.TabStop = false;
+            this.crystalI.Tag = "pickable_item";
             // 
             // buttonlvl2
             // 
@@ -1654,27 +1660,27 @@
             this.walllvl1_10.TabStop = false;
             this.walllvl1_10.Tag = "wall";
             // 
-            // EarthCrystal
+            // crystalE
             // 
-            this.EarthCrystal.BackColor = System.Drawing.Color.LawnGreen;
-            this.EarthCrystal.Location = new System.Drawing.Point(690, 49);
-            this.EarthCrystal.Margin = new System.Windows.Forms.Padding(2);
-            this.EarthCrystal.Name = "EarthCrystal";
-            this.EarthCrystal.Size = new System.Drawing.Size(15, 16);
-            this.EarthCrystal.TabIndex = 144;
-            this.EarthCrystal.TabStop = false;
-            this.EarthCrystal.Tag = "crystal";
+            this.crystalE.BackColor = System.Drawing.Color.LawnGreen;
+            this.crystalE.Location = new System.Drawing.Point(690, 49);
+            this.crystalE.Margin = new System.Windows.Forms.Padding(2);
+            this.crystalE.Name = "crystalE";
+            this.crystalE.Size = new System.Drawing.Size(15, 16);
+            this.crystalE.TabIndex = 144;
+            this.crystalE.TabStop = false;
+            this.crystalE.Tag = "pickable_item";
             // 
-            // FireCrystal
+            // crystalF
             // 
-            this.FireCrystal.BackColor = System.Drawing.Color.Red;
-            this.FireCrystal.Location = new System.Drawing.Point(480, 1186);
-            this.FireCrystal.Margin = new System.Windows.Forms.Padding(2);
-            this.FireCrystal.Name = "FireCrystal";
-            this.FireCrystal.Size = new System.Drawing.Size(15, 16);
-            this.FireCrystal.TabIndex = 143;
-            this.FireCrystal.TabStop = false;
-            this.FireCrystal.Tag = "crystal";
+            this.crystalF.BackColor = System.Drawing.Color.Red;
+            this.crystalF.Location = new System.Drawing.Point(480, 1186);
+            this.crystalF.Margin = new System.Windows.Forms.Padding(2);
+            this.crystalF.Name = "crystalF";
+            this.crystalF.Size = new System.Drawing.Size(15, 16);
+            this.crystalF.TabIndex = 143;
+            this.crystalF.TabStop = false;
+            this.crystalF.Tag = "pickable_item";
             // 
             // buttonlvl3
             // 
@@ -2018,16 +2024,16 @@
             this.chest2.TabStop = false;
             this.chest2.Tag = "flammable_object";
             // 
-            // Sugar
+            // sugar
             // 
-            this.Sugar.BackColor = System.Drawing.Color.White;
-            this.Sugar.Location = new System.Drawing.Point(128, 788);
-            this.Sugar.Margin = new System.Windows.Forms.Padding(2);
-            this.Sugar.Name = "Sugar";
-            this.Sugar.Size = new System.Drawing.Size(15, 16);
-            this.Sugar.TabIndex = 110;
-            this.Sugar.TabStop = false;
-            this.Sugar.Tag = "sugar";
+            this.sugar.BackColor = System.Drawing.Color.White;
+            this.sugar.Location = new System.Drawing.Point(128, 788);
+            this.sugar.Margin = new System.Windows.Forms.Padding(2);
+            this.sugar.Name = "sugar";
+            this.sugar.Size = new System.Drawing.Size(15, 16);
+            this.sugar.TabIndex = 110;
+            this.sugar.TabStop = false;
+            this.sugar.Tag = "pickable_item";
             // 
             // walllvl3_2
             // 
@@ -2118,6 +2124,11 @@
             // pnlInv
             // 
             this.pnlInv.BackColor = System.Drawing.Color.Black;
+            this.pnlInv.Controls.Add(this.invCursor);
+            this.pnlInv.Controls.Add(this.item6Lbl);
+            this.pnlInv.Controls.Add(this.item6);
+            this.pnlInv.Controls.Add(this.item5Lbl);
+            this.pnlInv.Controls.Add(this.item5);
             this.pnlInv.Controls.Add(this.item4Lbl);
             this.pnlInv.Controls.Add(this.item3Lbl);
             this.pnlInv.Controls.Add(this.item2Lbl);
@@ -2129,7 +2140,7 @@
             this.pnlInv.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlInv.Location = new System.Drawing.Point(0, 0);
             this.pnlInv.Name = "pnlInv";
-            this.pnlInv.Size = new System.Drawing.Size(1319, 114);
+            this.pnlInv.Size = new System.Drawing.Size(1264, 114);
             this.pnlInv.TabIndex = 5;
             this.pnlInv.Visible = false;
             // 
@@ -2139,7 +2150,7 @@
             this.item4Lbl.BackColor = System.Drawing.Color.Transparent;
             this.item4Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.item4Lbl.ForeColor = System.Drawing.Color.White;
-            this.item4Lbl.Location = new System.Drawing.Point(360, 57);
+            this.item4Lbl.Location = new System.Drawing.Point(453, 63);
             this.item4Lbl.Name = "item4Lbl";
             this.item4Lbl.Size = new System.Drawing.Size(0, 24);
             this.item4Lbl.TabIndex = 7;
@@ -2150,7 +2161,7 @@
             this.item3Lbl.BackColor = System.Drawing.Color.Transparent;
             this.item3Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.item3Lbl.ForeColor = System.Drawing.Color.White;
-            this.item3Lbl.Location = new System.Drawing.Point(265, 57);
+            this.item3Lbl.Location = new System.Drawing.Point(358, 63);
             this.item3Lbl.Name = "item3Lbl";
             this.item3Lbl.Size = new System.Drawing.Size(0, 24);
             this.item3Lbl.TabIndex = 6;
@@ -2161,7 +2172,7 @@
             this.item2Lbl.BackColor = System.Drawing.Color.Transparent;
             this.item2Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.item2Lbl.ForeColor = System.Drawing.Color.White;
-            this.item2Lbl.Location = new System.Drawing.Point(170, 57);
+            this.item2Lbl.Location = new System.Drawing.Point(263, 63);
             this.item2Lbl.Name = "item2Lbl";
             this.item2Lbl.Size = new System.Drawing.Size(0, 24);
             this.item2Lbl.TabIndex = 5;
@@ -2172,15 +2183,14 @@
             this.item1Lbl.BackColor = System.Drawing.Color.Transparent;
             this.item1Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.item1Lbl.ForeColor = System.Drawing.Color.White;
-            this.item1Lbl.Location = new System.Drawing.Point(75, 57);
+            this.item1Lbl.Location = new System.Drawing.Point(168, 63);
             this.item1Lbl.Name = "item1Lbl";
             this.item1Lbl.Size = new System.Drawing.Size(0, 24);
             this.item1Lbl.TabIndex = 4;
             // 
             // item4
             // 
-
-            this.item4.Location = new System.Drawing.Point(315, 16);
+            this.item4.Location = new System.Drawing.Point(408, 22);
             this.item4.Name = "item4";
             this.item4.Size = new System.Drawing.Size(65, 65);
             this.item4.TabIndex = 3;
@@ -2188,7 +2198,7 @@
             // 
             // item3
             // 
-            this.item3.Location = new System.Drawing.Point(220, 16);
+            this.item3.Location = new System.Drawing.Point(313, 22);
             this.item3.Name = "item3";
             this.item3.Size = new System.Drawing.Size(65, 65);
             this.item3.TabIndex = 2;
@@ -2196,7 +2206,7 @@
             // 
             // item2
             // 
-            this.item2.Location = new System.Drawing.Point(125, 16);
+            this.item2.Location = new System.Drawing.Point(218, 22);
             this.item2.Name = "item2";
             this.item2.Size = new System.Drawing.Size(65, 65);
             this.item2.TabIndex = 1;
@@ -2204,19 +2214,60 @@
             // 
             // item1
             // 
-            this.item1.Location = new System.Drawing.Point(30, 16);
+            this.item1.Location = new System.Drawing.Point(123, 22);
             this.item1.Name = "item1";
             this.item1.Size = new System.Drawing.Size(65, 65);
             this.item1.TabIndex = 0;
             this.item1.TabStop = false;
             // 
-            // PlayerSpells
+            // item5Lbl
             // 
-            this.PlayerSpells.Location = new System.Drawing.Point(745, 733);
-            this.PlayerSpells.Name = "PlayerSpells";
-            this.PlayerSpells.Size = new System.Drawing.Size(36, 36);
-            this.PlayerSpells.TabIndex = 102;
-            this.PlayerSpells.TabStop = false;
+            this.item5Lbl.AutoSize = true;
+            this.item5Lbl.BackColor = System.Drawing.Color.Transparent;
+            this.item5Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.item5Lbl.ForeColor = System.Drawing.Color.White;
+            this.item5Lbl.Location = new System.Drawing.Point(548, 63);
+            this.item5Lbl.Name = "item5Lbl";
+            this.item5Lbl.Size = new System.Drawing.Size(0, 24);
+            this.item5Lbl.TabIndex = 9;
+            // 
+            // item5
+            // 
+            this.item5.Location = new System.Drawing.Point(503, 22);
+            this.item5.Name = "item5";
+            this.item5.Size = new System.Drawing.Size(65, 65);
+            this.item5.TabIndex = 8;
+            this.item5.TabStop = false;
+            // 
+            // item6Lbl
+            // 
+            this.item6Lbl.AutoSize = true;
+            this.item6Lbl.BackColor = System.Drawing.Color.Transparent;
+            this.item6Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.item6Lbl.ForeColor = System.Drawing.Color.White;
+            this.item6Lbl.Location = new System.Drawing.Point(643, 63);
+            this.item6Lbl.Name = "item6Lbl";
+            this.item6Lbl.Size = new System.Drawing.Size(0, 24);
+            this.item6Lbl.TabIndex = 11;
+            // 
+            // item6
+            // 
+            this.item6.Location = new System.Drawing.Point(598, 22);
+            this.item6.Name = "item6";
+            this.item6.Size = new System.Drawing.Size(65, 65);
+            this.item6.TabIndex = 10;
+            this.item6.TabStop = false;
+            // 
+            // invCursor
+            // 
+            this.invCursor.BackColor = System.Drawing.Color.White;
+            this.invCursor.Location = new System.Drawing.Point(142, 93);
+            this.invCursor.Name = "invCursor";
+            this.invCursor.Size = new System.Drawing.Size(30, 12);
+            this.invCursor.TabIndex = 12;
+            this.invCursor.TabStop = false;
+            this.invCursor.Tag = "0";
+            this.invCursor.Visible = false;
             // 
             // Game
             // 
@@ -2277,9 +2328,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.wall12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Carrot1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Carrot2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Carrot3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carrot1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carrot2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carrot3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Bunny)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.George)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rock2)).EndInit();
@@ -2341,12 +2392,12 @@
             this.Map.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Cthulhu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonlvl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.IceCrystal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.crystalI)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonlvl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.walllvl1_11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.walllvl1_10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EarthCrystal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FireCrystal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.crystalE)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.crystalF)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonlvl3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.craft_area)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rocklvl3_4)).EndInit();
@@ -2379,7 +2430,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.doorlvl3_1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.walllvl3_3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chest2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Sugar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sugar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.walllvl3_2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Dragon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.walllvl3_1)).EndInit();
@@ -2388,14 +2439,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl3_2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.freezablelvl3_1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl3_1)).EndInit();
-
             this.pnlInv.ResumeLayout(false);
             this.pnlInv.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.item4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.item3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.item2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.item1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PlayerSpells)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.invCursor)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2445,9 +2497,9 @@
         private System.Windows.Forms.PictureBox wall12;
         private System.Windows.Forms.PictureBox wall13;
         private System.Windows.Forms.PictureBox wall14;
-        private System.Windows.Forms.PictureBox Carrot1;
-        private System.Windows.Forms.PictureBox Carrot2;
-        private System.Windows.Forms.PictureBox Carrot3;
+        private System.Windows.Forms.PictureBox carrot1;
+        private System.Windows.Forms.PictureBox carrot2;
+        private System.Windows.Forms.PictureBox carrot3;
         private System.Windows.Forms.PictureBox Bunny;
         private System.Windows.Forms.PictureBox George;
         private System.Windows.Forms.PictureBox rock2;
@@ -2515,7 +2567,7 @@
         private System.Windows.Forms.PictureBox riverlvl3_3;
         private System.Windows.Forms.PictureBox freezablelvl3_2;
         private System.Windows.Forms.PictureBox chest2;
-        private System.Windows.Forms.PictureBox Sugar;
+        private System.Windows.Forms.PictureBox sugar;
         private System.Windows.Forms.PictureBox walllvl3_2;
         private System.Windows.Forms.PictureBox walllvl3_3;
         private System.Windows.Forms.PictureBox rocklvl3_2;
@@ -2542,15 +2594,15 @@
         private System.Windows.Forms.PictureBox doorlvl3_6;
         private System.Windows.Forms.PictureBox doorlvl3_5;
         private System.Windows.Forms.PictureBox riverlvl3_6;
-        private System.Windows.Forms.PictureBox FireCrystal;
+        private System.Windows.Forms.PictureBox crystalF;
         private System.Windows.Forms.PictureBox buttonlvl3;
         private System.Windows.Forms.PictureBox craft_area;
         private System.Windows.Forms.PictureBox rocklvl3_4;
         private System.Windows.Forms.PictureBox loglvl3_2;
         private System.Windows.Forms.PictureBox riverlvl3_7;
         private System.Windows.Forms.PictureBox freezablelvl3_5;
-        private System.Windows.Forms.PictureBox EarthCrystal;
-        private System.Windows.Forms.PictureBox IceCrystal;
+        private System.Windows.Forms.PictureBox crystalE;
+        private System.Windows.Forms.PictureBox crystalI;
         private System.Windows.Forms.PictureBox buttonlvl2;
         private System.Windows.Forms.PictureBox walllvl1_11;
         private System.Windows.Forms.PictureBox walllvl1_10;
@@ -2565,5 +2617,10 @@
         private System.Windows.Forms.Label item3Lbl;
         private System.Windows.Forms.Label item2Lbl;
         private System.Windows.Forms.Label item1Lbl;
+        private System.Windows.Forms.PictureBox invCursor;
+        private System.Windows.Forms.Label item6Lbl;
+        private System.Windows.Forms.PictureBox item6;
+        private System.Windows.Forms.Label item5Lbl;
+        private System.Windows.Forms.PictureBox item5;
     }
 }

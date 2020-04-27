@@ -16,6 +16,9 @@ namespace Game
         public string path = String.Empty;
         PrivateFontCollection pfc = new PrivateFontCollection();
 
+        //na potrzeby inventory
+        int curLoc;
+
         PlayerCharacter protagonist;
 
         public Game()
@@ -88,13 +91,40 @@ namespace Game
                 {
                     protagonist.currentSpell = PlayerCharacter.Spells.None;
                 }
-            }  
+            }
+            else if(pnlText.Visible != true)
+            {
+                if (e.KeyCode == Keys.A || e.KeyCode == Keys.Left)
+                {
+                    if(curLoc > 0)
+                    {
+                        invCursor.Location = new Point(invCursor.Location.X - 95, invCursor.Location.Y);
+                        curLoc--;
+                    }
+                }
+                if (e.KeyCode == Keys.D || e.KeyCode == Keys.Right)
+                {
+                    if(curLoc < protagonist.Items.ListSize()-1)
+                    {
+                        invCursor.Location = new Point(invCursor.Location.X + 95, invCursor.Location.Y);
+                        curLoc++;
+                    }
+                }
+            }
 
             if (e.KeyCode == Keys.Space)
             {
                 protagonist.action = true;
                 if (reading)
                     cont = true;
+                if(pnlInv.Visible && !pnlText.Visible && invCursor.Visible)
+                {
+                    Item cur= protagonist.Items.ReturnItem(curLoc);
+                    path = "../Resources/Dialogs/" + cur.name + ".txt";
+                    StreamReader sr = new StreamReader(path);
+                    LoadDialog(sr);
+                    sr.Close();
+                }
             }
 
             if (e.KeyCode == Keys.I)
@@ -103,6 +133,7 @@ namespace Game
                     pnlInv.Visible = false;
                 else
                 {
+                    invCursor.Location = new Point(142, invCursor.Location.Y);
                     updateInv();
                     pnlInv.BringToFront();
                     pnlInv.Visible = true;
@@ -176,147 +207,21 @@ namespace Game
                 var thisPictureBoxTag = (string)thisPictureBox.Tag;
                 if (thisPictureBoxTag == null) continue;
 
-                if (thisPictureBoxTag.Equals("carrot"))
+                //podnoszenie itemow
+                if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
                 {
-                    if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
+                    if (protagonist.action)
                     {
-                        if (protagonist.action)
+                        if (thisPictureBoxTag.Equals("pickable_item"))
                         {
-                            statusLabel.Text = "You got a carrot, yay!";
-                            protagonist.Items.InsertItem("Carrot");
+                            string pickedItem = thisPictureBox.Name;
+                            pickedItem = pickedItem.Remove(pickedItem.Length - 1); //ostatni znak nazwy okresla numer itemu lub jego wlasciwosc dlatego trzeba go usunac na potrzeby inventory
+                            protagonist.Items.InsertItem(pickedItem);
                             thisPictureBox.Dispose();
                         }
-                    }
-                }
-                if (thisPictureBoxTag.Equals("stick"))
-                {
-                    if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
-                    {
-                        if (protagonist.action)
+                        if (thisPictureBoxTag.Equals("NPC"))
                         {
-                            protagonist.Items.InsertItem("Stick");
-                            thisPictureBox.Dispose();
-                        }
-                    }
-                }
-                if (thisPictureBoxTag.Equals("coin"))
-                {
-                    if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
-                    {
-                        if (protagonist.action)
-                        {
-                            protagonist.Items.InsertItem("Coin");
-                            thisPictureBox.Dispose();
-                        }
-                    }
-                }
-                if (thisPictureBoxTag.Equals("pot"))
-                {
-                    if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
-                    {
-                        if (protagonist.action)
-                        {
-                            protagonist.Items.InsertItem("Pot");
-                            thisPictureBox.Dispose();
-                        }
-                    }
-                }
-                if (thisPictureBoxTag.Equals("sugar"))
-                {
-                    if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
-                    {
-                        if (protagonist.action)
-                        {
-                            protagonist.Items.InsertItem("Sugar");
-                            thisPictureBox.Dispose();
-                        }
-                    }
-                }
-                if (thisPictureBoxTag.Equals("crystal"))
-                {
-                    if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
-                    {
-                        if (protagonist.action)
-                        {
-                            protagonist.Items.InsertItem("crystal");
-                            thisPictureBox.Dispose();
-                        }
-                    }
-                }
-
-                if (thisPictureBoxTag.Equals("NPC"))
-                {
-                    if (reading != true)
-                    {
-                        if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
-                        {
-                            if (protagonist.action)
-                            {
-                                protagonist.Items.InsertItem("Stick");
-                                thisPictureBox.Dispose();
-                            }
-                        }
-                    }
-                }
-                if (thisPictureBoxTag.Equals("coin"))
-                {
-                    if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
-                    {
-                        if (reading != true)
-                        {
-                            if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
-                            {
-                                if (protagonist.action)
-                                {
-                                    protagonist.Items.InsertItem("Coin");
-                                    thisPictureBox.Dispose();
-                                }
-                            }
-                        }
-                    }
-                }
-                if (thisPictureBoxTag.Equals("pot"))
-                {
-                    if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
-                    {
-                        if (protagonist.action)
-                        {
-                            protagonist.Items.InsertItem("Pot");
-                            thisPictureBox.Dispose();
-                        }
-                    }
-                }
-                if (thisPictureBoxTag.Equals("sugar"))
-                {
-                    if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
-                    {
-                        if (protagonist.action)
-                        {
-                            protagonist.Items.InsertItem("Sugar");
-                            thisPictureBox.Dispose();
-                        }
-                    }
-                }
-                if (thisPictureBoxTag.Equals("crystal"))
-                {
-                    if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
-                    {
-                        if (protagonist.action)
-                        {
-                            protagonist.Items.InsertItem("crystal");
-                            thisPictureBox.Dispose();
-                        }
-                    }
-                }
-
-                //wczytywanie dialogow dla wszystkich npc
-                if (thisPictureBoxTag.Equals("NPC"))
-                {
-                    if (reading != true)
-                    {
-                        if (Player.Bounds.IntersectsWith(thisPictureBox.Bounds))
-                        {
-                            if (protagonist.action)
+                            if (reading != true)
                             {
                                 //dobranie path zaleznej od nazwy npc
                                 //ewentualnie przerzucic na switch jesli bedzie duzo npc
@@ -325,14 +230,10 @@ namespace Game
 
                                 else if (thisPictureBox.Name == "Bunny")
                                 {
-                                    if (protagonist.Items.FindItem("Carrot") == null || protagonist.Items.FindItem("Carrot").amount < 2)
-                                    {
-                                        statusLabel.Text = "More carrots!";
+                                    if (protagonist.Items.FindItem("carrot") == null || protagonist.Items.FindItem("carrot").amount < 2)
                                         path = "../Resources/Dialogs/NPCIncompleteQuest.txt";
-                                    }
                                     else
                                     {
-                                        statusLabel.Text = "You completed the quest!";
                                         path = "../Resources/Dialogs/NPCFinishedQuest.txt";
                                         protagonist.Items.RemoveItem("Carrot");
                                         thisPictureBox.Dispose();
@@ -403,6 +304,9 @@ namespace Game
 
         private void updateInv()
         {
+            curLoc = 0;
+            if (protagonist.Items.ListSize() != 0)
+                invCursor.Visible=true;
             Item cur;
             string path;
             int amount;
