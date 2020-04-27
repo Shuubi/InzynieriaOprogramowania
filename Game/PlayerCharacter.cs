@@ -314,6 +314,10 @@ namespace Game
                 PlayerSpells.Visible = true;
                 pushMovableObjects();
             }
+            else
+            {
+                playerCollision("movable_object");
+            }
             if (currentSpell == Spells.Fire)
             {
                 PlayerSpells.BackColor = Color.Red;
@@ -341,7 +345,6 @@ namespace Game
             playerCollision("flammable_object");
             playerCollision("water");
             playerCollision("river");
-            playerCollision("movable_object");
             playerCollision("freezable_object");
             SpellCasting();
             DoorsInteraction();
