@@ -24,6 +24,7 @@ namespace Game
         public Game()
         {
             InitializeComponent();
+            pnlStart.BringToFront();
             pfc.AddFontFile("VCR.ttf");
             protagonist = new PlayerCharacter(Player,PlayerSpells);
             PlayerSpells.Visible = false;
@@ -138,6 +139,21 @@ namespace Game
                     pnlInv.BringToFront();
                     pnlInv.Visible = true;
                 }
+            }
+
+            if(e.KeyCode == Keys.Escape)
+            {
+                if(!pnlPause.Visible)
+                {
+                    pnlPause.BringToFront();
+                    pnlPause.Visible = true;
+                }
+                else
+                {
+                    pnlPause.SendToBack();
+                    pnlPause.Visible = false;
+                }
+                
             }
         }
 
@@ -345,19 +361,14 @@ namespace Game
             protagonist.MovePlayer();
         }
 
-        private void freezablelvl2_2_Click(object sender, EventArgs e)
+        private void btnStart_Click(object sender, EventArgs e)
         {
-
+            pnlStart.Dispose();
         }
 
-        private void riverlvl2_4_Click(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void freezablelvl2_6_Click(object sender, EventArgs e)
-        {
-
+            Application.Exit();
         }
 
         private void timer2_Tick(object sender, EventArgs e)

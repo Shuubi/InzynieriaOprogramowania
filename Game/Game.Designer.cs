@@ -184,6 +184,11 @@
             this.freezablelvl3_1 = new System.Windows.Forms.PictureBox();
             this.riverlvl3_1 = new System.Windows.Forms.PictureBox();
             this.pnlInv = new System.Windows.Forms.Panel();
+            this.invCursor = new System.Windows.Forms.PictureBox();
+            this.item6Lbl = new System.Windows.Forms.Label();
+            this.item6 = new System.Windows.Forms.PictureBox();
+            this.item5Lbl = new System.Windows.Forms.Label();
+            this.item5 = new System.Windows.Forms.PictureBox();
             this.item4Lbl = new System.Windows.Forms.Label();
             this.item3Lbl = new System.Windows.Forms.Label();
             this.item2Lbl = new System.Windows.Forms.Label();
@@ -192,11 +197,10 @@
             this.item3 = new System.Windows.Forms.PictureBox();
             this.item2 = new System.Windows.Forms.PictureBox();
             this.item1 = new System.Windows.Forms.PictureBox();
-            this.item5Lbl = new System.Windows.Forms.Label();
-            this.item5 = new System.Windows.Forms.PictureBox();
-            this.item6Lbl = new System.Windows.Forms.Label();
-            this.item6 = new System.Windows.Forms.PictureBox();
-            this.invCursor = new System.Windows.Forms.PictureBox();
+            this.pnlStart = new System.Windows.Forms.Panel();
+            this.btnStart = new System.Windows.Forms.Button();
+            this.pnlPause = new System.Windows.Forms.Panel();
+            this.btnExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PlayerSpells)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.pnlText.SuspendLayout();
@@ -348,13 +352,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.freezablelvl3_1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl3_1)).BeginInit();
             this.pnlInv.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.invCursor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.item4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.item3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.item2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.item1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.item5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.item6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.invCursor)).BeginInit();
+            this.pnlStart.SuspendLayout();
+            this.pnlPause.SuspendLayout();
             this.SuspendLayout();
             // 
             // PlayerSpells
@@ -1121,7 +1127,6 @@
             this.freezablelvl2_2.TabIndex = 69;
             this.freezablelvl2_2.TabStop = false;
             this.freezablelvl2_2.Tag = "freezable_object";
-            this.freezablelvl2_2.Click += new System.EventHandler(this.freezablelvl2_2_Click);
             // 
             // riverlvl2_5
             // 
@@ -1265,7 +1270,6 @@
             this.freezablelvl2_6.TabIndex = 86;
             this.freezablelvl2_6.TabStop = false;
             this.freezablelvl2_6.Tag = "freezable_object";
-            this.freezablelvl2_6.Click += new System.EventHandler(this.freezablelvl2_6_Click);
             // 
             // riverlvl2_18
             // 
@@ -2144,6 +2148,55 @@
             this.pnlInv.TabIndex = 5;
             this.pnlInv.Visible = false;
             // 
+            // invCursor
+            // 
+            this.invCursor.BackColor = System.Drawing.Color.White;
+            this.invCursor.Location = new System.Drawing.Point(142, 93);
+            this.invCursor.Name = "invCursor";
+            this.invCursor.Size = new System.Drawing.Size(30, 12);
+            this.invCursor.TabIndex = 12;
+            this.invCursor.TabStop = false;
+            this.invCursor.Tag = "0";
+            this.invCursor.Visible = false;
+            // 
+            // item6Lbl
+            // 
+            this.item6Lbl.AutoSize = true;
+            this.item6Lbl.BackColor = System.Drawing.Color.Transparent;
+            this.item6Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.item6Lbl.ForeColor = System.Drawing.Color.White;
+            this.item6Lbl.Location = new System.Drawing.Point(643, 63);
+            this.item6Lbl.Name = "item6Lbl";
+            this.item6Lbl.Size = new System.Drawing.Size(0, 24);
+            this.item6Lbl.TabIndex = 11;
+            // 
+            // item6
+            // 
+            this.item6.Location = new System.Drawing.Point(598, 22);
+            this.item6.Name = "item6";
+            this.item6.Size = new System.Drawing.Size(65, 65);
+            this.item6.TabIndex = 10;
+            this.item6.TabStop = false;
+            // 
+            // item5Lbl
+            // 
+            this.item5Lbl.AutoSize = true;
+            this.item5Lbl.BackColor = System.Drawing.Color.Transparent;
+            this.item5Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.item5Lbl.ForeColor = System.Drawing.Color.White;
+            this.item5Lbl.Location = new System.Drawing.Point(548, 63);
+            this.item5Lbl.Name = "item5Lbl";
+            this.item5Lbl.Size = new System.Drawing.Size(0, 24);
+            this.item5Lbl.TabIndex = 9;
+            // 
+            // item5
+            // 
+            this.item5.Location = new System.Drawing.Point(503, 22);
+            this.item5.Name = "item5";
+            this.item5.Size = new System.Drawing.Size(65, 65);
+            this.item5.TabIndex = 8;
+            this.item5.TabStop = false;
+            // 
             // item4Lbl
             // 
             this.item4Lbl.AutoSize = true;
@@ -2220,54 +2273,44 @@
             this.item1.TabIndex = 0;
             this.item1.TabStop = false;
             // 
-            // item5Lbl
+            // pnlStart
             // 
-            this.item5Lbl.AutoSize = true;
-            this.item5Lbl.BackColor = System.Drawing.Color.Transparent;
-            this.item5Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.item5Lbl.ForeColor = System.Drawing.Color.White;
-            this.item5Lbl.Location = new System.Drawing.Point(548, 63);
-            this.item5Lbl.Name = "item5Lbl";
-            this.item5Lbl.Size = new System.Drawing.Size(0, 24);
-            this.item5Lbl.TabIndex = 9;
+            this.pnlStart.Controls.Add(this.btnStart);
+            this.pnlStart.Location = new System.Drawing.Point(0, 0);
+            this.pnlStart.Name = "pnlStart";
+            this.pnlStart.Size = new System.Drawing.Size(1280, 720);
+            this.pnlStart.TabIndex = 6;
             // 
-            // item5
+            // btnStart
             // 
-            this.item5.Location = new System.Drawing.Point(503, 22);
-            this.item5.Name = "item5";
-            this.item5.Size = new System.Drawing.Size(65, 65);
-            this.item5.TabIndex = 8;
-            this.item5.TabStop = false;
+            this.btnStart.Location = new System.Drawing.Point(503, 419);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(234, 67);
+            this.btnStart.TabIndex = 0;
+            this.btnStart.TabStop = false;
+            this.btnStart.Text = "Start";
+            this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
-            // item6Lbl
+            // pnlPause
             // 
-            this.item6Lbl.AutoSize = true;
-            this.item6Lbl.BackColor = System.Drawing.Color.Transparent;
-            this.item6Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.item6Lbl.ForeColor = System.Drawing.Color.White;
-            this.item6Lbl.Location = new System.Drawing.Point(643, 63);
-            this.item6Lbl.Name = "item6Lbl";
-            this.item6Lbl.Size = new System.Drawing.Size(0, 24);
-            this.item6Lbl.TabIndex = 11;
+            this.pnlPause.Controls.Add(this.btnExit);
+            this.pnlPause.Location = new System.Drawing.Point(0, 0);
+            this.pnlPause.Name = "pnlPause";
+            this.pnlPause.Size = new System.Drawing.Size(1280, 720);
+            this.pnlPause.TabIndex = 7;
+            this.pnlPause.Visible = false;
             // 
-            // item6
+            // btnExit
             // 
-            this.item6.Location = new System.Drawing.Point(598, 22);
-            this.item6.Name = "item6";
-            this.item6.Size = new System.Drawing.Size(65, 65);
-            this.item6.TabIndex = 10;
-            this.item6.TabStop = false;
-            // 
-            // invCursor
-            // 
-            this.invCursor.BackColor = System.Drawing.Color.White;
-            this.invCursor.Location = new System.Drawing.Point(142, 93);
-            this.invCursor.Name = "invCursor";
-            this.invCursor.Size = new System.Drawing.Size(30, 12);
-            this.invCursor.TabIndex = 12;
-            this.invCursor.TabStop = false;
-            this.invCursor.Tag = "0";
-            this.invCursor.Visible = false;
+            this.btnExit.Location = new System.Drawing.Point(474, 376);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(306, 74);
+            this.btnExit.TabIndex = 1;
+            this.btnExit.TabStop = false;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // Game
             // 
@@ -2280,6 +2323,8 @@
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.pnlText);
             this.Controls.Add(this.pnlInv);
+            this.Controls.Add(this.pnlStart);
+            this.Controls.Add(this.pnlPause);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MinimizeBox = false;
@@ -2441,13 +2486,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl3_1)).EndInit();
             this.pnlInv.ResumeLayout(false);
             this.pnlInv.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.invCursor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.item4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.item3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.item2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.item1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.item5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.item6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.invCursor)).EndInit();
+            this.pnlStart.ResumeLayout(false);
+            this.pnlPause.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2622,5 +2669,9 @@
         private System.Windows.Forms.PictureBox item6;
         private System.Windows.Forms.Label item5Lbl;
         private System.Windows.Forms.PictureBox item5;
+        private System.Windows.Forms.Panel pnlStart;
+        private System.Windows.Forms.Button btnStart;
+        private System.Windows.Forms.Panel pnlPause;
+        private System.Windows.Forms.Button btnExit;
     }
 }
