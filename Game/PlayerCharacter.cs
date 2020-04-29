@@ -358,6 +358,7 @@ namespace Game
             playerCollision("water");
             playerCollision("river");
             playerCollision("freezable_object");
+            playerCollision("NPC");
             SpellCasting();
             DoorsInteraction();
         }
