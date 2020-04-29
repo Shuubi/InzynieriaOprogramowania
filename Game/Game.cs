@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using System.IO; //czytnie plikow
@@ -18,6 +19,9 @@ namespace Game
 
         //na potrzeby inventory
         int curLoc;
+
+        //na potrzeby zapisu stanu gry
+        private List<string> depositedItems = new List<string>();
 
         PlayerCharacter protagonist;
 
@@ -231,6 +235,7 @@ namespace Game
                         if (thisPictureBoxTag.Equals("pickable_item"))
                         {
                             string pickedItem = thisPictureBox.Name;
+                            depositedItems.Add(pickedItem); //przed zmianą nazwy dodaj do listy usuniętych obiektów
                             pickedItem = pickedItem.Remove(pickedItem.Length - 1); //ostatni znak nazwy okresla numer itemu lub jego wlasciwosc dlatego trzeba go usunac na potrzeby inventory
                             protagonist.Items.InsertItem(pickedItem);
                             thisPictureBox.Dispose();
@@ -325,7 +330,6 @@ namespace Game
                 invCursor.Visible=true;
             Item cur;
             string path;
-            int amount;
             for (int i=0;i< protagonist.Items.ListSize(); i++)
             {
                 cur = protagonist.Items.ReturnItem(i);
@@ -352,6 +356,46 @@ namespace Game
             }
         }
 
+        //zapisywanie do pliku
+        private void saveGame()
+        {
+            path = @"SaveFiles/1.txt";
+            FileStream fs = File.Create(path);
+            fs.Close();
+            string dane = String.Empty;
+            Item cur;
+
+            //inventory
+            using (StreamWriter sw = File.AppendText(path))
+                sw.WriteLine("Inventory");
+            for (int i=0 ; i < protagonist.Items.ListSize(); i++)
+            {
+                cur = protagonist.Items.ReturnItem(i);
+                dane = cur.name + ';' + cur.amount;
+
+                using (StreamWriter sw = File.AppendText(path))
+                    sw.WriteLine(dane);
+            }
+
+            //obiekty podniesione (do późniejszego usunięcia)
+            using (StreamWriter sw = File.AppendText(path))
+                sw.WriteLine("To delete");
+            for(int i=0;i<depositedItems.Count;i++)
+            {
+                using (StreamWriter sw = File.AppendText(path))
+                    sw.WriteLine(depositedItems[i]);
+            }
+
+            //stan drzwi
+            using (StreamWriter sw = File.AppendText(path))
+                sw.WriteLine("Doors to open");
+            for (int i = 0; i < protagonist.DoorsListSize(); i++)
+            {
+                using (StreamWriter sw = File.AppendText(path))
+                    sw.WriteLine(protagonist.ReturnDoor(i));
+            }
+        }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             protagonist.HandlePlayerCharacter();
@@ -368,6 +412,7 @@ namespace Game
 
         private void btnExit_Click(object sender, EventArgs e)
         {
+            saveGame();
             Application.Exit();
         }
 

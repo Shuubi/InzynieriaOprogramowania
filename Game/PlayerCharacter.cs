@@ -32,6 +32,17 @@ namespace Game
         public enum Directions { Left, Right, Up, Down }
         public enum Spells { None, Earth, Fire, Ice }
 
+        //na potrzeby saveGame
+        private List<string> openedDoors = new List<string>();
+        public int DoorsListSize()
+        {
+            return openedDoors.Count;
+        }
+        public string ReturnDoor(int i)
+        {
+            return openedDoors[i];
+        }
+
         public PlayerCharacter(Control player, Control playerspells)
         {
             Player = player;
@@ -195,6 +206,7 @@ namespace Game
                     {
                         x.Tag = "door_open";
                         x.BackColor = Color.Green;
+                        openedDoors.Add(x.Name);
                     }
                 }
             }
