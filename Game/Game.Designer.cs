@@ -201,6 +201,8 @@
             this.btnStart = new System.Windows.Forms.Button();
             this.pnlPause = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
+            this.btnLoad = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PlayerSpells)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.pnlText.SuspendLayout();
@@ -2275,6 +2277,7 @@
             // 
             // pnlStart
             // 
+            this.pnlStart.Controls.Add(this.btnLoad);
             this.pnlStart.Controls.Add(this.btnStart);
             this.pnlStart.Location = new System.Drawing.Point(0, 0);
             this.pnlStart.Name = "pnlStart";
@@ -2283,7 +2286,7 @@
             // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(503, 419);
+            this.btnStart.Location = new System.Drawing.Point(503, 316);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(234, 67);
             this.btnStart.TabIndex = 0;
@@ -2294,6 +2297,7 @@
             // 
             // pnlPause
             // 
+            this.pnlPause.Controls.Add(this.btnSave);
             this.pnlPause.Controls.Add(this.btnExit);
             this.pnlPause.Location = new System.Drawing.Point(0, 0);
             this.pnlPause.Name = "pnlPause";
@@ -2303,7 +2307,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(474, 376);
+            this.btnExit.Location = new System.Drawing.Point(457, 387);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(306, 74);
             this.btnExit.TabIndex = 1;
@@ -2311,6 +2315,28 @@
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // btnLoad
+            // 
+            this.btnLoad.Location = new System.Drawing.Point(503, 403);
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.Size = new System.Drawing.Size(234, 67);
+            this.btnLoad.TabIndex = 1;
+            this.btnLoad.TabStop = false;
+            this.btnLoad.Text = "Load Game";
+            this.btnLoad.UseVisualStyleBackColor = true;
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(457, 290);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(306, 74);
+            this.btnSave.TabIndex = 2;
+            this.btnSave.TabStop = false;
+            this.btnSave.Text = "Exit and Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // Game
             // 
@@ -2673,5 +2699,7 @@
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Panel pnlPause;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnLoad;
+        private System.Windows.Forms.Button btnSave;
     }
 }
