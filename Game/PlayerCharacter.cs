@@ -34,6 +34,10 @@ namespace Game
 
         //na potrzeby saveGame
         private List<string> openedDoors = new List<string>();
+        public void addDoor(string name)
+        {
+            openedDoors.Add(name);
+        }
         public int DoorsListSize()
         {
             return openedDoors.Count;

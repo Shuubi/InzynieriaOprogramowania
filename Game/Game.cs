@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Drawing;
 using System.Windows.Forms;
 using System.IO; //czytnie plikow
@@ -365,21 +366,30 @@ namespace Game
             string dane = String.Empty;
             Item cur;
 
+            //lokalizacja
+            /*using (StreamWriter sw = File.AppendText(path))
+            {
+                sw.WriteLine((Map.Location.X).ToString());
+                sw.WriteLine((Map.Location.Y).ToString());
+                sw.WriteLine((Player.Location.X).ToString());
+                sw.WriteLine((Player.Location.Y).ToString());
+            }*/
+
             //inventory
-            using (StreamWriter sw = File.AppendText(path))
-                sw.WriteLine("Inventory");
             for (int i=0 ; i < protagonist.Items.ListSize(); i++)
             {
                 cur = protagonist.Items.ReturnItem(i);
-                dane = cur.name + ';' + cur.amount;
 
                 using (StreamWriter sw = File.AppendText(path))
+                {
+                    dane = cur.name + ';' + cur.amount;
                     sw.WriteLine(dane);
+                }
             }
 
             //obiekty podniesione (do późniejszego usunięcia)
             using (StreamWriter sw = File.AppendText(path))
-                sw.WriteLine("To delete");
+                sw.WriteLine("-");
             for(int i=0;i<depositedItems.Count;i++)
             {
                 using (StreamWriter sw = File.AppendText(path))
@@ -388,12 +398,76 @@ namespace Game
 
             //stan drzwi
             using (StreamWriter sw = File.AppendText(path))
-                sw.WriteLine("Doors to open");
+                sw.WriteLine("-");
             for (int i = 0; i < protagonist.DoorsListSize(); i++)
             {
                 using (StreamWriter sw = File.AppendText(path))
                     sw.WriteLine(protagonist.ReturnDoor(i));
             }
+        }
+
+        private void loadGame(StreamReader sr)
+        {
+            string dane = String.Empty;
+            /*while ((dane = sr.ReadLine()) != null)
+            {
+                //lokalizacja
+                if (i>0 && i<=4)
+                {
+                    int loc = Int32.Parse(dane);
+                    switch(i)
+                    {
+                        case 1:
+                            Map.Location = new Point(loc, Map.Location.Y);
+                            break;
+                        case 2:
+                            Map.Location = new Point(Map.Location.X, loc);
+                            break;
+                        case 3:
+                            Map.Location = new Point(loc, Player.Location.Y);
+                            break;
+                        case 4:
+                            Map.Location = new Point(Player.Location.X, loc);
+                            break;
+                    }
+                }
+            }*/
+
+            //inv
+            while((dane = sr.ReadLine()) != null)
+            {
+                if (dane.Contains("-"))
+                    break;
+
+                string[] daneSplit = dane.Split(';');
+                string name = daneSplit[0];
+                string strAmount = daneSplit[1];
+                int amount = Int32.Parse(strAmount);
+
+                protagonist.Items.InsertItem(name, amount);
+            }
+
+            //usuwanie podniesionych obiektów
+            while ((dane = sr.ReadLine()) != null)
+            {
+                if (dane.Contains("-"))
+                    break;
+
+                depositedItems.Add(dane);
+                var pictureBox = this.Controls.Find(dane, true).FirstOrDefault() as PictureBox;
+                pictureBox.Dispose();
+            }
+
+            //otwieranie drzwi
+            while ((dane = sr.ReadLine()) != null)
+            {
+                protagonist.addDoor(dane);
+                var pictureBox = this.Controls.Find(dane, true).FirstOrDefault() as PictureBox;
+                pictureBox.Tag = "door_open";
+                pictureBox.BackColor = Color.Green;
+            }
+
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -411,6 +485,20 @@ namespace Game
         }
 
         private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnLoad_Click(object sender, EventArgs e)
+        {
+            StreamReader sr = new StreamReader(@"SaveFiles/1.txt");
+            loadGame(sr);
+            sr.Close();
+
+            pnlStart.Dispose();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
         {
             saveGame();
             Application.Exit();

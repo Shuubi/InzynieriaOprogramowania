@@ -1,13 +1,11 @@
-Inventory
+stick;2
 carrot;1
-stick;1
-To delete
-carrot2
+-
 stick1
-Doors to open
-doorlvl1_0
+carrot2
+stick2
+-
+doorlvl1
 doorlvl1_3
-doorlvl1_1
-doorlvl1_4
-door3
 doorlvl2
+doorlvl2_1
