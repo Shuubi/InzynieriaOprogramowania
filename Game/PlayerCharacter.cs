@@ -32,6 +32,8 @@ namespace Game
         public enum Directions { Left, Right, Up, Down }
         public enum Spells { None, Earth, Fire, Ice }
 
+        public bool GodMode = false;
+
         //na potrzeby saveGame
         private List<string> openedDoors = new List<string>();
         public void addDoor(string name)
@@ -91,6 +93,8 @@ namespace Game
 
         public void playerCollision(string tag)
         {
+            if (GodMode) return;
+
             //wykrywa kolizje gracza z pictureboxami z tagiem przekazanym jako argument funkcji
             foreach (Control x in Player.Parent.Controls)
             {

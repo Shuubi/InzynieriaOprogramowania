@@ -31,8 +31,9 @@ namespace Game
             InitializeComponent();
             pnlStart.BringToFront();
             pfc.AddFontFile("VCR.ttf");
-            protagonist = new PlayerCharacter(Player,PlayerSpells);
+            protagonist = new PlayerCharacter(Player, PlayerSpells);
             PlayerSpells.Visible = false;
+            HideLevels();
         }
 
         protected override void OnLoad(EventArgs e)
@@ -97,12 +98,16 @@ namespace Game
                 {
                     protagonist.currentSpell = PlayerCharacter.Spells.None;
                 }
+                if (e.KeyCode == Keys.G)
+                {
+                    protagonist.GodMode = true;
+                }
             }
-            else if(pnlText.Visible != true)
+            else if (pnlText.Visible != true)
             {
                 if (e.KeyCode == Keys.A || e.KeyCode == Keys.Left)
                 {
-                    if(curLoc > 0)
+                    if (curLoc > 0)
                     {
                         invCursor.Location = new Point(invCursor.Location.X - 95, invCursor.Location.Y);
                         curLoc--;
@@ -110,7 +115,7 @@ namespace Game
                 }
                 if (e.KeyCode == Keys.D || e.KeyCode == Keys.Right)
                 {
-                    if(curLoc < protagonist.Items.ListSize()-1)
+                    if (curLoc < protagonist.Items.ListSize() - 1)
                     {
                         invCursor.Location = new Point(invCursor.Location.X + 95, invCursor.Location.Y);
                         curLoc++;
@@ -123,9 +128,9 @@ namespace Game
                 protagonist.action = true;
                 if (reading)
                     cont = true;
-                if(pnlInv.Visible && !pnlText.Visible && invCursor.Visible)
+                if (pnlInv.Visible && !pnlText.Visible && invCursor.Visible)
                 {
-                    Item cur= protagonist.Items.ReturnItem(curLoc);
+                    Item cur = protagonist.Items.ReturnItem(curLoc);
                     path = "../Resources/Dialogs/" + cur.name + ".txt";
                     StreamReader sr = new StreamReader(path);
                     LoadDialog(sr);
@@ -146,9 +151,9 @@ namespace Game
                 }
             }
 
-            if(e.KeyCode == Keys.Escape)
+            if (e.KeyCode == Keys.Escape)
             {
-                if(!pnlPause.Visible)
+                if (!pnlPause.Visible)
                 {
                     pnlPause.BringToFront();
                     pnlPause.Visible = true;
@@ -158,7 +163,7 @@ namespace Game
                     pnlPause.SendToBack();
                     pnlPause.Visible = false;
                 }
-                
+
             }
         }
 
@@ -328,16 +333,16 @@ namespace Game
         {
             curLoc = 0;
             if (protagonist.Items.ListSize() != 0)
-                invCursor.Visible=true;
+                invCursor.Visible = true;
             Item cur;
             string path;
-            for (int i=0;i< protagonist.Items.ListSize(); i++)
+            for (int i = 0; i < protagonist.Items.ListSize(); i++)
             {
                 cur = protagonist.Items.ReturnItem(i);
                 path = "../Resources/Items/" + cur.name + ".jpg"; //nazwa itemu jest takze nazwa pliku
                 switch (i) //dodac jesli zwiekszy sie liczba dostepnych itemow w grze
                 {
-                    case 0: 
+                    case 0:
                         item1.LoadAsync(@path);
                         item1Lbl.Text = (cur.amount).ToString();
                         break;
@@ -376,7 +381,7 @@ namespace Game
             }*/
 
             //inventory
-            for (int i=0 ; i < protagonist.Items.ListSize(); i++)
+            for (int i = 0; i < protagonist.Items.ListSize(); i++)
             {
                 cur = protagonist.Items.ReturnItem(i);
 
@@ -390,7 +395,7 @@ namespace Game
             //obiekty podniesione (do późniejszego usunięcia)
             using (StreamWriter sw = File.AppendText(path))
                 sw.WriteLine("-");
-            for(int i=0;i<depositedItems.Count;i++)
+            for (int i = 0; i < depositedItems.Count; i++)
             {
                 using (StreamWriter sw = File.AppendText(path))
                     sw.WriteLine(depositedItems[i]);
@@ -434,7 +439,7 @@ namespace Game
             }*/
 
             //inv
-            while((dane = sr.ReadLine()) != null)
+            while ((dane = sr.ReadLine()) != null)
             {
                 if (dane.Contains("-"))
                     break;
@@ -467,14 +472,41 @@ namespace Game
                 pictureBox.BackColor = Color.Green;
             }
 
-
         }
+
+        public void HideLevels()
+        {
+            foreach (PictureBox x in Player.Parent.Controls)
+            {
+                if (x.Tag == "cover")
+                    x.BringToFront();
+            }
+        }
+
+        public void ShowLevels()
+        {
+            foreach (PictureBox x in Player.Parent.Controls)
+            {
+                if (protagonist.GodMode || x.Tag == "door_open")
+                {
+                    string name = x.Name + "cover";
+
+                    foreach (PictureBox c in Player.Parent.Controls)
+                    {
+                        if (c.Tag == "cover" && c.Name.ToString().StartsWith(name))
+                            c.Dispose();
+                    }
+                }
+            }
+        }
+
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             protagonist.HandlePlayerCharacter();
             ItemInteraction();
             Rotation();
+            ShowLevels();
 
             protagonist.MovePlayer();
         }

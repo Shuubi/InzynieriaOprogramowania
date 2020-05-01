@@ -198,11 +198,32 @@
             this.item2 = new System.Windows.Forms.PictureBox();
             this.item1 = new System.Windows.Forms.PictureBox();
             this.pnlStart = new System.Windows.Forms.Panel();
+            this.btnLoad = new System.Windows.Forms.Button();
             this.btnStart = new System.Windows.Forms.Button();
             this.pnlPause = new System.Windows.Forms.Panel();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.btnLoad = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.doorlvl1cover = new System.Windows.Forms.PictureBox();
+            this.doorlvl1_4cover = new System.Windows.Forms.PictureBox();
+            this.doorlvl1_3cover = new System.Windows.Forms.PictureBox();
+            this.doorlvl1_3cover2 = new System.Windows.Forms.PictureBox();
+            this.doorlvl1_2cover = new System.Windows.Forms.PictureBox();
+            this.doorlvl1_2cover2 = new System.Windows.Forms.PictureBox();
+            this.doorlvl1_1cover = new System.Windows.Forms.PictureBox();
+            this.doorlvl2cover = new System.Windows.Forms.PictureBox();
+            this.doorlvl2_1cover = new System.Windows.Forms.PictureBox();
+            this.doorlvl2_2cover = new System.Windows.Forms.PictureBox();
+            this.doorlvl2_4cover = new System.Windows.Forms.PictureBox();
+            this.doorlvl2_5cover = new System.Windows.Forms.PictureBox();
+            this.doorlvl2_3cover = new System.Windows.Forms.PictureBox();
+            this.door3cover = new System.Windows.Forms.PictureBox();
+            this.doorlvl3_4cover = new System.Windows.Forms.PictureBox();
+            this.doorlvl3_5cover = new System.Windows.Forms.PictureBox();
+            this.doorlvl3_2cover = new System.Windows.Forms.PictureBox();
+            this.doorlvl3_2cover2 = new System.Windows.Forms.PictureBox();
+            this.doorlvl3_1cover = new System.Windows.Forms.PictureBox();
+            this.doorlvl3_6cover = new System.Windows.Forms.PictureBox();
+            this.doorlvl3_7cover = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.PlayerSpells)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.pnlText.SuspendLayout();
@@ -363,6 +384,27 @@
             ((System.ComponentModel.ISupportInitialize)(this.item1)).BeginInit();
             this.pnlStart.SuspendLayout();
             this.pnlPause.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.doorlvl1cover)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doorlvl1_4cover)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doorlvl1_3cover)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doorlvl1_3cover2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doorlvl1_2cover)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doorlvl1_2cover2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doorlvl1_1cover)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doorlvl2cover)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doorlvl2_1cover)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doorlvl2_2cover)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doorlvl2_4cover)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doorlvl2_5cover)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doorlvl2_3cover)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.door3cover)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doorlvl3_4cover)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doorlvl3_5cover)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doorlvl3_2cover)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doorlvl3_2cover2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doorlvl3_1cover)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doorlvl3_6cover)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doorlvl3_7cover)).BeginInit();
             this.SuspendLayout();
             // 
             // PlayerSpells
@@ -1598,6 +1640,27 @@
             this.Map.Controls.Add(this.lvl3);
             this.Map.Controls.Add(this.lvl1);
             this.Map.Controls.Add(this.Hub);
+            this.Map.Controls.Add(this.doorlvl1cover);
+            this.Map.Controls.Add(this.doorlvl1_3cover);
+            this.Map.Controls.Add(this.doorlvl1_4cover);
+            this.Map.Controls.Add(this.doorlvl1_3cover2);
+            this.Map.Controls.Add(this.doorlvl1_2cover);
+            this.Map.Controls.Add(this.doorlvl1_2cover2);
+            this.Map.Controls.Add(this.doorlvl1_1cover);
+            this.Map.Controls.Add(this.doorlvl2cover);
+            this.Map.Controls.Add(this.doorlvl2_1cover);
+            this.Map.Controls.Add(this.doorlvl2_2cover);
+            this.Map.Controls.Add(this.doorlvl2_4cover);
+            this.Map.Controls.Add(this.doorlvl2_5cover);
+            this.Map.Controls.Add(this.doorlvl2_3cover);
+            this.Map.Controls.Add(this.door3cover);
+            this.Map.Controls.Add(this.doorlvl3_4cover);
+            this.Map.Controls.Add(this.doorlvl3_5cover);
+            this.Map.Controls.Add(this.doorlvl3_2cover);
+            this.Map.Controls.Add(this.doorlvl3_2cover2);
+            this.Map.Controls.Add(this.doorlvl3_1cover);
+            this.Map.Controls.Add(this.doorlvl3_6cover);
+            this.Map.Controls.Add(this.doorlvl3_7cover);
             this.Map.Location = new System.Drawing.Point(0, 0);
             this.Map.Margin = new System.Windows.Forms.Padding(2);
             this.Map.Name = "Map";
@@ -2284,6 +2347,17 @@
             this.pnlStart.Size = new System.Drawing.Size(1280, 720);
             this.pnlStart.TabIndex = 6;
             // 
+            // btnLoad
+            // 
+            this.btnLoad.Location = new System.Drawing.Point(503, 403);
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.Size = new System.Drawing.Size(234, 67);
+            this.btnLoad.TabIndex = 1;
+            this.btnLoad.TabStop = false;
+            this.btnLoad.Text = "Load Game";
+            this.btnLoad.UseVisualStyleBackColor = true;
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
+            // 
             // btnStart
             // 
             this.btnStart.Location = new System.Drawing.Point(503, 316);
@@ -2305,6 +2379,17 @@
             this.pnlPause.TabIndex = 7;
             this.pnlPause.Visible = false;
             // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(457, 290);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(306, 74);
+            this.btnSave.TabIndex = 2;
+            this.btnSave.TabStop = false;
+            this.btnSave.Text = "Exit and Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
             // btnExit
             // 
             this.btnExit.Location = new System.Drawing.Point(457, 387);
@@ -2316,27 +2401,194 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // btnLoad
+            // doorlvl1cover
             // 
-            this.btnLoad.Location = new System.Drawing.Point(503, 403);
-            this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(234, 67);
-            this.btnLoad.TabIndex = 1;
-            this.btnLoad.TabStop = false;
-            this.btnLoad.Text = "Load Game";
-            this.btnLoad.UseVisualStyleBackColor = true;
-            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
+            this.doorlvl1cover.Location = new System.Drawing.Point(592, 390);
+            this.doorlvl1cover.Name = "doorlvl1cover";
+            this.doorlvl1cover.Size = new System.Drawing.Size(270, 236);
+            this.doorlvl1cover.TabIndex = 151;
+            this.doorlvl1cover.TabStop = false;
+            this.doorlvl1cover.Tag = "cover";
             // 
-            // btnSave
+            // doorlvl1_4cover
             // 
-            this.btnSave.Location = new System.Drawing.Point(457, 290);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(306, 74);
-            this.btnSave.TabIndex = 2;
-            this.btnSave.TabStop = false;
-            this.btnSave.Text = "Exit and Save";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.doorlvl1_4cover.Location = new System.Drawing.Point(857, 419);
+            this.doorlvl1_4cover.Name = "doorlvl1_4cover";
+            this.doorlvl1_4cover.Size = new System.Drawing.Size(327, 206);
+            this.doorlvl1_4cover.TabIndex = 152;
+            this.doorlvl1_4cover.TabStop = false;
+            this.doorlvl1_4cover.Tag = "cover";
+            // 
+            // doorlvl1_3cover
+            // 
+            this.doorlvl1_3cover.Location = new System.Drawing.Point(592, 114);
+            this.doorlvl1_3cover.Name = "doorlvl1_3cover";
+            this.doorlvl1_3cover.Size = new System.Drawing.Size(436, 277);
+            this.doorlvl1_3cover.TabIndex = 153;
+            this.doorlvl1_3cover.TabStop = false;
+            this.doorlvl1_3cover.Tag = "cover";
+            // 
+            // doorlvl1_3cover2
+            // 
+            this.doorlvl1_3cover2.Location = new System.Drawing.Point(863, 383);
+            this.doorlvl1_3cover2.Name = "doorlvl1_3cover2";
+            this.doorlvl1_3cover2.Size = new System.Drawing.Size(135, 39);
+            this.doorlvl1_3cover2.TabIndex = 154;
+            this.doorlvl1_3cover2.TabStop = false;
+            this.doorlvl1_3cover2.Tag = "cover";
+            // 
+            // doorlvl1_2cover
+            // 
+            this.doorlvl1_2cover.Location = new System.Drawing.Point(1024, 0);
+            this.doorlvl1_2cover.Name = "doorlvl1_2cover";
+            this.doorlvl1_2cover.Size = new System.Drawing.Size(160, 391);
+            this.doorlvl1_2cover.TabIndex = 155;
+            this.doorlvl1_2cover.TabStop = false;
+            this.doorlvl1_2cover.Tag = "cover";
+            // 
+            // doorlvl1_2cover2
+            // 
+            this.doorlvl1_2cover2.Location = new System.Drawing.Point(846, 3);
+            this.doorlvl1_2cover2.Name = "doorlvl1_2cover2";
+            this.doorlvl1_2cover2.Size = new System.Drawing.Size(201, 111);
+            this.doorlvl1_2cover2.TabIndex = 156;
+            this.doorlvl1_2cover2.TabStop = false;
+            this.doorlvl1_2cover2.Tag = "cover";
+            // 
+            // doorlvl1_1cover
+            // 
+            this.doorlvl1_1cover.Location = new System.Drawing.Point(592, -19);
+            this.doorlvl1_1cover.Name = "doorlvl1_1cover";
+            this.doorlvl1_1cover.Size = new System.Drawing.Size(258, 133);
+            this.doorlvl1_1cover.TabIndex = 157;
+            this.doorlvl1_1cover.TabStop = false;
+            this.doorlvl1_1cover.Tag = "cover";
+            // 
+            // doorlvl2cover
+            // 
+            this.doorlvl2cover.Location = new System.Drawing.Point(1200, 626);
+            this.doorlvl2cover.Name = "doorlvl2cover";
+            this.doorlvl2cover.Size = new System.Drawing.Size(270, 218);
+            this.doorlvl2cover.TabIndex = 158;
+            this.doorlvl2cover.TabStop = false;
+            this.doorlvl2cover.Tag = "cover";
+            // 
+            // doorlvl2_1cover
+            // 
+            this.doorlvl2_1cover.Location = new System.Drawing.Point(1470, 626);
+            this.doorlvl2_1cover.Name = "doorlvl2_1cover";
+            this.doorlvl2_1cover.Size = new System.Drawing.Size(308, 262);
+            this.doorlvl2_1cover.TabIndex = 159;
+            this.doorlvl2_1cover.TabStop = false;
+            this.doorlvl2_1cover.Tag = "cover";
+            // 
+            // doorlvl2_2cover
+            // 
+            this.doorlvl2_2cover.Location = new System.Drawing.Point(1440, 886);
+            this.doorlvl2_2cover.Name = "doorlvl2_2cover";
+            this.doorlvl2_2cover.Size = new System.Drawing.Size(338, 250);
+            this.doorlvl2_2cover.TabIndex = 160;
+            this.doorlvl2_2cover.TabStop = false;
+            this.doorlvl2_2cover.Tag = "cover";
+            // 
+            // doorlvl2_4cover
+            // 
+            this.doorlvl2_4cover.Location = new System.Drawing.Point(1440, 1136);
+            this.doorlvl2_4cover.Name = "doorlvl2_4cover";
+            this.doorlvl2_4cover.Size = new System.Drawing.Size(335, 148);
+            this.doorlvl2_4cover.TabIndex = 161;
+            this.doorlvl2_4cover.TabStop = false;
+            this.doorlvl2_4cover.Tag = "cover";
+            // 
+            // doorlvl2_5cover
+            // 
+            this.doorlvl2_5cover.Location = new System.Drawing.Point(1200, 1104);
+            this.doorlvl2_5cover.Name = "doorlvl2_5cover";
+            this.doorlvl2_5cover.Size = new System.Drawing.Size(243, 180);
+            this.doorlvl2_5cover.TabIndex = 162;
+            this.doorlvl2_5cover.TabStop = false;
+            this.doorlvl2_5cover.Tag = "cover";
+            // 
+            // doorlvl2_3cover
+            // 
+            this.doorlvl2_3cover.Location = new System.Drawing.Point(1200, 838);
+            this.doorlvl2_3cover.Name = "doorlvl2_3cover";
+            this.doorlvl2_3cover.Size = new System.Drawing.Size(243, 267);
+            this.doorlvl2_3cover.TabIndex = 163;
+            this.doorlvl2_3cover.TabStop = false;
+            this.doorlvl2_3cover.Tag = "cover";
+            // 
+            // door3cover
+            // 
+            this.door3cover.Location = new System.Drawing.Point(375, 831);
+            this.door3cover.Name = "door3cover";
+            this.door3cover.Size = new System.Drawing.Size(202, 290);
+            this.door3cover.TabIndex = 164;
+            this.door3cover.TabStop = false;
+            this.door3cover.Tag = "cover";
+            // 
+            // doorlvl3_4cover
+            // 
+            this.doorlvl3_4cover.Location = new System.Drawing.Point(389, 626);
+            this.doorlvl3_4cover.Name = "doorlvl3_4cover";
+            this.doorlvl3_4cover.Size = new System.Drawing.Size(188, 208);
+            this.doorlvl3_4cover.TabIndex = 165;
+            this.doorlvl3_4cover.TabStop = false;
+            this.doorlvl3_4cover.Tag = "cover";
+            // 
+            // doorlvl3_5cover
+            // 
+            this.doorlvl3_5cover.Location = new System.Drawing.Point(88, 829);
+            this.doorlvl3_5cover.Name = "doorlvl3_5cover";
+            this.doorlvl3_5cover.Size = new System.Drawing.Size(287, 276);
+            this.doorlvl3_5cover.TabIndex = 166;
+            this.doorlvl3_5cover.TabStop = false;
+            this.doorlvl3_5cover.Tag = "cover";
+            // 
+            // doorlvl3_2cover
+            // 
+            this.doorlvl3_2cover.Location = new System.Drawing.Point(-10, 626);
+            this.doorlvl3_2cover.Name = "doorlvl3_2cover";
+            this.doorlvl3_2cover.Size = new System.Drawing.Size(403, 208);
+            this.doorlvl3_2cover.TabIndex = 167;
+            this.doorlvl3_2cover.TabStop = false;
+            this.doorlvl3_2cover.Tag = "cover";
+            // 
+            // doorlvl3_2cover2
+            // 
+            this.doorlvl3_2cover2.Location = new System.Drawing.Point(5, 811);
+            this.doorlvl3_2cover2.Name = "doorlvl3_2cover2";
+            this.doorlvl3_2cover2.Size = new System.Drawing.Size(160, 50);
+            this.doorlvl3_2cover2.TabIndex = 168;
+            this.doorlvl3_2cover2.TabStop = false;
+            this.doorlvl3_2cover2.Tag = "cover";
+            // 
+            // doorlvl3_1cover
+            // 
+            this.doorlvl3_1cover.Location = new System.Drawing.Point(0, 861);
+            this.doorlvl3_1cover.Name = "doorlvl3_1cover";
+            this.doorlvl3_1cover.Size = new System.Drawing.Size(92, 260);
+            this.doorlvl3_1cover.TabIndex = 169;
+            this.doorlvl3_1cover.TabStop = false;
+            this.doorlvl3_1cover.Tag = "cover";
+            // 
+            // doorlvl3_6cover
+            // 
+            this.doorlvl3_6cover.Location = new System.Drawing.Point(-7, 1118);
+            this.doorlvl3_6cover.Name = "doorlvl3_6cover";
+            this.doorlvl3_6cover.Size = new System.Drawing.Size(412, 166);
+            this.doorlvl3_6cover.TabIndex = 170;
+            this.doorlvl3_6cover.TabStop = false;
+            this.doorlvl3_6cover.Tag = "cover";
+            // 
+            // doorlvl3_7cover
+            // 
+            this.doorlvl3_7cover.Location = new System.Drawing.Point(405, 1104);
+            this.doorlvl3_7cover.Name = "doorlvl3_7cover";
+            this.doorlvl3_7cover.Size = new System.Drawing.Size(172, 180);
+            this.doorlvl3_7cover.TabIndex = 171;
+            this.doorlvl3_7cover.TabStop = false;
+            this.doorlvl3_7cover.Tag = "cover";
             // 
             // Game
             // 
@@ -2521,6 +2773,27 @@
             ((System.ComponentModel.ISupportInitialize)(this.item1)).EndInit();
             this.pnlStart.ResumeLayout(false);
             this.pnlPause.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.doorlvl1cover)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doorlvl1_4cover)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doorlvl1_3cover)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doorlvl1_3cover2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doorlvl1_2cover)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doorlvl1_2cover2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doorlvl1_1cover)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doorlvl2cover)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doorlvl2_1cover)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doorlvl2_2cover)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doorlvl2_4cover)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doorlvl2_5cover)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doorlvl2_3cover)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.door3cover)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doorlvl3_4cover)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doorlvl3_5cover)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doorlvl3_2cover)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doorlvl3_2cover2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doorlvl3_1cover)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doorlvl3_6cover)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doorlvl3_7cover)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2701,5 +2974,26 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnLoad;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.PictureBox doorlvl1cover;
+        private System.Windows.Forms.PictureBox doorlvl1_3cover;
+        private System.Windows.Forms.PictureBox doorlvl1_4cover;
+        private System.Windows.Forms.PictureBox doorlvl1_3cover2;
+        private System.Windows.Forms.PictureBox doorlvl1_2cover;
+        private System.Windows.Forms.PictureBox doorlvl1_2cover2;
+        private System.Windows.Forms.PictureBox doorlvl1_1cover;
+        private System.Windows.Forms.PictureBox doorlvl2cover;
+        private System.Windows.Forms.PictureBox doorlvl2_1cover;
+        private System.Windows.Forms.PictureBox doorlvl2_2cover;
+        private System.Windows.Forms.PictureBox doorlvl2_4cover;
+        private System.Windows.Forms.PictureBox doorlvl2_5cover;
+        private System.Windows.Forms.PictureBox doorlvl2_3cover;
+        private System.Windows.Forms.PictureBox door3cover;
+        private System.Windows.Forms.PictureBox doorlvl3_4cover;
+        private System.Windows.Forms.PictureBox doorlvl3_5cover;
+        private System.Windows.Forms.PictureBox doorlvl3_2cover;
+        private System.Windows.Forms.PictureBox doorlvl3_2cover2;
+        private System.Windows.Forms.PictureBox doorlvl3_1cover;
+        private System.Windows.Forms.PictureBox doorlvl3_6cover;
+        private System.Windows.Forms.PictureBox doorlvl3_7cover;
     }
 }
