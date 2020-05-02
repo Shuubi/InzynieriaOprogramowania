@@ -22,6 +22,10 @@ namespace Game
         public bool goUp { get; set; }
         public bool goDown { get; set; }
         public bool action { get; set; }
+
+        public bool FireLearned = false;
+        public bool IceLearned = false;
+        public bool EarthLearned = false;
         public bool castSpell { get; set; }
         public Directions playerRotation { get; set; }
         public Spells currentSpell { get; set; }
@@ -133,7 +137,7 @@ namespace Game
                 {
                     if (action) //gdy gracz ma wcisnieta spacje i podejdzie do movable_object, to moze go przesuwac na wszystkie strony, rowniez ciagnac do siebie (potem mozna dodac warunek znajomosci jakiegos zaklecia)
                     {
-                        if (Player.Bounds.IntersectsWith(x.Bounds))
+                        if (Player.Bounds.IntersectsWith(x.Bounds) && EarthLearned == true)
                         {
                             playerSpeed = 3;
                             if (goRight)
@@ -175,7 +179,7 @@ namespace Game
                     {
                         if (st is PictureBox)
                         {
-                            if (st.Tag == "wall" || st.Tag == "door_closed" || st.Tag == "movable_object")
+                            if (st.Tag == "wall" || st.Tag == "door_closed" || st.Tag == "movable_object" || st.Tag == "needKey")
                             {
                                 if (mv.Bounds.IntersectsWith(st.Bounds) && Player.Bounds.IntersectsWith(mv.Bounds))
                                 {
@@ -328,23 +332,24 @@ namespace Game
 
         public void SpellCasting()
         {
-            if (currentSpell == Spells.Earth)
+            if (currentSpell == Spells.Earth && EarthLearned == true)
             {
                 PlayerSpells.BackColor = Color.GreenYellow;
                 PlayerSpells.Visible = true;
-                pushMovableObjects();
+                pushMovableObjects(); 
+               
             }
             else
             {
                 playerCollision("movable_object");
             }
-            if (currentSpell == Spells.Fire)
+            if (currentSpell == Spells.Fire && FireLearned == true)
             {
                 PlayerSpells.BackColor = Color.Red;
                 PlayerSpells.Visible = true;
                 Fire();
             }
-            if (currentSpell == Spells.Ice)
+            if (currentSpell == Spells.Ice && IceLearned == true)
             {
                 PlayerSpells.BackColor = Color.White;
                 PlayerSpells.Visible = true;

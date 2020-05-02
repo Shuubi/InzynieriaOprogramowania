@@ -253,8 +253,10 @@ namespace Game
                                 //dobranie path zaleznej od nazwy npc
                                 //ewentualnie przerzucic na switch jesli bedzie duzo npc
                                 if (thisPictureBox.Name == "George")
+                                {
+                                    protagonist.EarthLearned = true;
                                     path = "../Resources/Dialogs/George.txt";
-
+                                }
                                 else if (thisPictureBox.Name == "Bunny")
                                 {
                                     if (protagonist.Items.FindItem("carrot") == null || protagonist.Items.FindItem("carrot").amount < 2)
@@ -265,6 +267,24 @@ namespace Game
                                         protagonist.Items.RemoveItem("Carrot");
                                         thisPictureBox.Dispose();
                                     }
+                                }
+                                else if (thisPictureBox.Name == "Altie")
+                                {
+                                    protagonist.IceLearned = true;
+                                    path = "../Resources/Dialogs/Altie.txt";
+                                }
+                                else if (thisPictureBox.Name == "Dragon")
+                                {
+                                    //if (protagonist.Items.FindItem("coin") == null)
+                                    //{
+                                    //    path = "../Resources/Dialogs/DragonIncomplete.txt";
+                                    //}
+                                    //else
+                                    //{
+                                        protagonist.FireLearned = true;
+                                        path = "../Resources/Dialogs/Dragon.txt"; 
+                                   // }
+                                    
                                 }
                                 //przekazanie path do funckji wczytujacej dialogi
                                 StreamReader sr = new StreamReader(path);
