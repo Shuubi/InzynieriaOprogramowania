@@ -303,8 +303,14 @@ namespace Game
             bool readAll = false;
             //Animacja Tekstu
             string ln2 = String.Empty;
+                
+                System.Media.SoundPlayer player = new System.Media.SoundPlayer("../Resources/Sounds/voice.wav"); // dodaje dzwięk przy dialogu
+                player.Play();
+
             for (int i = 0; i < ln.Length; i++)
             {
+                
+
                 ln2 = ln2.Insert(ln2.Length, ln[i].ToString());
                 lblDialog.Text = ln2;
                 Application.DoEvents();
@@ -359,7 +365,7 @@ namespace Game
             for (int i = 0; i < protagonist.Items.ListSize(); i++)
             {
                 cur = protagonist.Items.ReturnItem(i);
-                path = "../Resources/Items/" + cur.name + ".jpg"; //nazwa itemu jest takze nazwa pliku
+                path = ".. /Resources/Items/" + cur.name + ".jpg"; //nazwa itemu jest takze nazwa pliku
                 switch (i) //dodac jesli zwiekszy sie liczba dostepnych itemow w grze
                 {
                     case 0:
