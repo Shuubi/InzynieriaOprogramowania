@@ -372,6 +372,7 @@ namespace Game
             playerCollision("river");
             playerCollision("freezable_object");
             playerCollision("NPC");
+            playerCollision("button");
             SpellCasting();
             DoorsInteraction();
         }
@@ -407,7 +408,6 @@ namespace Game
 
         public void RemoveItem(string itemName, int amount = 1)
         {
-            //todo: Do stuff here plox
             var foundItem = FindItem(itemName);
             if (foundItem != null)
             {

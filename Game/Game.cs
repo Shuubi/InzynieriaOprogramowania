@@ -266,6 +266,7 @@ namespace Game
                                         path = "../Resources/Dialogs/NPCFinishedQuest.txt";
                                         protagonist.Items.RemoveItem("Carrot");
                                         thisPictureBox.Dispose();
+                                        protagonist.Items.InsertItem("key");
                                     }
                                 }
                                 else if (thisPictureBox.Name == "Altie")
@@ -275,17 +276,45 @@ namespace Game
                                 }
                                 else if (thisPictureBox.Name == "Dragon")
                                 {
-                                    //if (protagonist.Items.FindItem("coin") == null)
-                                    //{
-                                    //    path = "../Resources/Dialogs/DragonIncomplete.txt";
-                                    //}
-                                    //else
-                                    //{
+                                    if (protagonist.Items.FindItem("coin") == null)
+                                    {
+                                        path = "../Resources/Dialogs/DragonIncomplete.txt";
+                                    }
+                                    else
+                                    {
                                         protagonist.FireLearned = true;
-                                        path = "../Resources/Dialogs/Dragon.txt"; 
-                                   // }
-                                    
+                                        path = "../Resources/Dialogs/Dragon.txt";
+                                    }
                                 }
+                                else if (thisPictureBox.Name == "Cthulhu")
+                                {
+                                    if (protagonist.Items.FindItem("candy") == null)
+                                    {
+                                        path = "../Resources/Dialogs/CthulhuIncomplete.txt";
+                                    }
+                                    else
+                                    {
+                                        path = "../Resources/Dialogs/Cthulhu.txt";
+                                    }
+                                }
+                                else if (thisPictureBox.Name == "craft_area")
+                                {
+                                    if (protagonist.Items.FindItem("stick") == null || protagonist.Items.FindItem("stick").amount < 2 || protagonist.Items.FindItem("pot") == null || protagonist.Items.FindItem("sugar") == null)
+                                    {
+                                        path = "../Resources/Dialogs/CraftIncomplete.txt";
+                                    }
+                                    else
+                                    {
+                                        path = "../Resources/Dialogs/CraftComplete.txt";
+                                        protagonist.Items.RemoveItem("stick");
+                                        protagonist.Items.RemoveItem("pot");
+                                        protagonist.Items.RemoveItem("sugar");
+                                        protagonist.Items.InsertItem("candy");
+                                    }
+
+                                }
+                                else if (thisPictureBox.Name == "Teodor")
+                                    path = "../Resources/Dialogs/Teodor.txt";
                                 //przekazanie path do funckji wczytujacej dialogi
                                 StreamReader sr = new StreamReader(path);
                                 LoadDialog(sr);
