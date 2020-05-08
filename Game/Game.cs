@@ -198,24 +198,21 @@ namespace Game
 
         public void Rotation()
         {
-            Player.Image = Image.FromFile(@"Images\player.jpg");
+            Player.Image = Image.FromFile(@"Images\1.png");
             Image img = Player.Image;
             switch (protagonist.playerRotation)
             {
                 case PlayerCharacter.Directions.Right:
-                    img.RotateFlip(RotateFlipType.Rotate90FlipNone);
-                    Player.Image = img;
+                    Player.Image = Image.FromFile(@"Images\2.png");
                     break;
                 case PlayerCharacter.Directions.Left:
-                    img.RotateFlip(RotateFlipType.Rotate270FlipNone);
-                    Player.Image = img;
+                    Player.Image = Image.FromFile(@"Images\3.png");
                     break;
                 case PlayerCharacter.Directions.Up:
-                    Player.Image = img;
+                    Player.Image = Image.FromFile(@"Images\4.png");
                     break;
                 case PlayerCharacter.Directions.Down:
-                    img.RotateFlip(RotateFlipType.Rotate180FlipNone);
-                    Player.Image = img;
+                    Player.Image = Image.FromFile(@"Images\1.png");
                     break;
                 default: break;
             }
