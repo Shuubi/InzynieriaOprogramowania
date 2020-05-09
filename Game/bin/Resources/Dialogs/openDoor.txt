@@ -1,2 +1,2 @@
 You used a golden key.
-Door is now open!
+The door is now open!
