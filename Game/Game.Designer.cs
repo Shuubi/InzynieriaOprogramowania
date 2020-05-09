@@ -39,6 +39,8 @@
             this.pnlDialog = new System.Windows.Forms.Panel();
             this.lblDialog = new System.Windows.Forms.Label();
             this.Map = new System.Windows.Forms.Panel();
+            this.locked_door2 = new System.Windows.Forms.PictureBox();
+            this.Locked_door1 = new System.Windows.Forms.PictureBox();
             this.Player = new System.Windows.Forms.PictureBox();
             this.Teodor = new System.Windows.Forms.PictureBox();
             this.wall21 = new System.Windows.Forms.PictureBox();
@@ -150,7 +152,7 @@
             this.rock4 = new System.Windows.Forms.PictureBox();
             this.rock3 = new System.Windows.Forms.PictureBox();
             this.George = new System.Windows.Forms.PictureBox();
-            this.Bunny = new System.Windows.Forms.PictureBox();
+            this.Jasper = new System.Windows.Forms.PictureBox();
             this.carrot3 = new System.Windows.Forms.PictureBox();
             this.carrot2 = new System.Windows.Forms.PictureBox();
             this.carrot1 = new System.Windows.Forms.PictureBox();
@@ -235,6 +237,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.wall16)).BeginInit();
             this.pnlDialog.SuspendLayout();
             this.Map.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.locked_door2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Locked_door1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Teodor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall21)).BeginInit();
@@ -346,7 +350,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.rock4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rock3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.George)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Bunny)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Jasper)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.carrot3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.carrot2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.carrot1)).BeginInit();
@@ -493,6 +497,8 @@
             // Map
             // 
             this.Map.BackColor = System.Drawing.Color.Black;
+            this.Map.Controls.Add(this.locked_door2);
+            this.Map.Controls.Add(this.Locked_door1);
             this.Map.Controls.Add(this.Player);
             this.Map.Controls.Add(this.Teodor);
             this.Map.Controls.Add(this.wall21);
@@ -604,7 +610,7 @@
             this.Map.Controls.Add(this.rock4);
             this.Map.Controls.Add(this.rock3);
             this.Map.Controls.Add(this.George);
-            this.Map.Controls.Add(this.Bunny);
+            this.Map.Controls.Add(this.Jasper);
             this.Map.Controls.Add(this.carrot3);
             this.Map.Controls.Add(this.carrot2);
             this.Map.Controls.Add(this.carrot1);
@@ -664,11 +670,35 @@
             this.Map.Controls.Add(this.doorlvl3_6cover);
             this.Map.Controls.Add(this.doorlvl3_7cover);
             this.Map.Controls.Add(this.doorlvl1_4cover2);
-            this.Map.Location = new System.Drawing.Point(0, 0);
+            this.Map.Location = new System.Drawing.Point(-800, -500);
             this.Map.Margin = new System.Windows.Forms.Padding(2);
             this.Map.Name = "Map";
             this.Map.Size = new System.Drawing.Size(1778, 1926);
             this.Map.TabIndex = 4;
+            // 
+            // locked_door2
+            // 
+            this.locked_door2.BackColor = System.Drawing.Color.Maroon;
+            this.locked_door2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.locked_door2.Image = global::Game.Properties.Resources._lock;
+            this.locked_door2.Location = new System.Drawing.Point(846, 1263);
+            this.locked_door2.Name = "locked_door2";
+            this.locked_door2.Size = new System.Drawing.Size(60, 30);
+            this.locked_door2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.locked_door2.TabIndex = 178;
+            this.locked_door2.TabStop = false;
+            this.locked_door2.Tag = "NPC";
+            // 
+            // Locked_door1
+            // 
+            this.Locked_door1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Locked_door1.Image = global::Game.Properties.Resources._lock;
+            this.Locked_door1.Location = new System.Drawing.Point(720, 114);
+            this.Locked_door1.Name = "Locked_door1";
+            this.Locked_door1.Size = new System.Drawing.Size(60, 32);
+            this.Locked_door1.TabIndex = 177;
+            this.Locked_door1.TabStop = false;
+            this.Locked_door1.Tag = "NPC";
             // 
             // Player
             // 
@@ -696,9 +726,9 @@
             // 
             // wall21
             // 
-            this.wall21.Location = new System.Drawing.Point(925, 1263);
+            this.wall21.Location = new System.Drawing.Point(905, 1263);
             this.wall21.Name = "wall21";
-            this.wall21.Size = new System.Drawing.Size(259, 40);
+            this.wall21.Size = new System.Drawing.Size(279, 31);
             this.wall21.TabIndex = 174;
             this.wall21.TabStop = false;
             this.wall21.Tag = "wall";
@@ -707,7 +737,7 @@
             // 
             this.wall20.Location = new System.Drawing.Point(592, 1263);
             this.wall20.Name = "wall20";
-            this.wall20.Size = new System.Drawing.Size(258, 40);
+            this.wall20.Size = new System.Drawing.Size(258, 30);
             this.wall20.TabIndex = 173;
             this.wall20.TabStop = false;
             this.wall20.Tag = "wall";
@@ -717,7 +747,7 @@
             this.door4.BackColor = System.Drawing.Color.Maroon;
             this.door4.Location = new System.Drawing.Point(846, 1263);
             this.door4.Name = "door4";
-            this.door4.Size = new System.Drawing.Size(80, 40);
+            this.door4.Size = new System.Drawing.Size(80, 31);
             this.door4.TabIndex = 172;
             this.door4.TabStop = false;
             this.door4.Tag = "closed_door";
@@ -911,6 +941,8 @@
             // loglvl3_2
             // 
             this.loglvl3_2.BackColor = System.Drawing.Color.Peru;
+            this.loglvl3_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.loglvl3_2.Image = global::Game.Properties.Resources.log2;
             this.loglvl3_2.Location = new System.Drawing.Point(120, 1024);
             this.loglvl3_2.Margin = new System.Windows.Forms.Padding(2);
             this.loglvl3_2.Name = "loglvl3_2";
@@ -1018,6 +1050,8 @@
             // loglvl3_1
             // 
             this.loglvl3_1.BackColor = System.Drawing.Color.Peru;
+            this.loglvl3_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.loglvl3_1.Image = global::Game.Properties.Resources.log1;
             this.loglvl3_1.Location = new System.Drawing.Point(405, 894);
             this.loglvl3_1.Margin = new System.Windows.Forms.Padding(2);
             this.loglvl3_1.Name = "loglvl3_1";
@@ -1681,10 +1715,10 @@
             // freezablelvl2_1
             // 
             this.freezablelvl2_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.freezablelvl2_1.Location = new System.Drawing.Point(1620, 712);
+            this.freezablelvl2_1.Location = new System.Drawing.Point(1620, 707);
             this.freezablelvl2_1.Margin = new System.Windows.Forms.Padding(2);
             this.freezablelvl2_1.Name = "freezablelvl2_1";
-            this.freezablelvl2_1.Size = new System.Drawing.Size(60, 40);
+            this.freezablelvl2_1.Size = new System.Drawing.Size(60, 45);
             this.freezablelvl2_1.TabIndex = 66;
             this.freezablelvl2_1.TabStop = false;
             this.freezablelvl2_1.Tag = "freezable_object";
@@ -1695,7 +1729,7 @@
             this.riverlvl2_2.Location = new System.Drawing.Point(1620, 682);
             this.riverlvl2_2.Margin = new System.Windows.Forms.Padding(2);
             this.riverlvl2_2.Name = "riverlvl2_2";
-            this.riverlvl2_2.Size = new System.Drawing.Size(60, 32);
+            this.riverlvl2_2.Size = new System.Drawing.Size(60, 27);
             this.riverlvl2_2.TabIndex = 65;
             this.riverlvl2_2.TabStop = false;
             this.riverlvl2_2.Tag = "river";
@@ -1926,18 +1960,18 @@
             this.George.TabStop = false;
             this.George.Tag = "NPC";
             // 
-            // Bunny
+            // Jasper
             // 
-            this.Bunny.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Bunny.Image = ((System.Drawing.Image)(resources.GetObject("Bunny.Image")));
-            this.Bunny.Location = new System.Drawing.Point(1110, 323);
-            this.Bunny.Margin = new System.Windows.Forms.Padding(2);
-            this.Bunny.Name = "Bunny";
-            this.Bunny.Size = new System.Drawing.Size(30, 32);
-            this.Bunny.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Bunny.TabIndex = 38;
-            this.Bunny.TabStop = false;
-            this.Bunny.Tag = "NPC";
+            this.Jasper.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Jasper.Image = ((System.Drawing.Image)(resources.GetObject("Jasper.Image")));
+            this.Jasper.Location = new System.Drawing.Point(1110, 323);
+            this.Jasper.Margin = new System.Windows.Forms.Padding(2);
+            this.Jasper.Name = "Jasper";
+            this.Jasper.Size = new System.Drawing.Size(30, 32);
+            this.Jasper.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Jasper.TabIndex = 38;
+            this.Jasper.TabStop = false;
+            this.Jasper.Tag = "NPC";
             // 
             // carrot3
             // 
@@ -2000,10 +2034,10 @@
             // 
             // wall12
             // 
-            this.wall12.Location = new System.Drawing.Point(1170, 1300);
+            this.wall12.Location = new System.Drawing.Point(1170, 1284);
             this.wall12.Margin = new System.Windows.Forms.Padding(2);
             this.wall12.Name = "wall12";
-            this.wall12.Size = new System.Drawing.Size(15, 609);
+            this.wall12.Size = new System.Drawing.Size(15, 625);
             this.wall12.TabIndex = 32;
             this.wall12.TabStop = false;
             this.wall12.Tag = "wall";
@@ -2294,10 +2328,10 @@
             // lvl4
             // 
             this.lvl4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.lvl4.Location = new System.Drawing.Point(608, 1300);
+            this.lvl4.Location = new System.Drawing.Point(608, 1290);
             this.lvl4.Margin = new System.Windows.Forms.Padding(2);
             this.lvl4.Name = "lvl4";
-            this.lvl4.Size = new System.Drawing.Size(562, 609);
+            this.lvl4.Size = new System.Drawing.Size(562, 619);
             this.lvl4.TabIndex = 5;
             this.lvl4.TabStop = false;
             // 
@@ -2779,6 +2813,8 @@
             this.pnlDialog.ResumeLayout(false);
             this.pnlDialog.PerformLayout();
             this.Map.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.locked_door2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Locked_door1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Teodor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall21)).EndInit();
@@ -2890,7 +2926,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.rock4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rock3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.George)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Bunny)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Jasper)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.carrot3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.carrot2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.carrot1)).EndInit();
@@ -3013,7 +3049,7 @@
         private System.Windows.Forms.PictureBox carrot1;
         private System.Windows.Forms.PictureBox carrot2;
         private System.Windows.Forms.PictureBox carrot3;
-        private System.Windows.Forms.PictureBox Bunny;
+        private System.Windows.Forms.PictureBox Jasper;
         private System.Windows.Forms.PictureBox George;
         private System.Windows.Forms.PictureBox rock2;
         private System.Windows.Forms.PictureBox rock3;
@@ -3167,5 +3203,7 @@
         private System.Windows.Forms.PictureBox wall20;
         private System.Windows.Forms.PictureBox door4;
         private System.Windows.Forms.PictureBox doorlvl1_4cover2;
+        private System.Windows.Forms.PictureBox Locked_door1;
+        private System.Windows.Forms.PictureBox locked_door2;
     }
 }

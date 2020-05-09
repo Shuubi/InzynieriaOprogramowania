@@ -27,6 +27,8 @@ namespace Game
         public bool FireLearned = false;
         public bool IceLearned = false;
         public bool EarthLearned = false;
+        public bool Jasper = false;
+        public bool Teodor = false;
         public bool castSpell { get; set; }
         public Directions playerRotation { get; set; }
         public Spells currentSpell { get; set; }

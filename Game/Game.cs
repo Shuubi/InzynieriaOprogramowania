@@ -252,29 +252,49 @@ namespace Game
                                 //ewentualnie przerzucic na switch jesli bedzie duzo npc
                                 if (thisPictureBox.Name == "George")
                                 {
-                                    protagonist.EarthLearned = true;
-                                    path = "../Resources/Dialogs/George.txt";
-                                }
-                                else if (thisPictureBox.Name == "Bunny")
-                                {
-                                    if (protagonist.Items.FindItem("carrot") == null || protagonist.Items.FindItem("carrot").amount < 2)
-                                        path = "../Resources/Dialogs/NPCIncompleteQuest.txt";
+                                    if (protagonist.EarthLearned == false)
+                                    {
+                                        protagonist.EarthLearned = true;
+                                        path = "../Resources/Dialogs/George.txt";
+                                    }
                                     else
                                     {
-                                        path = "../Resources/Dialogs/NPCFinishedQuest.txt";
+                                        path = "../Resources/Dialogs/GeorgeAfter.txt";
+                                    }
+                                    
+                                }
+                                else if (thisPictureBox.Name == "Jasper")
+                                {
+                                    if (protagonist.Jasper == true)
+                                    {
+                                        path = "../Resources/Dialogs/JackalopeAfter.txt";
+                                    }
+                                    else if (protagonist.Items.FindItem("carrot") == null || protagonist.Items.FindItem("carrot").amount <= 2)
+                                        path = "../Resources/Dialogs/JackalopeIncompleteQuest.txt";
+                                    else
+                                    {
+                                        path = "../Resources/Dialogs/JackalopeFinishedQuest.txt";
                                         protagonist.Items.RemoveItem("Carrot");
-                                        thisPictureBox.Dispose();
                                         protagonist.Items.InsertItem("key");
+                                        protagonist.Jasper = true;
                                     }
                                 }
                                 else if (thisPictureBox.Name == "Altie")
                                 {
-                                    protagonist.IceLearned = true;
-                                    path = "../Resources/Dialogs/Altie.txt";
+                                    if (protagonist.IceLearned == false)
+                                    {
+                                        protagonist.IceLearned = true;
+                                        path = "../Resources/Dialogs/Altie.txt"; 
+                                    }
+                                    else
+                                        path = "../Resources/Dialogs/AltieAfter.txt";
+
                                 }
                                 else if (thisPictureBox.Name == "Dragon")
                                 {
-                                    if (protagonist.Items.FindItem("coin") == null)
+                                    if (protagonist.FireLearned == true)
+                                        path = "../Resources/Dialogs/DragonAfter.txt";
+                                    else if (protagonist.Items.FindItem("coin") == null)
                                     {
                                         path = "../Resources/Dialogs/DragonIncomplete.txt";
                                     }
@@ -311,8 +331,39 @@ namespace Game
                                     }
 
                                 }
+                                else if (thisPictureBox.Name == "Locked_door1")
+                                {
+                                    if (protagonist.Items.FindItem("key") == null)
+                                    {
+                                        path = "../Resources/Dialogs/lockedDoor.txt";
+                                    }
+                                    else
+                                    {
+                                        path = "../Resources/Dialogs/openDoor.txt";
+                                        thisPictureBox.Dispose();
+                                    }
+                                }
+                                else if (thisPictureBox.Name == "locked_door2")
+                                {
+                                    if (protagonist.Items.FindItem("crystal") == null || protagonist.Items.FindItem("crystal").amount <= 2)
+                                    {
+                                        path = "../Resources/Dialogs/lockedDoor2.txt";
+                                    }
+                                    else
+                                    {
+                                        path = "../Resources/Dialogs/openDoor2.txt";
+                                        thisPictureBox.Dispose();
+                                    }
+                                }
                                 else if (thisPictureBox.Name == "Teodor")
-                                    path = "../Resources/Dialogs/Teodor.txt";
+                                    if (protagonist.Teodor == false)
+                                    {
+                                        path = "../Resources/Dialogs/Teodor.txt";
+                                         protagonist.Teodor = true;
+                                    }
+                                    
+                                else
+                                        path = "../Resources/Dialogs/TeodorAfter.txt";
                                 //przekazanie path do funckji wczytujacej dialogi
                                 StreamReader sr = new StreamReader(path);
                                 LoadDialog(sr);
