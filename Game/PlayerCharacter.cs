@@ -17,6 +17,7 @@ namespace Game
     {
         public Control Player;
         public Control PlayerSpells;
+        public Control Map;
         public bool goRight { get; set; }
         public bool goLeft { get; set; }
         public bool goUp { get; set; }
@@ -53,10 +54,11 @@ namespace Game
             return openedDoors[i];
         }
 
-        public PlayerCharacter(Control player, Control playerspells)
+        public PlayerCharacter(Control player, Control playerspells, Control map)
         {
             Player = player;
             PlayerSpells = playerspells;
+            Map = map;
         }
 
         public void MovePlayer()
@@ -64,7 +66,7 @@ namespace Game
 
             if (goRight)
             {
-                Player.Parent.Left -= playerSpeed;
+                Map.Left -= playerSpeed;
                 Player.Left += playerSpeed;
                 PlayerSpells.Left += playerSpeed;
                 playerRotation = Directions.Right;
@@ -72,21 +74,21 @@ namespace Game
             }
             if (goLeft)
             {
-                Player.Parent.Left += playerSpeed;
+                Map.Left += playerSpeed;
                 Player.Left -= playerSpeed;
                 PlayerSpells.Left -= playerSpeed;
                 playerRotation = Directions.Left;
             }
             if (goUp)
             {
-                Player.Parent.Top += playerSpeed;
+                Map.Top += playerSpeed;
                 Player.Top -= playerSpeed;
                 PlayerSpells.Top -= playerSpeed;
                 playerRotation = Directions.Up;
             }
             if (goDown)
             {
-                Player.Parent.Top -= playerSpeed;
+                Map.Top -= playerSpeed;
                 Player.Top += playerSpeed;
                 PlayerSpells.Top += playerSpeed;
                 playerRotation = Directions.Down;
@@ -217,7 +219,7 @@ namespace Game
                     if (Player.Bounds.IntersectsWith(x.Bounds) && action)
                     {
                         x.Tag = "door_open";
-                        x.BackColor = Color.Green;
+                        x.Image = null;
                         openedDoors.Add(x.Name);
                     }
                 }

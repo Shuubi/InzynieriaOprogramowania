@@ -31,9 +31,10 @@ namespace Game
             InitializeComponent();
             pnlStart.BringToFront();
             pfc.AddFontFile("VCR.ttf");
-            protagonist = new PlayerCharacter(Player, PlayerSpells);
+            protagonist = new PlayerCharacter(Player, PlayerSpells, Map);
             PlayerSpells.Visible = false;
             HideLevels();
+            Player.BackColor = Color.Transparent;
         }
 
         protected override void OnLoad(EventArgs e)
@@ -329,13 +330,13 @@ namespace Game
             bool readAll = false;
             //Animacja Tekstu
             string ln2 = String.Empty;
-                
-                System.Media.SoundPlayer player = new System.Media.SoundPlayer("../Resources/Sounds/voice.wav"); // dodaje dzwięk przy dialogu
-                player.Play();
+
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer("../Resources/Sounds/voice.wav"); // dodaje dzwięk przy dialogu
+            player.Play();
 
             for (int i = 0; i < ln.Length; i++)
             {
-                
+
 
                 ln2 = ln2.Insert(ln2.Length, ln[i].ToString());
                 lblDialog.Text = ln2;
@@ -552,6 +553,27 @@ namespace Game
             }
         }
 
+        public void Transparency()
+        {
+            foreach (Control back in Map.Controls)
+            {
+                foreach (Control front in Map.Controls)
+                {
+                    if (back is PictureBox)
+                    {
+                        if (front is PictureBox)
+                        {
+                            if (back.Bounds.Contains(front.Bounds) && !back.Name.ToString().Contains("cover") && !front.Name.ToString().Contains("cover") && front.Tag!="wall")
+                            {
+                                front.BackColor = back.BackColor;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -559,8 +581,11 @@ namespace Game
             ItemInteraction();
             Rotation();
             ShowLevels();
+            Transparency();
 
             protagonist.MovePlayer();
+
+            
         }
 
         private void btnStart_Click(object sender, EventArgs e)
