@@ -563,7 +563,7 @@ namespace Game
                     {
                         if (front is PictureBox)
                         {
-                            if (back.Bounds.Contains(front.Bounds) && !back.Name.ToString().Contains("cover") && !front.Name.ToString().Contains("cover") && front.Tag!="wall")
+                            if (back.Bounds.Contains(front.Bounds) && !back.Name.ToString().Contains("cover") && !front.Name.ToString().Contains("cover") && front.Tag != "wall" && front.Tag != "river" && front.Tag != "freezable_object")
                             {
                                 front.BackColor = back.BackColor;
                             }
