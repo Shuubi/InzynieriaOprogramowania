@@ -261,7 +261,7 @@ namespace Game
                                     {
                                         path = "../Resources/Dialogs/GeorgeAfter.txt";
                                     }
-                                    
+
                                 }
                                 else if (thisPictureBox.Name == "Jasper")
                                 {
@@ -284,7 +284,7 @@ namespace Game
                                     if (protagonist.IceLearned == false)
                                     {
                                         protagonist.IceLearned = true;
-                                        path = "../Resources/Dialogs/Altie.txt"; 
+                                        path = "../Resources/Dialogs/Altie.txt";
                                     }
                                     else
                                         path = "../Resources/Dialogs/AltieAfter.txt";
@@ -359,10 +359,10 @@ namespace Game
                                     if (protagonist.Teodor == false)
                                     {
                                         path = "../Resources/Dialogs/Teodor.txt";
-                                         protagonist.Teodor = true;
+                                        protagonist.Teodor = true;
                                     }
-                                    
-                                else
+
+                                    else
                                         path = "../Resources/Dialogs/TeodorAfter.txt";
                                 //przekazanie path do funckji wczytujacej dialogi
                                 StreamReader sr = new StreamReader(path);
@@ -610,14 +610,12 @@ namespace Game
             {
                 foreach (Control front in Map.Controls)
                 {
-                    if (back is PictureBox)
+                    if (back is PictureBox && back.Bounds.Contains(front.Bounds) && !back.Name.ToString().Contains("cover"))
                     {
-                        if (front is PictureBox)
+                        if (front is PictureBox && !front.Name.ToString().Contains("cover") && front.Tag != null && front.Tag != "wall" && front.Tag != "river" &&
+                            front.Tag!="freezable_object" && front.Tag != "ice" && !front.Tag.ToString().Contains("ball") && !front.Name.ToString().Contains("PlayerSpells") )
                         {
-                            if (back.Bounds.Contains(front.Bounds) && !back.Name.ToString().Contains("cover") && !front.Name.ToString().Contains("cover") && front.Tag != "wall" && front.Tag != "river" && front.Tag != "freezable_object")
-                            {
-                                front.BackColor = back.BackColor;
-                            }
+                            front.BackColor = back.BackColor;
                         }
 
                     }
@@ -636,7 +634,6 @@ namespace Game
 
             protagonist.MovePlayer();
 
-            
         }
 
         private void btnStart_Click(object sender, EventArgs e)

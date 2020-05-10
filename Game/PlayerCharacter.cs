@@ -221,7 +221,7 @@ namespace Game
                     if (Player.Bounds.IntersectsWith(x.Bounds) && action)
                     {
                         x.Tag = "door_open";
-                        x.Image = null;
+                        x.BackgroundImage = null;
                         openedDoors.Add(x.Name);
                     }
                 }

@@ -31,21 +31,30 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Game));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.statusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.pnlText = new System.Windows.Forms.Panel();
-            this.wall16 = new System.Windows.Forms.PictureBox();
             this.pnlDialog = new System.Windows.Forms.Panel();
             this.lblDialog = new System.Windows.Forms.Label();
             this.Map = new System.Windows.Forms.Panel();
+            this.pnlInv = new System.Windows.Forms.Panel();
+            this.item6Lbl = new System.Windows.Forms.Label();
+            this.item5Lbl = new System.Windows.Forms.Label();
+            this.item4Lbl = new System.Windows.Forms.Label();
+            this.item3Lbl = new System.Windows.Forms.Label();
+            this.item2Lbl = new System.Windows.Forms.Label();
+            this.item1Lbl = new System.Windows.Forms.Label();
+            this.pnlStart = new System.Windows.Forms.Panel();
+            this.btnLoad = new System.Windows.Forms.Button();
+            this.btnStart = new System.Windows.Forms.Button();
+            this.pnlPause = new System.Windows.Forms.Panel();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.locked_door2 = new System.Windows.Forms.PictureBox();
             this.Locked_door1 = new System.Windows.Forms.PictureBox();
             this.Player = new System.Windows.Forms.PictureBox();
             this.Teodor = new System.Windows.Forms.PictureBox();
             this.wall21 = new System.Windows.Forms.PictureBox();
             this.wall20 = new System.Windows.Forms.PictureBox();
-            this.door4 = new System.Windows.Forms.PictureBox();
             this.walllvl2_7 = new System.Windows.Forms.PictureBox();
             this.walllvl2_5 = new System.Windows.Forms.PictureBox();
             this.walllvl2_4 = new System.Windows.Forms.PictureBox();
@@ -212,38 +221,26 @@
             this.doorlvl3_6cover = new System.Windows.Forms.PictureBox();
             this.doorlvl3_7cover = new System.Windows.Forms.PictureBox();
             this.doorlvl1_4cover2 = new System.Windows.Forms.PictureBox();
-            this.pnlInv = new System.Windows.Forms.Panel();
+            this.wall16 = new System.Windows.Forms.PictureBox();
             this.invCursor = new System.Windows.Forms.PictureBox();
-            this.item6Lbl = new System.Windows.Forms.Label();
             this.item6 = new System.Windows.Forms.PictureBox();
-            this.item5Lbl = new System.Windows.Forms.Label();
             this.item5 = new System.Windows.Forms.PictureBox();
-            this.item4Lbl = new System.Windows.Forms.Label();
-            this.item3Lbl = new System.Windows.Forms.Label();
-            this.item2Lbl = new System.Windows.Forms.Label();
-            this.item1Lbl = new System.Windows.Forms.Label();
             this.item4 = new System.Windows.Forms.PictureBox();
             this.item3 = new System.Windows.Forms.PictureBox();
             this.item2 = new System.Windows.Forms.PictureBox();
             this.item1 = new System.Windows.Forms.PictureBox();
-            this.pnlStart = new System.Windows.Forms.Panel();
-            this.btnLoad = new System.Windows.Forms.Button();
-            this.btnStart = new System.Windows.Forms.Button();
-            this.pnlPause = new System.Windows.Forms.Panel();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.statusStrip1.SuspendLayout();
             this.pnlText.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.wall16)).BeginInit();
             this.pnlDialog.SuspendLayout();
             this.Map.SuspendLayout();
+            this.pnlInv.SuspendLayout();
+            this.pnlStart.SuspendLayout();
+            this.pnlPause.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.locked_door2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Locked_door1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Teodor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall20)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.door4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.walllvl2_7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.walllvl2_5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.walllvl2_4)).BeginInit();
@@ -410,7 +407,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.doorlvl3_6cover)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doorlvl3_7cover)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doorlvl1_4cover2)).BeginInit();
-            this.pnlInv.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.wall16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.invCursor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.item6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.item5)).BeginInit();
@@ -418,8 +415,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.item3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.item2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.item1)).BeginInit();
-            this.pnlStart.SuspendLayout();
-            this.pnlPause.SuspendLayout();
             this.SuspendLayout();
             // 
             // timer1
@@ -427,24 +422,6 @@
             this.timer1.Enabled = true;
             this.timer1.Interval = 20;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.statusLabel});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 537);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1264, 22);
-            this.statusStrip1.TabIndex = 1;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // statusLabel
-            // 
-            this.statusLabel.BackColor = System.Drawing.Color.Transparent;
-            this.statusLabel.Name = "statusLabel";
-            this.statusLabel.Size = new System.Drawing.Size(66, 17);
-            this.statusLabel.Text = "statusLabel";
             // 
             // timer2
             // 
@@ -463,16 +440,6 @@
             this.pnlText.Size = new System.Drawing.Size(1264, 122);
             this.pnlText.TabIndex = 3;
             this.pnlText.Visible = false;
-            // 
-            // wall16
-            // 
-            this.wall16.Location = new System.Drawing.Point(0, 0);
-            this.wall16.Margin = new System.Windows.Forms.Padding(2);
-            this.wall16.Name = "wall16";
-            this.wall16.Size = new System.Drawing.Size(30, 504);
-            this.wall16.TabIndex = 1;
-            this.wall16.TabStop = false;
-            this.wall16.Tag = "wall";
             // 
             // pnlDialog
             // 
@@ -503,7 +470,6 @@
             this.Map.Controls.Add(this.Teodor);
             this.Map.Controls.Add(this.wall21);
             this.Map.Controls.Add(this.wall20);
-            this.Map.Controls.Add(this.door4);
             this.Map.Controls.Add(this.walllvl2_7);
             this.Map.Controls.Add(this.walllvl2_5);
             this.Map.Controls.Add(this.walllvl2_4);
@@ -647,7 +613,6 @@
             this.Map.Controls.Add(this.lvl2);
             this.Map.Controls.Add(this.lvl3);
             this.Map.Controls.Add(this.lvl1);
-            this.Map.Controls.Add(this.Hub);
             this.Map.Controls.Add(this.doorlvl1cover);
             this.Map.Controls.Add(this.doorlvl1_3cover);
             this.Map.Controls.Add(this.doorlvl1_4cover);
@@ -670,18 +635,171 @@
             this.Map.Controls.Add(this.doorlvl3_6cover);
             this.Map.Controls.Add(this.doorlvl3_7cover);
             this.Map.Controls.Add(this.doorlvl1_4cover2);
-            this.Map.Location = new System.Drawing.Point(-800, -500);
+            this.Map.Controls.Add(this.Hub);
+            this.Map.Location = new System.Drawing.Point(-200, -500);
             this.Map.Margin = new System.Windows.Forms.Padding(2);
             this.Map.Name = "Map";
             this.Map.Size = new System.Drawing.Size(1778, 1926);
             this.Map.TabIndex = 4;
             // 
+            // pnlInv
+            // 
+            this.pnlInv.BackColor = System.Drawing.Color.Black;
+            this.pnlInv.Controls.Add(this.invCursor);
+            this.pnlInv.Controls.Add(this.item6Lbl);
+            this.pnlInv.Controls.Add(this.item6);
+            this.pnlInv.Controls.Add(this.item5Lbl);
+            this.pnlInv.Controls.Add(this.item5);
+            this.pnlInv.Controls.Add(this.item4Lbl);
+            this.pnlInv.Controls.Add(this.item3Lbl);
+            this.pnlInv.Controls.Add(this.item2Lbl);
+            this.pnlInv.Controls.Add(this.item1Lbl);
+            this.pnlInv.Controls.Add(this.item4);
+            this.pnlInv.Controls.Add(this.item3);
+            this.pnlInv.Controls.Add(this.item2);
+            this.pnlInv.Controls.Add(this.item1);
+            this.pnlInv.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlInv.Location = new System.Drawing.Point(0, 0);
+            this.pnlInv.Name = "pnlInv";
+            this.pnlInv.Size = new System.Drawing.Size(1264, 114);
+            this.pnlInv.TabIndex = 5;
+            this.pnlInv.Visible = false;
+            // 
+            // item6Lbl
+            // 
+            this.item6Lbl.AutoSize = true;
+            this.item6Lbl.BackColor = System.Drawing.Color.Transparent;
+            this.item6Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.item6Lbl.ForeColor = System.Drawing.Color.White;
+            this.item6Lbl.Location = new System.Drawing.Point(643, 63);
+            this.item6Lbl.Name = "item6Lbl";
+            this.item6Lbl.Size = new System.Drawing.Size(0, 24);
+            this.item6Lbl.TabIndex = 11;
+            // 
+            // item5Lbl
+            // 
+            this.item5Lbl.AutoSize = true;
+            this.item5Lbl.BackColor = System.Drawing.Color.Transparent;
+            this.item5Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.item5Lbl.ForeColor = System.Drawing.Color.White;
+            this.item5Lbl.Location = new System.Drawing.Point(548, 63);
+            this.item5Lbl.Name = "item5Lbl";
+            this.item5Lbl.Size = new System.Drawing.Size(0, 24);
+            this.item5Lbl.TabIndex = 9;
+            // 
+            // item4Lbl
+            // 
+            this.item4Lbl.AutoSize = true;
+            this.item4Lbl.BackColor = System.Drawing.Color.Transparent;
+            this.item4Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.item4Lbl.ForeColor = System.Drawing.Color.White;
+            this.item4Lbl.Location = new System.Drawing.Point(453, 63);
+            this.item4Lbl.Name = "item4Lbl";
+            this.item4Lbl.Size = new System.Drawing.Size(0, 24);
+            this.item4Lbl.TabIndex = 7;
+            // 
+            // item3Lbl
+            // 
+            this.item3Lbl.AutoSize = true;
+            this.item3Lbl.BackColor = System.Drawing.Color.Transparent;
+            this.item3Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.item3Lbl.ForeColor = System.Drawing.Color.White;
+            this.item3Lbl.Location = new System.Drawing.Point(358, 63);
+            this.item3Lbl.Name = "item3Lbl";
+            this.item3Lbl.Size = new System.Drawing.Size(0, 24);
+            this.item3Lbl.TabIndex = 6;
+            // 
+            // item2Lbl
+            // 
+            this.item2Lbl.AutoSize = true;
+            this.item2Lbl.BackColor = System.Drawing.Color.Transparent;
+            this.item2Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.item2Lbl.ForeColor = System.Drawing.Color.White;
+            this.item2Lbl.Location = new System.Drawing.Point(263, 63);
+            this.item2Lbl.Name = "item2Lbl";
+            this.item2Lbl.Size = new System.Drawing.Size(0, 24);
+            this.item2Lbl.TabIndex = 5;
+            // 
+            // item1Lbl
+            // 
+            this.item1Lbl.AutoSize = true;
+            this.item1Lbl.BackColor = System.Drawing.Color.Transparent;
+            this.item1Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.item1Lbl.ForeColor = System.Drawing.Color.White;
+            this.item1Lbl.Location = new System.Drawing.Point(168, 63);
+            this.item1Lbl.Name = "item1Lbl";
+            this.item1Lbl.Size = new System.Drawing.Size(0, 24);
+            this.item1Lbl.TabIndex = 4;
+            // 
+            // pnlStart
+            // 
+            this.pnlStart.Controls.Add(this.btnLoad);
+            this.pnlStart.Controls.Add(this.btnStart);
+            this.pnlStart.Location = new System.Drawing.Point(0, 0);
+            this.pnlStart.Name = "pnlStart";
+            this.pnlStart.Size = new System.Drawing.Size(1280, 720);
+            this.pnlStart.TabIndex = 6;
+            // 
+            // btnLoad
+            // 
+            this.btnLoad.Location = new System.Drawing.Point(503, 403);
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.Size = new System.Drawing.Size(234, 67);
+            this.btnLoad.TabIndex = 1;
+            this.btnLoad.TabStop = false;
+            this.btnLoad.Text = "Load Game";
+            this.btnLoad.UseVisualStyleBackColor = true;
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
+            // 
+            // btnStart
+            // 
+            this.btnStart.Location = new System.Drawing.Point(503, 316);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(234, 67);
+            this.btnStart.TabIndex = 0;
+            this.btnStart.TabStop = false;
+            this.btnStart.Text = "Start";
+            this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
+            // 
+            // pnlPause
+            // 
+            this.pnlPause.Controls.Add(this.btnSave);
+            this.pnlPause.Controls.Add(this.btnExit);
+            this.pnlPause.Location = new System.Drawing.Point(0, 0);
+            this.pnlPause.Name = "pnlPause";
+            this.pnlPause.Size = new System.Drawing.Size(1280, 720);
+            this.pnlPause.TabIndex = 7;
+            this.pnlPause.Visible = false;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(457, 290);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(306, 74);
+            this.btnSave.TabIndex = 2;
+            this.btnSave.TabStop = false;
+            this.btnSave.Text = "Exit and Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.Location = new System.Drawing.Point(457, 387);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(306, 74);
+            this.btnExit.TabIndex = 1;
+            this.btnExit.TabStop = false;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // locked_door2
             // 
             this.locked_door2.BackColor = System.Drawing.Color.Maroon;
+            this.locked_door2.BackgroundImage = global::Game.Properties.Resources._lock;
             this.locked_door2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.locked_door2.Image = global::Game.Properties.Resources._lock;
-            this.locked_door2.Location = new System.Drawing.Point(846, 1263);
+            this.locked_door2.Location = new System.Drawing.Point(848, 1261);
             this.locked_door2.Name = "locked_door2";
             this.locked_door2.Size = new System.Drawing.Size(60, 30);
             this.locked_door2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -692,7 +810,8 @@
             // Locked_door1
             // 
             this.Locked_door1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Locked_door1.Image = global::Game.Properties.Resources._lock;
+            this.Locked_door1.BackgroundImage = global::Game.Properties.Resources._lock;
+            this.Locked_door1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Locked_door1.Location = new System.Drawing.Point(720, 114);
             this.Locked_door1.Name = "Locked_door1";
             this.Locked_door1.Size = new System.Drawing.Size(60, 32);
@@ -735,22 +854,12 @@
             // 
             // wall20
             // 
-            this.wall20.Location = new System.Drawing.Point(592, 1263);
+            this.wall20.Location = new System.Drawing.Point(578, 1263);
             this.wall20.Name = "wall20";
-            this.wall20.Size = new System.Drawing.Size(258, 30);
+            this.wall20.Size = new System.Drawing.Size(272, 30);
             this.wall20.TabIndex = 173;
             this.wall20.TabStop = false;
             this.wall20.Tag = "wall";
-            // 
-            // door4
-            // 
-            this.door4.BackColor = System.Drawing.Color.Maroon;
-            this.door4.Location = new System.Drawing.Point(846, 1263);
-            this.door4.Name = "door4";
-            this.door4.Size = new System.Drawing.Size(80, 31);
-            this.door4.TabIndex = 172;
-            this.door4.TabStop = false;
-            this.door4.Tag = "closed_door";
             // 
             // walllvl2_7
             // 
@@ -997,6 +1106,7 @@
             // doorlvl3_7
             // 
             this.doorlvl3_7.BackColor = System.Drawing.Color.Maroon;
+            this.doorlvl3_7.BackgroundImage = global::Game.Properties.Resources.lock_r;
             this.doorlvl3_7.Location = new System.Drawing.Point(375, 1154);
             this.doorlvl3_7.Margin = new System.Windows.Forms.Padding(2);
             this.doorlvl3_7.Name = "doorlvl3_7";
@@ -1008,6 +1118,7 @@
             // doorlvl3_6
             // 
             this.doorlvl3_6.BackColor = System.Drawing.Color.Maroon;
+            this.doorlvl3_6.BackgroundImage = global::Game.Properties.Resources._lock;
             this.doorlvl3_6.Location = new System.Drawing.Point(15, 1089);
             this.doorlvl3_6.Margin = new System.Windows.Forms.Padding(2);
             this.doorlvl3_6.Name = "doorlvl3_6";
@@ -1019,6 +1130,7 @@
             // doorlvl3_5
             // 
             this.doorlvl3_5.BackColor = System.Drawing.Color.Maroon;
+            this.doorlvl3_5.BackgroundImage = global::Game.Properties.Resources.lock_r;
             this.doorlvl3_5.Location = new System.Drawing.Point(375, 942);
             this.doorlvl3_5.Margin = new System.Windows.Forms.Padding(2);
             this.doorlvl3_5.Name = "doorlvl3_5";
@@ -1097,6 +1209,8 @@
             // door3
             // 
             this.door3.BackColor = System.Drawing.Color.Maroon;
+            this.door3.BackgroundImage = global::Game.Properties.Resources.lock_r;
+            this.door3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.door3.Location = new System.Drawing.Point(578, 942);
             this.door3.Margin = new System.Windows.Forms.Padding(2);
             this.door3.Name = "door3";
@@ -1128,6 +1242,8 @@
             // doorlvl3_4
             // 
             this.doorlvl3_4.BackColor = System.Drawing.Color.Maroon;
+            this.doorlvl3_4.BackgroundImage = global::Game.Properties.Resources._lock;
+            this.doorlvl3_4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.doorlvl3_4.Location = new System.Drawing.Point(465, 829);
             this.doorlvl3_4.Margin = new System.Windows.Forms.Padding(2);
             this.doorlvl3_4.Name = "doorlvl3_4";
@@ -1149,6 +1265,8 @@
             // doorlvl3_2
             // 
             this.doorlvl3_2.BackColor = System.Drawing.Color.Maroon;
+            this.doorlvl3_2.BackgroundImage = global::Game.Properties.Resources._lock;
+            this.doorlvl3_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.doorlvl3_2.Location = new System.Drawing.Point(195, 829);
             this.doorlvl3_2.Margin = new System.Windows.Forms.Padding(2);
             this.doorlvl3_2.Name = "doorlvl3_2";
@@ -1230,6 +1348,8 @@
             // doorlvl3_1
             // 
             this.doorlvl3_1.BackColor = System.Drawing.Color.Maroon;
+            this.doorlvl3_1.BackgroundImage = global::Game.Properties.Resources._lock;
+            this.doorlvl3_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.doorlvl3_1.Location = new System.Drawing.Point(15, 829);
             this.doorlvl3_1.Margin = new System.Windows.Forms.Padding(2);
             this.doorlvl3_1.Name = "doorlvl3_1";
@@ -1785,6 +1905,8 @@
             // doorlvl2_5
             // 
             this.doorlvl2_5.BackColor = System.Drawing.Color.Maroon;
+            this.doorlvl2_5.BackgroundImage = global::Game.Properties.Resources.lock_r;
+            this.doorlvl2_5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.doorlvl2_5.Location = new System.Drawing.Point(1440, 1170);
             this.doorlvl2_5.Margin = new System.Windows.Forms.Padding(2);
             this.doorlvl2_5.Name = "doorlvl2_5";
@@ -1806,6 +1928,8 @@
             // doorlvl2_4
             // 
             this.doorlvl2_4.BackColor = System.Drawing.Color.Maroon;
+            this.doorlvl2_4.BackgroundImage = global::Game.Properties.Resources._lock;
+            this.doorlvl2_4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.doorlvl2_4.Location = new System.Drawing.Point(1620, 1105);
             this.doorlvl2_4.Margin = new System.Windows.Forms.Padding(2);
             this.doorlvl2_4.Name = "doorlvl2_4";
@@ -1817,6 +1941,8 @@
             // doorlvl2_3
             // 
             this.doorlvl2_3.BackColor = System.Drawing.Color.Maroon;
+            this.doorlvl2_3.BackgroundImage = global::Game.Properties.Resources._lock;
+            this.doorlvl2_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.doorlvl2_3.Location = new System.Drawing.Point(1290, 1105);
             this.doorlvl2_3.Margin = new System.Windows.Forms.Padding(2);
             this.doorlvl2_3.Name = "doorlvl2_3";
@@ -1838,6 +1964,8 @@
             // doorlvl2_2
             // 
             this.doorlvl2_2.BackColor = System.Drawing.Color.Maroon;
+            this.doorlvl2_2.BackgroundImage = global::Game.Properties.Resources._lock;
+            this.doorlvl2_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.doorlvl2_2.Location = new System.Drawing.Point(1590, 856);
             this.doorlvl2_2.Margin = new System.Windows.Forms.Padding(2);
             this.doorlvl2_2.Name = "doorlvl2_2";
@@ -1859,6 +1987,8 @@
             // doorlvl2_1
             // 
             this.doorlvl2_1.BackColor = System.Drawing.Color.Maroon;
+            this.doorlvl2_1.BackgroundImage = global::Game.Properties.Resources.lock_r;
+            this.doorlvl2_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.doorlvl2_1.Location = new System.Drawing.Point(1440, 699);
             this.doorlvl2_1.Margin = new System.Windows.Forms.Padding(2);
             this.doorlvl2_1.Name = "doorlvl2_1";
@@ -1889,10 +2019,10 @@
             // 
             // wall17
             // 
-            this.wall17.Location = new System.Drawing.Point(1170, 764);
+            this.wall17.Location = new System.Drawing.Point(1170, 758);
             this.wall17.Margin = new System.Windows.Forms.Padding(2);
             this.wall17.Name = "wall17";
-            this.wall17.Size = new System.Drawing.Size(30, 528);
+            this.wall17.Size = new System.Drawing.Size(30, 534);
             this.wall17.TabIndex = 47;
             this.wall17.TabStop = false;
             this.wall17.Tag = "wall";
@@ -1911,10 +2041,12 @@
             // doorlvl2
             // 
             this.doorlvl2.BackColor = System.Drawing.Color.Maroon;
-            this.doorlvl2.Location = new System.Drawing.Point(1170, 699);
+            this.doorlvl2.BackgroundImage = global::Game.Properties.Resources.lock_r;
+            this.doorlvl2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.doorlvl2.Location = new System.Drawing.Point(1170, 695);
             this.doorlvl2.Margin = new System.Windows.Forms.Padding(2);
             this.doorlvl2.Name = "doorlvl2";
-            this.doorlvl2.Size = new System.Drawing.Size(30, 65);
+            this.doorlvl2.Size = new System.Drawing.Size(30, 66);
             this.doorlvl2.TabIndex = 45;
             this.doorlvl2.TabStop = false;
             this.doorlvl2.Tag = "door_closed";
@@ -2127,7 +2259,8 @@
             // doorlvl1_4
             // 
             this.doorlvl1_4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.doorlvl1_4.Image = global::Game.Properties.Resources._lock;
+            this.doorlvl1_4.BackgroundImage = global::Game.Properties.Resources._lock;
+            this.doorlvl1_4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.doorlvl1_4.Location = new System.Drawing.Point(908, 390);
             this.doorlvl1_4.Margin = new System.Windows.Forms.Padding(2);
             this.doorlvl1_4.Name = "doorlvl1_4";
@@ -2161,7 +2294,8 @@
             // doorlvl1_3
             // 
             this.doorlvl1_3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.doorlvl1_3.Image = global::Game.Properties.Resources._lock;
+            this.doorlvl1_3.BackgroundImage = global::Game.Properties.Resources._lock;
+            this.doorlvl1_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.doorlvl1_3.Location = new System.Drawing.Point(682, 390);
             this.doorlvl1_3.Margin = new System.Windows.Forms.Padding(2);
             this.doorlvl1_3.Name = "doorlvl1_3";
@@ -2183,7 +2317,8 @@
             // doorlvl1_2
             // 
             this.doorlvl1_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.doorlvl1_2.Image = global::Game.Properties.Resources.lock_r;
+            this.doorlvl1_2.BackgroundImage = global::Game.Properties.Resources.lock_r;
+            this.doorlvl1_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.doorlvl1_2.Location = new System.Drawing.Point(998, 301);
             this.doorlvl1_2.Margin = new System.Windows.Forms.Padding(2);
             this.doorlvl1_2.Name = "doorlvl1_2";
@@ -2230,7 +2365,8 @@
             // doorlvl1_1
             // 
             this.doorlvl1_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.doorlvl1_1.Image = global::Game.Properties.Resources._lock;
+            this.doorlvl1_1.BackgroundImage = global::Game.Properties.Resources._lock;
+            this.doorlvl1_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.doorlvl1_1.Location = new System.Drawing.Point(720, 114);
             this.doorlvl1_1.Margin = new System.Windows.Forms.Padding(2);
             this.doorlvl1_1.Name = "doorlvl1_1";
@@ -2295,6 +2431,8 @@
             // doorlvl1
             // 
             this.doorlvl1.BackColor = System.Drawing.Color.Maroon;
+            this.doorlvl1.BackgroundImage = global::Game.Properties.Resources._lock;
+            this.doorlvl1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.doorlvl1.Location = new System.Drawing.Point(682, 626);
             this.doorlvl1.Margin = new System.Windows.Forms.Padding(2);
             this.doorlvl1.Name = "doorlvl1";
@@ -2370,10 +2508,10 @@
             // Hub
             // 
             this.Hub.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.Hub.Location = new System.Drawing.Point(608, 658);
+            this.Hub.Location = new System.Drawing.Point(578, 626);
             this.Hub.Margin = new System.Windows.Forms.Padding(2);
             this.Hub.Name = "Hub";
-            this.Hub.Size = new System.Drawing.Size(562, 609);
+            this.Hub.Size = new System.Drawing.Size(622, 665);
             this.Hub.TabIndex = 0;
             this.Hub.TabStop = false;
             // 
@@ -2575,28 +2713,15 @@
             this.doorlvl1_4cover2.TabStop = false;
             this.doorlvl1_4cover2.Tag = "cover";
             // 
-            // pnlInv
+            // wall16
             // 
-            this.pnlInv.BackColor = System.Drawing.Color.Black;
-            this.pnlInv.Controls.Add(this.invCursor);
-            this.pnlInv.Controls.Add(this.item6Lbl);
-            this.pnlInv.Controls.Add(this.item6);
-            this.pnlInv.Controls.Add(this.item5Lbl);
-            this.pnlInv.Controls.Add(this.item5);
-            this.pnlInv.Controls.Add(this.item4Lbl);
-            this.pnlInv.Controls.Add(this.item3Lbl);
-            this.pnlInv.Controls.Add(this.item2Lbl);
-            this.pnlInv.Controls.Add(this.item1Lbl);
-            this.pnlInv.Controls.Add(this.item4);
-            this.pnlInv.Controls.Add(this.item3);
-            this.pnlInv.Controls.Add(this.item2);
-            this.pnlInv.Controls.Add(this.item1);
-            this.pnlInv.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlInv.Location = new System.Drawing.Point(0, 0);
-            this.pnlInv.Name = "pnlInv";
-            this.pnlInv.Size = new System.Drawing.Size(1264, 114);
-            this.pnlInv.TabIndex = 5;
-            this.pnlInv.Visible = false;
+            this.wall16.Location = new System.Drawing.Point(0, 0);
+            this.wall16.Margin = new System.Windows.Forms.Padding(2);
+            this.wall16.Name = "wall16";
+            this.wall16.Size = new System.Drawing.Size(30, 504);
+            this.wall16.TabIndex = 1;
+            this.wall16.TabStop = false;
+            this.wall16.Tag = "wall";
             // 
             // invCursor
             // 
@@ -2609,17 +2734,6 @@
             this.invCursor.Tag = "0";
             this.invCursor.Visible = false;
             // 
-            // item6Lbl
-            // 
-            this.item6Lbl.AutoSize = true;
-            this.item6Lbl.BackColor = System.Drawing.Color.Transparent;
-            this.item6Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.item6Lbl.ForeColor = System.Drawing.Color.White;
-            this.item6Lbl.Location = new System.Drawing.Point(643, 63);
-            this.item6Lbl.Name = "item6Lbl";
-            this.item6Lbl.Size = new System.Drawing.Size(0, 24);
-            this.item6Lbl.TabIndex = 11;
-            // 
             // item6
             // 
             this.item6.Location = new System.Drawing.Point(598, 22);
@@ -2628,17 +2742,6 @@
             this.item6.TabIndex = 10;
             this.item6.TabStop = false;
             // 
-            // item5Lbl
-            // 
-            this.item5Lbl.AutoSize = true;
-            this.item5Lbl.BackColor = System.Drawing.Color.Transparent;
-            this.item5Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.item5Lbl.ForeColor = System.Drawing.Color.White;
-            this.item5Lbl.Location = new System.Drawing.Point(548, 63);
-            this.item5Lbl.Name = "item5Lbl";
-            this.item5Lbl.Size = new System.Drawing.Size(0, 24);
-            this.item5Lbl.TabIndex = 9;
-            // 
             // item5
             // 
             this.item5.Location = new System.Drawing.Point(503, 22);
@@ -2646,50 +2749,6 @@
             this.item5.Size = new System.Drawing.Size(65, 65);
             this.item5.TabIndex = 8;
             this.item5.TabStop = false;
-            // 
-            // item4Lbl
-            // 
-            this.item4Lbl.AutoSize = true;
-            this.item4Lbl.BackColor = System.Drawing.Color.Transparent;
-            this.item4Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.item4Lbl.ForeColor = System.Drawing.Color.White;
-            this.item4Lbl.Location = new System.Drawing.Point(453, 63);
-            this.item4Lbl.Name = "item4Lbl";
-            this.item4Lbl.Size = new System.Drawing.Size(0, 24);
-            this.item4Lbl.TabIndex = 7;
-            // 
-            // item3Lbl
-            // 
-            this.item3Lbl.AutoSize = true;
-            this.item3Lbl.BackColor = System.Drawing.Color.Transparent;
-            this.item3Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.item3Lbl.ForeColor = System.Drawing.Color.White;
-            this.item3Lbl.Location = new System.Drawing.Point(358, 63);
-            this.item3Lbl.Name = "item3Lbl";
-            this.item3Lbl.Size = new System.Drawing.Size(0, 24);
-            this.item3Lbl.TabIndex = 6;
-            // 
-            // item2Lbl
-            // 
-            this.item2Lbl.AutoSize = true;
-            this.item2Lbl.BackColor = System.Drawing.Color.Transparent;
-            this.item2Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.item2Lbl.ForeColor = System.Drawing.Color.White;
-            this.item2Lbl.Location = new System.Drawing.Point(263, 63);
-            this.item2Lbl.Name = "item2Lbl";
-            this.item2Lbl.Size = new System.Drawing.Size(0, 24);
-            this.item2Lbl.TabIndex = 5;
-            // 
-            // item1Lbl
-            // 
-            this.item1Lbl.AutoSize = true;
-            this.item1Lbl.BackColor = System.Drawing.Color.Transparent;
-            this.item1Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.item1Lbl.ForeColor = System.Drawing.Color.White;
-            this.item1Lbl.Location = new System.Drawing.Point(168, 63);
-            this.item1Lbl.Name = "item1Lbl";
-            this.item1Lbl.Size = new System.Drawing.Size(0, 24);
-            this.item1Lbl.TabIndex = 4;
             // 
             // item4
             // 
@@ -2723,69 +2782,6 @@
             this.item1.TabIndex = 0;
             this.item1.TabStop = false;
             // 
-            // pnlStart
-            // 
-            this.pnlStart.Controls.Add(this.btnLoad);
-            this.pnlStart.Controls.Add(this.btnStart);
-            this.pnlStart.Location = new System.Drawing.Point(0, 0);
-            this.pnlStart.Name = "pnlStart";
-            this.pnlStart.Size = new System.Drawing.Size(1280, 720);
-            this.pnlStart.TabIndex = 6;
-            // 
-            // btnLoad
-            // 
-            this.btnLoad.Location = new System.Drawing.Point(503, 403);
-            this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(234, 67);
-            this.btnLoad.TabIndex = 1;
-            this.btnLoad.TabStop = false;
-            this.btnLoad.Text = "Load Game";
-            this.btnLoad.UseVisualStyleBackColor = true;
-            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
-            // 
-            // btnStart
-            // 
-            this.btnStart.Location = new System.Drawing.Point(503, 316);
-            this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(234, 67);
-            this.btnStart.TabIndex = 0;
-            this.btnStart.TabStop = false;
-            this.btnStart.Text = "Start";
-            this.btnStart.UseVisualStyleBackColor = true;
-            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
-            // 
-            // pnlPause
-            // 
-            this.pnlPause.Controls.Add(this.btnSave);
-            this.pnlPause.Controls.Add(this.btnExit);
-            this.pnlPause.Location = new System.Drawing.Point(0, 0);
-            this.pnlPause.Name = "pnlPause";
-            this.pnlPause.Size = new System.Drawing.Size(1280, 720);
-            this.pnlPause.TabIndex = 7;
-            this.pnlPause.Visible = false;
-            // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(457, 290);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(306, 74);
-            this.btnSave.TabIndex = 2;
-            this.btnSave.TabStop = false;
-            this.btnSave.Text = "Exit and Save";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnExit
-            // 
-            this.btnExit.Location = new System.Drawing.Point(457, 387);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(306, 74);
-            this.btnExit.TabIndex = 1;
-            this.btnExit.TabStop = false;
-            this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2794,7 +2790,6 @@
             this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.Map);
-            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.pnlText);
             this.Controls.Add(this.pnlInv);
             this.Controls.Add(this.pnlStart);
@@ -2806,20 +2801,20 @@
             this.Text = "Game";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyIsDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.KeyIsUp);
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
             this.pnlText.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.wall16)).EndInit();
             this.pnlDialog.ResumeLayout(false);
             this.pnlDialog.PerformLayout();
             this.Map.ResumeLayout(false);
+            this.pnlInv.ResumeLayout(false);
+            this.pnlInv.PerformLayout();
+            this.pnlStart.ResumeLayout(false);
+            this.pnlPause.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.locked_door2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Locked_door1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Teodor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall20)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.door4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.walllvl2_7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.walllvl2_5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.walllvl2_4)).EndInit();
@@ -2986,8 +2981,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.doorlvl3_6cover)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.doorlvl3_7cover)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.doorlvl1_4cover2)).EndInit();
-            this.pnlInv.ResumeLayout(false);
-            this.pnlInv.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.wall16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.invCursor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.item6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.item5)).EndInit();
@@ -2995,18 +2989,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.item3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.item2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.item1)).EndInit();
-            this.pnlStart.ResumeLayout(false);
-            this.pnlPause.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.PictureBox PlayerSpells;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel statusLabel;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Panel pnlText;
         private System.Windows.Forms.Panel pnlDialog;
@@ -3201,7 +3190,6 @@
         private System.Windows.Forms.PictureBox Teodor;
         private System.Windows.Forms.PictureBox wall21;
         private System.Windows.Forms.PictureBox wall20;
-        private System.Windows.Forms.PictureBox door4;
         private System.Windows.Forms.PictureBox doorlvl1_4cover2;
         private System.Windows.Forms.PictureBox Locked_door1;
         private System.Windows.Forms.PictureBox locked_door2;
