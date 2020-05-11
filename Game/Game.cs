@@ -306,13 +306,16 @@ namespace Game
                                 }
                                 else if (thisPictureBox.Name == "Cthulhu")
                                 {
-                                    if (protagonist.Items.FindItem("candy") == null)
+                                    if (protagonist.Cthulhu == true)
+                                        path = "../Resources/Dialogs/CthulhuAfter.txt";
+                                    else if (protagonist.Items.FindItem("candy") == null)
                                     {
                                         path = "../Resources/Dialogs/CthulhuIncomplete.txt";
                                     }
                                     else
                                     {
                                         path = "../Resources/Dialogs/Cthulhu.txt";
+                                        protagonist.Cthulhu = true;
                                     }
                                 }
                                 else if (thisPictureBox.Name == "craft_area")
