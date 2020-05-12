@@ -37,6 +37,10 @@
             this.pnlDialog = new System.Windows.Forms.Panel();
             this.lblDialog = new System.Windows.Forms.Label();
             this.Map = new System.Windows.Forms.Panel();
+            this.rocklvl3_4 = new System.Windows.Forms.PictureBox();
+            this.wall9 = new System.Windows.Forms.PictureBox();
+            this.walllvl3_9 = new System.Windows.Forms.PictureBox();
+            this.rocklvl2 = new System.Windows.Forms.PictureBox();
             this.walllvl3_3 = new System.Windows.Forms.PictureBox();
             this.walllvl3_2 = new System.Windows.Forms.PictureBox();
             this.walllvl3_1 = new System.Windows.Forms.PictureBox();
@@ -62,7 +66,6 @@
             this.crystal2 = new System.Windows.Forms.PictureBox();
             this.buttonlvl3 = new System.Windows.Forms.PictureBox();
             this.craft_area = new System.Windows.Forms.PictureBox();
-            this.rocklvl3_4 = new System.Windows.Forms.PictureBox();
             this.loglvl3_2 = new System.Windows.Forms.PictureBox();
             this.riverlvl3_7 = new System.Windows.Forms.PictureBox();
             this.freezablelvl3_5 = new System.Windows.Forms.PictureBox();
@@ -72,7 +75,6 @@
             this.doorlvl3_6 = new System.Windows.Forms.PictureBox();
             this.doorlvl3_5 = new System.Windows.Forms.PictureBox();
             this.walllvl3_10 = new System.Windows.Forms.PictureBox();
-            this.walllvl3_9 = new System.Windows.Forms.PictureBox();
             this.loglvl3_1 = new System.Windows.Forms.PictureBox();
             this.walllvl3_8 = new System.Windows.Forms.PictureBox();
             this.rocklvl3_3 = new System.Windows.Forms.PictureBox();
@@ -98,7 +100,6 @@
             this.riverlvl3_2 = new System.Windows.Forms.PictureBox();
             this.freezablelvl3_1 = new System.Windows.Forms.PictureBox();
             this.riverlvl3_1 = new System.Windows.Forms.PictureBox();
-            this.rocklvl2 = new System.Windows.Forms.PictureBox();
             this.coin1 = new System.Windows.Forms.PictureBox();
             this.stick2 = new System.Windows.Forms.PictureBox();
             this.stick1 = new System.Windows.Forms.PictureBox();
@@ -156,7 +157,6 @@
             this.wall11 = new System.Windows.Forms.PictureBox();
             this.wall10 = new System.Windows.Forms.PictureBox();
             this.wall8 = new System.Windows.Forms.PictureBox();
-            this.wall9 = new System.Windows.Forms.PictureBox();
             this.wall7 = new System.Windows.Forms.PictureBox();
             this.wall6 = new System.Windows.Forms.PictureBox();
             this.walllvl1_9 = new System.Windows.Forms.PictureBox();
@@ -230,6 +230,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.wall16)).BeginInit();
             this.pnlDialog.SuspendLayout();
             this.Map.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rocklvl3_4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wall9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.walllvl3_9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rocklvl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.walllvl3_3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.walllvl3_2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.walllvl3_1)).BeginInit();
@@ -255,7 +259,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.crystal2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonlvl3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.craft_area)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rocklvl3_4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.loglvl3_2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl3_7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.freezablelvl3_5)).BeginInit();
@@ -265,7 +268,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.doorlvl3_6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doorlvl3_5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.walllvl3_10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.walllvl3_9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.loglvl3_1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.walllvl3_8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rocklvl3_3)).BeginInit();
@@ -291,7 +293,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl3_2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.freezablelvl3_1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl3_1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rocklvl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coin1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stick2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stick1)).BeginInit();
@@ -349,7 +350,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.wall11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wall9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.walllvl1_9)).BeginInit();
@@ -468,6 +468,9 @@
             // Map
             // 
             this.Map.BackColor = System.Drawing.Color.Black;
+            this.Map.Controls.Add(this.rocklvl3_4);
+            this.Map.Controls.Add(this.wall9);
+            this.Map.Controls.Add(this.walllvl3_9);
             this.Map.Controls.Add(this.rocklvl2);
             this.Map.Controls.Add(this.walllvl3_3);
             this.Map.Controls.Add(this.walllvl3_2);
@@ -494,7 +497,6 @@
             this.Map.Controls.Add(this.crystal2);
             this.Map.Controls.Add(this.buttonlvl3);
             this.Map.Controls.Add(this.craft_area);
-            this.Map.Controls.Add(this.rocklvl3_4);
             this.Map.Controls.Add(this.loglvl3_2);
             this.Map.Controls.Add(this.riverlvl3_7);
             this.Map.Controls.Add(this.freezablelvl3_5);
@@ -504,7 +506,6 @@
             this.Map.Controls.Add(this.doorlvl3_6);
             this.Map.Controls.Add(this.doorlvl3_5);
             this.Map.Controls.Add(this.walllvl3_10);
-            this.Map.Controls.Add(this.walllvl3_9);
             this.Map.Controls.Add(this.loglvl3_1);
             this.Map.Controls.Add(this.walllvl3_8);
             this.Map.Controls.Add(this.rocklvl3_3);
@@ -587,7 +588,6 @@
             this.Map.Controls.Add(this.wall11);
             this.Map.Controls.Add(this.wall10);
             this.Map.Controls.Add(this.wall8);
-            this.Map.Controls.Add(this.wall9);
             this.Map.Controls.Add(this.wall7);
             this.Map.Controls.Add(this.wall6);
             this.Map.Controls.Add(this.walllvl1_9);
@@ -643,18 +643,70 @@
             this.Map.Size = new System.Drawing.Size(1778, 1926);
             this.Map.TabIndex = 4;
             // 
+            // rocklvl3_4
+            // 
+            this.rocklvl3_4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.rocklvl3_4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rocklvl3_4.BackgroundImage")));
+            this.rocklvl3_4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.rocklvl3_4.Location = new System.Drawing.Point(135, 1056);
+            this.rocklvl3_4.Margin = new System.Windows.Forms.Padding(2);
+            this.rocklvl3_4.Name = "rocklvl3_4";
+            this.rocklvl3_4.Size = new System.Drawing.Size(30, 32);
+            this.rocklvl3_4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.rocklvl3_4.TabIndex = 140;
+            this.rocklvl3_4.TabStop = false;
+            this.rocklvl3_4.Tag = "movable_object";
+            // 
+            // wall9
+            // 
+            this.wall9.BackgroundImage = global::Game.Properties.Resources.wall2;
+            this.wall9.Location = new System.Drawing.Point(1200, 626);
+            this.wall9.Margin = new System.Windows.Forms.Padding(2);
+            this.wall9.Name = "wall9";
+            this.wall9.Size = new System.Drawing.Size(562, 32);
+            this.wall9.TabIndex = 28;
+            this.wall9.TabStop = false;
+            this.wall9.Tag = "wall";
+            // 
+            // walllvl3_9
+            // 
+            this.walllvl3_9.BackgroundImage = global::Game.Properties.Resources.sandstone;
+            this.walllvl3_9.Location = new System.Drawing.Point(375, 1008);
+            this.walllvl3_9.Margin = new System.Windows.Forms.Padding(2);
+            this.walllvl3_9.Name = "walllvl3_9";
+            this.walllvl3_9.Size = new System.Drawing.Size(30, 146);
+            this.walllvl3_9.TabIndex = 130;
+            this.walllvl3_9.TabStop = false;
+            this.walllvl3_9.Tag = "wall";
+            // 
+            // rocklvl2
+            // 
+            this.rocklvl2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.rocklvl2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rocklvl2.BackgroundImage")));
+            this.rocklvl2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.rocklvl2.Location = new System.Drawing.Point(1699, 872);
+            this.rocklvl2.Margin = new System.Windows.Forms.Padding(2);
+            this.rocklvl2.Name = "rocklvl2";
+            this.rocklvl2.Size = new System.Drawing.Size(22, 24);
+            this.rocklvl2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.rocklvl2.TabIndex = 101;
+            this.rocklvl2.TabStop = false;
+            this.rocklvl2.Tag = "movable_object";
+            // 
             // walllvl3_3
             // 
+            this.walllvl3_3.BackgroundImage = global::Game.Properties.Resources.sandstone;
             this.walllvl3_3.Location = new System.Drawing.Point(251, 887);
             this.walllvl3_3.Margin = new System.Windows.Forms.Padding(2);
             this.walllvl3_3.Name = "walllvl3_3";
-            this.walllvl3_3.Size = new System.Drawing.Size(132, 32);
+            this.walllvl3_3.Size = new System.Drawing.Size(127, 32);
             this.walllvl3_3.TabIndex = 112;
             this.walllvl3_3.TabStop = false;
             this.walllvl3_3.Tag = "wall";
             // 
             // walllvl3_2
             // 
+            this.walllvl3_2.BackgroundImage = global::Game.Properties.Resources.sandstone;
             this.walllvl3_2.Location = new System.Drawing.Point(163, 701);
             this.walllvl3_2.Margin = new System.Windows.Forms.Padding(2);
             this.walllvl3_2.Name = "walllvl3_2";
@@ -665,6 +717,7 @@
             // 
             // walllvl3_1
             // 
+            this.walllvl3_1.BackgroundImage = global::Game.Properties.Resources.sandstone;
             this.walllvl3_1.Location = new System.Drawing.Point(375, 658);
             this.walllvl3_1.Margin = new System.Windows.Forms.Padding(2);
             this.walllvl3_1.Name = "walllvl3_1";
@@ -675,6 +728,7 @@
             // 
             // walllvl2_3
             // 
+            this.walllvl2_3.BackgroundImage = global::Game.Properties.Resources.wall2;
             this.walllvl2_3.Location = new System.Drawing.Point(1440, 737);
             this.walllvl2_3.Margin = new System.Windows.Forms.Padding(2);
             this.walllvl2_3.Name = "walllvl2_3";
@@ -752,6 +806,7 @@
             // 
             // walllvl2_7
             // 
+            this.walllvl2_7.BackgroundImage = global::Game.Properties.Resources.wall2;
             this.walllvl2_7.Location = new System.Drawing.Point(1350, 1105);
             this.walllvl2_7.Margin = new System.Windows.Forms.Padding(2);
             this.walllvl2_7.Name = "walllvl2_7";
@@ -762,17 +817,19 @@
             // 
             // walllvl2_5
             // 
-            this.walllvl2_5.Location = new System.Drawing.Point(1641, 816);
+            this.walllvl2_5.BackgroundImage = global::Game.Properties.Resources.wall2;
+            this.walllvl2_5.Location = new System.Drawing.Point(1641, 812);
             this.walllvl2_5.Margin = new System.Windows.Forms.Padding(2);
             this.walllvl2_5.Name = "walllvl2_5";
-            this.walllvl2_5.Size = new System.Drawing.Size(150, 32);
+            this.walllvl2_5.Size = new System.Drawing.Size(137, 32);
             this.walllvl2_5.TabIndex = 54;
             this.walllvl2_5.TabStop = false;
             this.walllvl2_5.Tag = "wall";
             // 
             // walllvl2_4
             // 
-            this.walllvl2_4.Location = new System.Drawing.Point(1464, 816);
+            this.walllvl2_4.BackgroundImage = global::Game.Properties.Resources.wall2;
+            this.walllvl2_4.Location = new System.Drawing.Point(1466, 812);
             this.walllvl2_4.Margin = new System.Windows.Forms.Padding(2);
             this.walllvl2_4.Name = "walllvl2_4";
             this.walllvl2_4.Size = new System.Drawing.Size(120, 32);
@@ -791,8 +848,9 @@
             // Cthulhu
             // 
             this.Cthulhu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Cthulhu.BackgroundImage = global::Game.Properties.Resources.cthulhu;
             this.Cthulhu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Cthulhu.Image = global::Game.Properties.Resources.cthulhu;
+            this.Cthulhu.InitialImage = null;
             this.Cthulhu.Location = new System.Drawing.Point(1221, 856);
             this.Cthulhu.Name = "Cthulhu";
             this.Cthulhu.Size = new System.Drawing.Size(200, 200);
@@ -817,8 +875,8 @@
             // buttonlvl1
             // 
             this.buttonlvl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.buttonlvl1.BackgroundImage = global::Game.Properties.Resources.button;
             this.buttonlvl1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonlvl1.Image = global::Game.Properties.Resources.button;
             this.buttonlvl1.Location = new System.Drawing.Point(630, 455);
             this.buttonlvl1.Margin = new System.Windows.Forms.Padding(2);
             this.buttonlvl1.Name = "buttonlvl1";
@@ -845,8 +903,8 @@
             // buttonlvl2
             // 
             this.buttonlvl2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.buttonlvl2.BackgroundImage = global::Game.Properties.Resources.button;
             this.buttonlvl2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonlvl2.Image = global::Game.Properties.Resources.button;
             this.buttonlvl2.Location = new System.Drawing.Point(1485, 1072);
             this.buttonlvl2.Margin = new System.Windows.Forms.Padding(2);
             this.buttonlvl2.Name = "buttonlvl2";
@@ -909,8 +967,8 @@
             // buttonlvl3
             // 
             this.buttonlvl3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.buttonlvl3.BackgroundImage = global::Game.Properties.Resources.button;
             this.buttonlvl3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonlvl3.Image = global::Game.Properties.Resources.button;
             this.buttonlvl3.Location = new System.Drawing.Point(133, 934);
             this.buttonlvl3.Margin = new System.Windows.Forms.Padding(2);
             this.buttonlvl3.Name = "buttonlvl3";
@@ -925,34 +983,19 @@
             this.craft_area.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.craft_area.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("craft_area.BackgroundImage")));
             this.craft_area.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.craft_area.Location = new System.Drawing.Point(165, 1154);
+            this.craft_area.Location = new System.Drawing.Point(165, 1161);
             this.craft_area.Margin = new System.Windows.Forms.Padding(2);
             this.craft_area.Name = "craft_area";
-            this.craft_area.Size = new System.Drawing.Size(60, 65);
+            this.craft_area.Size = new System.Drawing.Size(60, 58);
             this.craft_area.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.craft_area.TabIndex = 141;
             this.craft_area.TabStop = false;
             this.craft_area.Tag = "NPC";
             // 
-            // rocklvl3_4
-            // 
-            this.rocklvl3_4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.rocklvl3_4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rocklvl3_4.BackgroundImage")));
-            this.rocklvl3_4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.rocklvl3_4.Location = new System.Drawing.Point(135, 1056);
-            this.rocklvl3_4.Margin = new System.Windows.Forms.Padding(2);
-            this.rocklvl3_4.Name = "rocklvl3_4";
-            this.rocklvl3_4.Size = new System.Drawing.Size(30, 32);
-            this.rocklvl3_4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.rocklvl3_4.TabIndex = 140;
-            this.rocklvl3_4.TabStop = false;
-            this.rocklvl3_4.Tag = "movable_object";
-            // 
             // loglvl3_2
             // 
             this.loglvl3_2.BackColor = System.Drawing.Color.Peru;
             this.loglvl3_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.loglvl3_2.Image = global::Game.Properties.Resources.log2;
             this.loglvl3_2.Location = new System.Drawing.Point(120, 1024);
             this.loglvl3_2.Margin = new System.Windows.Forms.Padding(2);
             this.loglvl3_2.Name = "loglvl3_2";
@@ -996,6 +1039,7 @@
             // 
             // walllvl3_11
             // 
+            this.walllvl3_11.BackgroundImage = global::Game.Properties.Resources.sandstone;
             this.walllvl3_11.Location = new System.Drawing.Point(375, 1219);
             this.walllvl3_11.Margin = new System.Windows.Forms.Padding(2);
             this.walllvl3_11.Name = "walllvl3_11";
@@ -1020,6 +1064,7 @@
             // 
             this.doorlvl3_6.BackColor = System.Drawing.Color.Maroon;
             this.doorlvl3_6.BackgroundImage = global::Game.Properties.Resources._lock;
+            this.doorlvl3_6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.doorlvl3_6.Location = new System.Drawing.Point(15, 1089);
             this.doorlvl3_6.Margin = new System.Windows.Forms.Padding(2);
             this.doorlvl3_6.Name = "doorlvl3_6";
@@ -1042,29 +1087,19 @@
             // 
             // walllvl3_10
             // 
+            this.walllvl3_10.BackgroundImage = global::Game.Properties.Resources.sandstone;
             this.walllvl3_10.Location = new System.Drawing.Point(75, 1089);
             this.walllvl3_10.Margin = new System.Windows.Forms.Padding(2);
             this.walllvl3_10.Name = "walllvl3_10";
-            this.walllvl3_10.Size = new System.Drawing.Size(525, 32);
+            this.walllvl3_10.Size = new System.Drawing.Size(502, 32);
             this.walllvl3_10.TabIndex = 131;
             this.walllvl3_10.TabStop = false;
             this.walllvl3_10.Tag = "wall";
-            // 
-            // walllvl3_9
-            // 
-            this.walllvl3_9.Location = new System.Drawing.Point(375, 1008);
-            this.walllvl3_9.Margin = new System.Windows.Forms.Padding(2);
-            this.walllvl3_9.Name = "walllvl3_9";
-            this.walllvl3_9.Size = new System.Drawing.Size(30, 146);
-            this.walllvl3_9.TabIndex = 130;
-            this.walllvl3_9.TabStop = false;
-            this.walllvl3_9.Tag = "wall";
             // 
             // loglvl3_1
             // 
             this.loglvl3_1.BackColor = System.Drawing.Color.Peru;
             this.loglvl3_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.loglvl3_1.Image = global::Game.Properties.Resources.log1;
             this.loglvl3_1.Location = new System.Drawing.Point(405, 894);
             this.loglvl3_1.Margin = new System.Windows.Forms.Padding(2);
             this.loglvl3_1.Name = "loglvl3_1";
@@ -1075,6 +1110,7 @@
             // 
             // walllvl3_8
             // 
+            this.walllvl3_8.BackgroundImage = global::Game.Properties.Resources.sandstone;
             this.walllvl3_8.Location = new System.Drawing.Point(75, 887);
             this.walllvl3_8.Margin = new System.Windows.Forms.Padding(2);
             this.walllvl3_8.Name = "walllvl3_8";
@@ -1099,10 +1135,11 @@
             // 
             // walllvl3_7
             // 
+            this.walllvl3_7.BackgroundImage = global::Game.Properties.Resources.sandstone;
             this.walllvl3_7.Location = new System.Drawing.Point(525, 829);
             this.walllvl3_7.Margin = new System.Windows.Forms.Padding(2);
             this.walllvl3_7.Name = "walllvl3_7";
-            this.walllvl3_7.Size = new System.Drawing.Size(60, 32);
+            this.walllvl3_7.Size = new System.Drawing.Size(52, 32);
             this.walllvl3_7.TabIndex = 126;
             this.walllvl3_7.TabStop = false;
             this.walllvl3_7.Tag = "wall";
@@ -1155,6 +1192,7 @@
             // 
             // walllvl3_6
             // 
+            this.walllvl3_6.BackgroundImage = global::Game.Properties.Resources.sandstone;
             this.walllvl3_6.Location = new System.Drawing.Point(375, 829);
             this.walllvl3_6.Margin = new System.Windows.Forms.Padding(2);
             this.walllvl3_6.Name = "walllvl3_6";
@@ -1178,6 +1216,7 @@
             // 
             // walllvl3_4
             // 
+            this.walllvl3_4.BackgroundImage = global::Game.Properties.Resources.sandstone;
             this.walllvl3_4.Location = new System.Drawing.Point(89, 887);
             this.walllvl3_4.Margin = new System.Windows.Forms.Padding(2);
             this.walllvl3_4.Name = "walllvl3_4";
@@ -1354,20 +1393,6 @@
             this.riverlvl3_1.TabIndex = 102;
             this.riverlvl3_1.TabStop = false;
             this.riverlvl3_1.Tag = "river";
-            // 
-            // rocklvl2
-            // 
-            this.rocklvl2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.rocklvl2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rocklvl2.BackgroundImage")));
-            this.rocklvl2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.rocklvl2.Location = new System.Drawing.Point(1699, 872);
-            this.rocklvl2.Margin = new System.Windows.Forms.Padding(2);
-            this.rocklvl2.Name = "rocklvl2";
-            this.rocklvl2.Size = new System.Drawing.Size(22, 24);
-            this.rocklvl2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.rocklvl2.TabIndex = 101;
-            this.rocklvl2.TabStop = false;
-            this.rocklvl2.Tag = "movable_object";
             // 
             // coin1
             // 
@@ -1640,10 +1665,10 @@
             // riverlvl2_7
             // 
             this.riverlvl2_7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.riverlvl2_7.Location = new System.Drawing.Point(1468, 846);
+            this.riverlvl2_7.Location = new System.Drawing.Point(1468, 840);
             this.riverlvl2_7.Margin = new System.Windows.Forms.Padding(2);
             this.riverlvl2_7.Name = "riverlvl2_7";
-            this.riverlvl2_7.Size = new System.Drawing.Size(30, 90);
+            this.riverlvl2_7.Size = new System.Drawing.Size(30, 96);
             this.riverlvl2_7.TabIndex = 72;
             this.riverlvl2_7.TabStop = false;
             this.riverlvl2_7.Tag = "river";
@@ -1732,10 +1757,11 @@
             // 
             // walllvl2_9
             // 
+            this.walllvl2_9.BackgroundImage = global::Game.Properties.Resources.wall2;
             this.walllvl2_9.Location = new System.Drawing.Point(1440, 1235);
             this.walllvl2_9.Margin = new System.Windows.Forms.Padding(2);
             this.walllvl2_9.Name = "walllvl2_9";
-            this.walllvl2_9.Size = new System.Drawing.Size(30, 81);
+            this.walllvl2_9.Size = new System.Drawing.Size(30, 33);
             this.walllvl2_9.TabIndex = 61;
             this.walllvl2_9.TabStop = false;
             this.walllvl2_9.Tag = "wall";
@@ -1755,6 +1781,7 @@
             // 
             // walllvl2_8
             // 
+            this.walllvl2_8.BackgroundImage = global::Game.Properties.Resources.wall2;
             this.walllvl2_8.Location = new System.Drawing.Point(1680, 1105);
             this.walllvl2_8.Margin = new System.Windows.Forms.Padding(2);
             this.walllvl2_8.Name = "walllvl2_8";
@@ -1791,10 +1818,11 @@
             // 
             // walllvl2_6
             // 
-            this.walllvl2_6.Location = new System.Drawing.Point(1170, 1105);
+            this.walllvl2_6.BackgroundImage = global::Game.Properties.Resources.wall2;
+            this.walllvl2_6.Location = new System.Drawing.Point(1200, 1105);
             this.walllvl2_6.Margin = new System.Windows.Forms.Padding(2);
             this.walllvl2_6.Name = "walllvl2_6";
-            this.walllvl2_6.Size = new System.Drawing.Size(120, 32);
+            this.walllvl2_6.Size = new System.Drawing.Size(90, 32);
             this.walllvl2_6.TabIndex = 55;
             this.walllvl2_6.TabStop = false;
             this.walllvl2_6.Tag = "wall";
@@ -1804,7 +1832,7 @@
             this.doorlvl2_2.BackColor = System.Drawing.Color.Maroon;
             this.doorlvl2_2.BackgroundImage = global::Game.Properties.Resources._lock;
             this.doorlvl2_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.doorlvl2_2.Location = new System.Drawing.Point(1583, 816);
+            this.doorlvl2_2.Location = new System.Drawing.Point(1583, 812);
             this.doorlvl2_2.Margin = new System.Windows.Forms.Padding(2);
             this.doorlvl2_2.Name = "doorlvl2_2";
             this.doorlvl2_2.Size = new System.Drawing.Size(60, 32);
@@ -1827,16 +1855,18 @@
             // 
             // walllvl2_2
             // 
-            this.walllvl2_2.Location = new System.Drawing.Point(1440, 642);
+            this.walllvl2_2.BackgroundImage = global::Game.Properties.Resources.wall2;
+            this.walllvl2_2.Location = new System.Drawing.Point(1440, 650);
             this.walllvl2_2.Margin = new System.Windows.Forms.Padding(2);
             this.walllvl2_2.Name = "walllvl2_2";
-            this.walllvl2_2.Size = new System.Drawing.Size(30, 35);
+            this.walllvl2_2.Size = new System.Drawing.Size(30, 27);
             this.walllvl2_2.TabIndex = 49;
             this.walllvl2_2.TabStop = false;
             this.walllvl2_2.Tag = "wall";
             // 
             // walllvl2_1
             // 
+            this.walllvl2_1.BackgroundImage = global::Game.Properties.Resources.wall2;
             this.walllvl2_1.Location = new System.Drawing.Point(1200, 812);
             this.walllvl2_1.Margin = new System.Windows.Forms.Padding(2);
             this.walllvl2_1.Name = "walllvl2_1";
@@ -1974,6 +2004,7 @@
             // 
             // wall14
             // 
+            this.wall14.BackgroundImage = global::Game.Properties.Resources.wall2;
             this.wall14.Location = new System.Drawing.Point(1200, 1268);
             this.wall14.Margin = new System.Windows.Forms.Padding(2);
             this.wall14.Name = "wall14";
@@ -1984,10 +2015,11 @@
             // 
             // wall13
             // 
+            this.wall13.BackgroundImage = global::Game.Properties.Resources.sandstone;
             this.wall13.Location = new System.Drawing.Point(0, 1268);
             this.wall13.Margin = new System.Windows.Forms.Padding(2);
             this.wall13.Name = "wall13";
-            this.wall13.Size = new System.Drawing.Size(562, 16);
+            this.wall13.Size = new System.Drawing.Size(577, 13);
             this.wall13.TabIndex = 33;
             this.wall13.TabStop = false;
             this.wall13.Tag = "wall";
@@ -2024,26 +2056,18 @@
             // 
             // wall8
             // 
-            this.wall8.Location = new System.Drawing.Point(1762, 642);
+            this.wall8.BackgroundImage = global::Game.Properties.Resources.wall2;
+            this.wall8.Location = new System.Drawing.Point(1762, 626);
             this.wall8.Margin = new System.Windows.Forms.Padding(2);
             this.wall8.Name = "wall8";
-            this.wall8.Size = new System.Drawing.Size(15, 642);
+            this.wall8.Size = new System.Drawing.Size(15, 658);
             this.wall8.TabIndex = 29;
             this.wall8.TabStop = false;
             this.wall8.Tag = "wall";
             // 
-            // wall9
-            // 
-            this.wall9.Location = new System.Drawing.Point(1170, 626);
-            this.wall9.Margin = new System.Windows.Forms.Padding(2);
-            this.wall9.Name = "wall9";
-            this.wall9.Size = new System.Drawing.Size(592, 32);
-            this.wall9.TabIndex = 28;
-            this.wall9.TabStop = false;
-            this.wall9.Tag = "wall";
-            // 
             // wall7
             // 
+            this.wall7.BackgroundImage = global::Game.Properties.Resources.sandstone;
             this.wall7.Location = new System.Drawing.Point(0, 626);
             this.wall7.Margin = new System.Windows.Forms.Padding(2);
             this.wall7.Name = "wall7";
@@ -2054,10 +2078,11 @@
             // 
             // wall6
             // 
+            this.wall6.BackgroundImage = global::Game.Properties.Resources.sandstone;
             this.wall6.Location = new System.Drawing.Point(0, 626);
             this.wall6.Margin = new System.Windows.Forms.Padding(2);
             this.wall6.Name = "wall6";
-            this.wall6.Size = new System.Drawing.Size(608, 32);
+            this.wall6.Size = new System.Drawing.Size(577, 32);
             this.wall6.TabIndex = 26;
             this.wall6.TabStop = false;
             this.wall6.Tag = "wall";
@@ -2193,7 +2218,6 @@
             // doorlvl1_1
             // 
             this.doorlvl1_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.doorlvl1_1.BackgroundImage = global::Game.Properties.Resources._lock;
             this.doorlvl1_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.doorlvl1_1.Location = new System.Drawing.Point(720, 114);
             this.doorlvl1_1.Margin = new System.Windows.Forms.Padding(2);
@@ -2248,10 +2272,10 @@
             // 
             // wall3
             // 
-            this.wall3.Location = new System.Drawing.Point(608, 626);
+            this.wall3.Location = new System.Drawing.Point(578, 626);
             this.wall3.Margin = new System.Windows.Forms.Padding(2);
             this.wall3.Name = "wall3";
-            this.wall3.Size = new System.Drawing.Size(75, 32);
+            this.wall3.Size = new System.Drawing.Size(105, 32);
             this.wall3.TabIndex = 9;
             this.wall3.TabStop = false;
             this.wall3.Tag = "wall";
@@ -2303,21 +2327,25 @@
             // 
             // lvl2
             // 
-            this.lvl2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lvl2.Location = new System.Drawing.Point(1200, 658);
+            this.lvl2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(173)))), ((int)(((byte)(232)))));
+            this.lvl2.BackgroundImage = global::Game.Properties.Resources.grass2;
+            this.lvl2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.lvl2.Location = new System.Drawing.Point(1200, 650);
             this.lvl2.Margin = new System.Windows.Forms.Padding(2);
             this.lvl2.Name = "lvl2";
-            this.lvl2.Size = new System.Drawing.Size(562, 609);
+            this.lvl2.Size = new System.Drawing.Size(576, 629);
             this.lvl2.TabIndex = 4;
             this.lvl2.TabStop = false;
             // 
             // lvl3
             // 
-            this.lvl3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.lvl3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(185)))), ((int)(((byte)(126)))));
+            this.lvl3.BackgroundImage = global::Game.Properties.Resources.sand;
+            this.lvl3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.lvl3.Location = new System.Drawing.Point(15, 658);
             this.lvl3.Margin = new System.Windows.Forms.Padding(2);
             this.lvl3.Name = "lvl3";
-            this.lvl3.Size = new System.Drawing.Size(562, 609);
+            this.lvl3.Size = new System.Drawing.Size(562, 621);
             this.lvl3.TabIndex = 3;
             this.lvl3.TabStop = false;
             // 
@@ -2409,16 +2437,16 @@
             // 
             this.doorlvl2_1cover.Location = new System.Drawing.Point(1470, 626);
             this.doorlvl2_1cover.Name = "doorlvl2_1cover";
-            this.doorlvl2_1cover.Size = new System.Drawing.Size(308, 262);
+            this.doorlvl2_1cover.Size = new System.Drawing.Size(308, 218);
             this.doorlvl2_1cover.TabIndex = 159;
             this.doorlvl2_1cover.TabStop = false;
             this.doorlvl2_1cover.Tag = "cover";
             // 
             // doorlvl2_2cover
             // 
-            this.doorlvl2_2cover.Location = new System.Drawing.Point(1440, 843);
+            this.doorlvl2_2cover.Location = new System.Drawing.Point(1440, 841);
             this.doorlvl2_2cover.Name = "doorlvl2_2cover";
-            this.doorlvl2_2cover.Size = new System.Drawing.Size(338, 293);
+            this.doorlvl2_2cover.Size = new System.Drawing.Size(338, 295);
             this.doorlvl2_2cover.TabIndex = 160;
             this.doorlvl2_2cover.TabStop = false;
             this.doorlvl2_2cover.Tag = "cover";
@@ -2443,9 +2471,9 @@
             // 
             // doorlvl2_3cover
             // 
-            this.doorlvl2_3cover.Location = new System.Drawing.Point(1200, 838);
+            this.doorlvl2_3cover.Location = new System.Drawing.Point(1200, 840);
             this.doorlvl2_3cover.Name = "doorlvl2_3cover";
-            this.doorlvl2_3cover.Size = new System.Drawing.Size(243, 267);
+            this.doorlvl2_3cover.Size = new System.Drawing.Size(244, 265);
             this.doorlvl2_3cover.TabIndex = 163;
             this.doorlvl2_3cover.TabStop = false;
             this.doorlvl2_3cover.Tag = "cover";
@@ -2461,18 +2489,18 @@
             // 
             // doorlvl3_4cover
             // 
-            this.doorlvl3_4cover.Location = new System.Drawing.Point(389, 626);
+            this.doorlvl3_4cover.Location = new System.Drawing.Point(375, 626);
             this.doorlvl3_4cover.Name = "doorlvl3_4cover";
-            this.doorlvl3_4cover.Size = new System.Drawing.Size(188, 208);
+            this.doorlvl3_4cover.Size = new System.Drawing.Size(202, 205);
             this.doorlvl3_4cover.TabIndex = 165;
             this.doorlvl3_4cover.TabStop = false;
             this.doorlvl3_4cover.Tag = "cover";
             // 
             // doorlvl3_5cover
             // 
-            this.doorlvl3_5cover.Location = new System.Drawing.Point(88, 887);
+            this.doorlvl3_5cover.Location = new System.Drawing.Point(76, 887);
             this.doorlvl3_5cover.Name = "doorlvl3_5cover";
-            this.doorlvl3_5cover.Size = new System.Drawing.Size(287, 218);
+            this.doorlvl3_5cover.Size = new System.Drawing.Size(302, 232);
             this.doorlvl3_5cover.TabIndex = 166;
             this.doorlvl3_5cover.TabStop = false;
             this.doorlvl3_5cover.Tag = "cover";
@@ -2481,16 +2509,16 @@
             // 
             this.doorlvl3_2cover.Location = new System.Drawing.Point(-10, 626);
             this.doorlvl3_2cover.Name = "doorlvl3_2cover";
-            this.doorlvl3_2cover.Size = new System.Drawing.Size(403, 265);
+            this.doorlvl3_2cover.Size = new System.Drawing.Size(388, 265);
             this.doorlvl3_2cover.TabIndex = 167;
             this.doorlvl3_2cover.TabStop = false;
             this.doorlvl3_2cover.Tag = "cover";
             // 
             // doorlvl3_2cover2
             // 
-            this.doorlvl3_2cover2.Location = new System.Drawing.Point(5, 811);
+            this.doorlvl3_2cover2.Location = new System.Drawing.Point(-10, 811);
             this.doorlvl3_2cover2.Name = "doorlvl3_2cover2";
-            this.doorlvl3_2cover2.Size = new System.Drawing.Size(83, 140);
+            this.doorlvl3_2cover2.Size = new System.Drawing.Size(87, 140);
             this.doorlvl3_2cover2.TabIndex = 168;
             this.doorlvl3_2cover2.TabStop = false;
             this.doorlvl3_2cover2.Tag = "cover";
@@ -2499,7 +2527,7 @@
             // 
             this.doorlvl3_1cover.Location = new System.Drawing.Point(0, 948);
             this.doorlvl3_1cover.Name = "doorlvl3_1cover";
-            this.doorlvl3_1cover.Size = new System.Drawing.Size(92, 173);
+            this.doorlvl3_1cover.Size = new System.Drawing.Size(79, 173);
             this.doorlvl3_1cover.TabIndex = 169;
             this.doorlvl3_1cover.TabStop = false;
             this.doorlvl3_1cover.Tag = "cover";
@@ -2515,9 +2543,9 @@
             // 
             // doorlvl3_7cover
             // 
-            this.doorlvl3_7cover.Location = new System.Drawing.Point(405, 1104);
+            this.doorlvl3_7cover.Location = new System.Drawing.Point(405, 1118);
             this.doorlvl3_7cover.Name = "doorlvl3_7cover";
-            this.doorlvl3_7cover.Size = new System.Drawing.Size(172, 180);
+            this.doorlvl3_7cover.Size = new System.Drawing.Size(172, 166);
             this.doorlvl3_7cover.TabIndex = 171;
             this.doorlvl3_7cover.TabStop = false;
             this.doorlvl3_7cover.Tag = "cover";
@@ -2776,6 +2804,10 @@
             this.pnlDialog.ResumeLayout(false);
             this.pnlDialog.PerformLayout();
             this.Map.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.rocklvl3_4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wall9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.walllvl3_9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rocklvl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.walllvl3_3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.walllvl3_2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.walllvl3_1)).EndInit();
@@ -2801,7 +2833,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.crystal2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonlvl3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.craft_area)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rocklvl3_4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.loglvl3_2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl3_7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.freezablelvl3_5)).EndInit();
@@ -2811,7 +2842,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.doorlvl3_6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.doorlvl3_5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.walllvl3_10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.walllvl3_9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.loglvl3_1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.walllvl3_8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rocklvl3_3)).EndInit();
@@ -2837,7 +2867,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl3_2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.freezablelvl3_1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.riverlvl3_1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rocklvl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.coin1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stick2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stick1)).EndInit();
@@ -2895,7 +2924,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.wall11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wall9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.walllvl1_9)).EndInit();
