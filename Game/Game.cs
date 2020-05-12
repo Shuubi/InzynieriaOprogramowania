@@ -358,6 +358,10 @@ namespace Game
                                         thisPictureBox.Dispose();
                                     }
                                 }
+                                else if (thisPictureBox.Name == "doorlvl1_3" || thisPictureBox.Name == "doorlvl2_4" || thisPictureBox.Name == "doorlvl3_2")
+                                {
+                                    path = "../Resources/Dialogs/lockedDoor3.txt";
+                                }
                                 else if (thisPictureBox.Name == "Teodor")
                                     if (protagonist.Teodor == false)
                                     {
@@ -616,7 +620,7 @@ namespace Game
                     if (back is PictureBox && back.Bounds.Contains(front.Bounds) && !back.Name.ToString().Contains("cover"))
                     {
                         if (front is PictureBox && !front.Name.ToString().Contains("cover") && front.Tag != null && front.Tag != "wall" && front.Tag != "river" &&
-                            front.Tag!="freezable_object" && front.Tag != "ice" && !front.Tag.ToString().Contains("ball") && !front.Name.ToString().Contains("PlayerSpells") )
+                            front.Tag != "freezable_object" && front.Tag != "ice" && !front.Tag.ToString().Contains("ball") && !front.Name.ToString().Contains("PlayerSpells"))
                         {
                             front.BackColor = back.BackColor;
                         }
@@ -624,6 +628,32 @@ namespace Game
                     }
                 }
             }
+        }
+
+        public void OpenDoorWithButton()
+        {
+            foreach (Control rock in Map.Controls)
+            {
+                if (rock is PictureBox && rock.Name.ToString().Contains("rock"))
+                {
+                    if (rock.Bounds.IntersectsWith(buttonlvl1.Bounds))
+                    {
+                        doorlvl1_3.BackgroundImage = null;
+                        doorlvl1_3.Tag = "door_open";
+                    }
+                    if (rock.Bounds.IntersectsWith(buttonlvl2.Bounds))
+                    {
+                        doorlvl2_4.BackgroundImage = null;
+                        doorlvl2_4.Tag = "door_open";
+                    }
+                    if (rock.Bounds.IntersectsWith(buttonlvl3.Bounds))
+                    {
+                        doorlvl3_2.BackgroundImage = null;
+                        doorlvl3_2.Tag = "door_open";
+                    }
+                }
+            }
+
         }
 
 
@@ -634,6 +664,7 @@ namespace Game
             Rotation();
             ShowLevels();
             Transparency();
+            OpenDoorWithButton();
 
             protagonist.MovePlayer();
 

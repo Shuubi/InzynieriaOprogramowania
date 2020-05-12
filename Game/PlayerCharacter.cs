@@ -218,7 +218,7 @@ namespace Game
             {
                 if (x is PictureBox && x.Tag == "door_closed")
                 {
-                    //jesli gracz dotyka drzwi i nacisnie spacje, to drzwi zmieniaja tag i kolor
+                    //jesli gracz dotyka drzwi i nacisnie spacje, to drzwi zmieniaja tag 
                     if (Player.Bounds.IntersectsWith(x.Bounds) && action)
                     {
                         x.Tag = "door_open";

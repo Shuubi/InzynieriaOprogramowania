@@ -468,6 +468,7 @@
             // Map
             // 
             this.Map.BackColor = System.Drawing.Color.Black;
+            this.Map.Controls.Add(this.rocklvl2);
             this.Map.Controls.Add(this.walllvl3_3);
             this.Map.Controls.Add(this.walllvl3_2);
             this.Map.Controls.Add(this.walllvl3_1);
@@ -529,7 +530,6 @@
             this.Map.Controls.Add(this.riverlvl3_2);
             this.Map.Controls.Add(this.freezablelvl3_1);
             this.Map.Controls.Add(this.riverlvl3_1);
-            this.Map.Controls.Add(this.rocklvl2);
             this.Map.Controls.Add(this.coin1);
             this.Map.Controls.Add(this.stick2);
             this.Map.Controls.Add(this.stick1);
@@ -637,7 +637,7 @@
             this.Map.Controls.Add(this.doorlvl3_7cover);
             this.Map.Controls.Add(this.doorlvl1_4cover2);
             this.Map.Controls.Add(this.Hub);
-            this.Map.Location = new System.Drawing.Point(-500, -600);
+            this.Map.Location = new System.Drawing.Point(0, 0);
             this.Map.Margin = new System.Windows.Forms.Padding(2);
             this.Map.Name = "Map";
             this.Map.Size = new System.Drawing.Size(1778, 1926);
@@ -1174,7 +1174,7 @@
             this.doorlvl3_2.Size = new System.Drawing.Size(60, 32);
             this.doorlvl3_2.TabIndex = 120;
             this.doorlvl3_2.TabStop = false;
-            this.doorlvl3_2.Tag = "door_closed";
+            this.doorlvl3_2.Tag = "NPC";
             // 
             // walllvl3_4
             // 
@@ -1774,7 +1774,7 @@
             this.doorlvl2_4.Size = new System.Drawing.Size(60, 32);
             this.doorlvl2_4.TabIndex = 58;
             this.doorlvl2_4.TabStop = false;
-            this.doorlvl2_4.Tag = "door_closed";
+            this.doorlvl2_4.Tag = "NPC";
             // 
             // doorlvl2_3
             // 
@@ -2130,7 +2130,7 @@
             this.doorlvl1_3.Size = new System.Drawing.Size(60, 32);
             this.doorlvl1_3.TabIndex = 20;
             this.doorlvl1_3.TabStop = false;
-            this.doorlvl1_3.Tag = "door_closed";
+            this.doorlvl1_3.Tag = "NPC";
             // 
             // walllvl1_5
             // 
