@@ -468,13 +468,13 @@
             // Map
             // 
             this.Map.BackColor = System.Drawing.Color.Black;
+            this.Map.Controls.Add(this.walllvl3_1);
             this.Map.Controls.Add(this.rocklvl3_4);
             this.Map.Controls.Add(this.wall9);
             this.Map.Controls.Add(this.walllvl3_9);
             this.Map.Controls.Add(this.rocklvl2);
             this.Map.Controls.Add(this.walllvl3_3);
             this.Map.Controls.Add(this.walllvl3_2);
-            this.Map.Controls.Add(this.walllvl3_1);
             this.Map.Controls.Add(this.walllvl2_3);
             this.Map.Controls.Add(this.locked_door2);
             this.Map.Controls.Add(this.Locked_door1);
@@ -637,7 +637,7 @@
             this.Map.Controls.Add(this.doorlvl3_7cover);
             this.Map.Controls.Add(this.doorlvl1_4cover2);
             this.Map.Controls.Add(this.Hub);
-            this.Map.Location = new System.Drawing.Point(0, 0);
+            this.Map.Location = new System.Drawing.Point(0, -600);
             this.Map.Margin = new System.Windows.Forms.Padding(2);
             this.Map.Name = "Map";
             this.Map.Size = new System.Drawing.Size(1778, 1926);
@@ -995,6 +995,7 @@
             // loglvl3_2
             // 
             this.loglvl3_2.BackColor = System.Drawing.Color.Peru;
+            this.loglvl3_2.BackgroundImage = global::Game.Properties.Resources.log2;
             this.loglvl3_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.loglvl3_2.Location = new System.Drawing.Point(120, 1024);
             this.loglvl3_2.Margin = new System.Windows.Forms.Padding(2);
@@ -1007,6 +1008,7 @@
             // riverlvl3_7
             // 
             this.riverlvl3_7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.riverlvl3_7.BackgroundImage = global::Game.Properties.Resources.water;
             this.riverlvl3_7.Location = new System.Drawing.Point(285, 1023);
             this.riverlvl3_7.Margin = new System.Windows.Forms.Padding(2);
             this.riverlvl3_7.Name = "riverlvl3_7";
@@ -1018,6 +1020,7 @@
             // freezablelvl3_5
             // 
             this.freezablelvl3_5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.freezablelvl3_5.BackgroundImage = global::Game.Properties.Resources.shallow_water;
             this.freezablelvl3_5.Location = new System.Drawing.Point(285, 960);
             this.freezablelvl3_5.Margin = new System.Windows.Forms.Padding(2);
             this.freezablelvl3_5.Name = "freezablelvl3_5";
@@ -1029,6 +1032,7 @@
             // riverlvl3_6
             // 
             this.riverlvl3_6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.riverlvl3_6.BackgroundImage = global::Game.Properties.Resources.water;
             this.riverlvl3_6.Location = new System.Drawing.Point(285, 912);
             this.riverlvl3_6.Margin = new System.Windows.Forms.Padding(2);
             this.riverlvl3_6.Name = "riverlvl3_6";
@@ -1099,6 +1103,7 @@
             // loglvl3_1
             // 
             this.loglvl3_1.BackColor = System.Drawing.Color.Peru;
+            this.loglvl3_1.BackgroundImage = global::Game.Properties.Resources.log1;
             this.loglvl3_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.loglvl3_1.Location = new System.Drawing.Point(405, 894);
             this.loglvl3_1.Margin = new System.Windows.Forms.Padding(2);
@@ -1114,7 +1119,7 @@
             this.walllvl3_8.Location = new System.Drawing.Point(75, 887);
             this.walllvl3_8.Margin = new System.Windows.Forms.Padding(2);
             this.walllvl3_8.Name = "walllvl3_8";
-            this.walllvl3_8.Size = new System.Drawing.Size(30, 234);
+            this.walllvl3_8.Size = new System.Drawing.Size(30, 204);
             this.walllvl3_8.TabIndex = 128;
             this.walllvl3_8.TabStop = false;
             this.walllvl3_8.Tag = "wall";
@@ -1217,10 +1222,10 @@
             // walllvl3_4
             // 
             this.walllvl3_4.BackgroundImage = global::Game.Properties.Resources.sandstone;
-            this.walllvl3_4.Location = new System.Drawing.Point(89, 887);
+            this.walllvl3_4.Location = new System.Drawing.Point(105, 887);
             this.walllvl3_4.Margin = new System.Windows.Forms.Padding(2);
             this.walllvl3_4.Name = "walllvl3_4";
-            this.walllvl3_4.Size = new System.Drawing.Size(104, 32);
+            this.walllvl3_4.Size = new System.Drawing.Size(88, 32);
             this.walllvl3_4.TabIndex = 119;
             this.walllvl3_4.TabStop = false;
             this.walllvl3_4.Tag = "wall";
@@ -1242,6 +1247,7 @@
             // riverlvl3_5
             // 
             this.riverlvl3_5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.riverlvl3_5.BackgroundImage = global::Game.Properties.Resources.water;
             this.riverlvl3_5.Location = new System.Drawing.Point(336, 802);
             this.riverlvl3_5.Margin = new System.Windows.Forms.Padding(2);
             this.riverlvl3_5.Name = "riverlvl3_5";
@@ -1253,6 +1259,7 @@
             // freezablelvl3_3
             // 
             this.freezablelvl3_3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.freezablelvl3_3.BackgroundImage = global::Game.Properties.Resources.shallow_water;
             this.freezablelvl3_3.Location = new System.Drawing.Point(292, 802);
             this.freezablelvl3_3.Margin = new System.Windows.Forms.Padding(2);
             this.freezablelvl3_3.Name = "freezablelvl3_3";
@@ -1264,6 +1271,7 @@
             // riverlvl3_4
             // 
             this.riverlvl3_4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.riverlvl3_4.BackgroundImage = global::Game.Properties.Resources.water;
             this.riverlvl3_4.Location = new System.Drawing.Point(190, 802);
             this.riverlvl3_4.Margin = new System.Windows.Forms.Padding(2);
             this.riverlvl3_4.Name = "riverlvl3_4";
@@ -1342,6 +1350,7 @@
             // riverlvl3_3
             // 
             this.riverlvl3_3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.riverlvl3_3.BackgroundImage = global::Game.Properties.Resources.water;
             this.riverlvl3_3.Location = new System.Drawing.Point(274, 717);
             this.riverlvl3_3.Margin = new System.Windows.Forms.Padding(2);
             this.riverlvl3_3.Name = "riverlvl3_3";
@@ -1353,6 +1362,7 @@
             // freezablelvl3_2
             // 
             this.freezablelvl3_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.freezablelvl3_2.BackgroundImage = global::Game.Properties.Resources.shallow_water;
             this.freezablelvl3_2.Location = new System.Drawing.Point(230, 717);
             this.freezablelvl3_2.Margin = new System.Windows.Forms.Padding(2);
             this.freezablelvl3_2.Name = "freezablelvl3_2";
@@ -1364,6 +1374,7 @@
             // riverlvl3_2
             // 
             this.riverlvl3_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.riverlvl3_2.BackgroundImage = global::Game.Properties.Resources.water;
             this.riverlvl3_2.Location = new System.Drawing.Point(126, 717);
             this.riverlvl3_2.Margin = new System.Windows.Forms.Padding(2);
             this.riverlvl3_2.Name = "riverlvl3_2";
@@ -1375,6 +1386,7 @@
             // freezablelvl3_1
             // 
             this.freezablelvl3_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.freezablelvl3_1.BackgroundImage = global::Game.Properties.Resources.shallow_water;
             this.freezablelvl3_1.Location = new System.Drawing.Point(67, 716);
             this.freezablelvl3_1.Margin = new System.Windows.Forms.Padding(2);
             this.freezablelvl3_1.Name = "freezablelvl3_1";
@@ -1386,6 +1398,7 @@
             // riverlvl3_1
             // 
             this.riverlvl3_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.riverlvl3_1.BackgroundImage = global::Game.Properties.Resources.water;
             this.riverlvl3_1.Location = new System.Drawing.Point(16, 716);
             this.riverlvl3_1.Margin = new System.Windows.Forms.Padding(2);
             this.riverlvl3_1.Name = "riverlvl3_1";
@@ -1467,6 +1480,7 @@
             // freezablelvl2_8
             // 
             this.freezablelvl2_8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.freezablelvl2_8.BackgroundImage = global::Game.Properties.Resources.shallow_water;
             this.freezablelvl2_8.Location = new System.Drawing.Point(1680, 1176);
             this.freezablelvl2_8.Margin = new System.Windows.Forms.Padding(2);
             this.freezablelvl2_8.Name = "freezablelvl2_8";
@@ -1478,6 +1492,7 @@
             // freezablelvl2_7
             // 
             this.freezablelvl2_7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.freezablelvl2_7.BackgroundImage = global::Game.Properties.Resources.shallow_water;
             this.freezablelvl2_7.Location = new System.Drawing.Point(1500, 1177);
             this.freezablelvl2_7.Margin = new System.Windows.Forms.Padding(2);
             this.freezablelvl2_7.Name = "freezablelvl2_7";
@@ -1489,6 +1504,7 @@
             // riverlvl2_24
             // 
             this.riverlvl2_24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.riverlvl2_24.BackgroundImage = global::Game.Properties.Resources.water;
             this.riverlvl2_24.Location = new System.Drawing.Point(1680, 1227);
             this.riverlvl2_24.Margin = new System.Windows.Forms.Padding(2);
             this.riverlvl2_24.Name = "riverlvl2_24";
@@ -1500,6 +1516,7 @@
             // riverlvl2_23
             // 
             this.riverlvl2_23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.riverlvl2_23.BackgroundImage = global::Game.Properties.Resources.water;
             this.riverlvl2_23.Location = new System.Drawing.Point(1500, 1227);
             this.riverlvl2_23.Margin = new System.Windows.Forms.Padding(2);
             this.riverlvl2_23.Name = "riverlvl2_23";
@@ -1511,6 +1528,7 @@
             // riverlvl2_22
             // 
             this.riverlvl2_22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.riverlvl2_22.BackgroundImage = global::Game.Properties.Resources.water;
             this.riverlvl2_22.Location = new System.Drawing.Point(1470, 1235);
             this.riverlvl2_22.Margin = new System.Windows.Forms.Padding(2);
             this.riverlvl2_22.Name = "riverlvl2_22";
@@ -1522,6 +1540,7 @@
             // riverlvl2_21
             // 
             this.riverlvl2_21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.riverlvl2_21.BackgroundImage = global::Game.Properties.Resources.water;
             this.riverlvl2_21.Location = new System.Drawing.Point(1680, 1170);
             this.riverlvl2_21.Margin = new System.Windows.Forms.Padding(2);
             this.riverlvl2_21.Name = "riverlvl2_21";
@@ -1533,6 +1552,7 @@
             // riverlvl2_20
             // 
             this.riverlvl2_20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.riverlvl2_20.BackgroundImage = global::Game.Properties.Resources.water;
             this.riverlvl2_20.Location = new System.Drawing.Point(1680, 1136);
             this.riverlvl2_20.Margin = new System.Windows.Forms.Padding(2);
             this.riverlvl2_20.Name = "riverlvl2_20";
@@ -1544,6 +1564,7 @@
             // riverlvl2_19
             // 
             this.riverlvl2_19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.riverlvl2_19.BackgroundImage = global::Game.Properties.Resources.water;
             this.riverlvl2_19.Location = new System.Drawing.Point(1500, 1170);
             this.riverlvl2_19.Margin = new System.Windows.Forms.Padding(2);
             this.riverlvl2_19.Name = "riverlvl2_19";
@@ -1555,6 +1576,7 @@
             // riverlvl2_18
             // 
             this.riverlvl2_18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.riverlvl2_18.BackgroundImage = global::Game.Properties.Resources.water;
             this.riverlvl2_18.Location = new System.Drawing.Point(1470, 1137);
             this.riverlvl2_18.Margin = new System.Windows.Forms.Padding(2);
             this.riverlvl2_18.Name = "riverlvl2_18";
@@ -1566,6 +1588,7 @@
             // freezablelvl2_6
             // 
             this.freezablelvl2_6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.freezablelvl2_6.BackgroundImage = global::Game.Properties.Resources.shallow_water;
             this.freezablelvl2_6.Location = new System.Drawing.Point(1671, 994);
             this.freezablelvl2_6.Margin = new System.Windows.Forms.Padding(2);
             this.freezablelvl2_6.Name = "freezablelvl2_6";
@@ -1577,6 +1600,7 @@
             // freezablelvl2_5
             // 
             this.freezablelvl2_5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.freezablelvl2_5.BackgroundImage = global::Game.Properties.Resources.shallow_water;
             this.freezablelvl2_5.Location = new System.Drawing.Point(1558, 934);
             this.freezablelvl2_5.Margin = new System.Windows.Forms.Padding(2);
             this.freezablelvl2_5.Name = "freezablelvl2_5";
@@ -1599,6 +1623,7 @@
             // riverlvl2_15
             // 
             this.riverlvl2_15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.riverlvl2_15.BackgroundImage = global::Game.Properties.Resources.water;
             this.riverlvl2_15.Location = new System.Drawing.Point(1736, 846);
             this.riverlvl2_15.Margin = new System.Windows.Forms.Padding(2);
             this.riverlvl2_15.Name = "riverlvl2_15";
@@ -1610,6 +1635,7 @@
             // riverlvl2_14
             // 
             this.riverlvl2_14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.riverlvl2_14.BackgroundImage = global::Game.Properties.Resources.water;
             this.riverlvl2_14.Location = new System.Drawing.Point(1671, 903);
             this.riverlvl2_14.Margin = new System.Windows.Forms.Padding(2);
             this.riverlvl2_14.Name = "riverlvl2_14";
@@ -1621,6 +1647,7 @@
             // riverlvl2_13
             // 
             this.riverlvl2_13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.riverlvl2_13.BackgroundImage = global::Game.Properties.Resources.water;
             this.riverlvl2_13.Location = new System.Drawing.Point(1557, 1036);
             this.riverlvl2_13.Margin = new System.Windows.Forms.Padding(2);
             this.riverlvl2_13.Name = "riverlvl2_13";
@@ -1632,6 +1659,7 @@
             // riverlvl2_11
             // 
             this.riverlvl2_11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.riverlvl2_11.BackgroundImage = global::Game.Properties.Resources.water;
             this.riverlvl2_11.Location = new System.Drawing.Point(1557, 994);
             this.riverlvl2_11.Margin = new System.Windows.Forms.Padding(2);
             this.riverlvl2_11.Name = "riverlvl2_11";
@@ -1643,6 +1671,7 @@
             // riverlvl2_10
             // 
             this.riverlvl2_10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.riverlvl2_10.BackgroundImage = global::Game.Properties.Resources.water;
             this.riverlvl2_10.Location = new System.Drawing.Point(1497, 903);
             this.riverlvl2_10.Margin = new System.Windows.Forms.Padding(2);
             this.riverlvl2_10.Name = "riverlvl2_10";
@@ -1654,6 +1683,7 @@
             // freezablelvl2_3
             // 
             this.freezablelvl2_3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.freezablelvl2_3.BackgroundImage = global::Game.Properties.Resources.shallow_water;
             this.freezablelvl2_3.Location = new System.Drawing.Point(1617, 903);
             this.freezablelvl2_3.Margin = new System.Windows.Forms.Padding(2);
             this.freezablelvl2_3.Name = "freezablelvl2_3";
@@ -1665,6 +1695,7 @@
             // riverlvl2_7
             // 
             this.riverlvl2_7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.riverlvl2_7.BackgroundImage = global::Game.Properties.Resources.water;
             this.riverlvl2_7.Location = new System.Drawing.Point(1468, 840);
             this.riverlvl2_7.Margin = new System.Windows.Forms.Padding(2);
             this.riverlvl2_7.Name = "riverlvl2_7";
@@ -1676,6 +1707,7 @@
             // riverlvl2_5
             // 
             this.riverlvl2_5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.riverlvl2_5.BackgroundImage = global::Game.Properties.Resources.water;
             this.riverlvl2_5.Location = new System.Drawing.Point(1470, 738);
             this.riverlvl2_5.Margin = new System.Windows.Forms.Padding(2);
             this.riverlvl2_5.Name = "riverlvl2_5";
@@ -1687,6 +1719,7 @@
             // freezablelvl2_2
             // 
             this.freezablelvl2_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.freezablelvl2_2.BackgroundImage = global::Game.Properties.Resources.shallow_water;
             this.freezablelvl2_2.Location = new System.Drawing.Point(1573, 738);
             this.freezablelvl2_2.Margin = new System.Windows.Forms.Padding(2);
             this.freezablelvl2_2.Name = "freezablelvl2_2";
@@ -1698,6 +1731,7 @@
             // riverlvl2_3
             // 
             this.riverlvl2_3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.riverlvl2_3.BackgroundImage = global::Game.Properties.Resources.water;
             this.riverlvl2_3.Location = new System.Drawing.Point(1627, 727);
             this.riverlvl2_3.Margin = new System.Windows.Forms.Padding(2);
             this.riverlvl2_3.Name = "riverlvl2_3";
@@ -1709,6 +1743,7 @@
             // freezablelvl2_1
             // 
             this.freezablelvl2_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.freezablelvl2_1.BackgroundImage = global::Game.Properties.Resources.shallow_water;
             this.freezablelvl2_1.Location = new System.Drawing.Point(1627, 683);
             this.freezablelvl2_1.Margin = new System.Windows.Forms.Padding(2);
             this.freezablelvl2_1.Name = "freezablelvl2_1";
@@ -1720,6 +1755,7 @@
             // riverlvl2_2
             // 
             this.riverlvl2_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.riverlvl2_2.BackgroundImage = global::Game.Properties.Resources.water;
             this.riverlvl2_2.Location = new System.Drawing.Point(1627, 658);
             this.riverlvl2_2.Margin = new System.Windows.Forms.Padding(2);
             this.riverlvl2_2.Name = "riverlvl2_2";

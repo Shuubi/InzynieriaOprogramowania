@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 using System.Windows.Forms;
+using System.Timers;
 using System.Media;
 
 
@@ -326,7 +327,7 @@ namespace Game
                         }
                         if (f.Bounds.IntersectsWith(x.Bounds) && (x.Tag == "freezable_object"))
                         {
-                            x.BackColor = Color.White;
+                            x.BackgroundImage = Image.FromFile(@"Images\ice.png");
                             x.Tag = "ice";
                         }
                     }

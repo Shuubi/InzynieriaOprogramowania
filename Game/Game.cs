@@ -694,6 +694,7 @@ namespace Game
             Application.Exit();
         }
 
+
         private void timer2_Tick(object sender, EventArgs e)
         {
             foreach (Control f in Player.Parent.Controls)
