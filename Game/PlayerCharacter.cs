@@ -379,6 +379,7 @@ namespace Game
             playerCollision("river");
             playerCollision("freezable_object");
             playerCollision("NPC");
+            playerCollision("DialogItem");
             playerCollision("button");
             SpellCasting();
             DoorsInteraction();

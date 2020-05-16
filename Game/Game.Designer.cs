@@ -114,7 +114,7 @@
             this.carrot1 = new System.Windows.Forms.PictureBox();
             this.carrot2 = new System.Windows.Forms.PictureBox();
             this.carrot3 = new System.Windows.Forms.PictureBox();
-            this.Jasper = new System.Windows.Forms.PictureBox();
+            this.Jackalope = new System.Windows.Forms.PictureBox();
             this.George = new System.Windows.Forms.PictureBox();
             this.rock3 = new System.Windows.Forms.PictureBox();
             this.rock4 = new System.Windows.Forms.PictureBox();
@@ -302,7 +302,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.carrot1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.carrot2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.carrot3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Jasper)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Jackalope)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.George)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rock3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rock4)).BeginInit();
@@ -1292,18 +1292,18 @@
             this.carrot3.TabStop = false;
             this.carrot3.Tag = "pickable_item";
             // 
-            // Jasper
+            // Jackalope
             // 
-            this.Jasper.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Jasper.Image = ((System.Drawing.Image)(resources.GetObject("Jasper.Image")));
-            this.Jasper.Location = new System.Drawing.Point(1110, 323);
-            this.Jasper.Margin = new System.Windows.Forms.Padding(2);
-            this.Jasper.Name = "Jasper";
-            this.Jasper.Size = new System.Drawing.Size(30, 32);
-            this.Jasper.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Jasper.TabIndex = 38;
-            this.Jasper.TabStop = false;
-            this.Jasper.Tag = "NPC";
+            this.Jackalope.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Jackalope.Image = ((System.Drawing.Image)(resources.GetObject("Jackalope.Image")));
+            this.Jackalope.Location = new System.Drawing.Point(1110, 323);
+            this.Jackalope.Margin = new System.Windows.Forms.Padding(2);
+            this.Jackalope.Name = "Jackalope";
+            this.Jackalope.Size = new System.Drawing.Size(30, 32);
+            this.Jackalope.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Jackalope.TabIndex = 38;
+            this.Jackalope.TabStop = false;
+            this.Jackalope.Tag = "NPC";
             // 
             // George
             // 
@@ -2761,7 +2761,7 @@
             this.Map.Controls.Add(this.rock4);
             this.Map.Controls.Add(this.rock3);
             this.Map.Controls.Add(this.George);
-            this.Map.Controls.Add(this.Jasper);
+            this.Map.Controls.Add(this.Jackalope);
             this.Map.Controls.Add(this.carrot3);
             this.Map.Controls.Add(this.carrot2);
             this.Map.Controls.Add(this.carrot1);
@@ -2978,7 +2978,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.carrot1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.carrot2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.carrot3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Jasper)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Jackalope)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.George)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rock3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rock4)).EndInit();
@@ -3184,7 +3184,7 @@
         private System.Windows.Forms.PictureBox carrot1;
         private System.Windows.Forms.PictureBox carrot2;
         private System.Windows.Forms.PictureBox carrot3;
-        private System.Windows.Forms.PictureBox Jasper;
+        private System.Windows.Forms.PictureBox Jackalope;
         private System.Windows.Forms.PictureBox George;
         private System.Windows.Forms.PictureBox rock3;
         private System.Windows.Forms.PictureBox rock4;

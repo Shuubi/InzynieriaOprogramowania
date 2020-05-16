@@ -268,7 +268,7 @@ namespace Game
                                             path = "../Resources/Dialogs/GeorgeAfter.txt";
                                         }
                                     }
-                                    else if (thisPictureBox.Name == "Jasper")
+                                    else if (thisPictureBox.Name == "Jackalope")
                                     {
                                         if (protagonist.Jasper == true)
                                         {
@@ -279,7 +279,7 @@ namespace Game
                                         else
                                         {
                                             path = "../Resources/Dialogs/JackalopeFinishedQuest.txt";
-                                            protagonist.Items.RemoveItem("Carrot");
+                                            protagonist.Items.RemoveItem("carrot");
                                             protagonist.Items.InsertItem("key");
                                             protagonist.Jasper = true;
                                         }
@@ -307,6 +307,7 @@ namespace Game
                                         {
                                             protagonist.FireLearned = true;
                                             path = "../Resources/Dialogs/Dragon.txt";
+                                            protagonist.Items.RemoveItem("coin");
                                         }
                                     }
                                     else if (thisPictureBox.Name == "Cthulhu")
@@ -321,6 +322,7 @@ namespace Game
                                         {
                                             path = "../Resources/Dialogs/Cthulhu.txt";
                                             protagonist.Cthulhu = true;
+                                            protagonist.Items.RemoveItem("candy");
                                         }
                                     }
                                     else if (thisPictureBox.Name == "Teodor")
@@ -364,6 +366,7 @@ namespace Game
                                         {
                                             path = "../Resources/Dialogs/openDoor.txt";
                                             thisPictureBox.Dispose();
+                                            protagonist.Items.RemoveItem("key");
                                         }
                                     }
                                     else if (thisPictureBox.Name == "locked_door2")
@@ -376,6 +379,7 @@ namespace Game
                                         {
                                             path = "../Resources/Dialogs/openDoor2.txt";
                                             thisPictureBox.Dispose();
+                                            protagonist.Items.RemoveItem("crystal");
                                         }
                                     }
                                     else if (thisPictureBox.Name == "doorlvl1_3" || thisPictureBox.Name == "doorlvl2_4" || thisPictureBox.Name == "doorlvl3_2")
