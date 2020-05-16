@@ -10,7 +10,7 @@ namespace Game
 {
     public partial class Game : Form
     {
-        int mouseX, mouseY;
+        //int mouseX, mouseY; czy to jest gdzieś wykorzystywane?
 
         //na potrzeby dialogow
         bool cont = false;
@@ -131,10 +131,11 @@ namespace Game
                     cont = true;
                 if (pnlInv.Visible && !pnlText.Visible && invCursor.Visible)
                 {
+                    string name = "item";
                     Item cur = protagonist.Items.ReturnItem(curLoc);
                     path = "../Resources/Dialogs/" + cur.name + ".txt";
                     StreamReader sr = new StreamReader(path);
-                    LoadDialog(sr);
+                    LoadDialog(sr,name);
                     sr.Close();
                 }
             }
@@ -244,136 +245,147 @@ namespace Game
                             protagonist.Items.InsertItem(pickedItem);
                             thisPictureBox.Dispose();
                         }
-                        if (thisPictureBoxTag.Equals("NPC"))
+                        if (reading != true)
                         {
-                            if (reading != true)
+                            if(thisPictureBoxTag.Equals("NPC")||thisPictureBoxTag.Equals("DialogItem"))
                             {
-                                //dobranie path zaleznej od nazwy npc
-                                //ewentualnie przerzucic na switch jesli bedzie duzo npc
-                                if (thisPictureBox.Name == "George")
-                                {
-                                    if (protagonist.EarthLearned == false)
-                                    {
-                                        protagonist.EarthLearned = true;
-                                        path = "../Resources/Dialogs/George.txt";
-                                    }
-                                    else
-                                    {
-                                        path = "../Resources/Dialogs/GeorgeAfter.txt";
-                                    }
+                                //deklaracja na potrzeby spriteów
+                                string SprName = "item";
 
-                                }
-                                else if (thisPictureBox.Name == "Jasper")
+                                if (thisPictureBoxTag.Equals("NPC")) //wymagaja wczytania sprite'a
                                 {
-                                    if (protagonist.Jasper == true)
+                                    //dobranie path zaleznej od nazwy npc
+                                    //ewentualnie przerzucic na switch jesli bedzie duzo npc
+                                    if (thisPictureBox.Name == "George")
                                     {
-                                        path = "../Resources/Dialogs/JackalopeAfter.txt";
+                                        if (protagonist.EarthLearned == false)
+                                        {
+                                            protagonist.EarthLearned = true;
+                                            path = "../Resources/Dialogs/George.txt";
+                                        }
+                                        else
+                                        {
+                                            path = "../Resources/Dialogs/GeorgeAfter.txt";
+                                        }
                                     }
-                                    else if (protagonist.Items.FindItem("carrot") == null || protagonist.Items.FindItem("carrot").amount <= 2)
-                                        path = "../Resources/Dialogs/JackalopeIncompleteQuest.txt";
-                                    else
+                                    else if (thisPictureBox.Name == "Jasper")
                                     {
-                                        path = "../Resources/Dialogs/JackalopeFinishedQuest.txt";
-                                        protagonist.Items.RemoveItem("Carrot");
-                                        protagonist.Items.InsertItem("key");
-                                        protagonist.Jasper = true;
+                                        if (protagonist.Jasper == true)
+                                        {
+                                            path = "../Resources/Dialogs/JackalopeAfter.txt";
+                                        }
+                                        else if (protagonist.Items.FindItem("carrot") == null || protagonist.Items.FindItem("carrot").amount <= 2)
+                                            path = "../Resources/Dialogs/JackalopeIncompleteQuest.txt";
+                                        else
+                                        {
+                                            path = "../Resources/Dialogs/JackalopeFinishedQuest.txt";
+                                            protagonist.Items.RemoveItem("Carrot");
+                                            protagonist.Items.InsertItem("key");
+                                            protagonist.Jasper = true;
+                                        }
                                     }
-                                }
-                                else if (thisPictureBox.Name == "Altie")
-                                {
-                                    if (protagonist.IceLearned == false)
+                                    else if (thisPictureBox.Name == "Altie")
                                     {
-                                        protagonist.IceLearned = true;
-                                        path = "../Resources/Dialogs/Altie.txt";
-                                    }
-                                    else
-                                        path = "../Resources/Dialogs/AltieAfter.txt";
+                                        if (protagonist.IceLearned == false)
+                                        {
+                                            protagonist.IceLearned = true;
+                                            path = "../Resources/Dialogs/Altie.txt";
+                                        }
+                                        else
+                                            path = "../Resources/Dialogs/AltieAfter.txt";
 
-                                }
-                                else if (thisPictureBox.Name == "Dragon")
-                                {
-                                    if (protagonist.FireLearned == true)
-                                        path = "../Resources/Dialogs/DragonAfter.txt";
-                                    else if (protagonist.Items.FindItem("coin") == null)
-                                    {
-                                        path = "../Resources/Dialogs/DragonIncomplete.txt";
                                     }
-                                    else
+                                    else if (thisPictureBox.Name == "Dragon")
                                     {
-                                        protagonist.FireLearned = true;
-                                        path = "../Resources/Dialogs/Dragon.txt";
+                                        if (protagonist.FireLearned == true)
+                                            path = "../Resources/Dialogs/DragonAfter.txt";
+                                        else if (protagonist.Items.FindItem("coin") == null)
+                                        {
+                                            path = "../Resources/Dialogs/DragonIncomplete.txt";
+                                        }
+                                        else
+                                        {
+                                            protagonist.FireLearned = true;
+                                            path = "../Resources/Dialogs/Dragon.txt";
+                                        }
                                     }
-                                }
-                                else if (thisPictureBox.Name == "Cthulhu")
-                                {
-                                    if (protagonist.Cthulhu == true)
-                                        path = "../Resources/Dialogs/CthulhuAfter.txt";
-                                    else if (protagonist.Items.FindItem("candy") == null)
+                                    else if (thisPictureBox.Name == "Cthulhu")
                                     {
-                                        path = "../Resources/Dialogs/CthulhuIncomplete.txt";
+                                        if (protagonist.Cthulhu == true)
+                                            path = "../Resources/Dialogs/CthulhuAfter.txt";
+                                        else if (protagonist.Items.FindItem("candy") == null)
+                                        {
+                                            path = "../Resources/Dialogs/CthulhuIncomplete.txt";
+                                        }
+                                        else
+                                        {
+                                            path = "../Resources/Dialogs/Cthulhu.txt";
+                                            protagonist.Cthulhu = true;
+                                        }
                                     }
-                                    else
+                                    else if (thisPictureBox.Name == "Teodor")
                                     {
-                                        path = "../Resources/Dialogs/Cthulhu.txt";
-                                        protagonist.Cthulhu = true;
-                                    }
-                                }
-                                else if (thisPictureBox.Name == "craft_area")
-                                {
-                                    if (protagonist.Items.FindItem("stick") == null || protagonist.Items.FindItem("stick").amount < 2 || protagonist.Items.FindItem("pot") == null || protagonist.Items.FindItem("sugar") == null)
-                                    {
-                                        path = "../Resources/Dialogs/CraftIncomplete.txt";
-                                    }
-                                    else
-                                    {
-                                        path = "../Resources/Dialogs/CraftComplete.txt";
-                                        protagonist.Items.RemoveItem("stick");
-                                        protagonist.Items.RemoveItem("pot");
-                                        protagonist.Items.RemoveItem("sugar");
-                                        protagonist.Items.InsertItem("candy");
-                                    }
+                                        if (protagonist.Teodor == false)
+                                        {
+                                            path = "../Resources/Dialogs/Teodor.txt";
+                                            protagonist.Teodor = true;
+                                        }
 
+                                        else
+                                            path = "../Resources/Dialogs/TeodorAfter.txt";
+                                    }
+                                    SprName = thisPictureBox.Name;
                                 }
-                                else if (thisPictureBox.Name == "Locked_door1")
+                                if (thisPictureBoxTag.Equals("DialogItem")) //nie wczytuja sprite'a
                                 {
-                                    if (protagonist.Items.FindItem("key") == null)
+                                    if (thisPictureBox.Name == "craft_area")
                                     {
-                                        path = "../Resources/Dialogs/lockedDoor.txt";
-                                    }
-                                    else
-                                    {
-                                        path = "../Resources/Dialogs/openDoor.txt";
-                                        thisPictureBox.Dispose();
-                                    }
-                                }
-                                else if (thisPictureBox.Name == "locked_door2")
-                                {
-                                    if (protagonist.Items.FindItem("crystal") == null || protagonist.Items.FindItem("crystal").amount <= 2)
-                                    {
-                                        path = "../Resources/Dialogs/lockedDoor2.txt";
-                                    }
-                                    else
-                                    {
-                                        path = "../Resources/Dialogs/openDoor2.txt";
-                                        thisPictureBox.Dispose();
-                                    }
-                                }
-                                else if (thisPictureBox.Name == "doorlvl1_3" || thisPictureBox.Name == "doorlvl2_4" || thisPictureBox.Name == "doorlvl3_2")
-                                {
-                                    path = "../Resources/Dialogs/lockedDoor3.txt";
-                                }
-                                else if (thisPictureBox.Name == "Teodor")
-                                    if (protagonist.Teodor == false)
-                                    {
-                                        path = "../Resources/Dialogs/Teodor.txt";
-                                        protagonist.Teodor = true;
-                                    }
+                                        if (protagonist.Items.FindItem("stick") == null || protagonist.Items.FindItem("stick").amount < 2 || protagonist.Items.FindItem("pot") == null || protagonist.Items.FindItem("sugar") == null)
+                                        {
+                                            path = "../Resources/Dialogs/CraftIncomplete.txt";
+                                        }
+                                        else
+                                        {
+                                            path = "../Resources/Dialogs/CraftComplete.txt";
+                                            protagonist.Items.RemoveItem("stick");
+                                            protagonist.Items.RemoveItem("pot");
+                                            protagonist.Items.RemoveItem("sugar");
+                                            protagonist.Items.InsertItem("candy");
+                                        }
 
-                                    else
-                                        path = "../Resources/Dialogs/TeodorAfter.txt";
+                                    }
+                                    else if (thisPictureBox.Name == "Locked_door1")
+                                    {
+                                        if (protagonist.Items.FindItem("key") == null)
+                                        {
+                                            path = "../Resources/Dialogs/lockedDoor.txt";
+                                        }
+                                        else
+                                        {
+                                            path = "../Resources/Dialogs/openDoor.txt";
+                                            thisPictureBox.Dispose();
+                                        }
+                                    }
+                                    else if (thisPictureBox.Name == "locked_door2")
+                                    {
+                                        if (protagonist.Items.FindItem("crystal") == null || protagonist.Items.FindItem("crystal").amount <= 2)
+                                        {
+                                            path = "../Resources/Dialogs/lockedDoor2.txt";
+                                        }
+                                        else
+                                        {
+                                            path = "../Resources/Dialogs/openDoor2.txt";
+                                            thisPictureBox.Dispose();
+                                        }
+                                    }
+                                    else if (thisPictureBox.Name == "doorlvl1_3" || thisPictureBox.Name == "doorlvl2_4" || thisPictureBox.Name == "doorlvl3_2")
+                                    {
+                                        path = "../Resources/Dialogs/lockedDoor3.txt";
+                                    }
+                                }
                                 //przekazanie path do funckji wczytujacej dialogi
                                 StreamReader sr = new StreamReader(path);
-                                LoadDialog(sr);
+                                LoadDialog(sr,SprName);
                                 sr.Close();
                             }
                         }
@@ -388,9 +400,7 @@ namespace Game
             bool readAll = false;
             //Animacja Tekstu
             string ln2 = String.Empty;
-
-            System.Media.SoundPlayer player = new System.Media.SoundPlayer("../Resources/Sounds/voice.wav"); // dodaje dzwięk przy dialogu
-            player.Play();
+            string sound = String.Empty;
 
             for (int i = 0; i < ln.Length; i++)
             {
@@ -398,6 +408,13 @@ namespace Game
 
                 ln2 = ln2.Insert(ln2.Length, ln[i].ToString());
                 lblDialog.Text = ln2;
+
+                Random number = new Random();
+                int nr=number.Next(20);
+                sound = "../Resources/Sounds/"+(nr).ToString()+".wav";
+                System.Media.SoundPlayer player = new System.Media.SoundPlayer(sound);
+                player.Play();
+
                 Application.DoEvents();
                 System.Threading.Thread.Sleep(50);
                 if (cont) //przewinięcie
@@ -414,12 +431,17 @@ namespace Game
         }
 
         //pokazywanie panelu z dialogami, przejscie do funkcji czytajacej linie z pliku i zamkniecie okna
-        private void LoadDialog(StreamReader sr)
+        private void LoadDialog(StreamReader sr,string name)
         {
-            pnlText.BringToFront();
             pnlText.Visible = true;
             lblDialog.Font = new Font(pfc.Families[0], 16);
             string ln = String.Empty;
+
+            name = "PB" + name;
+            var pictureBox = this.Controls.Find(name, true).FirstOrDefault() as PictureBox;
+            if (name != "PBitem")
+                pictureBox.BringToFront();
+            pnlText.BringToFront();
 
             reading = true;
             while ((ln = sr.ReadLine()) != null)
@@ -434,6 +456,8 @@ namespace Game
                 cont = false;
             }
 
+            if (name != "PBitem")
+                pictureBox.SendToBack();
             lblDialog.Text = "";
             pnlText.Visible = false;
             reading = false;
@@ -450,7 +474,7 @@ namespace Game
             for (int i = 0; i < protagonist.Items.ListSize(); i++)
             {
                 cur = protagonist.Items.ReturnItem(i);
-                path = ".. /Resources/Items/" + cur.name + ".jpg"; //nazwa itemu jest takze nazwa pliku
+                path = "../Resources/Items/" + cur.name + ".jpg"; //nazwa itemu jest takze nazwa pliku
                 switch (i) //dodac jesli zwiekszy sie liczba dostepnych itemow w grze
                 {
                     case 0:
