@@ -321,6 +321,8 @@ namespace Game
                                         else
                                         {
                                             path = "../Resources/Dialogs/Cthulhu.txt";
+                                            PBCthulhu.Image = Image.FromFile(@"Images\DACthulhu2.png");
+                                            Cthulhu.Image = Image.FromFile(@"Images\Cthulhu2.png");
                                             protagonist.Cthulhu = true;
                                             protagonist.Items.RemoveItem("candy");
                                         }
@@ -444,7 +446,10 @@ namespace Game
             name = "PB" + name;
             var pictureBox = this.Controls.Find(name, true).FirstOrDefault() as PictureBox;
             if (name != "PBitem")
+            {
+                pictureBox.Visible = true;
                 pictureBox.BringToFront();
+            }
             pnlText.BringToFront();
 
             reading = true;
@@ -461,7 +466,10 @@ namespace Game
             }
 
             if (name != "PBitem")
+            {
+                pictureBox.Visible = false;
                 pictureBox.SendToBack();
+            }
             lblDialog.Text = "";
             pnlText.Visible = false;
             reading = false;
@@ -490,12 +498,28 @@ namespace Game
                         item2Lbl.Text = (cur.amount).ToString();
                         break;
                     case 2:
-                        item2.LoadAsync(@path);
-                        item2Lbl.Text = (cur.amount).ToString();
+                        item3.LoadAsync(@path);
+                        item3Lbl.Text = (cur.amount).ToString();
                         break;
                     case 3:
                         item4.LoadAsync(@path);
                         item4Lbl.Text = (cur.amount).ToString();
+                        break;
+                    case 4:
+                        item5.LoadAsync(@path);
+                        item5Lbl.Text = (cur.amount).ToString();
+                        break;
+                    case 5:
+                        item6.LoadAsync(@path);
+                        item6Lbl.Text = (cur.amount).ToString();
+                        break;
+                    case 6:
+                        item7.LoadAsync(@path);
+                        item7Lbl.Text = (cur.amount).ToString();
+                        break;
+                    case 7:
+                        item8.LoadAsync(@path);
+                        item8Lbl.Text = (cur.amount).ToString();
                         break;
                 }
             }
@@ -548,6 +572,22 @@ namespace Game
                 using (StreamWriter sw = File.AppendText(path))
                     sw.WriteLine(protagonist.ReturnDoor(i));
             }
+
+            //depositowane obiekty (nie itemy)
+            using (StreamWriter sw = File.AppendText(path))
+                sw.WriteLine("-");
+            for (int i = 0; i < depositedItems.Count; i++)
+            {
+                using (StreamWriter sw = File.AppendText(path))
+                    sw.WriteLine(protagonist.ReturnDisposed(i));
+            }
+
+            //ilosc czarow
+            using (StreamWriter sw = File.AppendText(path))
+                sw.WriteLine("-");
+            if (protagonist.EarthLearned == true) using (StreamWriter sw = File.AppendText(path)) sw.WriteLine("E");
+            if (protagonist.FireLearned == true) using (StreamWriter sw = File.AppendText(path)) sw.WriteLine("F");
+            if (protagonist.IceLearned == true) using (StreamWriter sw = File.AppendText(path)) sw.WriteLine("I");
         }
 
         private void loadGame(StreamReader sr)
@@ -609,6 +649,33 @@ namespace Game
                 var pictureBox = this.Controls.Find(dane, true).FirstOrDefault() as PictureBox;
                 pictureBox.Tag = "door_open";
                 pictureBox.BackColor = Color.Green;
+            }
+
+            while ((dane = sr.ReadLine()) != null)
+            {
+                if (dane.Contains("-"))
+                    break;
+
+                protagonist.addDisposed(dane);
+                var pictureBox = this.Controls.Find(dane, true).FirstOrDefault() as PictureBox;
+                pictureBox.Dispose();
+            }
+
+            //odblokowywanie czarow
+            while ((dane = sr.ReadLine()) != null)
+            {
+                switch (dane)
+                {
+                    case "E":
+                        protagonist.EarthLearned = true;
+                        break;
+                    case "F":
+                        protagonist.FireLearned = true;
+                        break;
+                    case "I":
+                        protagonist.IceLearned = true;
+                        break;
+                }
             }
 
         }

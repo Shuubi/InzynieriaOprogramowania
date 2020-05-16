@@ -227,10 +227,15 @@
             this.walllvl3_1 = new System.Windows.Forms.PictureBox();
             this.Map = new System.Windows.Forms.Panel();
             this.PBGeorge = new System.Windows.Forms.PictureBox();
-            this.PBJackalope = new System.Windows.Forms.PictureBox();
+            this.PBJasper = new System.Windows.Forms.PictureBox();
             this.PBAltie = new System.Windows.Forms.PictureBox();
             this.PBDragon = new System.Windows.Forms.PictureBox();
             this.PBTeodor = new System.Windows.Forms.PictureBox();
+            this.item7 = new System.Windows.Forms.PictureBox();
+            this.item8 = new System.Windows.Forms.PictureBox();
+            this.PBCthulhu = new System.Windows.Forms.PictureBox();
+            this.item7Lbl = new System.Windows.Forms.Label();
+            this.item8Lbl = new System.Windows.Forms.Label();
             this.pnlText.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.wall16)).BeginInit();
             this.pnlDialog.SuspendLayout();
@@ -415,10 +420,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.walllvl3_1)).BeginInit();
             this.Map.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBGeorge)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PBJackalope)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBJasper)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBAltie)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBDragon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBTeodor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBCthulhu)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -478,6 +486,10 @@
             // pnlInv
             // 
             this.pnlInv.BackColor = System.Drawing.Color.Black;
+            this.pnlInv.Controls.Add(this.item8Lbl);
+            this.pnlInv.Controls.Add(this.item7Lbl);
+            this.pnlInv.Controls.Add(this.item8);
+            this.pnlInv.Controls.Add(this.item7);
             this.pnlInv.Controls.Add(this.invCursor);
             this.pnlInv.Controls.Add(this.item6Lbl);
             this.pnlInv.Controls.Add(this.item6);
@@ -2435,7 +2447,7 @@
             // Cthulhu
             // 
             this.Cthulhu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Cthulhu.BackgroundImage = global::Game.Properties.Resources.cthulhu;
+            this.Cthulhu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Cthulhu.BackgroundImage")));
             this.Cthulhu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Cthulhu.InitialImage = null;
             this.Cthulhu.Location = new System.Drawing.Point(1221, 856);
@@ -2831,55 +2843,115 @@
             this.PBGeorge.BackColor = System.Drawing.Color.Transparent;
             this.PBGeorge.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PBGeorge.BackgroundImage")));
             this.PBGeorge.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.PBGeorge.Location = new System.Drawing.Point(0, 22);
+            this.PBGeorge.Image = ((System.Drawing.Image)(resources.GetObject("PBGeorge.Image")));
+            this.PBGeorge.Location = new System.Drawing.Point(0, 0);
             this.PBGeorge.Name = "PBGeorge";
-            this.PBGeorge.Size = new System.Drawing.Size(1264, 585);
+            this.PBGeorge.Size = new System.Drawing.Size(1264, 607);
             this.PBGeorge.TabIndex = 8;
             this.PBGeorge.TabStop = false;
+            this.PBGeorge.Visible = false;
             // 
-            // PBJackalope
+            // PBJasper
             // 
-            this.PBJackalope.BackColor = System.Drawing.Color.Transparent;
-            this.PBJackalope.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PBJackalope.BackgroundImage")));
-            this.PBJackalope.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.PBJackalope.Location = new System.Drawing.Point(3, 22);
-            this.PBJackalope.Name = "PBJackalope";
-            this.PBJackalope.Size = new System.Drawing.Size(1258, 585);
-            this.PBJackalope.TabIndex = 10;
-            this.PBJackalope.TabStop = false;
+            this.PBJasper.BackColor = System.Drawing.Color.Transparent;
+            this.PBJasper.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PBJasper.BackgroundImage")));
+            this.PBJasper.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.PBJasper.Image = ((System.Drawing.Image)(resources.GetObject("PBJasper.Image")));
+            this.PBJasper.Location = new System.Drawing.Point(0, 0);
+            this.PBJasper.Name = "PBJasper";
+            this.PBJasper.Size = new System.Drawing.Size(1264, 607);
+            this.PBJasper.TabIndex = 10;
+            this.PBJasper.TabStop = false;
+            this.PBJasper.Visible = false;
             // 
             // PBAltie
             // 
             this.PBAltie.BackColor = System.Drawing.Color.Transparent;
             this.PBAltie.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PBAltie.BackgroundImage")));
             this.PBAltie.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.PBAltie.Location = new System.Drawing.Point(0, 22);
+            this.PBAltie.Image = ((System.Drawing.Image)(resources.GetObject("PBAltie.Image")));
+            this.PBAltie.Location = new System.Drawing.Point(0, 0);
             this.PBAltie.Name = "PBAltie";
-            this.PBAltie.Size = new System.Drawing.Size(1264, 585);
+            this.PBAltie.Size = new System.Drawing.Size(1264, 607);
             this.PBAltie.TabIndex = 11;
             this.PBAltie.TabStop = false;
+            this.PBAltie.Visible = false;
             // 
             // PBDragon
             // 
             this.PBDragon.BackColor = System.Drawing.Color.Transparent;
             this.PBDragon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PBDragon.BackgroundImage")));
             this.PBDragon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.PBDragon.Location = new System.Drawing.Point(0, 22);
+            this.PBDragon.Image = ((System.Drawing.Image)(resources.GetObject("PBDragon.Image")));
+            this.PBDragon.Location = new System.Drawing.Point(0, 0);
             this.PBDragon.Name = "PBDragon";
-            this.PBDragon.Size = new System.Drawing.Size(1264, 585);
+            this.PBDragon.Size = new System.Drawing.Size(1264, 607);
             this.PBDragon.TabIndex = 12;
             this.PBDragon.TabStop = false;
+            this.PBDragon.Visible = false;
             // 
             // PBTeodor
             // 
             this.PBTeodor.BackColor = System.Drawing.Color.Transparent;
             this.PBTeodor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PBTeodor.BackgroundImage")));
             this.PBTeodor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.PBTeodor.Location = new System.Drawing.Point(12, 22);
+            this.PBTeodor.Location = new System.Drawing.Point(0, 0);
             this.PBTeodor.Name = "PBTeodor";
-            this.PBTeodor.Size = new System.Drawing.Size(1240, 585);
+            this.PBTeodor.Size = new System.Drawing.Size(1264, 607);
             this.PBTeodor.TabIndex = 10;
             this.PBTeodor.TabStop = false;
+            this.PBTeodor.Visible = false;
+            // 
+            // item7
+            // 
+            this.item7.Location = new System.Drawing.Point(693, 22);
+            this.item7.Name = "item7";
+            this.item7.Size = new System.Drawing.Size(65, 65);
+            this.item7.TabIndex = 13;
+            this.item7.TabStop = false;
+            // 
+            // item8
+            // 
+            this.item8.Location = new System.Drawing.Point(788, 22);
+            this.item8.Name = "item8";
+            this.item8.Size = new System.Drawing.Size(65, 65);
+            this.item8.TabIndex = 14;
+            this.item8.TabStop = false;
+            // 
+            // PBCthulhu
+            // 
+            this.PBCthulhu.BackColor = System.Drawing.Color.Transparent;
+            this.PBCthulhu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PBCthulhu.BackgroundImage")));
+            this.PBCthulhu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.PBCthulhu.Image = ((System.Drawing.Image)(resources.GetObject("PBCthulhu.Image")));
+            this.PBCthulhu.Location = new System.Drawing.Point(0, 0);
+            this.PBCthulhu.Name = "PBCthulhu";
+            this.PBCthulhu.Size = new System.Drawing.Size(1264, 607);
+            this.PBCthulhu.TabIndex = 13;
+            this.PBCthulhu.TabStop = false;
+            this.PBCthulhu.Visible = false;
+            // 
+            // item7Lbl
+            // 
+            this.item7Lbl.AutoSize = true;
+            this.item7Lbl.BackColor = System.Drawing.Color.Transparent;
+            this.item7Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.item7Lbl.ForeColor = System.Drawing.Color.White;
+            this.item7Lbl.Location = new System.Drawing.Point(738, 63);
+            this.item7Lbl.Name = "item7Lbl";
+            this.item7Lbl.Size = new System.Drawing.Size(0, 24);
+            this.item7Lbl.TabIndex = 15;
+            // 
+            // item8Lbl
+            // 
+            this.item8Lbl.AutoSize = true;
+            this.item8Lbl.BackColor = System.Drawing.Color.Transparent;
+            this.item8Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.item8Lbl.ForeColor = System.Drawing.Color.White;
+            this.item8Lbl.Location = new System.Drawing.Point(833, 63);
+            this.item8Lbl.Name = "item8Lbl";
+            this.item8Lbl.Size = new System.Drawing.Size(0, 24);
+            this.item8Lbl.TabIndex = 16;
             // 
             // Game
             // 
@@ -2895,9 +2967,10 @@
             this.Controls.Add(this.pnlPause);
             this.Controls.Add(this.PBGeorge);
             this.Controls.Add(this.PBAltie);
-            this.Controls.Add(this.PBJackalope);
+            this.Controls.Add(this.PBJasper);
             this.Controls.Add(this.PBDragon);
             this.Controls.Add(this.PBTeodor);
+            this.Controls.Add(this.PBCthulhu);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MinimizeBox = false;
@@ -3091,10 +3164,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.walllvl3_1)).EndInit();
             this.Map.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PBGeorge)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PBJackalope)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBJasper)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBAltie)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBDragon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBTeodor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBCthulhu)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3297,9 +3373,14 @@
         private System.Windows.Forms.PictureBox walllvl3_1;
         private System.Windows.Forms.Panel Map;
         private System.Windows.Forms.PictureBox PBGeorge;
-        private System.Windows.Forms.PictureBox PBJackalope;
+        private System.Windows.Forms.PictureBox PBJasper;
         private System.Windows.Forms.PictureBox PBAltie;
         private System.Windows.Forms.PictureBox PBDragon;
         private System.Windows.Forms.PictureBox PBTeodor;
+        private System.Windows.Forms.PictureBox item8;
+        private System.Windows.Forms.PictureBox item7;
+        private System.Windows.Forms.PictureBox PBCthulhu;
+        private System.Windows.Forms.Label item8Lbl;
+        private System.Windows.Forms.Label item7Lbl;
     }
 }

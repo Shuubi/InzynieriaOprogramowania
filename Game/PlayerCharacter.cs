@@ -59,6 +59,20 @@ namespace Game
             return openedDoors[i];
         }
 
+        private List<string> disposed = new List<string>();
+        public void addDisposed(string name)
+        {
+            disposed.Add(name);
+        }
+        public int DisposedListSize()
+        {
+            return disposed.Count;
+        }
+        public string ReturnDisposed(int i)
+        {
+            return disposed[i];
+        }
+
         public PlayerCharacter(Control player, Control playerspells, Control map)
         {
             Player = player;
@@ -271,6 +285,7 @@ namespace Game
                     {
                         if (f.Bounds.IntersectsWith(x.Bounds) && (x.Tag == "wall" || x.Tag == "door_closed"))
                         {
+                            disposed.Add(f.Name);
                             f.Dispose();
                         }
                         if (f.Bounds.IntersectsWith(x.Bounds) && x.Tag == "flammable_object")
@@ -323,6 +338,7 @@ namespace Game
                     {
                         if (f.Bounds.IntersectsWith(x.Bounds) && (x.Tag == "wall" || x.Tag == "door_closed"))
                         {
+                            disposed.Add(f.Name);
                             f.Dispose();
                         }
                         if (f.Bounds.IntersectsWith(x.Bounds) && (x.Tag == "freezable_object"))
