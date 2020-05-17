@@ -37,6 +37,10 @@
             this.pnlDialog = new System.Windows.Forms.Panel();
             this.lblDialog = new System.Windows.Forms.Label();
             this.pnlInv = new System.Windows.Forms.Panel();
+            this.item8Lbl = new System.Windows.Forms.Label();
+            this.item7Lbl = new System.Windows.Forms.Label();
+            this.item8 = new System.Windows.Forms.PictureBox();
+            this.item7 = new System.Windows.Forms.PictureBox();
             this.invCursor = new System.Windows.Forms.PictureBox();
             this.item6Lbl = new System.Windows.Forms.Label();
             this.item6 = new System.Windows.Forms.PictureBox();
@@ -227,19 +231,17 @@
             this.walllvl3_1 = new System.Windows.Forms.PictureBox();
             this.Map = new System.Windows.Forms.Panel();
             this.PBGeorge = new System.Windows.Forms.PictureBox();
-            this.PBJasper = new System.Windows.Forms.PictureBox();
+            this.PBJackalope = new System.Windows.Forms.PictureBox();
             this.PBAltie = new System.Windows.Forms.PictureBox();
             this.PBDragon = new System.Windows.Forms.PictureBox();
             this.PBTeodor = new System.Windows.Forms.PictureBox();
-            this.item7 = new System.Windows.Forms.PictureBox();
-            this.item8 = new System.Windows.Forms.PictureBox();
             this.PBCthulhu = new System.Windows.Forms.PictureBox();
-            this.item7Lbl = new System.Windows.Forms.Label();
-            this.item8Lbl = new System.Windows.Forms.Label();
             this.pnlText.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.wall16)).BeginInit();
             this.pnlDialog.SuspendLayout();
             this.pnlInv.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.item8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.invCursor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.item6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.item5)).BeginInit();
@@ -420,12 +422,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.walllvl3_1)).BeginInit();
             this.Map.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBGeorge)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PBJasper)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBJackalope)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBAltie)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBDragon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBTeodor)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.item7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.item8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBCthulhu)).BeginInit();
             this.SuspendLayout();
             // 
@@ -480,7 +480,7 @@
             this.lblDialog.ForeColor = System.Drawing.SystemColors.Control;
             this.lblDialog.Location = new System.Drawing.Point(4, 4);
             this.lblDialog.Name = "lblDialog";
-            this.lblDialog.Size = new System.Drawing.Size(0, 23);
+            this.lblDialog.Size = new System.Drawing.Size(0, 29);
             this.lblDialog.TabIndex = 0;
             // 
             // pnlInv
@@ -510,6 +510,44 @@
             this.pnlInv.TabIndex = 5;
             this.pnlInv.Visible = false;
             // 
+            // item8Lbl
+            // 
+            this.item8Lbl.AutoSize = true;
+            this.item8Lbl.BackColor = System.Drawing.Color.Transparent;
+            this.item8Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.item8Lbl.ForeColor = System.Drawing.Color.White;
+            this.item8Lbl.Location = new System.Drawing.Point(833, 63);
+            this.item8Lbl.Name = "item8Lbl";
+            this.item8Lbl.Size = new System.Drawing.Size(0, 29);
+            this.item8Lbl.TabIndex = 16;
+            // 
+            // item7Lbl
+            // 
+            this.item7Lbl.AutoSize = true;
+            this.item7Lbl.BackColor = System.Drawing.Color.Transparent;
+            this.item7Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.item7Lbl.ForeColor = System.Drawing.Color.White;
+            this.item7Lbl.Location = new System.Drawing.Point(738, 63);
+            this.item7Lbl.Name = "item7Lbl";
+            this.item7Lbl.Size = new System.Drawing.Size(0, 29);
+            this.item7Lbl.TabIndex = 15;
+            // 
+            // item8
+            // 
+            this.item8.Location = new System.Drawing.Point(788, 22);
+            this.item8.Name = "item8";
+            this.item8.Size = new System.Drawing.Size(65, 65);
+            this.item8.TabIndex = 14;
+            this.item8.TabStop = false;
+            // 
+            // item7
+            // 
+            this.item7.Location = new System.Drawing.Point(693, 22);
+            this.item7.Name = "item7";
+            this.item7.Size = new System.Drawing.Size(65, 65);
+            this.item7.TabIndex = 13;
+            this.item7.TabStop = false;
+            // 
             // invCursor
             // 
             this.invCursor.BackColor = System.Drawing.Color.White;
@@ -529,7 +567,7 @@
             this.item6Lbl.ForeColor = System.Drawing.Color.White;
             this.item6Lbl.Location = new System.Drawing.Point(643, 63);
             this.item6Lbl.Name = "item6Lbl";
-            this.item6Lbl.Size = new System.Drawing.Size(0, 24);
+            this.item6Lbl.Size = new System.Drawing.Size(0, 29);
             this.item6Lbl.TabIndex = 11;
             // 
             // item6
@@ -548,7 +586,7 @@
             this.item5Lbl.ForeColor = System.Drawing.Color.White;
             this.item5Lbl.Location = new System.Drawing.Point(548, 63);
             this.item5Lbl.Name = "item5Lbl";
-            this.item5Lbl.Size = new System.Drawing.Size(0, 24);
+            this.item5Lbl.Size = new System.Drawing.Size(0, 29);
             this.item5Lbl.TabIndex = 9;
             // 
             // item5
@@ -567,7 +605,7 @@
             this.item4Lbl.ForeColor = System.Drawing.Color.White;
             this.item4Lbl.Location = new System.Drawing.Point(453, 63);
             this.item4Lbl.Name = "item4Lbl";
-            this.item4Lbl.Size = new System.Drawing.Size(0, 24);
+            this.item4Lbl.Size = new System.Drawing.Size(0, 29);
             this.item4Lbl.TabIndex = 7;
             // 
             // item3Lbl
@@ -578,7 +616,7 @@
             this.item3Lbl.ForeColor = System.Drawing.Color.White;
             this.item3Lbl.Location = new System.Drawing.Point(358, 63);
             this.item3Lbl.Name = "item3Lbl";
-            this.item3Lbl.Size = new System.Drawing.Size(0, 24);
+            this.item3Lbl.Size = new System.Drawing.Size(0, 29);
             this.item3Lbl.TabIndex = 6;
             // 
             // item2Lbl
@@ -589,7 +627,7 @@
             this.item2Lbl.ForeColor = System.Drawing.Color.White;
             this.item2Lbl.Location = new System.Drawing.Point(263, 63);
             this.item2Lbl.Name = "item2Lbl";
-            this.item2Lbl.Size = new System.Drawing.Size(0, 24);
+            this.item2Lbl.Size = new System.Drawing.Size(0, 29);
             this.item2Lbl.TabIndex = 5;
             // 
             // item1Lbl
@@ -600,7 +638,7 @@
             this.item1Lbl.ForeColor = System.Drawing.Color.White;
             this.item1Lbl.Location = new System.Drawing.Point(168, 63);
             this.item1Lbl.Name = "item1Lbl";
-            this.item1Lbl.Size = new System.Drawing.Size(0, 24);
+            this.item1Lbl.Size = new System.Drawing.Size(0, 29);
             this.item1Lbl.TabIndex = 4;
             // 
             // item4
@@ -2851,18 +2889,18 @@
             this.PBGeorge.TabStop = false;
             this.PBGeorge.Visible = false;
             // 
-            // PBJasper
+            // PBJackalope
             // 
-            this.PBJasper.BackColor = System.Drawing.Color.Transparent;
-            this.PBJasper.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PBJasper.BackgroundImage")));
-            this.PBJasper.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.PBJasper.Image = ((System.Drawing.Image)(resources.GetObject("PBJasper.Image")));
-            this.PBJasper.Location = new System.Drawing.Point(0, 0);
-            this.PBJasper.Name = "PBJasper";
-            this.PBJasper.Size = new System.Drawing.Size(1264, 607);
-            this.PBJasper.TabIndex = 10;
-            this.PBJasper.TabStop = false;
-            this.PBJasper.Visible = false;
+            this.PBJackalope.BackColor = System.Drawing.Color.Transparent;
+            this.PBJackalope.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PBJackalope.BackgroundImage")));
+            this.PBJackalope.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.PBJackalope.Image = ((System.Drawing.Image)(resources.GetObject("PBJackalope.Image")));
+            this.PBJackalope.Location = new System.Drawing.Point(0, 0);
+            this.PBJackalope.Name = "PBJackalope";
+            this.PBJackalope.Size = new System.Drawing.Size(1264, 607);
+            this.PBJackalope.TabIndex = 10;
+            this.PBJackalope.TabStop = false;
+            this.PBJackalope.Visible = false;
             // 
             // PBAltie
             // 
@@ -2902,22 +2940,6 @@
             this.PBTeodor.TabStop = false;
             this.PBTeodor.Visible = false;
             // 
-            // item7
-            // 
-            this.item7.Location = new System.Drawing.Point(693, 22);
-            this.item7.Name = "item7";
-            this.item7.Size = new System.Drawing.Size(65, 65);
-            this.item7.TabIndex = 13;
-            this.item7.TabStop = false;
-            // 
-            // item8
-            // 
-            this.item8.Location = new System.Drawing.Point(788, 22);
-            this.item8.Name = "item8";
-            this.item8.Size = new System.Drawing.Size(65, 65);
-            this.item8.TabIndex = 14;
-            this.item8.TabStop = false;
-            // 
             // PBCthulhu
             // 
             this.PBCthulhu.BackColor = System.Drawing.Color.Transparent;
@@ -2930,28 +2952,6 @@
             this.PBCthulhu.TabIndex = 13;
             this.PBCthulhu.TabStop = false;
             this.PBCthulhu.Visible = false;
-            // 
-            // item7Lbl
-            // 
-            this.item7Lbl.AutoSize = true;
-            this.item7Lbl.BackColor = System.Drawing.Color.Transparent;
-            this.item7Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.item7Lbl.ForeColor = System.Drawing.Color.White;
-            this.item7Lbl.Location = new System.Drawing.Point(738, 63);
-            this.item7Lbl.Name = "item7Lbl";
-            this.item7Lbl.Size = new System.Drawing.Size(0, 24);
-            this.item7Lbl.TabIndex = 15;
-            // 
-            // item8Lbl
-            // 
-            this.item8Lbl.AutoSize = true;
-            this.item8Lbl.BackColor = System.Drawing.Color.Transparent;
-            this.item8Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.item8Lbl.ForeColor = System.Drawing.Color.White;
-            this.item8Lbl.Location = new System.Drawing.Point(833, 63);
-            this.item8Lbl.Name = "item8Lbl";
-            this.item8Lbl.Size = new System.Drawing.Size(0, 24);
-            this.item8Lbl.TabIndex = 16;
             // 
             // Game
             // 
@@ -2967,7 +2967,7 @@
             this.Controls.Add(this.pnlPause);
             this.Controls.Add(this.PBGeorge);
             this.Controls.Add(this.PBAltie);
-            this.Controls.Add(this.PBJasper);
+            this.Controls.Add(this.PBJackalope);
             this.Controls.Add(this.PBDragon);
             this.Controls.Add(this.PBTeodor);
             this.Controls.Add(this.PBCthulhu);
@@ -2984,6 +2984,8 @@
             this.pnlDialog.PerformLayout();
             this.pnlInv.ResumeLayout(false);
             this.pnlInv.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.item8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.invCursor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.item6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.item5)).EndInit();
@@ -3164,12 +3166,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.walllvl3_1)).EndInit();
             this.Map.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PBGeorge)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PBJasper)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBJackalope)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBAltie)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBDragon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBTeodor)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.item7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.item8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBCthulhu)).EndInit();
             this.ResumeLayout(false);
 
@@ -3373,7 +3373,7 @@
         private System.Windows.Forms.PictureBox walllvl3_1;
         private System.Windows.Forms.Panel Map;
         private System.Windows.Forms.PictureBox PBGeorge;
-        private System.Windows.Forms.PictureBox PBJasper;
+        private System.Windows.Forms.PictureBox PBJackalope;
         private System.Windows.Forms.PictureBox PBAltie;
         private System.Windows.Forms.PictureBox PBDragon;
         private System.Windows.Forms.PictureBox PBTeodor;

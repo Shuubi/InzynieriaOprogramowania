@@ -2322,7 +2322,7 @@
         IAAAALf8w1/+f5vA6k3AOjunAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="PBJasper.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="PBJackalope.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABOwAAAJYCAYAAADRznncAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
         MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAACxMAAAsTAQCanBgAAI8hSURBVHhe7d2/rq3Nlpj1FlJH
@@ -2939,7 +2939,7 @@
         ojtbfdG+n4jW3gM9KxULdrrOn/2b/x8pJafz3Hn+5gAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="PBJasper.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="PBJackalope.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAA1IAAAKWCAYAAABDKKgRAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
         MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAADsQAAA7EAZUrDhsAAEq5SURBVHhe7f09rjXbuiXkUg9s
