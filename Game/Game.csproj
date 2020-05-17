@@ -121,5 +121,17 @@
   <ItemGroup>
     <None Include="bin\Debug\Images\chest.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\hub.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\hub-wall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\crystaldoor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\corridor.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
