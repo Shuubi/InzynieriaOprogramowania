@@ -2602,7 +2602,7 @@
             this.locked_door2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.locked_door2.TabIndex = 178;
             this.locked_door2.TabStop = false;
-            this.locked_door2.Tag = "NPC";
+            this.locked_door2.Tag = "DialogItem";
             // 
             // walllvl2_3
             // 

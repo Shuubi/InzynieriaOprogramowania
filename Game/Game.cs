@@ -523,6 +523,50 @@ namespace Game
                         break;
                 }
             }
+            if (protagonist.Items.ListSize() < 7)
+            {
+                for (int i = protagonist.Items.ListSize(); i < 7; i++)
+                {
+                    path = "../Resources/Items/black.jpg";
+                    switch (i) //dodac jesli zwiekszy sie liczba dostepnych itemow w grze
+                    {
+                        case 0:
+                            item1.LoadAsync(@path);
+                            item1Lbl.Text = "";
+                            break;
+                        case 1:
+                            item2.LoadAsync(@path);
+                            item2Lbl.Text = "";
+                            break;
+                        case 2:
+                            item3.LoadAsync(@path);
+                            item3Lbl.Text = "";
+                            break;
+                        case 3:
+                            item4.LoadAsync(@path);
+                            item4Lbl.Text = "";
+                            break;
+                        case 4:
+                            item5.LoadAsync(@path);
+                            item5Lbl.Text = "";
+                            break;
+                        case 5:
+                            item6.LoadAsync(@path);
+                            item6Lbl.Text = "";
+                            break;
+                        case 6:
+                            item7.LoadAsync(@path);
+                            item7Lbl.Text = "";
+                            break;
+                        case 7:
+                            item8.LoadAsync(@path);
+                            item8Lbl.Text = "";
+                            break;
+                    }
+                }
+            
+            }
+
         }
 
         //zapisywanie do pliku
