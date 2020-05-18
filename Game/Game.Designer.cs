@@ -236,6 +236,7 @@
             this.PBDragon = new System.Windows.Forms.PictureBox();
             this.PBTeodor = new System.Windows.Forms.PictureBox();
             this.PBCthulhu = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlText.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.wall16)).BeginInit();
             this.pnlDialog.SuspendLayout();
@@ -427,6 +428,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PBDragon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBTeodor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBCthulhu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -480,7 +482,7 @@
             this.lblDialog.ForeColor = System.Drawing.SystemColors.Control;
             this.lblDialog.Location = new System.Drawing.Point(4, 4);
             this.lblDialog.Name = "lblDialog";
-            this.lblDialog.Size = new System.Drawing.Size(0, 29);
+            this.lblDialog.Size = new System.Drawing.Size(0, 23);
             this.lblDialog.TabIndex = 0;
             // 
             // pnlInv
@@ -518,7 +520,7 @@
             this.item8Lbl.ForeColor = System.Drawing.Color.White;
             this.item8Lbl.Location = new System.Drawing.Point(833, 63);
             this.item8Lbl.Name = "item8Lbl";
-            this.item8Lbl.Size = new System.Drawing.Size(0, 29);
+            this.item8Lbl.Size = new System.Drawing.Size(0, 24);
             this.item8Lbl.TabIndex = 16;
             // 
             // item7Lbl
@@ -529,7 +531,7 @@
             this.item7Lbl.ForeColor = System.Drawing.Color.White;
             this.item7Lbl.Location = new System.Drawing.Point(738, 63);
             this.item7Lbl.Name = "item7Lbl";
-            this.item7Lbl.Size = new System.Drawing.Size(0, 29);
+            this.item7Lbl.Size = new System.Drawing.Size(0, 24);
             this.item7Lbl.TabIndex = 15;
             // 
             // item8
@@ -567,7 +569,7 @@
             this.item6Lbl.ForeColor = System.Drawing.Color.White;
             this.item6Lbl.Location = new System.Drawing.Point(643, 63);
             this.item6Lbl.Name = "item6Lbl";
-            this.item6Lbl.Size = new System.Drawing.Size(0, 29);
+            this.item6Lbl.Size = new System.Drawing.Size(0, 24);
             this.item6Lbl.TabIndex = 11;
             // 
             // item6
@@ -586,7 +588,7 @@
             this.item5Lbl.ForeColor = System.Drawing.Color.White;
             this.item5Lbl.Location = new System.Drawing.Point(548, 63);
             this.item5Lbl.Name = "item5Lbl";
-            this.item5Lbl.Size = new System.Drawing.Size(0, 29);
+            this.item5Lbl.Size = new System.Drawing.Size(0, 24);
             this.item5Lbl.TabIndex = 9;
             // 
             // item5
@@ -605,7 +607,7 @@
             this.item4Lbl.ForeColor = System.Drawing.Color.White;
             this.item4Lbl.Location = new System.Drawing.Point(453, 63);
             this.item4Lbl.Name = "item4Lbl";
-            this.item4Lbl.Size = new System.Drawing.Size(0, 29);
+            this.item4Lbl.Size = new System.Drawing.Size(0, 24);
             this.item4Lbl.TabIndex = 7;
             // 
             // item3Lbl
@@ -616,7 +618,7 @@
             this.item3Lbl.ForeColor = System.Drawing.Color.White;
             this.item3Lbl.Location = new System.Drawing.Point(358, 63);
             this.item3Lbl.Name = "item3Lbl";
-            this.item3Lbl.Size = new System.Drawing.Size(0, 29);
+            this.item3Lbl.Size = new System.Drawing.Size(0, 24);
             this.item3Lbl.TabIndex = 6;
             // 
             // item2Lbl
@@ -627,7 +629,7 @@
             this.item2Lbl.ForeColor = System.Drawing.Color.White;
             this.item2Lbl.Location = new System.Drawing.Point(263, 63);
             this.item2Lbl.Name = "item2Lbl";
-            this.item2Lbl.Size = new System.Drawing.Size(0, 29);
+            this.item2Lbl.Size = new System.Drawing.Size(0, 24);
             this.item2Lbl.TabIndex = 5;
             // 
             // item1Lbl
@@ -638,7 +640,7 @@
             this.item1Lbl.ForeColor = System.Drawing.Color.White;
             this.item1Lbl.Location = new System.Drawing.Point(168, 63);
             this.item1Lbl.Name = "item1Lbl";
-            this.item1Lbl.Size = new System.Drawing.Size(0, 29);
+            this.item1Lbl.Size = new System.Drawing.Size(0, 24);
             this.item1Lbl.TabIndex = 4;
             // 
             // item4
@@ -677,6 +679,7 @@
             // 
             this.pnlStart.Controls.Add(this.btnLoad);
             this.pnlStart.Controls.Add(this.btnStart);
+            this.pnlStart.Controls.Add(this.pictureBox1);
             this.pnlStart.Location = new System.Drawing.Point(0, 0);
             this.pnlStart.Name = "pnlStart";
             this.pnlStart.Size = new System.Drawing.Size(1280, 720);
@@ -684,7 +687,7 @@
             // 
             // btnLoad
             // 
-            this.btnLoad.Location = new System.Drawing.Point(503, 403);
+            this.btnLoad.Location = new System.Drawing.Point(503, 467);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(234, 67);
             this.btnLoad.TabIndex = 1;
@@ -695,7 +698,7 @@
             // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(503, 316);
+            this.btnStart.Location = new System.Drawing.Point(503, 370);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(234, 67);
             this.btnStart.TabIndex = 0;
@@ -908,7 +911,7 @@
             this.Map.Controls.Add(this.doorlvl1_4cover2);
             this.Map.Controls.Add(this.Hub);
             this.Map.Controls.Add(this.locked_door2cover);
-            this.Map.Location = new System.Drawing.Point(0, 0);
+            this.Map.Location = new System.Drawing.Point(1000, 1000);
             this.Map.Margin = new System.Windows.Forms.Padding(2);
             this.Map.Name = "Map";
             this.Map.Size = new System.Drawing.Size(1778, 1926);
@@ -2941,6 +2944,7 @@
             this.PBTeodor.BackColor = System.Drawing.Color.Transparent;
             this.PBTeodor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PBTeodor.BackgroundImage")));
             this.PBTeodor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.PBTeodor.Image = ((System.Drawing.Image)(resources.GetObject("PBTeodor.Image")));
             this.PBTeodor.Location = new System.Drawing.Point(0, 0);
             this.PBTeodor.Name = "PBTeodor";
             this.PBTeodor.Size = new System.Drawing.Size(1264, 607);
@@ -2960,6 +2964,15 @@
             this.PBCthulhu.TabIndex = 13;
             this.PBCthulhu.TabStop = false;
             this.PBCthulhu.Visible = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1264, 681);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // Game
             // 
@@ -3179,6 +3192,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PBDragon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBTeodor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBCthulhu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3390,5 +3404,6 @@
         private System.Windows.Forms.Label item8Lbl;
         private System.Windows.Forms.Label item7Lbl;
         private System.Windows.Forms.PictureBox locked_door2cover;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -95,3 +95,8 @@ C:\Users\Shuubi\Documents\GitHub\InzynieriaOprogramowania\Game\obj\Debug\AxInter
 C:\Users\Shuubi\Documents\GitHub\InzynieriaOprogramowania\Game\obj\Debug\Game.csproj.ResolveComReference.cache
 C:\Users\Shuubi\Documents\GitHub\InzynieriaOprogramowania\Game\bin\Debug\Interop.WMPLib.dll
 C:\Users\Shuubi\Documents\GitHub\InzynieriaOprogramowania\Game\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Julia\Documents\GitHub\InzynieriaOprogramowania\Game\bin\Debug\Interop.WMPLib.dll
+C:\Users\Julia\Documents\GitHub\InzynieriaOprogramowania\Game\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Julia\Documents\GitHub\InzynieriaOprogramowania\Game\obj\Debug\Interop.WMPLib.dll
+C:\Users\Julia\Documents\GitHub\InzynieriaOprogramowania\Game\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Julia\Documents\GitHub\InzynieriaOprogramowania\Game\obj\Debug\Game.csproj.ResolveComReference.cache
