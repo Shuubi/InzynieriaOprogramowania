@@ -1,2 +1,16 @@
+stick;1
+key;1
 -
+carrot2
+stick1
+carrot1
+carrot3
 -
+doorlvl11
+doorlvl1_31
+doorlvl1_41
+doorlvl1_21
+-
+J
+-
+E

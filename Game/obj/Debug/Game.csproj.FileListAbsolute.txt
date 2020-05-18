@@ -85,3 +85,8 @@ C:\Users\Weronika\Documents\GitHub\InzynieriaOprogramowania\Game\bin\Debug\AxInt
 C:\Users\Weronika\Documents\GitHub\InzynieriaOprogramowania\Game\obj\Debug\Interop.WMPLib.dll
 C:\Users\Weronika\Documents\GitHub\InzynieriaOprogramowania\Game\obj\Debug\AxInterop.WMPLib.dll
 C:\Users\Weronika\Documents\GitHub\InzynieriaOprogramowania\Game\obj\Debug\Game.csproj.ResolveComReference.cache
+C:\Users\Julia\Desktop\C#\InzynieriaOprogramowania-master\Game\bin\Debug\Interop.WMPLib.dll
+C:\Users\Julia\Desktop\C#\InzynieriaOprogramowania-master\Game\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Julia\Desktop\C#\InzynieriaOprogramowania-master\Game\obj\Debug\Interop.WMPLib.dll
+C:\Users\Julia\Desktop\C#\InzynieriaOprogramowania-master\Game\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Julia\Desktop\C#\InzynieriaOprogramowania-master\Game\obj\Debug\Game.csproj.ResolveComReference.cache
