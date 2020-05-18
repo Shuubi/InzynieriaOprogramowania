@@ -5,6 +5,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.IO; //czytnie plikow
 using System.Drawing.Text; //zmiana na wybrany font
+using WMPLib;
 
 namespace Game
 {
@@ -26,6 +27,8 @@ namespace Game
 
         PlayerCharacter protagonist;
 
+        WindowsMediaPlayer backgroundMusic = new WindowsMediaPlayer();
+
         public Game()
         {
             InitializeComponent();
@@ -35,6 +38,8 @@ namespace Game
             PlayerSpells.Visible = false;
             HideLevels();
             Player.BackColor = Color.Transparent;
+            backgroundMusic.URL = "music.wav";
+            backgroundMusic.settings.setMode("Loop", true);
         }
 
         protected override void OnLoad(EventArgs e)
@@ -135,7 +140,7 @@ namespace Game
                     Item cur = protagonist.Items.ReturnItem(curLoc);
                     path = "../Resources/Dialogs/" + cur.name + ".txt";
                     StreamReader sr = new StreamReader(path);
-                    LoadDialog(sr,name);
+                    LoadDialog(sr, name);
                     sr.Close();
                 }
             }
@@ -244,10 +249,12 @@ namespace Game
                             pickedItem = pickedItem.Remove(pickedItem.Length - 1); //ostatni znak nazwy okresla numer itemu lub jego wlasciwosc dlatego trzeba go usunac na potrzeby inventory
                             protagonist.Items.InsertItem(pickedItem);
                             thisPictureBox.Dispose();
+                            System.Media.SoundPlayer sound = new System.Media.SoundPlayer("../Resources/Sounds/item.wav");
+                            sound.Play();
                         }
                         if (reading != true)
                         {
-                            if(thisPictureBoxTag.Equals("NPC")||thisPictureBoxTag.Equals("DialogItem"))
+                            if (thisPictureBoxTag.Equals("NPC") || thisPictureBoxTag.Equals("DialogItem"))
                             {
                                 //deklaracja na potrzeby spriteów
                                 string SprName = "item";
@@ -391,7 +398,7 @@ namespace Game
                                 }
                                 //przekazanie path do funckji wczytujacej dialogi
                                 StreamReader sr = new StreamReader(path);
-                                LoadDialog(sr,SprName);
+                                LoadDialog(sr, SprName);
                                 sr.Close();
                             }
                         }
@@ -416,8 +423,8 @@ namespace Game
                 lblDialog.Text = ln2;
 
                 Random number = new Random();
-                int nr=number.Next(20);
-                sound = "../Resources/Sounds/"+(nr).ToString()+".wav";
+                int nr = number.Next(20);
+                sound = "../Resources/Sounds/" + (nr).ToString() + ".wav";
                 System.Media.SoundPlayer player = new System.Media.SoundPlayer(sound);
                 player.Play();
 
@@ -437,7 +444,7 @@ namespace Game
         }
 
         //pokazywanie panelu z dialogami, przejscie do funkcji czytajacej linie z pliku i zamkniecie okna
-        private void LoadDialog(StreamReader sr,string name)
+        private void LoadDialog(StreamReader sr, string name)
         {
             pnlText.Visible = true;
             lblDialog.Font = new Font(pfc.Families[0], 16);
@@ -564,7 +571,7 @@ namespace Game
                             break;
                     }
                 }
-            
+
             }
 
         }
@@ -684,6 +691,7 @@ namespace Game
                 depositedItems.Add(dane);
                 var pictureBox = this.Controls.Find(dane, true).FirstOrDefault() as PictureBox;
                 pictureBox.Dispose();
+               
             }
 
             //otwieranie drzwi
@@ -771,25 +779,34 @@ namespace Game
 
         public void OpenDoorWithButton()
         {
+            System.Media.SoundPlayer sound = new System.Media.SoundPlayer("../Resources/Sounds/lock.wav");
+
             foreach (Control rock in Map.Controls)
             {
                 if (rock is PictureBox && rock.Name.ToString().Contains("rock"))
                 {
                     if (rock.Bounds.IntersectsWith(buttonlvl1.Bounds))
                     {
+                        sound.Play();
                         doorlvl1_3.BackgroundImage = null;
                         doorlvl1_3.Tag = "door_open";
+                        rock.Name = null;
                     }
                     if (rock.Bounds.IntersectsWith(buttonlvl2.Bounds))
                     {
+                        sound.Play();
                         doorlvl2_4.BackgroundImage = null;
                         doorlvl2_4.Tag = "door_open";
+                        rock.Name = null;
                     }
                     if (rock.Bounds.IntersectsWith(buttonlvl3.Bounds))
                     {
+                        sound.Play();
                         doorlvl3_2.BackgroundImage = null;
                         doorlvl3_2.Tag = "door_open";
+                        rock.Name = null;
                     }
+                  
                 }
             }
         }

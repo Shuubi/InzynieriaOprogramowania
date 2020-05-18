@@ -33,17 +33,27 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.pnlText = new System.Windows.Forms.Panel();
+            this.wall16 = new System.Windows.Forms.PictureBox();
             this.pnlDialog = new System.Windows.Forms.Panel();
             this.lblDialog = new System.Windows.Forms.Label();
             this.pnlInv = new System.Windows.Forms.Panel();
             this.item8Lbl = new System.Windows.Forms.Label();
             this.item7Lbl = new System.Windows.Forms.Label();
+            this.item8 = new System.Windows.Forms.PictureBox();
+            this.item7 = new System.Windows.Forms.PictureBox();
+            this.invCursor = new System.Windows.Forms.PictureBox();
             this.item6Lbl = new System.Windows.Forms.Label();
+            this.item6 = new System.Windows.Forms.PictureBox();
             this.item5Lbl = new System.Windows.Forms.Label();
+            this.item5 = new System.Windows.Forms.PictureBox();
             this.item4Lbl = new System.Windows.Forms.Label();
             this.item3Lbl = new System.Windows.Forms.Label();
             this.item2Lbl = new System.Windows.Forms.Label();
             this.item1Lbl = new System.Windows.Forms.Label();
+            this.item4 = new System.Windows.Forms.PictureBox();
+            this.item3 = new System.Windows.Forms.PictureBox();
+            this.item2 = new System.Windows.Forms.PictureBox();
+            this.item1 = new System.Windows.Forms.PictureBox();
             this.pnlStart = new System.Windows.Forms.Panel();
             this.btnLoad = new System.Windows.Forms.Button();
             this.btnStart = new System.Windows.Forms.Button();
@@ -221,16 +231,6 @@
             this.doorlvl1_4cover2 = new System.Windows.Forms.PictureBox();
             this.Hub = new System.Windows.Forms.PictureBox();
             this.locked_door2cover = new System.Windows.Forms.PictureBox();
-            this.wall16 = new System.Windows.Forms.PictureBox();
-            this.item8 = new System.Windows.Forms.PictureBox();
-            this.item7 = new System.Windows.Forms.PictureBox();
-            this.invCursor = new System.Windows.Forms.PictureBox();
-            this.item6 = new System.Windows.Forms.PictureBox();
-            this.item5 = new System.Windows.Forms.PictureBox();
-            this.item4 = new System.Windows.Forms.PictureBox();
-            this.item3 = new System.Windows.Forms.PictureBox();
-            this.item2 = new System.Windows.Forms.PictureBox();
-            this.item1 = new System.Windows.Forms.PictureBox();
             this.PBGeorge = new System.Windows.Forms.PictureBox();
             this.PBAltie = new System.Windows.Forms.PictureBox();
             this.PBJackalope = new System.Windows.Forms.PictureBox();
@@ -238,8 +238,18 @@
             this.PBTeodor = new System.Windows.Forms.PictureBox();
             this.PBCthulhu = new System.Windows.Forms.PictureBox();
             this.pnlText.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.wall16)).BeginInit();
             this.pnlDialog.SuspendLayout();
             this.pnlInv.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.item8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.invCursor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item1)).BeginInit();
             this.pnlStart.SuspendLayout();
             this.pnlPause.SuspendLayout();
             this.Map.SuspendLayout();
@@ -413,16 +423,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.doorlvl1_4cover2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Hub)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.locked_door2cover)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wall16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.item8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.item7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.invCursor)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.item6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.item5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.item4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.item3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.item2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.item1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBGeorge)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBAltie)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBJackalope)).BeginInit();
@@ -454,6 +454,16 @@
             this.pnlText.Size = new System.Drawing.Size(1264, 170);
             this.pnlText.TabIndex = 3;
             this.pnlText.Visible = false;
+            // 
+            // wall16
+            // 
+            this.wall16.Location = new System.Drawing.Point(0, 0);
+            this.wall16.Margin = new System.Windows.Forms.Padding(2);
+            this.wall16.Name = "wall16";
+            this.wall16.Size = new System.Drawing.Size(30, 504);
+            this.wall16.TabIndex = 1;
+            this.wall16.TabStop = false;
+            this.wall16.Tag = "wall";
             // 
             // pnlDialog
             // 
@@ -524,6 +534,33 @@
             this.item7Lbl.Size = new System.Drawing.Size(0, 24);
             this.item7Lbl.TabIndex = 15;
             // 
+            // item8
+            // 
+            this.item8.Location = new System.Drawing.Point(788, 22);
+            this.item8.Name = "item8";
+            this.item8.Size = new System.Drawing.Size(65, 65);
+            this.item8.TabIndex = 14;
+            this.item8.TabStop = false;
+            // 
+            // item7
+            // 
+            this.item7.Location = new System.Drawing.Point(693, 22);
+            this.item7.Name = "item7";
+            this.item7.Size = new System.Drawing.Size(65, 65);
+            this.item7.TabIndex = 13;
+            this.item7.TabStop = false;
+            // 
+            // invCursor
+            // 
+            this.invCursor.BackColor = System.Drawing.Color.White;
+            this.invCursor.Location = new System.Drawing.Point(142, 93);
+            this.invCursor.Name = "invCursor";
+            this.invCursor.Size = new System.Drawing.Size(30, 12);
+            this.invCursor.TabIndex = 12;
+            this.invCursor.TabStop = false;
+            this.invCursor.Tag = "0";
+            this.invCursor.Visible = false;
+            // 
             // item6Lbl
             // 
             this.item6Lbl.AutoSize = true;
@@ -535,6 +572,14 @@
             this.item6Lbl.Size = new System.Drawing.Size(0, 24);
             this.item6Lbl.TabIndex = 11;
             // 
+            // item6
+            // 
+            this.item6.Location = new System.Drawing.Point(598, 22);
+            this.item6.Name = "item6";
+            this.item6.Size = new System.Drawing.Size(65, 65);
+            this.item6.TabIndex = 10;
+            this.item6.TabStop = false;
+            // 
             // item5Lbl
             // 
             this.item5Lbl.AutoSize = true;
@@ -545,6 +590,14 @@
             this.item5Lbl.Name = "item5Lbl";
             this.item5Lbl.Size = new System.Drawing.Size(0, 24);
             this.item5Lbl.TabIndex = 9;
+            // 
+            // item5
+            // 
+            this.item5.Location = new System.Drawing.Point(503, 22);
+            this.item5.Name = "item5";
+            this.item5.Size = new System.Drawing.Size(65, 65);
+            this.item5.TabIndex = 8;
+            this.item5.TabStop = false;
             // 
             // item4Lbl
             // 
@@ -589,6 +642,38 @@
             this.item1Lbl.Name = "item1Lbl";
             this.item1Lbl.Size = new System.Drawing.Size(0, 24);
             this.item1Lbl.TabIndex = 4;
+            // 
+            // item4
+            // 
+            this.item4.Location = new System.Drawing.Point(408, 22);
+            this.item4.Name = "item4";
+            this.item4.Size = new System.Drawing.Size(65, 65);
+            this.item4.TabIndex = 3;
+            this.item4.TabStop = false;
+            // 
+            // item3
+            // 
+            this.item3.Location = new System.Drawing.Point(313, 22);
+            this.item3.Name = "item3";
+            this.item3.Size = new System.Drawing.Size(65, 65);
+            this.item3.TabIndex = 2;
+            this.item3.TabStop = false;
+            // 
+            // item2
+            // 
+            this.item2.Location = new System.Drawing.Point(218, 22);
+            this.item2.Name = "item2";
+            this.item2.Size = new System.Drawing.Size(65, 65);
+            this.item2.TabIndex = 1;
+            this.item2.TabStop = false;
+            // 
+            // item1
+            // 
+            this.item1.Location = new System.Drawing.Point(123, 22);
+            this.item1.Name = "item1";
+            this.item1.Size = new System.Drawing.Size(65, 65);
+            this.item1.TabIndex = 0;
+            this.item1.TabStop = false;
             // 
             // pnlStart
             // 
@@ -2814,91 +2899,6 @@
             this.locked_door2cover.TabStop = false;
             this.locked_door2cover.Tag = "cover";
             // 
-            // wall16
-            // 
-            this.wall16.Location = new System.Drawing.Point(0, 0);
-            this.wall16.Margin = new System.Windows.Forms.Padding(2);
-            this.wall16.Name = "wall16";
-            this.wall16.Size = new System.Drawing.Size(30, 504);
-            this.wall16.TabIndex = 1;
-            this.wall16.TabStop = false;
-            this.wall16.Tag = "wall";
-            // 
-            // item8
-            // 
-            this.item8.Location = new System.Drawing.Point(788, 22);
-            this.item8.Name = "item8";
-            this.item8.Size = new System.Drawing.Size(65, 65);
-            this.item8.TabIndex = 14;
-            this.item8.TabStop = false;
-            // 
-            // item7
-            // 
-            this.item7.Location = new System.Drawing.Point(693, 22);
-            this.item7.Name = "item7";
-            this.item7.Size = new System.Drawing.Size(65, 65);
-            this.item7.TabIndex = 13;
-            this.item7.TabStop = false;
-            // 
-            // invCursor
-            // 
-            this.invCursor.BackColor = System.Drawing.Color.White;
-            this.invCursor.Location = new System.Drawing.Point(142, 93);
-            this.invCursor.Name = "invCursor";
-            this.invCursor.Size = new System.Drawing.Size(30, 12);
-            this.invCursor.TabIndex = 12;
-            this.invCursor.TabStop = false;
-            this.invCursor.Tag = "0";
-            this.invCursor.Visible = false;
-            // 
-            // item6
-            // 
-            this.item6.Location = new System.Drawing.Point(598, 22);
-            this.item6.Name = "item6";
-            this.item6.Size = new System.Drawing.Size(65, 65);
-            this.item6.TabIndex = 10;
-            this.item6.TabStop = false;
-            // 
-            // item5
-            // 
-            this.item5.Location = new System.Drawing.Point(503, 22);
-            this.item5.Name = "item5";
-            this.item5.Size = new System.Drawing.Size(65, 65);
-            this.item5.TabIndex = 8;
-            this.item5.TabStop = false;
-            // 
-            // item4
-            // 
-            this.item4.Location = new System.Drawing.Point(408, 22);
-            this.item4.Name = "item4";
-            this.item4.Size = new System.Drawing.Size(65, 65);
-            this.item4.TabIndex = 3;
-            this.item4.TabStop = false;
-            // 
-            // item3
-            // 
-            this.item3.Location = new System.Drawing.Point(313, 22);
-            this.item3.Name = "item3";
-            this.item3.Size = new System.Drawing.Size(65, 65);
-            this.item3.TabIndex = 2;
-            this.item3.TabStop = false;
-            // 
-            // item2
-            // 
-            this.item2.Location = new System.Drawing.Point(218, 22);
-            this.item2.Name = "item2";
-            this.item2.Size = new System.Drawing.Size(65, 65);
-            this.item2.TabIndex = 1;
-            this.item2.TabStop = false;
-            // 
-            // item1
-            // 
-            this.item1.Location = new System.Drawing.Point(123, 22);
-            this.item1.Name = "item1";
-            this.item1.Size = new System.Drawing.Size(65, 65);
-            this.item1.TabIndex = 0;
-            this.item1.TabStop = false;
-            // 
             // PBGeorge
             // 
             this.PBGeorge.BackColor = System.Drawing.Color.Transparent;
@@ -3002,10 +3002,20 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyIsDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.KeyIsUp);
             this.pnlText.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.wall16)).EndInit();
             this.pnlDialog.ResumeLayout(false);
             this.pnlDialog.PerformLayout();
             this.pnlInv.ResumeLayout(false);
             this.pnlInv.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.item8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.invCursor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item1)).EndInit();
             this.pnlStart.ResumeLayout(false);
             this.pnlPause.ResumeLayout(false);
             this.Map.ResumeLayout(false);
@@ -3179,16 +3189,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.doorlvl1_4cover2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Hub)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.locked_door2cover)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wall16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.item8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.item7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.invCursor)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.item6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.item5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.item4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.item3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.item2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.item1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBGeorge)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBAltie)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBJackalope)).EndInit();

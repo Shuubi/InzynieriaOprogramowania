@@ -237,6 +237,8 @@ namespace Game
                     //jesli gracz dotyka drzwi i nacisnie spacje, to drzwi zmieniaja tag 
                     if (Player.Bounds.IntersectsWith(x.Bounds) && action)
                     {
+                        System.Media.SoundPlayer sound = new System.Media.SoundPlayer("../Resources/Sounds/lock.wav");
+                       sound.Play();
                         x.Tag = "door_open";
                         x.BackgroundImage = null;
                         openedDoors.Add(x.Name);
