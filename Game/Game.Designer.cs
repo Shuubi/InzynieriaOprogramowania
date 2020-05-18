@@ -196,7 +196,6 @@
             this.walllvl1_4 = new System.Windows.Forms.PictureBox();
             this.rock1 = new System.Windows.Forms.PictureBox();
             this.walllv1_3 = new System.Windows.Forms.PictureBox();
-            this.doorlvl1_1 = new System.Windows.Forms.PictureBox();
             this.walllvl1_2 = new System.Windows.Forms.PictureBox();
             this.walllvl1_1 = new System.Windows.Forms.PictureBox();
             this.wall5 = new System.Windows.Forms.PictureBox();
@@ -213,7 +212,7 @@
             this.doorlvl1_3cover2 = new System.Windows.Forms.PictureBox();
             this.doorlvl1_2cover = new System.Windows.Forms.PictureBox();
             this.doorlvl1_2cover2 = new System.Windows.Forms.PictureBox();
-            this.doorlvl1_1cover = new System.Windows.Forms.PictureBox();
+            this.Locked_door1cover = new System.Windows.Forms.PictureBox();
             this.doorlvl2cover = new System.Windows.Forms.PictureBox();
             this.doorlvl2_1cover = new System.Windows.Forms.PictureBox();
             this.doorlvl2_2cover = new System.Windows.Forms.PictureBox();
@@ -388,7 +387,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.walllvl1_4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rock1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.walllv1_3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.doorlvl1_1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.walllvl1_2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.walllvl1_1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall5)).BeginInit();
@@ -405,7 +403,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.doorlvl1_3cover2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doorlvl1_2cover)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doorlvl1_2cover2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.doorlvl1_1cover)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Locked_door1cover)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doorlvl2cover)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doorlvl2_1cover)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doorlvl2_2cover)).BeginInit();
@@ -482,7 +480,7 @@
             this.lblDialog.ForeColor = System.Drawing.SystemColors.Control;
             this.lblDialog.Location = new System.Drawing.Point(4, 4);
             this.lblDialog.Name = "lblDialog";
-            this.lblDialog.Size = new System.Drawing.Size(0, 23);
+            this.lblDialog.Size = new System.Drawing.Size(0, 29);
             this.lblDialog.TabIndex = 0;
             // 
             // pnlInv
@@ -520,7 +518,7 @@
             this.item8Lbl.ForeColor = System.Drawing.Color.White;
             this.item8Lbl.Location = new System.Drawing.Point(833, 63);
             this.item8Lbl.Name = "item8Lbl";
-            this.item8Lbl.Size = new System.Drawing.Size(0, 24);
+            this.item8Lbl.Size = new System.Drawing.Size(0, 29);
             this.item8Lbl.TabIndex = 16;
             // 
             // item7Lbl
@@ -531,7 +529,7 @@
             this.item7Lbl.ForeColor = System.Drawing.Color.White;
             this.item7Lbl.Location = new System.Drawing.Point(738, 63);
             this.item7Lbl.Name = "item7Lbl";
-            this.item7Lbl.Size = new System.Drawing.Size(0, 24);
+            this.item7Lbl.Size = new System.Drawing.Size(0, 29);
             this.item7Lbl.TabIndex = 15;
             // 
             // item8
@@ -569,7 +567,7 @@
             this.item6Lbl.ForeColor = System.Drawing.Color.White;
             this.item6Lbl.Location = new System.Drawing.Point(643, 63);
             this.item6Lbl.Name = "item6Lbl";
-            this.item6Lbl.Size = new System.Drawing.Size(0, 24);
+            this.item6Lbl.Size = new System.Drawing.Size(0, 29);
             this.item6Lbl.TabIndex = 11;
             // 
             // item6
@@ -588,7 +586,7 @@
             this.item5Lbl.ForeColor = System.Drawing.Color.White;
             this.item5Lbl.Location = new System.Drawing.Point(548, 63);
             this.item5Lbl.Name = "item5Lbl";
-            this.item5Lbl.Size = new System.Drawing.Size(0, 24);
+            this.item5Lbl.Size = new System.Drawing.Size(0, 29);
             this.item5Lbl.TabIndex = 9;
             // 
             // item5
@@ -607,7 +605,7 @@
             this.item4Lbl.ForeColor = System.Drawing.Color.White;
             this.item4Lbl.Location = new System.Drawing.Point(453, 63);
             this.item4Lbl.Name = "item4Lbl";
-            this.item4Lbl.Size = new System.Drawing.Size(0, 24);
+            this.item4Lbl.Size = new System.Drawing.Size(0, 29);
             this.item4Lbl.TabIndex = 7;
             // 
             // item3Lbl
@@ -618,7 +616,7 @@
             this.item3Lbl.ForeColor = System.Drawing.Color.White;
             this.item3Lbl.Location = new System.Drawing.Point(358, 63);
             this.item3Lbl.Name = "item3Lbl";
-            this.item3Lbl.Size = new System.Drawing.Size(0, 24);
+            this.item3Lbl.Size = new System.Drawing.Size(0, 29);
             this.item3Lbl.TabIndex = 6;
             // 
             // item2Lbl
@@ -629,7 +627,7 @@
             this.item2Lbl.ForeColor = System.Drawing.Color.White;
             this.item2Lbl.Location = new System.Drawing.Point(263, 63);
             this.item2Lbl.Name = "item2Lbl";
-            this.item2Lbl.Size = new System.Drawing.Size(0, 24);
+            this.item2Lbl.Size = new System.Drawing.Size(0, 29);
             this.item2Lbl.TabIndex = 5;
             // 
             // item1Lbl
@@ -640,7 +638,7 @@
             this.item1Lbl.ForeColor = System.Drawing.Color.White;
             this.item1Lbl.Location = new System.Drawing.Point(168, 63);
             this.item1Lbl.Name = "item1Lbl";
-            this.item1Lbl.Size = new System.Drawing.Size(0, 24);
+            this.item1Lbl.Size = new System.Drawing.Size(0, 29);
             this.item1Lbl.TabIndex = 4;
             // 
             // item4
@@ -876,7 +874,6 @@
             this.Map.Controls.Add(this.walllvl1_4);
             this.Map.Controls.Add(this.rock1);
             this.Map.Controls.Add(this.walllv1_3);
-            this.Map.Controls.Add(this.doorlvl1_1);
             this.Map.Controls.Add(this.walllvl1_2);
             this.Map.Controls.Add(this.walllvl1_1);
             this.Map.Controls.Add(this.wall5);
@@ -893,7 +890,7 @@
             this.Map.Controls.Add(this.doorlvl1_3cover2);
             this.Map.Controls.Add(this.doorlvl1_2cover);
             this.Map.Controls.Add(this.doorlvl1_2cover2);
-            this.Map.Controls.Add(this.doorlvl1_1cover);
+            this.Map.Controls.Add(this.Locked_door1cover);
             this.Map.Controls.Add(this.doorlvl2cover);
             this.Map.Controls.Add(this.doorlvl2_1cover);
             this.Map.Controls.Add(this.doorlvl2_2cover);
@@ -911,7 +908,7 @@
             this.Map.Controls.Add(this.doorlvl1_4cover2);
             this.Map.Controls.Add(this.Hub);
             this.Map.Controls.Add(this.locked_door2cover);
-            this.Map.Location = new System.Drawing.Point(0, -500);
+            this.Map.Location = new System.Drawing.Point(0, 0);
             this.Map.Margin = new System.Windows.Forms.Padding(2);
             this.Map.Name = "Map";
             this.Map.Size = new System.Drawing.Size(1778, 1926);
@@ -2553,18 +2550,6 @@
             this.walllv1_3.TabStop = false;
             this.walllv1_3.Tag = "wall";
             // 
-            // doorlvl1_1
-            // 
-            this.doorlvl1_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.doorlvl1_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.doorlvl1_1.Location = new System.Drawing.Point(720, 114);
-            this.doorlvl1_1.Margin = new System.Windows.Forms.Padding(2);
-            this.doorlvl1_1.Name = "doorlvl1_1";
-            this.doorlvl1_1.Size = new System.Drawing.Size(60, 32);
-            this.doorlvl1_1.TabIndex = 14;
-            this.doorlvl1_1.TabStop = false;
-            this.doorlvl1_1.Tag = "door_closed";
-            // 
             // walllvl1_2
             // 
             this.walllvl1_2.BackgroundImage = global::Game.Properties.Resources.grass_wall;
@@ -2734,14 +2719,14 @@
             this.doorlvl1_2cover2.TabStop = false;
             this.doorlvl1_2cover2.Tag = "cover";
             // 
-            // doorlvl1_1cover
+            // Locked_door1cover
             // 
-            this.doorlvl1_1cover.Location = new System.Drawing.Point(572, -19);
-            this.doorlvl1_1cover.Name = "doorlvl1_1cover";
-            this.doorlvl1_1cover.Size = new System.Drawing.Size(278, 133);
-            this.doorlvl1_1cover.TabIndex = 157;
-            this.doorlvl1_1cover.TabStop = false;
-            this.doorlvl1_1cover.Tag = "cover";
+            this.Locked_door1cover.Location = new System.Drawing.Point(572, -19);
+            this.Locked_door1cover.Name = "Locked_door1cover";
+            this.Locked_door1cover.Size = new System.Drawing.Size(278, 133);
+            this.Locked_door1cover.TabIndex = 157;
+            this.Locked_door1cover.TabStop = false;
+            this.Locked_door1cover.Tag = "cover";
             // 
             // doorlvl2cover
             // 
@@ -3154,7 +3139,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.walllvl1_4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rock1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.walllv1_3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.doorlvl1_1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.walllvl1_2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.walllvl1_1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall5)).EndInit();
@@ -3171,7 +3155,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.doorlvl1_3cover2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.doorlvl1_2cover)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.doorlvl1_2cover2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.doorlvl1_1cover)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Locked_door1cover)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.doorlvl2cover)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.doorlvl2_1cover)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.doorlvl2_2cover)).EndInit();
@@ -3242,7 +3226,7 @@
         private System.Windows.Forms.PictureBox doorlvl2_2cover;
         private System.Windows.Forms.PictureBox doorlvl2_1cover;
         private System.Windows.Forms.PictureBox doorlvl2cover;
-        private System.Windows.Forms.PictureBox doorlvl1_1cover;
+        private System.Windows.Forms.PictureBox Locked_door1cover;
         private System.Windows.Forms.PictureBox doorlvl1_2cover2;
         private System.Windows.Forms.PictureBox doorlvl1_2cover;
         private System.Windows.Forms.PictureBox doorlvl1_3cover2;
@@ -3261,7 +3245,6 @@
         private System.Windows.Forms.PictureBox wall5;
         private System.Windows.Forms.PictureBox walllvl1_1;
         private System.Windows.Forms.PictureBox walllvl1_2;
-        private System.Windows.Forms.PictureBox doorlvl1_1;
         private System.Windows.Forms.PictureBox walllv1_3;
         private System.Windows.Forms.PictureBox rock1;
         private System.Windows.Forms.PictureBox walllvl1_4;

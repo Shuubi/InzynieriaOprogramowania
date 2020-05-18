@@ -374,7 +374,7 @@ namespace Game
                                         else
                                         {
                                             path = "../Resources/Dialogs/openDoor.txt";
-                                            thisPictureBox.Dispose();
+                                            thisPictureBox.Tag = "door_open";
                                             protagonist.Items.RemoveItem("key");
                                         }
                                     }
