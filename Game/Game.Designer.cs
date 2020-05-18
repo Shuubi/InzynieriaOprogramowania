@@ -58,10 +58,9 @@
             this.btnLoad = new System.Windows.Forms.Button();
             this.btnStart = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pnlPause = new System.Windows.Forms.Panel();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
             this.Map = new System.Windows.Forms.Panel();
+            this.Player = new System.Windows.Forms.PictureBox();
+            this.PlayerSpells = new System.Windows.Forms.PictureBox();
             this.wall3 = new System.Windows.Forms.PictureBox();
             this.wall4 = new System.Windows.Forms.PictureBox();
             this.walllvl3_1 = new System.Windows.Forms.PictureBox();
@@ -74,14 +73,12 @@
             this.walllvl2_3 = new System.Windows.Forms.PictureBox();
             this.locked_door2 = new System.Windows.Forms.PictureBox();
             this.Locked_door1 = new System.Windows.Forms.PictureBox();
-            this.Player = new System.Windows.Forms.PictureBox();
             this.Teodor = new System.Windows.Forms.PictureBox();
             this.wall21 = new System.Windows.Forms.PictureBox();
             this.wall20 = new System.Windows.Forms.PictureBox();
             this.walllvl2_7 = new System.Windows.Forms.PictureBox();
             this.walllvl2_5 = new System.Windows.Forms.PictureBox();
             this.walllvl2_4 = new System.Windows.Forms.PictureBox();
-            this.PlayerSpells = new System.Windows.Forms.PictureBox();
             this.Cthulhu = new System.Windows.Forms.PictureBox();
             this.rock2 = new System.Windows.Forms.PictureBox();
             this.buttonlvl1 = new System.Windows.Forms.PictureBox();
@@ -237,6 +234,9 @@
             this.PBDragon = new System.Windows.Forms.PictureBox();
             this.PBTeodor = new System.Windows.Forms.PictureBox();
             this.PBCthulhu = new System.Windows.Forms.PictureBox();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.pnlPause = new System.Windows.Forms.Panel();
             this.pnlText.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.wall16)).BeginInit();
             this.pnlDialog.SuspendLayout();
@@ -252,8 +252,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.item1)).BeginInit();
             this.pnlStart.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.pnlPause.SuspendLayout();
             this.Map.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PlayerSpells)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.walllvl3_1)).BeginInit();
@@ -266,14 +267,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.walllvl2_3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.locked_door2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Locked_door1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Teodor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.walllvl2_7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.walllvl2_5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.walllvl2_4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PlayerSpells)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cthulhu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rock2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonlvl1)).BeginInit();
@@ -429,6 +428,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PBDragon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBTeodor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBCthulhu)).BeginInit();
+            this.pnlPause.SuspendLayout();
             this.SuspendLayout();
             // 
             // timer1
@@ -716,38 +716,6 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // pnlPause
-            // 
-            this.pnlPause.Controls.Add(this.btnSave);
-            this.pnlPause.Controls.Add(this.btnExit);
-            this.pnlPause.Location = new System.Drawing.Point(0, 0);
-            this.pnlPause.Name = "pnlPause";
-            this.pnlPause.Size = new System.Drawing.Size(1280, 720);
-            this.pnlPause.TabIndex = 7;
-            this.pnlPause.Visible = false;
-            // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(457, 290);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(306, 74);
-            this.btnSave.TabIndex = 2;
-            this.btnSave.TabStop = false;
-            this.btnSave.Text = "Exit and Save";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnExit
-            // 
-            this.btnExit.Location = new System.Drawing.Point(457, 387);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(306, 74);
-            this.btnExit.TabIndex = 1;
-            this.btnExit.TabStop = false;
-            this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
             // Map
             // 
             this.Map.BackColor = System.Drawing.Color.Black;
@@ -920,11 +888,33 @@
             this.Map.Controls.Add(this.doorlvl1_4cover2);
             this.Map.Controls.Add(this.Hub);
             this.Map.Controls.Add(this.locked_door2cover);
-            this.Map.Location = new System.Drawing.Point(0, -200);
+            this.Map.Location = new System.Drawing.Point(0, 0);
             this.Map.Margin = new System.Windows.Forms.Padding(2);
             this.Map.Name = "Map";
             this.Map.Size = new System.Drawing.Size(1778, 1926);
             this.Map.TabIndex = 4;
+            // 
+            // Player
+            // 
+            this.Player.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Player.Location = new System.Drawing.Point(749, 737);
+            this.Player.Margin = new System.Windows.Forms.Padding(2);
+            this.Player.Name = "Player";
+            this.Player.Size = new System.Drawing.Size(30, 30);
+            this.Player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Player.TabIndex = 1;
+            this.Player.TabStop = false;
+            this.Player.Tag = "Player";
+            // 
+            // PlayerSpells
+            // 
+            this.PlayerSpells.BackColor = System.Drawing.Color.Transparent;
+            this.PlayerSpells.Location = new System.Drawing.Point(745, 733);
+            this.PlayerSpells.Name = "PlayerSpells";
+            this.PlayerSpells.Size = new System.Drawing.Size(38, 38);
+            this.PlayerSpells.TabIndex = 102;
+            this.PlayerSpells.TabStop = false;
+            this.PlayerSpells.Tag = "aura";
             // 
             // wall3
             // 
@@ -1067,18 +1057,6 @@
             this.Locked_door1.TabStop = false;
             this.Locked_door1.Tag = "DialogItem";
             // 
-            // Player
-            // 
-            this.Player.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Player.Location = new System.Drawing.Point(748, 737);
-            this.Player.Margin = new System.Windows.Forms.Padding(2);
-            this.Player.Name = "Player";
-            this.Player.Size = new System.Drawing.Size(30, 30);
-            this.Player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Player.TabIndex = 1;
-            this.Player.TabStop = false;
-            this.Player.Tag = "Player";
-            // 
             // Teodor
             // 
             this.Teodor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
@@ -1143,14 +1121,6 @@
             this.walllvl2_4.TabIndex = 52;
             this.walllvl2_4.TabStop = false;
             this.walllvl2_4.Tag = "wall";
-            // 
-            // PlayerSpells
-            // 
-            this.PlayerSpells.Location = new System.Drawing.Point(745, 733);
-            this.PlayerSpells.Name = "PlayerSpells";
-            this.PlayerSpells.Size = new System.Drawing.Size(36, 36);
-            this.PlayerSpells.TabIndex = 102;
-            this.PlayerSpells.TabStop = false;
             // 
             // Cthulhu
             // 
@@ -2513,6 +2483,7 @@
             this.walllvl1_5.Size = new System.Drawing.Size(75, 32);
             this.walllvl1_5.TabIndex = 19;
             this.walllvl1_5.TabStop = false;
+            this.walllvl1_5.Tag = "wall";
             // 
             // doorlvl1_2
             // 
@@ -2974,6 +2945,38 @@
             this.PBCthulhu.TabStop = false;
             this.PBCthulhu.Visible = false;
             // 
+            // btnExit
+            // 
+            this.btnExit.Location = new System.Drawing.Point(457, 387);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(306, 74);
+            this.btnExit.TabIndex = 1;
+            this.btnExit.TabStop = false;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(457, 290);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(306, 74);
+            this.btnSave.TabIndex = 2;
+            this.btnSave.TabStop = false;
+            this.btnSave.Text = "Exit and Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // pnlPause
+            // 
+            this.pnlPause.Controls.Add(this.btnSave);
+            this.pnlPause.Controls.Add(this.btnExit);
+            this.pnlPause.Location = new System.Drawing.Point(0, 0);
+            this.pnlPause.Name = "pnlPause";
+            this.pnlPause.Size = new System.Drawing.Size(1280, 720);
+            this.pnlPause.TabIndex = 7;
+            this.pnlPause.Visible = false;
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3016,8 +3019,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.item1)).EndInit();
             this.pnlStart.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.pnlPause.ResumeLayout(false);
             this.Map.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Player)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PlayerSpells)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.walllvl3_1)).EndInit();
@@ -3030,14 +3034,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.walllvl2_3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.locked_door2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Locked_door1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Player)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Teodor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.walllvl2_7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.walllvl2_5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.walllvl2_4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PlayerSpells)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cthulhu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rock2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonlvl1)).EndInit();
@@ -3193,6 +3195,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PBDragon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBTeodor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBCthulhu)).EndInit();
+            this.pnlPause.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -3220,10 +3223,7 @@
         private System.Windows.Forms.PictureBox item5;
         private System.Windows.Forms.Panel pnlStart;
         private System.Windows.Forms.Button btnStart;
-        private System.Windows.Forms.Panel pnlPause;
-        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnLoad;
-        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.PictureBox Hub;
         private System.Windows.Forms.PictureBox doorlvl1_4cover2;
         private System.Windows.Forms.PictureBox doorlvl3_7cover;
@@ -3405,5 +3405,8 @@
         private System.Windows.Forms.Label item7Lbl;
         private System.Windows.Forms.PictureBox locked_door2cover;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Panel pnlPause;
     }
 }

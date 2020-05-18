@@ -18,7 +18,7 @@ namespace Game
     public class PlayerCharacter
     {
         public Control Player;
-        public Control PlayerSpells;
+        public PictureBox PlayerSpells;
         public Control Map;
         public bool goRight { get; set; }
         public bool goLeft { get; set; }
@@ -59,7 +59,7 @@ namespace Game
             return editObject[i];
         }
 
-        public PlayerCharacter(Control player, Control playerspells, Control map)
+        public PlayerCharacter(Control player, PictureBox playerspells, Control map)
         {
             Player = player;
             PlayerSpells = playerspells;
@@ -333,6 +333,7 @@ namespace Game
                         if (f.Bounds.IntersectsWith(x.Bounds) && (x.Tag == "freezable_object"))
                         {
                             x.BackgroundImage = Image.FromFile(@"Images\ice.png");
+                            x.BackColor = Color.FromArgb(214, 247, 255);
                             x.Tag = "ice";
                             string obj = x.Name + "3";
                             editObject.Add(obj);
@@ -348,10 +349,8 @@ namespace Game
         {
             if (currentSpell == Spells.Earth && EarthLearned == true)
             {
-                PlayerSpells.BackColor = Color.GreenYellow;
                 PlayerSpells.Visible = true;
                 pushMovableObjects(); 
-               
             }
             else
             {
@@ -359,13 +358,11 @@ namespace Game
             }
             if (currentSpell == Spells.Fire && FireLearned == true)
             {
-                PlayerSpells.BackColor = Color.Red;
                 PlayerSpells.Visible = true;
                 Fire();
             }
             if (currentSpell == Spells.Ice && IceLearned == true)
             {
-                PlayerSpells.BackColor = Color.White;
                 PlayerSpells.Visible = true;
                 Ice();
             }

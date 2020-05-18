@@ -38,6 +38,7 @@ namespace Game
             Player.BackColor = Color.Transparent;
             backgroundMusic.URL = "music.wav";
             backgroundMusic.settings.setMode("Loop", true);
+         
         }
 
         protected override void OnLoad(EventArgs e)
@@ -89,14 +90,20 @@ namespace Game
                 if (e.KeyCode == Keys.D1)
                 {
                     protagonist.currentSpell = PlayerCharacter.Spells.Earth;
+                    if(protagonist.EarthLearned)
+                    PlayerSpells.Image = Image.FromFile(@"Images/aura_green.gif");
                 }
                 if (e.KeyCode == Keys.D2)
                 {
                     protagonist.currentSpell = PlayerCharacter.Spells.Fire;
+                    if (protagonist.FireLearned)
+                        PlayerSpells.Image = Image.FromFile(@"Images/aura_red.gif");
                 }
                 if (e.KeyCode == Keys.D3)
                 {
                     protagonist.currentSpell = PlayerCharacter.Spells.Ice;
+                    if (protagonist.IceLearned)
+                        PlayerSpells.Image = Image.FromFile(@"Images/aura_white.gif");
                 }
                 if (e.KeyCode == Keys.Q)
                 {
@@ -768,7 +775,7 @@ namespace Game
                     x.BringToFront();
             }
         }
-
+  
         public void ShowLevels()
         {
             foreach (PictureBox x in Player.Parent.Controls)
@@ -795,7 +802,7 @@ namespace Game
                     if (back is PictureBox && back.Bounds.Contains(front.Bounds) && !back.Name.ToString().Contains("cover"))
                     {
                         if (front is PictureBox && !front.Name.ToString().Contains("cover") && front.Tag != null && front.Tag != "wall" && front.Tag != "river" &&
-                            front.Tag != "freezable_object" && front.Tag != "ice" && !front.Tag.ToString().Contains("ball") && !front.Name.ToString().Contains("PlayerSpells"))
+                              front.Tag != "ice" && !front.Tag.ToString().Contains("ball"))
                         {
                             front.BackColor = back.BackColor;
                         }
@@ -837,7 +844,6 @@ namespace Game
                         rock.Name = null;
                         protagonist.addObj("doorlvl3_21");
                     }
-                  
                 }
             }
         }
@@ -851,6 +857,7 @@ namespace Game
             ShowLevels();
             Transparency();
             OpenDoorWithButton();
+            
 
             protagonist.MovePlayer();
 
@@ -893,5 +900,9 @@ namespace Game
             }
         }
 
+        private void btnControls_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
