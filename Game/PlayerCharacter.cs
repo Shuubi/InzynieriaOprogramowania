@@ -45,32 +45,18 @@ namespace Game
         public bool GodMode = false;
 
         //na potrzeby saveGame
-        private List<string> openedDoors = new List<string>();
-        public void addDoor(string name)
+        private List<string> editObject = new List<string>();
+        public void addObj(string name)
         {
-            openedDoors.Add(name);
+            editObject.Add(name);
         }
-        public int DoorsListSize()
+        public int ObjListSize()
         {
-            return openedDoors.Count;
+            return editObject.Count;
         }
-        public string ReturnDoor(int i)
+        public string ReturnObj(int i)
         {
-            return openedDoors[i];
-        }
-
-        private List<string> disposed = new List<string>();
-        public void addDisposed(string name)
-        {
-            disposed.Add(name);
-        }
-        public int DisposedListSize()
-        {
-            return disposed.Count;
-        }
-        public string ReturnDisposed(int i)
-        {
-            return disposed[i];
+            return editObject[i];
         }
 
         public PlayerCharacter(Control player, Control playerspells, Control map)
@@ -241,7 +227,8 @@ namespace Game
                        sound.Play();
                         x.Tag = "door_open";
                         x.BackgroundImage = null;
-                        openedDoors.Add(x.Name);
+                        string obj = x.Name + "1";
+                        editObject.Add(obj);
                     }
                 }
             }
@@ -287,13 +274,14 @@ namespace Game
                     {
                         if (f.Bounds.IntersectsWith(x.Bounds) && (x.Tag == "wall" || x.Tag == "door_closed"))
                         {
-                            disposed.Add(f.Name);
                             f.Dispose();
                         }
                         if (f.Bounds.IntersectsWith(x.Bounds) && x.Tag == "flammable_object")
                         {
                             x.BackColor = Color.Red;
                             x.Tag = "burning_object";
+                            string obj = x.Name + "2";
+                            editObject.Add(obj);
                         }
                     }
                 }
@@ -340,13 +328,14 @@ namespace Game
                     {
                         if (f.Bounds.IntersectsWith(x.Bounds) && (x.Tag == "wall" || x.Tag == "door_closed"))
                         {
-                            disposed.Add(f.Name);
                             f.Dispose();
                         }
                         if (f.Bounds.IntersectsWith(x.Bounds) && (x.Tag == "freezable_object"))
                         {
                             x.BackgroundImage = Image.FromFile(@"Images\ice.png");
                             x.Tag = "ice";
+                            string obj = x.Name + "3";
+                            editObject.Add(obj);
                         }
                     }
 

@@ -618,20 +618,18 @@ namespace Game
             //stan drzwi
             using (StreamWriter sw = File.AppendText(path))
                 sw.WriteLine("-");
-            for (int i = 0; i < protagonist.DoorsListSize(); i++)
+            for (int i = 0; i < protagonist.ObjListSize(); i++)
             {
                 using (StreamWriter sw = File.AppendText(path))
-                    sw.WriteLine(protagonist.ReturnDoor(i));
+                    sw.WriteLine(protagonist.ReturnObj(i));
             }
 
-            //depositowane obiekty (nie itemy)
+            //rozmowy z npc
             using (StreamWriter sw = File.AppendText(path))
                 sw.WriteLine("-");
-            for (int i = 0; i < depositedItems.Count; i++)
-            {
-                using (StreamWriter sw = File.AppendText(path))
-                    sw.WriteLine(protagonist.ReturnDisposed(i));
-            }
+            if (protagonist.Cthulhu) using (StreamWriter sw = File.AppendText(path)) sw.WriteLine("C");
+            if (protagonist.Jasper) using (StreamWriter sw = File.AppendText(path)) sw.WriteLine("J");
+            if (protagonist.Teodor) using (StreamWriter sw = File.AppendText(path)) sw.WriteLine("T");
 
             //ilosc czarow
             using (StreamWriter sw = File.AppendText(path))
@@ -694,23 +692,52 @@ namespace Game
                
             }
 
-            //otwieranie drzwi
-            while ((dane = sr.ReadLine()) != null)
-            {
-                protagonist.addDoor(dane);
-                var pictureBox = this.Controls.Find(dane, true).FirstOrDefault() as PictureBox;
-                pictureBox.Tag = "door_open";
-                pictureBox.BackColor = Color.Green;
-            }
-
+            //edycja tagow obiektow
             while ((dane = sr.ReadLine()) != null)
             {
                 if (dane.Contains("-"))
                     break;
 
-                protagonist.addDisposed(dane);
-                var pictureBox = this.Controls.Find(dane, true).FirstOrDefault() as PictureBox;
-                pictureBox.Dispose();
+                protagonist.addObj(dane);
+                string name = dane.Remove(dane.Length - 1);
+                int typ = int.Parse(dane.Substring(dane.Length - 1));
+                var pictureBox = this.Controls.Find(name, true).FirstOrDefault() as PictureBox;
+                switch (typ)
+                {
+                    case 1:
+                        pictureBox.Tag = "door_open";
+                        pictureBox.BackgroundImage = null;
+                        break;
+                    case 2:
+                        pictureBox.BackColor = Color.Red;
+                        pictureBox.Tag = "burning_object";
+                        break;
+                    case 3:
+                        pictureBox.BackgroundImage = Image.FromFile(@"Images\ice.png");
+                        pictureBox.Tag = "ice";
+                        break;
+                }
+            }
+
+            //stan dialogow npc
+            while ((dane = sr.ReadLine()) != null)
+            {
+                if (dane.Contains("-"))
+                    break;
+                switch (dane)
+                {
+                    case "C":
+                        protagonist.Cthulhu = true;
+                        PBCthulhu.Image = Image.FromFile(@"Images\DACthulhu2.png");
+                        Cthulhu.Image = Image.FromFile(@"Images\Cthulhu2.png");
+                        break;
+                    case "J":
+                        protagonist.Jasper = true;
+                        break;
+                    case "T":
+                        protagonist.Teodor = true;
+                        break;
+                }
             }
 
             //odblokowywanie czarow
@@ -791,6 +818,7 @@ namespace Game
                         doorlvl1_3.BackgroundImage = null;
                         doorlvl1_3.Tag = "door_open";
                         rock.Name = null;
+                        protagonist.addObj("doorlvl1_31");
                     }
                     if (rock.Bounds.IntersectsWith(buttonlvl2.Bounds))
                     {
@@ -798,6 +826,7 @@ namespace Game
                         doorlvl2_4.BackgroundImage = null;
                         doorlvl2_4.Tag = "door_open";
                         rock.Name = null;
+                        protagonist.addObj("doorlvl2_41");
                     }
                     if (rock.Bounds.IntersectsWith(buttonlvl3.Bounds))
                     {
@@ -805,6 +834,7 @@ namespace Game
                         doorlvl3_2.BackgroundImage = null;
                         doorlvl3_2.Tag = "door_open";
                         rock.Name = null;
+                        protagonist.addObj("doorlvl3_21");
                     }
                   
                 }
