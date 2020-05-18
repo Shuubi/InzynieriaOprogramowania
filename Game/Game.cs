@@ -5,14 +5,12 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.IO; //czytnie plikow
 using System.Drawing.Text; //zmiana na wybrany font
-using WMPLib;
+using WMPLib; //muzyka w tle
 
 namespace Game
 {
     public partial class Game : Form
     {
-        //int mouseX, mouseY; czy to jest gdzieś wykorzystywane?
-
         //na potrzeby dialogow
         bool cont = false;
         bool reading = false;
@@ -374,6 +372,9 @@ namespace Game
                                         else
                                         {
                                             path = "../Resources/Dialogs/openDoor.txt";
+                                            System.Media.SoundPlayer sound = new System.Media.SoundPlayer("../Resources/Sounds/lock.wav");
+                                            sound.Play();
+                                            thisPictureBox.BackgroundImage = null;
                                             thisPictureBox.Tag = "door_open";
                                             protagonist.Items.RemoveItem("key");
                                         }
