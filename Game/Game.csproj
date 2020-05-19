@@ -167,5 +167,8 @@
   <ItemGroup>
     <None Include="bin\Debug\Images\pause.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\pointer.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
