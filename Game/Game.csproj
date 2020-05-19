@@ -161,5 +161,11 @@
   <ItemGroup>
     <None Include="bin\Debug\Images\aura_white.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\controls.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\pause.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

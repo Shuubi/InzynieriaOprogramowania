@@ -175,7 +175,7 @@ namespace Game
                     pnlPause.SendToBack();
                     pnlPause.Visible = false;
                 }
-
+                
             }
         }
 
@@ -882,8 +882,7 @@ namespace Game
             ShowLevels();
             Transparency();
             OpenDoorWithButton();
-            
-
+           
             protagonist.MovePlayer();
 
         }
@@ -925,11 +924,6 @@ namespace Game
             }
         }
 
-        private void btnControls_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnExit2_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -938,6 +932,25 @@ namespace Game
         private void btnBack_Click(object sender, EventArgs e)
         {
             pnlEnd.Dispose();
+        }
+
+        private void btnControls_Click_1(object sender, EventArgs e)
+        {
+            pnlControls.BringToFront();
+            pnlControls.Visible = true;
+            Game.ActiveForm.KeyPreview = true;
+        }
+
+        private void exitControls_Click(object sender, EventArgs e)
+        {
+            pnlControls.SendToBack();
+            pnlControls.Visible = false;
+        }
+
+        private void unpause_Click(object sender, EventArgs e)
+        {
+            pnlPause.SendToBack();
+            pnlPause.Visible = false;
         }
     }
 }
