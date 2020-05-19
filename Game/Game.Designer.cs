@@ -237,6 +237,10 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.pnlPause = new System.Windows.Forms.Panel();
+            this.pnlEnd = new System.Windows.Forms.Panel();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.btnExit2 = new System.Windows.Forms.Button();
+            this.lblEnd = new System.Windows.Forms.Label();
             this.pnlText.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.wall16)).BeginInit();
             this.pnlDialog.SuspendLayout();
@@ -429,6 +433,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PBTeodor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBCthulhu)).BeginInit();
             this.pnlPause.SuspendLayout();
+            this.pnlEnd.SuspendLayout();
             this.SuspendLayout();
             // 
             // timer1
@@ -2977,6 +2982,50 @@
             this.pnlPause.TabIndex = 7;
             this.pnlPause.Visible = false;
             // 
+            // pnlEnd
+            // 
+            this.pnlEnd.Controls.Add(this.lblEnd);
+            this.pnlEnd.Controls.Add(this.btnBack);
+            this.pnlEnd.Controls.Add(this.btnExit2);
+            this.pnlEnd.Location = new System.Drawing.Point(-8, -20);
+            this.pnlEnd.Name = "pnlEnd";
+            this.pnlEnd.Size = new System.Drawing.Size(1280, 720);
+            this.pnlEnd.TabIndex = 14;
+            this.pnlEnd.Visible = false;
+            // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(457, 290);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(306, 74);
+            this.btnBack.TabIndex = 2;
+            this.btnBack.TabStop = false;
+            this.btnBack.Text = "Back to Game";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // btnExit2
+            // 
+            this.btnExit2.Location = new System.Drawing.Point(457, 387);
+            this.btnExit2.Name = "btnExit2";
+            this.btnExit2.Size = new System.Drawing.Size(306, 74);
+            this.btnExit2.TabIndex = 1;
+            this.btnExit2.TabStop = false;
+            this.btnExit2.Text = "Exit";
+            this.btnExit2.UseVisualStyleBackColor = true;
+            this.btnExit2.Click += new System.EventHandler(this.btnExit2_Click);
+            // 
+            // lblEnd
+            // 
+            this.lblEnd.AutoSize = true;
+            this.lblEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblEnd.ForeColor = System.Drawing.Color.White;
+            this.lblEnd.Location = new System.Drawing.Point(521, 205);
+            this.lblEnd.Name = "lblEnd";
+            this.lblEnd.Size = new System.Drawing.Size(182, 42);
+            this.lblEnd.TabIndex = 3;
+            this.lblEnd.Text = "THE END";
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2995,6 +3044,7 @@
             this.Controls.Add(this.PBDragon);
             this.Controls.Add(this.PBTeodor);
             this.Controls.Add(this.PBCthulhu);
+            this.Controls.Add(this.pnlEnd);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MinimizeBox = false;
@@ -3196,6 +3246,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.PBTeodor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBCthulhu)).EndInit();
             this.pnlPause.ResumeLayout(false);
+            this.pnlEnd.ResumeLayout(false);
+            this.pnlEnd.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -3408,5 +3460,9 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Panel pnlPause;
+        private System.Windows.Forms.Panel pnlEnd;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btnExit2;
+        private System.Windows.Forms.Label lblEnd;
     }
 }

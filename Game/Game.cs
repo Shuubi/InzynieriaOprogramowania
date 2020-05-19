@@ -408,6 +408,31 @@ namespace Game
                                 StreamReader sr = new StreamReader(path);
                                 LoadDialog(sr, SprName);
                                 sr.Close();
+
+                                if(path == "../Resources/Dialogs/Teodor.txt")
+                                {
+                                    lblEnd.Font = new Font(pfc.Families[0], 28);
+                                    pnlEnd.Visible = true;
+                                    pnlEnd.BringToFront();
+                                    System.Threading.Thread.Sleep(160);
+                                    string ln = "The End";
+                                    string ln2 = String.Empty;
+                                    string sound = String.Empty;
+                                    for (int i = 0; i < ln.Length; i++)
+                                    {
+                                        ln2 = ln2.Insert(ln2.Length, ln[i].ToString());
+                                        lblEnd.Text = ln2;
+
+                                        Random number = new Random();
+                                        int nr = number.Next(20);
+                                        sound = "../Resources/Sounds/" + (nr).ToString() + ".wav";
+                                        System.Media.SoundPlayer player = new System.Media.SoundPlayer(sound);
+                                        player.Play();
+
+                                        Application.DoEvents();
+                                        System.Threading.Thread.Sleep(100);
+                                    }
+                                }
                             }
                         }
                     }
@@ -903,6 +928,16 @@ namespace Game
         private void btnControls_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnExit2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            pnlEnd.Dispose();
         }
     }
 }
