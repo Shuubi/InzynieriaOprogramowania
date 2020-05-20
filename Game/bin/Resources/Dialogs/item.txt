@@ -1,0 +1,2 @@
+You picked up an item!
+You can see your inventory by pressing "i"
