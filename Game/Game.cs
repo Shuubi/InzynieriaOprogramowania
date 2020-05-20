@@ -256,6 +256,13 @@ namespace Game
                             thisPictureBox.Dispose();
                             System.Media.SoundPlayer sound = new System.Media.SoundPlayer("../Resources/Sounds/item.wav");
                             sound.Play();
+                            if (protagonist.FirstItem)
+                            {
+                                protagonist.FirstItem = false;
+                                StreamReader sr = new StreamReader(@"../Resources/Dialogs/item.txt");
+                                LoadDialog(sr, "item");
+                                sr.Close();
+                            }
                         }
                         if (reading != true)
                         {
