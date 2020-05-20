@@ -397,6 +397,7 @@ namespace Game
                                             path = "../Resources/Dialogs/openDoor2.txt";
                                             thisPictureBox.Tag = "door_open";
                                             protagonist.Items.RemoveItem("crystal");
+                                            thisPictureBox.BackgroundImage = null;
                                         }
                                     }
                                     else if (thisPictureBox.Name == "doorlvl1_3" || thisPictureBox.Name == "doorlvl2_4" || thisPictureBox.Name == "doorlvl3_2")
