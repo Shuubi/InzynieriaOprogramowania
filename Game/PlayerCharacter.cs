@@ -32,6 +32,7 @@ namespace Game
         public bool Jasper = false;
         public bool Teodor = false;
         public bool Cthulhu = false;
+        public bool FirstItem = true;
         public bool castSpell { get; set; }
         public Directions playerRotation { get; set; }
         public Spells currentSpell { get; set; }
