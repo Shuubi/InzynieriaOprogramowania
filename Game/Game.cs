@@ -960,5 +960,13 @@ namespace Game
             pnlPause.SendToBack();
             pnlPause.Visible = false;
         }
+
+        private void Game_FormClosing_1(object sender, FormClosingEventArgs e)
+        {
+            Environment.Exit(1);
+            //calkowicie wylacza aplikacje nawet w trakcie wczytywania dialogu z pliku
+        }
     }
+
+
 }
