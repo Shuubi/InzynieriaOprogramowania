@@ -387,6 +387,7 @@ namespace Game
                                             thisPictureBox.BackgroundImage = null;
                                             thisPictureBox.Tag = "door_open";
                                             protagonist.Items.RemoveItem("key");
+                                            protagonist.addObj("Locked_door11");
                                         }
                                     }
                                     else if (thisPictureBox.Name == "locked_door2")
@@ -726,7 +727,7 @@ namespace Game
                 depositedItems.Add(dane);
                 var pictureBox = this.Controls.Find(dane, true).FirstOrDefault() as PictureBox;
                 pictureBox.Dispose();
-               
+                protagonist.FirstItem = false;
             }
 
             //edycja tagow obiektow
