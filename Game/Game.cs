@@ -109,10 +109,6 @@ namespace Game
                 {
                     protagonist.currentSpell = PlayerCharacter.Spells.None;
                 }
-                if (e.KeyCode == Keys.G)
-                {
-                    protagonist.GodMode = true;
-                }
             }
             else if (pnlText.Visible != true)
             {
@@ -813,7 +809,7 @@ namespace Game
         {
             foreach (PictureBox x in Player.Parent.Controls)
             {
-                if (protagonist.GodMode || x.Tag == "door_open")
+                if (x.Tag == "door_open")
                 {
                     string name = x.Name + "cover";
 
