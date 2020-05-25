@@ -734,6 +734,8 @@
             // Map
             // 
             this.Map.BackColor = System.Drawing.Color.Black;
+            this.Map.Controls.Add(this.rocklvl3_2);
+            this.Map.Controls.Add(this.rocklvl3_1);
             this.Map.Controls.Add(this.Player);
             this.Map.Controls.Add(this.PlayerSpells);
             this.Map.Controls.Add(this.wall3);
@@ -785,11 +787,9 @@
             this.Map.Controls.Add(this.walllvl3_6);
             this.Map.Controls.Add(this.doorlvl3_2);
             this.Map.Controls.Add(this.walllvl3_4);
-            this.Map.Controls.Add(this.rocklvl3_2);
             this.Map.Controls.Add(this.riverlvl3_5);
             this.Map.Controls.Add(this.freezablelvl3_3);
             this.Map.Controls.Add(this.riverlvl3_4);
-            this.Map.Controls.Add(this.rocklvl3_1);
             this.Map.Controls.Add(this.doorlvl3_1);
             this.Map.Controls.Add(this.chest2);
             this.Map.Controls.Add(this.sugar1);
@@ -904,7 +904,7 @@
             this.Map.Controls.Add(this.doorlvl1_4cover2);
             this.Map.Controls.Add(this.Hub);
             this.Map.Controls.Add(this.locked_door2cover);
-            this.Map.Location = new System.Drawing.Point(0, 0);
+            this.Map.Location = new System.Drawing.Point(0, -500);
             this.Map.Margin = new System.Windows.Forms.Padding(2);
             this.Map.Name = "Map";
             this.Map.Size = new System.Drawing.Size(1778, 1926);
@@ -1018,10 +1018,10 @@
             // walllvl3_3
             // 
             this.walllvl3_3.BackgroundImage = global::Game.Properties.Resources.sandstone;
-            this.walllvl3_3.Location = new System.Drawing.Point(251, 887);
+            this.walllvl3_3.Location = new System.Drawing.Point(256, 887);
             this.walllvl3_3.Margin = new System.Windows.Forms.Padding(2);
             this.walllvl3_3.Name = "walllvl3_3";
-            this.walllvl3_3.Size = new System.Drawing.Size(127, 32);
+            this.walllvl3_3.Size = new System.Drawing.Size(122, 32);
             this.walllvl3_3.TabIndex = 112;
             this.walllvl3_3.TabStop = false;
             this.walllvl3_3.Tag = "wall";
@@ -1509,7 +1509,7 @@
             this.doorlvl3_2.Location = new System.Drawing.Point(192, 887);
             this.doorlvl3_2.Margin = new System.Windows.Forms.Padding(2);
             this.doorlvl3_2.Name = "doorlvl3_2";
-            this.doorlvl3_2.Size = new System.Drawing.Size(60, 32);
+            this.doorlvl3_2.Size = new System.Drawing.Size(68, 32);
             this.doorlvl3_2.TabIndex = 120;
             this.doorlvl3_2.TabStop = false;
             this.doorlvl3_2.Tag = "DialogItem";
@@ -1530,10 +1530,10 @@
             this.rocklvl3_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.rocklvl3_2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rocklvl3_2.BackgroundImage")));
             this.rocklvl3_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.rocklvl3_2.Location = new System.Drawing.Point(256, 847);
+            this.rocklvl3_2.Location = new System.Drawing.Point(267, 841);
             this.rocklvl3_2.Margin = new System.Windows.Forms.Padding(2);
             this.rocklvl3_2.Name = "rocklvl3_2";
-            this.rocklvl3_2.Size = new System.Drawing.Size(35, 36);
+            this.rocklvl3_2.Size = new System.Drawing.Size(32, 32);
             this.rocklvl3_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.rocklvl3_2.TabIndex = 118;
             this.rocklvl3_2.TabStop = false;
@@ -1543,7 +1543,7 @@
             // 
             this.riverlvl3_5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.riverlvl3_5.BackgroundImage = global::Game.Properties.Resources.water;
-            this.riverlvl3_5.Location = new System.Drawing.Point(336, 802);
+            this.riverlvl3_5.Location = new System.Drawing.Point(333, 799);
             this.riverlvl3_5.Margin = new System.Windows.Forms.Padding(2);
             this.riverlvl3_5.Name = "riverlvl3_5";
             this.riverlvl3_5.Size = new System.Drawing.Size(46, 32);
@@ -1555,7 +1555,7 @@
             // 
             this.freezablelvl3_3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.freezablelvl3_3.BackgroundImage = global::Game.Properties.Resources.shallow_water;
-            this.freezablelvl3_3.Location = new System.Drawing.Point(292, 802);
+            this.freezablelvl3_3.Location = new System.Drawing.Point(292, 799);
             this.freezablelvl3_3.Margin = new System.Windows.Forms.Padding(2);
             this.freezablelvl3_3.Name = "freezablelvl3_3";
             this.freezablelvl3_3.Size = new System.Drawing.Size(45, 32);
@@ -1567,7 +1567,7 @@
             // 
             this.riverlvl3_4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.riverlvl3_4.BackgroundImage = global::Game.Properties.Resources.water;
-            this.riverlvl3_4.Location = new System.Drawing.Point(190, 802);
+            this.riverlvl3_4.Location = new System.Drawing.Point(190, 799);
             this.riverlvl3_4.Margin = new System.Windows.Forms.Padding(2);
             this.riverlvl3_4.Name = "riverlvl3_4";
             this.riverlvl3_4.Size = new System.Drawing.Size(107, 32);

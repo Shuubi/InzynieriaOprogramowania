@@ -26,9 +26,9 @@ namespace Game
         public bool goDown { get; set; }
         public bool action { get; set; }
 
-        public bool FireLearned = false;
-        public bool IceLearned = false;
-        public bool EarthLearned = false;
+        public bool FireLearned = true;
+        public bool IceLearned = true;
+        public bool EarthLearned = true;
         public bool Jasper = false;
         public bool Teodor = false;
         public bool Cthulhu = false;
@@ -183,7 +183,7 @@ namespace Game
                     {
                         if (st is PictureBox)
                         {
-                            if (st.Tag == "wall" || st.Tag == "door_closed" || st.Tag == "movable_object" || st.Tag == "needKey")
+                            if (st.Tag == "wall" || st.Tag == "door_closed" || st.Tag == "movable_object" || st.Tag == "needKey" || st.Tag == "river" || st.Tag == "freezable_object")
                             {
                                 if (mv.Bounds.IntersectsWith(st.Bounds) && Player.Bounds.IntersectsWith(mv.Bounds))
                                 {
