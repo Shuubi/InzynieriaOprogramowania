@@ -26,9 +26,9 @@ namespace Game
         public bool goDown { get; set; }
         public bool action { get; set; }
 
-        public bool FireLearned = true;
-        public bool IceLearned = true;
-        public bool EarthLearned = true;
+        public bool FireLearned = false;
+        public bool IceLearned = false;
+        public bool EarthLearned = false;
         public bool Jasper = false;
         public bool Teodor = false;
         public bool Cthulhu = false;
